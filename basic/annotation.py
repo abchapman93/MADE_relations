@@ -81,7 +81,7 @@ class RelationAnnotation(BaseAnnotation):
 
     @property
     def span(self):
-        spans = self.annotation_1.span + annotation_2.span
+        spans = self.annotation_1.span + self.annotation_2.span
         return (min(spans), max(spans))
 
     @property
@@ -91,6 +91,12 @@ class RelationAnnotation(BaseAnnotation):
     @property
     def entity_types(self):
         return (self.annotation_1.type, self.annotation_2.type)
+
+    def __repr__(self):
+        return "'{0}':'{1}', {2}:{3}, type={4}".format(self.annotation_1.text,
+                                        self.annotation_2.text,
+                                        self.entity_types[0],
+                                        self.entity_types[1], self.type)
 
 
 
@@ -118,7 +124,6 @@ class AnnotatedDocument(object):
         annotations that it connects.
         """
         for relation_id, relation in self.bioc_relations.items():
-            print(relation)
             node1, node2 = relation.nodes
             bioc_annotation_1 = self.bioc_annotations[node1.refid]
             bioc_annotation_2 = self.bioc_annotations[node2.refid]
