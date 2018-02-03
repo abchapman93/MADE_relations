@@ -45,8 +45,8 @@ class EntityAnnotation(BaseAnnotation):
         self.bioc_anno = bioc_anno
 
         self.type = bioc_anno.infons['type']
-        self.start_index = loc.offset
-        self.end_index = loc.offset + loc.length
+        self.start_index = int(loc.offset)
+        self.end_index = int(loc.offset) + int(loc.length)
         self.spanned_text = bioc_anno.text
 
         self.id = bioc_anno.id
