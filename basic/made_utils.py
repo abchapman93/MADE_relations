@@ -32,7 +32,7 @@ class TextAndBioCParser(object):
         annotated_docs = {} # {file_name: (text, [annotation_1, ..., annotation_n])}
         text_files = glob.glob(os.path.join(self.datadir, 'corpus', '*'))
         for i, file_path in enumerate(text_files):
-            if i % 25 == 0:
+            if i % 100 == 0:
                 print("{}/{}".format(i, num_docs if num_docs != -1 else len(text_files)))
             if i == num_docs:
                 break
