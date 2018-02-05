@@ -57,27 +57,58 @@ class EntityAnnotation(BaseAnnotation):
 class RelationAnnotation(BaseAnnotation):
     """
     Takes a bioc.Relation object and two connected bioc.Annotation objects.
-
     """
-    def __init__(self, bioc_rel, anno1, anno2):
+    def __init__(self, bioc_rel, anno1, anno2, true_relation=True):
         super().__init__()
         self.id = -1
-        self.from_bioc(bioc_rel, anno1, anno2)
+        self.true_relation = true_relation
+        self.annotation_1 = anno1
+        self.annotation_2 = anno2
+        if bioc_rel:
+            self.id = bioc_rel.id
+            self.type = bioc_rel.infons['type']
+        else:
+            self.id = str(anno1.id) + str(anno2.id)
+            self.type = 'none'
 
-    def from_bioc(self, bioc_rel, anno1, anno2):
+    @classmethod
+    def from_bioc_rel(cls, bioc_rel, anno1, anno2):
         # assert that the types are correct
         # these should be of bioc classes for now
         assert isinstance(bioc_rel, bioc.bioc_relation.BioCRelation)
         for anno in (anno1, anno2):
             assert isinstance(anno, EntityAnnotation)
 
+        return cls(bioc_rel, anno1, anno2, true_relation=True)
+
+    @classmethod
+    def from_null_rel(cls, anno1, anno2):
+        """
+        Creates a new, fake relation.
+        """
+        return cls(None, anno1, anno2, true_relation=True)
+
+
         self.id = bioc_rel.id
         self.type = bioc_rel.infons['type']
         self.annotation_1 = anno1
         self.annotation_2 = anno2
+        return self
 
         # If bioc_anno1 and bioc_anno2 are None and annotations is not empty,
         # find bioc_anno1 and bioc_anno2 in the list of annotations.
+
+
+    def get_annotations(self):
+        """
+        Returns the two EntityAnnotation objects.
+        """
+        return [self.annotation_1, self.annotation_2]
+
+    @classmethod
+    def create_relation(cls, bioc_anno1, bioc_anno2):
+        return cls()
+
 
     @property
     def span(self):
@@ -125,17 +156,36 @@ class AnnotatedDocument(object):
         """
         for relation_id, relation in self.bioc_relations.items():
             node1, node2 = relation.nodes
+            # Use add_relation to add the two nodes
             bioc_annotation_1 = self.bioc_annotations[node1.refid]
             bioc_annotation_2 = self.bioc_annotations[node2.refid]
-
-            # convert into EntityAnnotations
-            annotation_1 = EntityAnnotation(bioc_annotation_1)
-            annotation_2 = EntityAnnotation(bioc_annotation_2)
-
-            relation_annotation = RelationAnnotation(relation, annotation_1, annotation_2)
-            self.relations.append(relation_annotation)
+            relation_annotation = self.create_relation(relation,
+                                    bioc_annotation_1,
+                                    bioc_annotation_2, )
+            annotation_1, annotation_2 = relation_annotation.get_annotations()
+            # Now append annotations and relations
             self.annotations.extend([annotation_1, annotation_2])
-        return
+            self.relations.append(relation_annotation)
+
+    def create_relation(self, relation, bioc_annotation_1, bioc_annotation_2, true_relation=True):
+        """
+        Takes two bioc annotation node objects and true_relation,
+        a boolean that states whether this is a true relation or a
+        generated negative sample.
+        """
+        # convert into EntityAnnotations
+        annotation_1 = EntityAnnotation(bioc_annotation_1)
+        annotation_2 = EntityAnnotation(bioc_annotation_2)
+        relation_annotation = RelationAnnotation.from_bioc_rel(relation, annotation_1,
+                                        annotation_2)
+        return relation_annotation
+
+
+    def get_annotations(self):
+        return self.annotations
+
+    def get_relations(self):
+        return self.relations
 
 
 
