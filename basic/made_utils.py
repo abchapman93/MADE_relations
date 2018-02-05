@@ -3,10 +3,19 @@ This module will contain helper classes and functions for parsing
 the data found in annotations.
 """
 import bioc
-import os, glob
-
-from . import annotation
+import os, glob, sys
+sys.path.append('.')
+import annotation
 #import annotation
+
+def read_made_data(num_docs=-1):
+    """
+    Returns a dictionary where the keys are filenames and
+    the values are AnnotatedDocument objects.
+    """
+    reader = TextAndBioCParser()
+    docs = reader.read_texts_and_xmls(num_docs)
+    return docs
 
 
 class TextAndBioCParser(object):
