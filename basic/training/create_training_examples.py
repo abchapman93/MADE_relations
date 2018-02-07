@@ -2,6 +2,7 @@
 This script will create RelationAnnotation objects out of every possible annotation pair in the data documents.
 """
 from collections import defaultdict
+import random
 import os
 import sys
 import pickle
@@ -9,93 +10,37 @@ import pickle
 sys.path.append('..')
 import made_utils
 import annotation
+from train_utils import *
 
 
-def define_legal_edges(thresh=1):
+def sample_negative_examples(relations, neg_prop=1.0):
     """
-    This function iterates through all of the annotations in the training data
-    and defines legal edges as being between any two entity types
-    that appear connected by any relation in the training data above some threshold.
+    Takes a list of Relationannotations and
+    neg_prop, a float that specifies the proportion of negative
+    to positive examples.
 
-    For example, if a threshold is set at 10, and it is found that there are only
-    6 Relations connecting 'drug => drug', this is defined as illegal.
+    In the future, a more sophisticated method of sampling might be used,
+    ie., sampling by the probability of the Annotation types in the nodes.
     """
-    edges = defaultdict(int) # count of entity => entity edges
-    entities = [] # all possible entities (nodes)
-    # Dictionary mapping filenames to AnnotatedDocuments
-    docs = made_utils.read_made_data()
+    pos_relations = []
+    neg_relations = []
+    for relat in relations:
+        if relat.type == 'none':
+            neg_relations.append(relat)
+        else:
+            pos_relations.append(relat)
 
-    for i, doc in enumerate(docs.values()):
-        for relation in doc.relations:
-            edge = relation.entity_types
-            entity_type1, entity_type2 = edge
-            # Add one to this edge
-            edges[edge] += 1
-            # Append this entity
-            entities.extend(edge)
-    entities = set(entities)
+    pos_size = len(pos_relations)
+    neg_sample_size = int(neg_prop * pos_size)
 
-    # Now add all edges that weren't seen
-    # These will have a value of 0
-    for entity in entities:
-        for other in entities:
-            edges[(entity, other)] += 0
-
-    with open('edge_counts.pkl', 'wb') as f:
-        pickle.dump(edges, f)
-
-    print("Saved edge counts")
-    return [x for x in edges.keys() if edges[x] >= thresh]
-
-def load_legal_edges(thresh=1):
-    """
-    Reads a pickled dictionary of edge counts.
-    Returns a list of edges with a count > thresh
-    """
-    with open('edge_counts.pkl', 'rb') as f:
-        edges = pickle.load(f)
-    print("Loaded legal edges")
-    return [x for x in edges.keys() if edges[x] >= thresh]
+    neg_sample = random.sample(neg_relations, neg_sample_size)
+    print("{} positive relations, {} negative relations".format(len(pos_relations),
+                len(neg_sample)))
+    return pos_relations + neg_sample
 
 
-def create_all_relations(docs, legal_edges):
-    """
-    Takes a dictionary of AnnotatedDocuments.
-    Returns a list of all possible relations between entity annotations in those documents.
-    These consist of either true relations that are found in RelationAnnotation objects
-    or in artifical, "negative" samples that were generated between two non-related entities.
-    """
-    relations = defaultdict(list)
-    for fname, doc in docs.items():
-        true_annotations = doc.get_annotations()
-        true_relations = doc.get_relations()
-        connected_annotations = defaultdict(list) # mapping of tuples (id, id): RelationAnnotation
-        # Map all annotation_1's to annotation_2's
-        # in order to identify all positive examples of relations
-        for relat in true_relations:
-            anno1, anno2 = relat.get_annotations()
-            connected_annotations[anno1.id].append(anno2.id)
-        # Now create negative relations between each anno and all other anno's
-        fake_relations = []
-        for anno in true_annotations:
-            for other_anno in true_annotations:
-                if anno.id == other_anno.id:
-                    continue
-                if (anno.type, other_anno.type) not in legal_edges:
-                    continue
-                elif other_anno.id not in connected_annotations[anno.id]:
-                    fake_relation = annotation.RelationAnnotation.from_null_rel(anno, other_anno)
-                    fake_relations.append(fake_relation)
 
 
-        for r in true_relations: # append doc so we can use it later
-            relations[r.type].append((r,doc))
-        for fr in fake_relations:
-            relations[fr.type].append((fr, doc))
-
-    return relations
-    print(relations); exit()
-    annos = doc.get_annotations()
 
 
 def main():
@@ -104,18 +49,25 @@ def main():
     # Load in legal edges
     legal_edges = load_legal_edges()
     # Now generate all possible relation annotations
-    all_possible_relations = create_all_relations(docs, legal_edges)
-    for rel_type in all_possible_relations.keys():
-        print("{}: {} relations".format(rel_type, len(all_possible_relations[rel_type])))
-    with open('generated_train.pkl', 'wb') as f:
-        pickle.dump(all_possible_relations, f)
-    print("Saved generated training examples")
+    #all_possible_relations = create_all_relations(docs, legal_edges)
+    all_relations = []
+    for fname, doc in docs.items():
+        all_relations.extend(pair_annotations_in_doc(doc, legal_edges))
+
+    #relation_types = defaultdict(int)
+    #for relat in all_relations:
+    #    relation_types[relat.type] += 1
+
+    sample_relats = sample_negative_examples(all_relations, neg_prop=1.0)
+
+    outpath = os.path.join(outdir, 'generated_train.pkl')
+    with open(outpath, 'wb') as f:
+        pickle.dump(sample_relats, f)
+    print("Saved {} training examples".format(len(sample_relats)))
 
 
 if __name__ == '__main__':
+    outdir = os.path.join('..', '..', 'data')
+    assert os.path.exists(outdir)
+    assert os.path.isdir(outdir)
     main()
-    exit()
-    #legal_edges = define_legal_edges()
-    legal_edges = load_legal_edges()
-    print(legal_edges)
-    #main()
