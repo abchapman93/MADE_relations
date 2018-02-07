@@ -1,4 +1,7 @@
 import bioc
+import made_utils
+import tokenizing
+from PyRuSH.RuSH import RuSH
 
 class BaseAnnotation(object):
     def __init__(self):
@@ -32,8 +35,9 @@ class EntityAnnotation(BaseAnnotation):
     Sets attributes to match that annotation.
     """
 
-    def __init__(self, bioc_anno):
+    def __init__(self, bioc_anno, file_name):
         super().__init__()
+        self.file_name = file_name
         self.id = -1
         self.from_bioc(bioc_anno)
 
@@ -58,8 +62,9 @@ class RelationAnnotation(BaseAnnotation):
     """
     Takes a bioc.Relation object and two connected bioc.Annotation objects.
     """
-    def __init__(self, bioc_rel, anno1, anno2, true_relation=True):
+    def __init__(self, bioc_rel, anno1, anno2, file_name, true_relation=True):
         super().__init__()
+        self.file_name = file_name
         self.id = -1
         self.true_relation = true_relation
         self.annotation_1 = anno1
@@ -72,14 +77,14 @@ class RelationAnnotation(BaseAnnotation):
             self.type = 'none'
 
     @classmethod
-    def from_bioc_rel(cls, bioc_rel, anno1, anno2):
+    def from_bioc_rel(cls, bioc_rel, anno1, anno2, file_name):
         # assert that the types are correct
         # these should be of bioc classes for now
         assert isinstance(bioc_rel, bioc.bioc_relation.BioCRelation)
         for anno in (anno1, anno2):
             assert isinstance(anno, EntityAnnotation)
 
-        return cls(bioc_rel, anno1, anno2, true_relation=True)
+        return cls(bioc_rel, anno1, anno2, file_name, true_relation=True)
 
     @classmethod
     def from_null_rel(cls, anno1, anno2):
@@ -142,12 +147,73 @@ class AnnotatedDocument(object):
 
         self.relations = [] # A list containg RelationAnnotation objects
         self.annotations = []
-        self.sentences = [] # Tokenized sentences
+        self._sentences = {} # Tokenized sentences, {offset: sentence}
+        self._tokens = {} # Tokenized words, {offset: token}
         # NOTE : This "positive_label" relates to positive/possible cases of pneumonia
         self.positive_label = -1
         self.tokenized_document = None
 
+        self.tokenize_document()
         self.connect_relation_pairs()
+
+
+    def create_relation(self, relation, bioc_annotation_1, bioc_annotation_2, true_relation=True):
+        """
+        Takes two bioc annotation node objects and true_relation,
+        a boolean that states whether this is a true relation or a
+        generated negative sample.
+        """
+        # convert into EntityAnnotations
+        annotation_1 = EntityAnnotation(bioc_annotation_1, self.file_name)
+        annotation_2 = EntityAnnotation(bioc_annotation_2, self.file_name)
+        relation_annotation = RelationAnnotation.from_bioc_rel(relation, annotation_1,
+                                        annotation_2, self.file_name)
+        return relation_annotation
+
+
+    def tokenize_document(self, doc_tokenizer=None):
+        if not doc_tokenizer:
+            doc_tokenizer = tokenizing.DocumentTokenizer()
+        tokenized_doc = doc_tokenizer.tokenize_doc(self.text)
+        for tokenized_sentence in tokenized_doc:
+            tokens, spans = zip(*tokenized_sentence)
+            idx = 0
+            sentence = []
+            offset = 0
+            for token, span in tokenized_sentence:
+                if idx == 0:
+                    offset = span[0] # offset of the entire sentence
+                self._tokens[span[0]] = token
+                sentence.append(token)
+
+            self._sentences[offset] = sentence
+
+    def get_text_at_span(self, span):
+        token_spans = sorted(self._tokens.items(), key=lambda x:x[0])
+        length = len(token_spans)
+        # First, get to the initial offset
+        offset = 0
+        while offset < span[0]:
+            offset, _= token_spans[1] # Look at the next span in the list
+            token_spans.pop(0)
+
+        # Now iterate through until we get to the end of the span
+        tokens = []
+        idx = 0
+        for offset, token in token_spans:
+            if offset >= span[1]:
+                break
+            tokens.append(token)
+        return tokens
+
+
+    def get_token_at_offset(self, offset):
+        if offset in self._tokens:
+            return self._tokens[offset]
+        else:
+            print(self.text[offset:offset+10])
+            raise ValueError("Something's not right.")
+
 
     def connect_relation_pairs(self):
         """
@@ -167,18 +233,6 @@ class AnnotatedDocument(object):
             self.annotations.extend([annotation_1, annotation_2])
             self.relations.append(relation_annotation)
 
-    def create_relation(self, relation, bioc_annotation_1, bioc_annotation_2, true_relation=True):
-        """
-        Takes two bioc annotation node objects and true_relation,
-        a boolean that states whether this is a true relation or a
-        generated negative sample.
-        """
-        # convert into EntityAnnotations
-        annotation_1 = EntityAnnotation(bioc_annotation_1)
-        annotation_2 = EntityAnnotation(bioc_annotation_2)
-        relation_annotation = RelationAnnotation.from_bioc_rel(relation, annotation_1,
-                                        annotation_2)
-        return relation_annotation
 
 
     def get_annotations(self):
@@ -192,3 +246,14 @@ class AnnotatedDocument(object):
     def __repr__(self):
         return "[{} annotations, {} relations]".format(len(self.annotations), len(self.relations))
         #return '[type=[{3} {1}:{2}]'.format(self.type, self.annotation_1.type, self.annotation_2.type,)
+
+if __name__ == '__main__':
+    reader = made_utils.TextAndBioCParser()
+    docs = reader.read_texts_and_xmls(1)
+    doc = list(docs.values())[0]
+    annos = doc.get_annotations()
+    for anno in annos:
+        print(anno)
+        print(doc.get_text_at_span(anno.span))
+
+    exit()

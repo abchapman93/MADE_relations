@@ -47,7 +47,8 @@ class TextAndBioCParser(object):
                 break
             file_name = os.path.basename(file_path)
             text, annotations, relations = self.read_text_and_xml(file_name)
-            annotated_docs[file_name] = annotation.AnnotatedDocument(file_name, text, annotations, relations)
+            annotated_docs[file_name] = annotation.AnnotatedDocument(file_name, text, annotations, relations,)
+
         return annotated_docs
 
     def read_text_and_xml(self, file_name):
