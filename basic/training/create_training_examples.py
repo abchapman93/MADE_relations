@@ -39,13 +39,31 @@ def sample_negative_examples(relations, neg_prop=1.0):
     return pos_relations + neg_sample
 
 
-
-
+def write_doc_debug(doc, outdir):
+    # For debugging, let's look in-depth at one tokenized document
+    outpath = os.path.join(outdir, 'annotated_document.txt')
+    with open(outpath, 'w') as f:
+        f.write(doc.file_name )
+        f.write('\n')
+        f.write(str(doc))
+        f.write('\n')
+        f.write(doc.text)
+        f.write('\n')
+        f.write("Sentences:")
+        for sent in doc.get_sentences():
+            f.write(str(sent))
+            f.write('\n')
+        f.write("Tokenized words:{}".format('\n'.join(doc.get_tokens())))
+        exit()
+        f.write('\n')
+        f.write('\n')
+        f.write("Tokenized words: {}".format(doc._tokens))
 
 
 def main():
     # First, read in data as a dictionary
     docs = made_utils.read_made_data()
+    doc = docs[list(docs.keys())[0]]
     # Load in legal edges
     legal_edges = load_legal_edges()
     # Now generate all possible relation annotations
@@ -65,6 +83,13 @@ def main():
         pickle.dump(sample_relats, f)
     print("Saved {} training examples".format(len(sample_relats)))
 
+    # Save the documents as well
+    outpath = os.path.join(outdir, 'annotated_documents.pkl')
+    with open(outpath, 'wb') as f:
+        pickle.dump(docs, f)
+    print("Saved {} documents at {}".format(len(docs), outpath))
+    with open(os.path.join(outdir, 'string_train.txt'), 'w') as f:
+        f.write('\n'.join([str(r) for r in random.sample(sample_relats, 100)]))
 
 if __name__ == '__main__':
     outdir = os.path.join('..', '..', 'data')

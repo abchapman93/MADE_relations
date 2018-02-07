@@ -40,6 +40,7 @@ class TextAndBioCParser(object):
         """
         annotated_docs = {} # {file_name: (text, [annotation_1, ..., annotation_n])}
         text_files = glob.glob(os.path.join(self.datadir, 'corpus', '*'))
+        num_failed=0
         for i, file_path in enumerate(text_files):
             if i % 100 == 0:
                 print("{}/{}".format(i, num_docs if num_docs != -1 else len(text_files)))
@@ -47,7 +48,11 @@ class TextAndBioCParser(object):
                 break
             file_name = os.path.basename(file_path)
             text, annotations, relations = self.read_text_and_xml(file_name)
-            annotated_docs[file_name] = annotation.AnnotatedDocument(file_name, text, annotations, relations,)
+            try:
+                annotated_docs[file_name] = annotation.AnnotatedDocument(file_name, text, annotations, relations,)
+            except Exception as e:
+                raise e
+                pass
 
         return annotated_docs
 

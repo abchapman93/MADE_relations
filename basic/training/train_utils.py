@@ -83,7 +83,7 @@ def pair_annotations_in_doc(doc, legal_edges=[]):
                 continue
             elif anno2.id not in edges[anno1.id]:
                 generated_relation = annotation.RelationAnnotation.from_null_rel(
-                    anno1, anno2
+                    anno1, anno2, doc.file_name
                 )
                 generated_relations.append(generated_relation)
     relations = true_relations + generated_relations

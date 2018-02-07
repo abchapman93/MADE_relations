@@ -1,7 +1,19 @@
 import bioc
+import re
 import made_utils
 import tokenizing
 from PyRuSH.RuSH import RuSH
+
+
+def min_preprocess(text):
+   """
+   Preprocessing to try and prevent errors in pyRuSH
+   TODO: Hopefully can figure out how to avoid this
+   """
+   text = re.sub('\*', '-', text)
+   text = re.sub('[\[\]\(\)]', '-', text)
+   text = re.sub('[\"]', '-', text)
+   return text
 
 class BaseAnnotation(object):
     def __init__(self):
@@ -87,11 +99,11 @@ class RelationAnnotation(BaseAnnotation):
         return cls(bioc_rel, anno1, anno2, file_name, true_relation=True)
 
     @classmethod
-    def from_null_rel(cls, anno1, anno2):
+    def from_null_rel(cls, anno1, anno2, file_name):
         """
         Creates a new, fake relation.
         """
-        return cls(None, anno1, anno2, true_relation=True)
+        return cls(None, anno1, anno2, file_name, true_relation=True)
 
 
         self.id = bioc_rel.id
@@ -141,7 +153,8 @@ class RelationAnnotation(BaseAnnotation):
 class AnnotatedDocument(object):
     def __init__(self, file_name, text, annotations, relations):
         self.file_name = file_name
-        self.text = text
+        #self.text = text
+        self.text = min_preprocess(text)
         self.bioc_annotations = annotations # a dictionary mapping annotation id's to bioc.Annotation objects
         self.bioc_relations = relations # a dictionary mapping relation id's to bioc.Relation objects
 
@@ -155,6 +168,8 @@ class AnnotatedDocument(object):
 
         self.tokenize_document()
         self.connect_relation_pairs()
+
+
 
 
     def create_relation(self, relation, bioc_annotation_1, bioc_annotation_2, true_relation=True):
@@ -233,6 +248,17 @@ class AnnotatedDocument(object):
             self.annotations.extend([annotation_1, annotation_2])
             self.relations.append(relation_annotation)
 
+    def get_sentences(self):
+        """
+        Returns the sentences as a list of lists of words
+        """
+        return [tokens for (offset, tokens) in sorted(self._sentences.items(), key=lambda x:x[0])]
+
+    def get_tokens(self):
+        """
+        Returns the tokens as a list of words
+        """
+        return [token for (offset, token) in sorted(self._tokens.items(), key=lambda x:x[0])]
 
 
     def get_annotations(self):
