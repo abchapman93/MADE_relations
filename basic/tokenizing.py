@@ -81,6 +81,7 @@ class ClinicalRushSentenceTokenizer(object):
         sent_spans = [(s.begin, s.end) for s in sent_spans]
         return sent_spans
 
+
 class DefaultSentenceTokenizer(object):
     def __init__(self):
         self.tokenizer = PunktSentenceTokenizer()

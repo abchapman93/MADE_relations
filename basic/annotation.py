@@ -122,6 +122,10 @@ class RelationAnnotation(BaseAnnotation):
         """
         return [self.annotation_1, self.annotation_2]
 
+    def get_span(self):
+        spans = self.annotation_1.span + self.annotation_2.span
+        return (min(spans), max(spans))
+
     @classmethod
     def create_relation(cls, bioc_anno1, bioc_anno2):
         return cls()
@@ -151,7 +155,7 @@ class RelationAnnotation(BaseAnnotation):
 # this class encapsulates all data for a document which has been annotated_doc_map
 # this includes the original text, its annotations and its tokenized self
 class AnnotatedDocument(object):
-    def __init__(self, file_name, text, annotations, relations):
+    def __init__(self, file_name, text, annotations={}, relations={}):
         self.file_name = file_name
         #self.text = text
         self.text = min_preprocess(text)
@@ -194,14 +198,12 @@ class AnnotatedDocument(object):
             tokens, spans = zip(*tokenized_sentence)
             idx = 0
             sentence = []
-            offset = 0
+            offset = spans[0][0] # Beginning offset of the sentence
             for token, span in tokenized_sentence:
-                if idx == 0:
-                    offset = span[0] # offset of the entire sentence
                 self._tokens[span[0]] = token
                 sentence.append(token)
-
             self._sentences[offset] = sentence
+
 
     def get_text_at_span(self, span):
         token_spans = sorted(self._tokens.items(), key=lambda x:x[0])
@@ -221,12 +223,111 @@ class AnnotatedDocument(object):
             tokens.append(token)
         return tokens
 
+    def get_tokens_before_or_after(self, offset, delta=-1, n=1):
+        """
+        Returns a list of all tokens that occur before or after offset up to n.
+        Delta should be either 1 or -1 and defines whether to go forwards or backwards.
+        If it reaches the beginning of a sentence, returns <PHI>.
+        If it reaches the end, returns <OMEGA>
+        """
+        tokens = []
+        if delta == -1:
+            offset += delta # Step backwards/forwards until we find a new token
+        while len(tokens) < n:
+            if offset in self._sentences: # this means it's the start of a new sentence
+                if delta == -1: # If this ist the beginning, we want to include this
+                    tokens.append(self._tokens[offset])
+                for diff in range(n - len(tokens)): # Add PHI as many times as necessary
+                    to_append = '<PHI>' if delta == -1 else '<OMEGA>'
+                    tokens.append(to_append)
+                break
+            elif offset in self._tokens: # This means we've found a new token
+                tokens.append(self._tokens[offset])
+                offset += delta
+            else:
+                offset += delta
+        if delta == -1:
+            return list(reversed(tokens))
+        else:
+            return tokens
+
+
+    def in_same_sentence(self, span):
+        """
+        Checks whether a relation entity is within a single sentence.
+        """
+        start, end = span
+        idx = start
+        while idx < end:
+            if idx in self._sentences: # If the current idx is a key in the sentence spans, it marks a new sentence
+                return 1
+            idx += 1
+        return 0
+
+    def get_sentences_overlap_span(self, span):
+        """
+        Iterates through the sentences and returns a list of sentences that OVERLAP
+        with span.
+        """
+        to_return = []
+        offset, end = span
+
+        # first find the beginning of the current sentences
+        if offset not in self._sentences:
+            offsets = sorted([v for v in self._sentences.keys() if v < offset],
+                            key=lambda v: offset-v)
+            begin_offset = offsets[0]
+        while offset not in self._sentences:
+            if offset <= 0:
+                break
+            offset -= 1
+        to_return.append(self._sentences[offset])
+        # Now go back to the first offset and find the next sentence
+        offset = span[0] + 1
+        while offset < end:
+            if offset in self._sentences:
+                to_return.append(self._sentences[offset])
+                break
+            else:
+                offset += 1
+
+            if offset > len(self.text):
+                break
+
+        return to_return
+
+
+    def wrong_get_sentences_in_span(self, span):
+        """
+        Iterates through the sentences and returns the lists of tokens up to span
+        """
+        sent_spans = sorted(self._sentences.items(), key=lambda x:x[0])
+        # TODO: Use a faster search algorithm if you have to
+        offset = 0
+        while offset < span[0]:
+            offset, _ = sent_spans[0]
+            sent_spans.pop(0)
+
+        # Now iterate through to the end of span
+        sents = []
+        idx = 0
+        partial_sents = []
+        for i in sent_spans:
+        #for offset, sent in sent_spans:
+            # If the next offset is larger, only append part of it
+            offset = sent_spans[i][0]
+            next_offset = sent_spans[i + 1][0]
+            if next_offset >= span[1]:
+                partial_sent = get_text_at_span()
+                break
+            sents.append(sent)
+
+
 
     def get_token_at_offset(self, offset):
         if offset in self._tokens:
             return self._tokens[offset]
         else:
-            print(self.text[offset:offset+10])
             raise ValueError("Something's not right.")
 
 

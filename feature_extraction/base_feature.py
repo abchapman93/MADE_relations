@@ -1,4 +1,4 @@
-class FeatureExtractor(object):
+class BaseFeatureExtractor(object):
     def __init__(self):
         pass
 
