@@ -1,199 +1,199 @@
- not much change. He continues to have <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>low back pain</SSLIF></SEVERITY_TYPE> , about 6/10. He does have fatigue. He
+NOSIS: Follicular B cell lymphoma with <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>peripheral lymphadenopathy</SSLIF></SEVERITY_TYPE> , which has been a problem throughout hi
 
-cond heart sounds are preserved with no <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>murmurs</SSLIF></SEVERITY_TYPE> , rubs or gallops.  ABDOMEN: Nontender
-
-MS His dominant medical comorbidity is <SEVERITY_TYPE><SEVERITY>end-stage</SEVERITY> <SSLIF>renal disease</SSLIF></SEVERITY_TYPE>  and he is on home peritoneal dialysis. 
-
-bone marrow and spleen. He does have a <SEVERITY_TYPE><SEVERITY>significant</SEVERITY>  <SSLIF>paraprotein</SSLIF></SEVERITY_TYPE> , which has been extremely difficult to 
-
-pitalization. He does have significant <SEVERITY_TYPE><SSLIF>musculoskeletal pain now in the left hip</SSLIF> about <SEVERITY>8/10</SEVERITY></SEVERITY_TYPE> . He denies any skin rash. He denies a
-
-] is a 52-year-old male with history of <SEVERITY_TYPE><INDICATION>non-Hodgkin's lymphoma, subtype mixed follicular and large B cell lymphoma involving T10 spine</INDICATION>, <SEVERITY>stage IAE</SEVERITY></SEVERITY_TYPE>  diagnosed in [** Date **]. He is curre
-
-ny new skin rashes. He does have about <SEVERITY_TYPE><SEVERITY>3/10</SEVERITY> <SSLIF>pain</SSLIF></SEVERITY_TYPE> .   FAMILY HISTORY: Negative for mul
-
-[** Name **] is a 52-year-old male with <SEVERITY_TYPE><INDICATION>non-Hodgkin's lymphoma, subtype mixed follicular and large B cell, involving T10 spine</INDICATION>, <SEVERITY>stage IAE</SEVERITY></SEVERITY_TYPE>  diagnosed in [** Date **]. He is curre
-
-N:  1. Right THR, [** Date **].  2. <SEVERITY_TYPE><SEVERITY>Advanced</SEVERITY> <SSLIF>OA</SSLIF></SEVERITY_TYPE> , left hip.  3. Lumbar spine disease w
-
-he past  10 days to 2 weeks he has had <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>interscapular back pain</SSLIF></SEVERITY_TYPE> .  Magnetic resonance imaging examinati
-
-esolved.  3. History of asthma.  4. <SEVERITY_TYPE><SEVERITY>Mild</SEVERITY> <ADE>thrombocytopenia</ADE></SEVERITY_TYPE>  and intermittent leukopenia secondary t
-
- O2 saturation 97% on room air. He has <SEVERITY_TYPE><SEVERITY>obvious</SEVERITY> <SSLIF>swelling of his face</SSLIF></SEVERITY_TYPE>  and marked edema of both upper extremit
-
-a-2 microglobulin is normal at 1.30. A <SEVERITY_TYPE><SSLIF>serum protein \nelectrophoresis shows a very small M-spike</SSLIF><SEVERITY>very small</SEVERITY></SEVERITY_TYPE>  which is the original IgM  paraprotein
-
-vel.   ASSESSMENT:  1. Status post <SEVERITY_TYPE><SEVERITY>stage III</SEVERITY> <INDICATION>Burkitt lymphoma</INDICATION></SEVERITY_TYPE>  in continuous complete remission.  2. 
-
- 77-year-old male with hypertension and <SEVERITY_TYPE><SEVERITY>stage III</SEVERITY> <SSLIF>chronic kidney disease</SSLIF></SEVERITY_TYPE> . He was diagnosed with hypertension ab
-
-   About a month ago, she experienced <SEVERITY_TYPE><SEVERITY>severe</SEVERITY> <INDICATION>aching of bones and muscles from \nher shoulders to her knees</INDICATION></SEVERITY_TYPE>  and her primary care physician, Dr. [**
-
-ich is clean, dry and intact. There is <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>edema</SSLIF></SEVERITY_TYPE> .   LABORATORY DATA: The most recent
-
-own glucose intolerance. He denies any <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>skin rashes</SSLIF></SEVERITY_TYPE>  currently. He does have significant lo
-
-ed gentleman sitting up in the chair in <SEVERITY_TYPE><SEVERITY>moderate</SEVERITY> <SSLIF>distress</SSLIF></SEVERITY_TYPE>  from  mild low back pain and restless.
-
-stem cell transplant 92 days ago.  2. <SEVERITY_TYPE><SEVERITY>Mild</SEVERITY> <SSLIF>pancytopenia</SSLIF></SEVERITY_TYPE> , probably immune based.  3. Neuropath
-
-ll to antibiotics.   The patient has <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE> . I am concerned that this is  seconda
-
-mily history was noncontributory and no <SEVERITY_TYPE><SEVERITY>excessive</SEVERITY> <SSLIF>swelling</SSLIF></SEVERITY_TYPE>  was noted.     Attending: [** Name 
-
-f the house. He is also complaining of <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>sharp right-sided chest pain</SSLIF></SEVERITY_TYPE> . He says it hurts when he takes a brea
-
-out abnormal lymphoid tissue. He has a <SEVERITY_TYPE><SEVERITY>5 x 3 cm</SEVERITY> hard <SSLIF>lobulated nodal mass in the left supraclavicular fossa</SSLIF></SEVERITY_TYPE>  and a 3 x 3 cm hard nodal mass in the r
-
- be inadequate RV filling pressures and <SEVERITY_TYPE><SEVERITY>severe</SEVERITY> progressive <SSLIF>pulmonary hypertension</SSLIF></SEVERITY_TYPE> . The patient on admit this time for an
-
-esolved.  3. History of asthma.  4. <SEVERITY_TYPE><SEVERITY>Mild</SEVERITY> <ADE>thrombocytopenia</ADE></SEVERITY_TYPE>  and intermittent leukopenia secondary t
-
-*]. He received 1 cycle, but it caused <SEVERITY_TYPE><SEVERITY>profound</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE>  and this was not repeated.   ADDITIO
-
-ma.   ROS: Energy is still a 6/10. <SEVERITY_TYPE><SSLIF>Weight is up 11 pounds since June</SSLIF><SEVERITY>11 pounds</SEVERITY></SEVERITY_TYPE> * Date **]and though this may be partial
-
-She denied any fever. She also has  a <SEVERITY_TYPE><SEVERITY>very</SEVERITY> <SSLIF>poor energy level</SSLIF></SEVERITY_TYPE> . Her appetite has been so-so. [** Nam
-
- crackles at the bases bilaterally with <SEVERITY_TYPE><SEVERITY>significant</SEVERITY>  <SSLIF>diminished breath sounds</SSLIF></SEVERITY_TYPE>  on the right side about 2/3 up. The le
-
-n: fading redness on his right leg with <SEVERITY_TYPE><SEVERITY>minimal</SEVERITY> <SSLIF>edema</SSLIF></SEVERITY_TYPE> .  5). GI: no dysphagia, no nausea, no 
-
-d heart sounds are preserved. He has a <SEVERITY_TYPE><SEVERITY>soft</SEVERITY> <SSLIF>early systolic murmur relegated to the left lower sternal border</SSLIF></SEVERITY_TYPE> . No rubs, gallops, clicks or diastolic
-
-ed. Curvature of the spine, there is a <SEVERITY_TYPE><SEVERITY>pinhole</SEVERITY> <SSLIF>opening</SSLIF></SEVERITY_TYPE>  which tracks in approximately 2 mm in t
-
-t met.   NEW SHORT-TERM GOALS:  1. <SEVERITY_TYPE><SSLIF>Pain</SSLIF> decreased to <SEVERITY>6/10</SEVERITY></SEVERITY_TYPE>  restated.  2. Range of motion, contin
-
-o new significant complaints except for <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>mouth pain</SSLIF></SEVERITY_TYPE> , which he feels is secondary to a denta
-
-al, S2 normal, regular rate and rhythm, <SEVERITY_TYPE><SSLIF>systolic murmur grade III/VI at the base</SSLIF><SEVERITY>grade III/VI</SEVERITY></SEVERITY_TYPE> , holosystolic. Pulses normal.  CHEST 
-
-notherapy in [** Date **], which caused <SEVERITY_TYPE><SEVERITY>profound</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE>  and he had no more after 1 cycle.   
-
-en an MDS related clones of 20q-.  2. <SEVERITY_TYPE><SEVERITY>Mild</SEVERITY> <SSLIF>pancytopenia</SSLIF></SEVERITY_TYPE>  and thrombocytopenia present since [** 
-
-. Graft versus host disease. He has a <SEVERITY_TYPE><SEVERITY>faint</SEVERITY> <SSLIF>skin rash</SSLIF></SEVERITY_TYPE> , which could be engraftment syndrome an
-
-pate a liver or spleen.  EXTREMITIES: <SEVERITY_TYPE><SEVERITY>Trace</SEVERITY> <SSLIF>peripheral edema</SSLIF></SEVERITY_TYPE> . The patient has a full length  compr
-
-** Name **] looks pale. He has a large <SEVERITY_TYPE><SSLIF>neck mass</SSLIF> <SEVERITY>greater than 10 cm</SEVERITY></SEVERITY_TYPE>  encompassing behind the left auricula e
-
-ediastinal mass and CT scan confirmed a <SEVERITY_TYPE><SEVERITY>7 x 9 cm</SEVERITY>  <SSLIF>mass</SSLIF></SEVERITY_TYPE>  sitting in the anterior mediastinum [**
-
-d.  CV: RRR, nl S1, S2, M/R/G  Pulm: <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>crackles</SSLIF></SEVERITY_TYPE>  in LLL  Abd: S/NT/ND, +BS  Ext: edem
-
- as the nasal region. There is a small <SEVERITY_TYPE><SSLIF>scab over the left bridge of the nose</SSLIF> measuring approximately <SEVERITY>0.5 cm in diameter</SEVERITY></SEVERITY_TYPE> . There is no evidence of acute infecti
-
-ce. He continues to have significant  <SEVERITY_TYPE><INDICATION>back pain</INDICATION> about <SEVERITY>4-7/10</SEVERITY></SEVERITY_TYPE> , depending he has taken pain medication
-
-g mucosa  covering the entire cavity. <SEVERITY_TYPE><SEVERITY>Minimal</SEVERITY> <SSLIF>mucusy discharge is noted on the right \nside</SSLIF></SEVERITY_TYPE> . Choanae are clear bilaterally. Super
-
-      CLINIC NOTE   DIAGNOSIS: <SEVERITY_TYPE><SEVERITY>Stage II</SEVERITY> <SSLIF>follicular small cleaved lymphocytic lymphoma, B cell,</SSLIF></SEVERITY_TYPE>   diagnosed [** Date **]; the patient's
-
-, Then [** Date **] she noticed  some <SEVERITY_TYPE><SSLIF>chest tightness 5/10, radiating to the throat</SSLIF><SEVERITY>5/10</SEVERITY></SEVERITY_TYPE> . It was associated with  lightheadedne
-
- 2.)  Leukocytosis On CXR, there was <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> increased <SSLIF>opacity in the left \nretrocardiac space</SSLIF></SEVERITY_TYPE>  which may represent developing atelecta
-
-o cervical lymphadenopathy. There is a <SEVERITY_TYPE><SEVERITY>3 cm</SEVERITY>  <SSLIF>medial right supraclavicular lymph node</SSLIF></SEVERITY_TYPE> , and there are multiple 1 cm  bilatera
-
-e pain in the impingement arc. She has <SEVERITY_TYPE><SEVERITY>4/5</SEVERITY> <SSLIF>strength to resisted \nabduction</SSLIF></SEVERITY_TYPE> and 4+/5 strength to resisted external r
-
-teral thigh, and right buttock. On the <SEVERITY_TYPE><SSLIF>left medial thigh, there is a 4 mm macular globular nevus</SSLIF><SEVERITY>4 mm</SEVERITY></SEVERITY_TYPE>  with slightly increased eccentric pigme
-
-ate **]. He was initially admitted for <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE>  and developed Salmonella sepsis with ne
-
-terally.  Back: Full range of motion, <SEVERITY_TYPE><SEVERITY>very mild</SEVERITY> <SSLIF>spinal curvature</SSLIF></SEVERITY_TYPE> . Abdomen: Soft, nontender and nondist
-
-erum protein electrophoresis reveals an <SEVERITY_TYPE><SSLIF>M-spike that has risen</SSLIF> <SEVERITY>slightly</SEVERITY></SEVERITY_TYPE>  to 4000, but is basically stable.   
-
- EXAMINATION: He is a pleasant male in <SEVERITY_TYPE><SEVERITY>obvious</SEVERITY> <SSLIF>agony</SSLIF></SEVERITY_TYPE>  with the  following vital signs: Heig
-
-ion in early [** Date **]. He has also <SEVERITY_TYPE><SSLIF>gained a lot of weight</SSLIF><SEVERITY>a lot</SEVERITY></SEVERITY_TYPE>  over the past 6 months. This is prevent
-
-es have dyspnea on  exertion. She has <SEVERITY_TYPE><SEVERITY>some</SEVERITY> degree of <SSLIF>air hunger</SSLIF></SEVERITY_TYPE> , although her pulse oximetry is  reaso
-
-m concerned that [** Name **] is in the <SEVERITY_TYPE><SEVERITY>early stages</SEVERITY> of developing an <SSLIF>eating disorder</SSLIF></SEVERITY_TYPE> . She was counseled on the many negativ
-
-probably secondary to problem #1  with <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>pain</SSLIF></SEVERITY_TYPE> . He is status post kyphoplasty in [** 
-
- CARDIOVASCULAR: Regular rhythm with a <SEVERITY_TYPE><SEVERITY>grade II/VI</SEVERITY> <SSLIF>systolic ejection murmur</SSLIF></SEVERITY_TYPE> . ABDOMEN: Soft, no hepatosplenomegaly,
-
- lumbar area. The MRI did not show any <SEVERITY_TYPE><SEVERITY>significant</SEVERITY>  <SSLIF>abnormality involving the lumbar area</SSLIF></SEVERITY_TYPE> , so whether there is retroperitoneal 
-
-nt insurance. He says that he has 4/10 <SEVERITY_TYPE><SSLIF>back pain</SSLIF>, which is especially <SEVERITY>severe</SEVERITY></SEVERITY_TYPE>  when he stands for long periods of time
-
-** Date **]. This is associated with a <SEVERITY_TYPE><SEVERITY>large</SEVERITY> <SSLIF>monoclonal \nIgG kappa paraprotein</SSLIF></SEVERITY_TYPE> , which had been worsening over the year
-
- a 53-year-old male with a history of a <SEVERITY_TYPE><INDICATION>non-Hodgkin lymphoma</INDICATION>, a <SEVERITY>stage IAe</SEVERITY></SEVERITY_TYPE> , who is receiving maintenance rituximab
-
-moved with Hartmann forceps. There was <SEVERITY_TYPE><SEVERITY>moderate amount</SEVERITY> of <SSLIF>yellowish soupy material</SSLIF></SEVERITY_TYPE>  underneath the scabs which were suction
-
-* Date **]. With 1 cycle, he developed <SEVERITY_TYPE><SEVERITY>profound</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE>  and has not had any further therapy wit
-
-me **] is a 19-year-old with history of <SEVERITY_TYPE><SEVERITY>stage III</SEVERITY> <SSLIF>Burkitt's lymphoma</SSLIF></SEVERITY_TYPE>  who comes to Pediatric Oncology Survivo
-
-h.  5. History of hypothyroidism, his <SEVERITY_TYPE><SSLIF>TSH level is slightly low</SSLIF><SEVERITY>slightly</SEVERITY></SEVERITY_TYPE> . He is only taking gabapentin at 125 m
-
-    CLINIC NOTE     DIAGNOSIS: <SEVERITY_TYPE><SEVERITY>Stage II</SEVERITY> <SSLIF>follicular small cleaved lymphocytic lymphoma</SSLIF></SEVERITY_TYPE> ,  intermediate grade, diagnosed [** Da
-
-CUTE ONSET OF  SHORTNESS OF BREATH AND <SEVERITY_TYPE><SEVERITY>MILD</SEVERITY> <SSLIF>DYSPHAGIA</SSLIF></SEVERITY_TYPE> . PT RECEIVED A CHEST XRAY AND CT OF  T
-
- He needs a cane to walk. He also has <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> intermittent <SSLIF>back pain</SSLIF></SEVERITY_TYPE> . His skin rash is improved.   FAMIL
-
-nt is quite hard of hearing and appears <SEVERITY_TYPE><SEVERITY>a bit</SEVERITY> <SSLIF>frail</SSLIF></SEVERITY_TYPE> . VITAL SIGNS: Her weight is up 3 kg to
-
-maxillary  sinus was entered through a <SEVERITY_TYPE><SEVERITY>large amount</SEVERITY> of <SSLIF>inflamed granular tissue</SSLIF></SEVERITY_TYPE> . There  was exposed bone involving th
-
-No menorrhagia. LMP ending currently. <SEVERITY_TYPE><SEVERITY>Mild</SEVERITY> <SSLIF>dysmenorrhea</SSLIF></SEVERITY_TYPE> .  FAMILY HISTORY: HTN and hyperchole
-
-*] when he initially was admitted for  <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE>  and then developed salmonella sepsis wi
-
- debridement. The patient did develop <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <ADE>bleeding from the wound</ADE></SEVERITY_TYPE>   on [** Date **]. The patient was on 
-
-d lymphoma with IgG kappa M-spike. His <SEVERITY_TYPE><SSLIF>IgG level is very elevated</SSLIF><SEVERITY>very</SEVERITY></SEVERITY_TYPE> , but is stable. [** Name **] has not h
-
- in the forearm and hand. He has still <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>facial fullness</SSLIF></SEVERITY_TYPE> . He denies any coughing or shortness o
-
-ne in [** Date **] which rendered him  <SEVERITY_TYPE><SEVERITY>profoundly</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE>  and this has not been repeated.   AD
-
-IAGNOSES  Problem List: 1) ckd (585.5 <SEVERITY_TYPE><SSLIF>CHRONIC KIDNEY DISEASE</SSLIF> <SEVERITY>STAGE 5</SEVERITY></SEVERITY_TYPE> )  Last Modified: [** Date **]  2) an
-
-e biopsy was done and was found to be a <SEVERITY_TYPE><SEVERITY>low-grade</SEVERITY> <SSLIF>follicular lymphoma</SSLIF></SEVERITY_TYPE> .  d. Recent bone marrow aspirate and 
-
-mall left pleural effusion as well as a <SEVERITY_TYPE><SEVERITY>small</SEVERITY> <SSLIF>loculated pleural effusion</SSLIF></SEVERITY_TYPE>   along the left major fissure noted. 
-
-BMI was 21.7. HEENT: Oropharynx had a <SEVERITY_TYPE><SEVERITY>small</SEVERITY> <SSLIF>white exudate on her tongue</SSLIF></SEVERITY_TYPE> , but no other lesions or exudates were 
-
-rge amount of pericardial effusion with <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>diastolic RV \ncollapse</SSLIF></SEVERITY_TYPE>  and an RA collapse of more than 50% wit
-
-e poorly. She says she is again having <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE> . She is in a wheelchair and has a brac
-
-redominantly on the left.  He also had <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>bilateral pedal edema</SSLIF></SEVERITY_TYPE> . An operation was performed for what 
-
- is stable. MCV is 98.9. BUN is 15 and <SEVERITY_TYPE><SSLIF>creatinine is 1.22, which is increased</SSLIF> <SEVERITY>slightly</SEVERITY></SEVERITY_TYPE> . AST is 41, ALT is 37. An LDH has incr
+xam. The patient does have evidence of <SEVERITY_TYPE><SEVERITY>mild-to-moderate</SEVERITY> <SSLIF>cough</SSLIF></SEVERITY_TYPE>   with greenish yellow sputum but whete
 
 t to increase it because he already has <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <ADE>peripheral neuropathy</ADE></SEVERITY_TYPE>  and I do not want to make it worse as h
 
-ata of graft versus host disease.  4. <SEVERITY_TYPE><SEVERITY>Mild</SEVERITY> <INDICATION>neuropathy</INDICATION></SEVERITY_TYPE> : he will continue on gabapentin   5. 
+is left upper extremity as well. He is <SEVERITY_TYPE><SEVERITY>a little</SEVERITY> <SSLIF>lethargic</SSLIF></SEVERITY_TYPE>  and out of focus. His weight is 57.9 k
 
- x1 cycle in [** Date **], which caused <SEVERITY_TYPE><SEVERITY>profound</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE> , which was discontinued.   ADDITIONA
+uation of his finger, which developed a <SEVERITY_TYPE><SEVERITY>very</SEVERITY> <SSLIF>painful pustular collection underneath the end of the nail</SSLIF></SEVERITY_TYPE>  about 3 days ago. It is his left fifth
 
- or his diet. He  noticed that he has <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>leg swelling</SSLIF></SEVERITY_TYPE> . He also complains of cold  intoleran
+      CLINIC NOTE   DIAGNOSIS: <SEVERITY_TYPE><SEVERITY>Stage II</SEVERITY> <SSLIF>follicular small cleaved lymphocytic lymphoma, B cell</SSLIF></SEVERITY_TYPE> , diagnosed in --- Date ---. The patien
 
-ages and this is notable for  a large, <SEVERITY_TYPE><SEVERITY>9 x 7 cm</SEVERITY>, <SSLIF>anterior mediastinal mass</SSLIF></SEVERITY_TYPE> . There is a suggestion of  possible n
+men and left upper quadrant. There was <SEVERITY_TYPE><SEVERITY>some</SEVERITY>  <SSLIF>free blood</SSLIF></SEVERITY_TYPE>  around it which was quite fresh. We lo
 
-abnormal lymphoid tissue. There is  a <SEVERITY_TYPE><SEVERITY>2.5 cm</SEVERITY> <SSLIF>hard, fixed node medially in the left supraclavicular fossa</SSLIF></SEVERITY_TYPE>  and  there is a pair of 2 cm right sup
+s post  chemotherapy  Hypercalcemia  <SEVERITY_TYPE><SSLIF>Chronic renal insufficiency</SSLIF>. <SEVERITY>stage 4 -5</SEVERITY></SEVERITY_TYPE>   - - - - -  CARDIAC HISTORY  - - - -
 
-e received 1 cycle, but it rendered him <SEVERITY_TYPE><SEVERITY>profoundly</SEVERITY> <ADE>pancytopenic</ADE></SEVERITY_TYPE>  and this was not repeated.   ADDITIO
+hat at this time.   3. Hyperlipidemia/<SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <INDICATION>hypertriglyceridemia</INDICATION></SEVERITY_TYPE> . Discussed the results with him. Cont
 
-cult for him to get up there and causes <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>pain</SSLIF></SEVERITY_TYPE> .  Extremities: Revealed no edema on t
+ler: There was no stenosis. There was  <SEVERITY_TYPE><SEVERITY>trace</SEVERITY> <SSLIF>regurgitation</SSLIF></SEVERITY_TYPE> .   Pericardium: There was no pericar
 
-tenderness around  the T10-L1 region. <SEVERITY_TYPE><SEVERITY>Extensive</SEVERITY> <SSLIF>paraspinal tenderness</SSLIF></SEVERITY_TYPE> , more on the right side  compared to t
+e. Unfortunately, he does have chronic <SEVERITY_TYPE><SSLIF>back pain</SSLIF> about <SEVERITY>3-4/10</SEVERITY></SEVERITY_TYPE> , which does limit his activity. He doe
 
-scular exam: Regular rhythm. There is <SEVERITY_TYPE><SEVERITY>grade 2/6</SEVERITY>  <SSLIF>systolic ejection murmur</SSLIF></SEVERITY_TYPE>  which I had not heard in the past. Abd
+phoid tissue. There is persistence of a <SEVERITY_TYPE><SEVERITY>7 x 4 cm</SEVERITY> <SSLIF>left supraclavicular nodal mass</SSLIF></SEVERITY_TYPE> . There is a 3 x 4 cm right supraclavic
 
-OVASCULAR: Rapid regular rhythm with a <SEVERITY_TYPE><SEVERITY>grade 2/6</SEVERITY> <SSLIF>systolic ejection murmur</SSLIF></SEVERITY_TYPE> .  ABDOMEN: Soft. He has difficulty g
+ Subsequently, he developed significant <SEVERITY_TYPE><SEVERITY>excruciating</SEVERITY> <SSLIF>pain</SSLIF></SEVERITY_TYPE>  and was  hospitalized for at least fiv
 
-en he received Neulasta, he experienced <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <INDICATION>bony aches</INDICATION></SEVERITY_TYPE>  and pains of the lower back which he ca
+isk prolapse with spondylolisthesis and <SEVERITY_TYPE><SEVERITY>moderate</SEVERITY> <SSLIF>foraminal stenosis</SSLIF></SEVERITY_TYPE> . He continues to have back pain and is
+
+h nodes. There is a relatively large  <SEVERITY_TYPE><SSLIF>lobular indeterminate attenuation mass at the right cardiophrenic angle</SSLIF>  measuring <SEVERITY>7.5 x 6.5 cm</SEVERITY></SEVERITY_TYPE>  suspicious for conglomerate lymphadenop
+
+, but it appears to be from description <SEVERITY_TYPE><SSLIF>nasal NK T-cell lymphoma</SSLIF>. He was classified as <SEVERITY>stage I</SEVERITY></SEVERITY_TYPE>  and at that time, according to the pati
+
+no acute distress. The left nostril has <SEVERITY_TYPE><SEVERITY>large amount</SEVERITY> of sticky <SSLIF>scabs adherent to the remaining portions of his sinuses</SSLIF></SEVERITY_TYPE> . Some of these were removed with force
+
+h extremities. There is no erythema.  <SEVERITY_TYPE><SEVERITY>Some</SEVERITY> <SSLIF>chronic venous changes of the skin</SSLIF></SEVERITY_TYPE> . No indication of infections or  ulce
+
+s to have low-grade fever up to 99. No <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>shortness of breath</SSLIF></SEVERITY_TYPE> , whitish phlegm. The antibiotic has no
+
+ashes, no ecchymosis.  LYMPHATICS: No <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>cervical or inguinal adenopathy</SSLIF></SEVERITY_TYPE> .  NECK: No masses.  HEENT: Nasogast
+
+called as pin-like symptoms. He became <SEVERITY_TYPE><SEVERITY>quite</SEVERITY> <SSLIF>nervous</SSLIF></SEVERITY_TYPE> , but had taken Aleve in all those sympt
+
+ted for salmonella sepsis presenting as <SEVERITY_TYPE><SEVERITY>excruciating</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE>  and then developed necrotizing fasciiti
+
+se.   Other major medical problem is <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>renal insufficiency</SSLIF></SEVERITY_TYPE>  with waxing and  waning hypercalcemia 
+
+.   LABORATORY DATA: CBC revealed a <SEVERITY_TYPE><SSLIF>white blood cell count</SSLIF> of 7700, which is very <SEVERITY>high</SEVERITY></SEVERITY_TYPE>  for him, with 87.5 polys, 4.1 lymphs, 7
+
+Aortic valve: The valve was trileaflet. <SEVERITY_TYPE><SSLIF>Leaflets exhibited mildly to moderately \nincreased thickness</SSLIF><SEVERITY>mildly to moderately</SEVERITY></SEVERITY_TYPE>  and mild calcification. Doppler: There 
+
+- Date ---. With 1 cycle, he developed <SEVERITY_TYPE><SEVERITY>profound</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE>  and this has not been repeated.   AD
+
+mpression of L3, to a lesser extent L4, <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>levoscoliosis</SSLIF></SEVERITY_TYPE> , diffuse degenerative changes, no high-
+
+ted for Salmonella sepsis presenting as <SEVERITY_TYPE><SEVERITY>excruciating</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE> . He then developed necrotizing fasciit
+
+--- by  calling --- Hospital ---. The <SEVERITY_TYPE><SSLIF>wound</SSLIF> is <SEVERITY>4 cm x 5 cm x 1 cm</SEVERITY></SEVERITY_TYPE>  in size.  4. The --- Hospital --- is 
+
+tein is 6.8 with an albumin of 4.6. An <SEVERITY_TYPE><SSLIF>IgM level continues to be very low</SSLIF><SEVERITY>very</SEVERITY></SEVERITY_TYPE>  at 18. Free kappa light chains are 22.
+
+udarabine in --- Date ---, which caused <SEVERITY_TYPE><SEVERITY>profound</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE>  and was discontinued.   ADDITIONAL M
+
+dition, namely that she is experiencing <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>leg edema</SSLIF></SEVERITY_TYPE> , which appears mid to late in the day a
+
+ame --- is an 82-year-old female with a <SEVERITY_TYPE><SEVERITY>stage II</SEVERITY> <SSLIF>follicular small cleaved lymphocytic lymphoma, B cell</SSLIF></SEVERITY_TYPE> , who continues to be in remission.  2.
+
+icular lymphadenopathy.  SPINE: Shows <SEVERITY_TYPE><SEVERITY>severe</SEVERITY> <SSLIF>kyphosis</SSLIF></SEVERITY_TYPE> , is nontender.  LUNGS: Clear to percu
+
+bocytopenic purpura who presents with a <SEVERITY_TYPE><SEVERITY>small</SEVERITY>  <INDICATION>swollen, red lesion above the left eye</INDICATION></SEVERITY_TYPE>  that is becoming increasingly more  sw
+
+s disease as well as chemotherapy. 11. <SEVERITY_TYPE><SEVERITY>Significant</SEVERITY> <ADE>epistaxis</ADE></SEVERITY_TYPE>  requiring hospitalization in --- Date -
+
+. ABDOMEN: Obese. EXTREMITIES: He has <SEVERITY_TYPE><SEVERITY>trace</SEVERITY>, <SSLIF>nonpitting edema to the mid calf</SSLIF></SEVERITY_TYPE> .   ASSESSMENT AND PLAN: A 52-year-o
+
+      CLINIC NOTE   DIAGNOSIS: <SEVERITY_TYPE><SEVERITY>Stage II</SEVERITY> <SSLIF>follicular small cleaved lymphocytic lymphoma, B cell</SSLIF></SEVERITY_TYPE> , diagnosed --- Date ---; the patient's 
+
+al neurological changes. He denies any <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>skin rash</SSLIF></SEVERITY_TYPE>  currently. He does have chronic back a
+
+rotrusion without neural impingement.  <SEVERITY_TYPE><SEVERITY>Small amount</SEVERITY> of <SSLIF>ascites</SSLIF></SEVERITY_TYPE>  present. Non-specific myositis of the 
+
+d which was PET negative, but they were <SEVERITY_TYPE><SEVERITY>minimally</SEVERITY> <SSLIF>metabolically lymph nodes in the neck bilaterally</SSLIF></SEVERITY_TYPE> . The patient received radiation therap
+
+red blood per rectum or melena. He has <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <INDICATION>peripheral neuropathy</INDICATION></SEVERITY_TYPE>   secondary to Velcade and is on Neuron
+
+e her in a chair. The patient was then <SEVERITY_TYPE><SEVERITY>very</SEVERITY> <SSLIF>weak</SSLIF></SEVERITY_TYPE>  and unable to get up from the chair. F
+
+ T6 vertebral bodies with approximately <SEVERITY_TYPE><SEVERITY>70%</SEVERITY> <SSLIF>loss of the \nvertebral body heights</SSLIF></SEVERITY_TYPE> . The rib and thoracic spine fracture 
+
+t at home uses a walker. She does have <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>pain in her leg</SSLIF></SEVERITY_TYPE> . She is able to do all activities of d
+
+g. She denies any chest pain. She has <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>dyspnea on exertion</SSLIF></SEVERITY_TYPE> . She denies any PND, orthopnea or peri
+
+esolved.  3. History of asthma.  4. <SEVERITY_TYPE><SEVERITY>Mild</SEVERITY> <ADE>thrombocytopenia</ADE></SEVERITY_TYPE>  and intermittent leukopenia secondary t
+
+nsory nerve potentials are absent. The <SEVERITY_TYPE><SSLIF>left sural \nsensory nerve potential is of very low amplitude</SSLIF><SEVERITY>very low</SEVERITY></SEVERITY_TYPE>  and normal conduction  velocity. The 
+
+ent's plan  Resident Plan: Question of <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> increased <SSLIF>opacity in the left retrocardiac \nspace</SSLIF></SEVERITY_TYPE>  which may represent developing atelecta
+
+oneal dialysis at home. He  developed <SEVERITY_TYPE><SEVERITY>end-stage</SEVERITY> <ADE>renal disease</ADE></SEVERITY_TYPE>  resulting from excessive intake of  ca
+
+ate ---. He was initially admitted for <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE>  and developed Salmonella sepsis with ne
+
+tory failure,  hematologic failure and <SEVERITY_TYPE><SEVERITY>severe</SEVERITY> <SSLIF>metabolic derangement(s</SSLIF></SEVERITY_TYPE> - and requires high  complexity decisi
+
+ but it was quite clear that this was a <SEVERITY_TYPE><SEVERITY>very large</SEVERITY> <SSLIF>clot</SSLIF></SEVERITY_TYPE>  and it  was not coming up easily with 
+
+llary and supraclavicular fossa for his <SEVERITY_TYPE><SEVERITY>stage III</SEVERITY> <SSLIF>recurrent follicular lymphoma</SSLIF></SEVERITY_TYPE>  apparently status post Richter's transf
+
+ght neural foraminal stenosis at L2-L3, <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>neural foraminal narrowing</SSLIF></SEVERITY_TYPE>  at several levels.   In discussing w
+
+riend of his died of cirrhosis with the <SEVERITY_TYPE><SEVERITY>extreme</SEVERITY> <SSLIF>swelling</SSLIF></SEVERITY_TYPE> , confusion  and bleeding. The patient
+
+easing peripheral neuropathy as well as <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE> . His pain, however, is under good cont
+
+ashes.  NEUROLOGIC: The patient has a <SEVERITY_TYPE><SEVERITY>very significant</SEVERITY> <SSLIF>kyphosis</SSLIF></SEVERITY_TYPE>  from his back issues. He is walking wi
+
+y.   Currently, the patient is still <SEVERITY_TYPE><SEVERITY>somewhat</SEVERITY> <SSLIF>fatigued</SSLIF></SEVERITY_TYPE> . She is feeling a little unsteady on h
+
+ntially  normal. CBC is notable for a <SEVERITY_TYPE><SEVERITY>mildly</SEVERITY><SEVERITY>mildly</SEVERITY></SEVERITY_TYPE>  elevated white blood cell count of  10
+
+thological by MRI or PET scan. She has <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <INDICATION>osteoporosis</INDICATION></SEVERITY_TYPE>  probably secondary to prednisone. She 
+
+        LATEX          <SEVERITY_TYPE><SSLIF>SKIN RASH</SSLIF>; -<SEVERITY>MILD</SEVERITY></SEVERITY_TYPE>     ?                
+
+His blood pressure is 129/84, pulse 96, <SEVERITY_TYPE><SSLIF>pain</SSLIF> <SEVERITY>7-8/10</SEVERITY></SEVERITY_TYPE> , weight 255 pounds and BMI is 52.6. GEN
+
+ oropharynx. The patient does describe <SEVERITY_TYPE><SEVERITY>some</SEVERITY> intermittent sensation of <SSLIF>pain</SSLIF></SEVERITY_TYPE> , but is otherwise free of fever, chills
+
+bumin  that is normal at 4.4. A total <SEVERITY_TYPE><SSLIF>bilirubin is slightly elevated</SSLIF><SEVERITY>slightly</SEVERITY></SEVERITY_TYPE>  at 1.4.  Alkaline phosphatase is norma
+
+s or edema on abdomen.  There was some <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>tenderness at the site of G-tube</SSLIF></SEVERITY_TYPE> . Extremities: No  petechiae, there i
+
+r. No ascites. Lower extremities show <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>venous stasis</SSLIF></SEVERITY_TYPE>  plus +2 plus edema of the lower extremi
+
+tic or chronically ill-appearing, looks <SEVERITY_TYPE><SEVERITY>a bit</SEVERITY> <SSLIF>jaundiced</SSLIF></SEVERITY_TYPE> , but he is a  roofer and works with hi
+
+motion of the right shoulder. He has a <SEVERITY_TYPE><SEVERITY>9 x 7.5 cm</SEVERITY> reddish, mildly <SSLIF>tender swelling in the anterior aspect of the shoulder</SSLIF></SEVERITY_TYPE> . There is slight fluctuance that does 
+
+%. No  significant valvular disease. <SEVERITY_TYPE><SEVERITY>Small</SEVERITY> <SSLIF>pericardial effusion</SSLIF></SEVERITY_TYPE> , mainly over RV  distal lateral wall a
+
+al scar. The patient still has a small <SEVERITY_TYPE><SEVERITY>2 mm</SEVERITY> <SSLIF>opening</SSLIF></SEVERITY_TYPE>  about the size  of the end of a wooden
+
+t seem to be soaking sweats and she has <SEVERITY_TYPE><SEVERITY>markedly</SEVERITY> <SSLIF>decreased \nstrength and stamina</SSLIF></SEVERITY_TYPE> . She notes some discomfort in the left
+
+--- Date --- when he was admitted  for <SEVERITY_TYPE><SEVERITY>excruciating</SEVERITY> <SSLIF>back pain</SSLIF></SEVERITY_TYPE>  and subsequently developed salmonella s
+
+lar. A weight was not obtained, but he <SEVERITY_TYPE><SSLIF>has lost \napproximately 40-50 pounds</SSLIF><SEVERITY>40-50 pounds</SEVERITY></SEVERITY_TYPE> . HEENT: No scleral icterus. Pharynx 
+
+ich is quite firm and fixed. There is a <SEVERITY_TYPE><SEVERITY>1.5 cm</SEVERITY> <SSLIF>node just behind the pectoralis major muscle low in the left axilla</SSLIF></SEVERITY_TYPE>  and the suggestion of a bulky adenopath
+
+ cervix, stage 3 cystocele on Valsalva, <SEVERITY_TYPE><SEVERITY>stage 2</SEVERITY>  <SSLIF>uterine prolapse</SSLIF></SEVERITY_TYPE> . Extremities without clubbing, cyanosi
+
+cant skin rash currently. He does have <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <INDICATION>back pain</INDICATION></SEVERITY_TYPE>  about 5/10, but the narcotics do help h
+
+r,  temperature 99.5. He looks well. <SEVERITY_TYPE><SSLIF>Hair is somewhat thinned</SSLIF><SEVERITY>somewhat</SEVERITY></SEVERITY_TYPE> . No skin rash,  and nothing suspiciou
+
+ght than on the left  base. There are <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>rhonchi</SSLIF></SEVERITY_TYPE> , but no wheezing, no pleural friction r
+
+sion stocking on the right. There is  <SEVERITY_TYPE><SEVERITY>trace</SEVERITY> <SSLIF>peripheral edema on the left</SSLIF></SEVERITY_TYPE> . There is no skin rash, petechiae or 
+
+ skeleton;  however, he does have some <SEVERITY_TYPE><SEVERITY>noted</SEVERITY> <SSLIF>spasm in his paraspinal muscles</SSLIF></SEVERITY_TYPE>  that are  tender to touch.  Skin inta
+
+e continued to improve. He also has had <SEVERITY_TYPE><SEVERITY>some</SEVERITY> <SSLIF>hypertension</SSLIF></SEVERITY_TYPE> . He denies any chest pain, shortness o
+
+nd tingling in his feet. He says it is <SEVERITY_TYPE><SEVERITY>somewhat</SEVERITY> <SSLIF>difficult \nto walk</SSLIF></SEVERITY_TYPE> .   Additionally, he is experiencing 
+
+e some of that weight. He is currently <SEVERITY_TYPE><SEVERITY>significantly</SEVERITY> <SSLIF>obese</SSLIF></SEVERITY_TYPE> . We talked about his diet and eating 3
+
+other day. She still has edema and her <SEVERITY_TYPE><SSLIF>BNP levels \nare still slightly elevated</SSLIF><SEVERITY>slightly</SEVERITY></SEVERITY_TYPE> . She understands to avoid any excess s
+
+ased.   He is also experiencing some <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>epistaxis</SSLIF></SEVERITY_TYPE> . He denies any increased bruising or g
+
+bdominal pain. There was approximately <SEVERITY_TYPE><SEVERITY>20 pound</SEVERITY> <SSLIF>weight loss</SSLIF></SEVERITY_TYPE> . CT done in the ER revealed mesenteric
+
+e left side. Tympanometry also showed a <SEVERITY_TYPE><SEVERITY>slight</SEVERITY> <SSLIF>negative pressure in the left side</SSLIF></SEVERITY_TYPE>  but not on the right side. Discriminat
+
+isease, status post chemotherapy.  2. <SEVERITY_TYPE><SEVERITY>End-stage</SEVERITY> <SSLIF>renal disease</SSLIF></SEVERITY_TYPE>  secondary to milk-alkali syndrome, on r
+
+ary to problem #1 and  associated with <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>pain</SSLIF></SEVERITY_TYPE> . He is status post 3 kyphoplasties, on
+
+a brace, but is also having significant <SEVERITY_TYPE><INDICATION>back pain</INDICATION>. It is quite excruciating about <SEVERITY>8/10</SEVERITY></SEVERITY_TYPE> . She is on Vicodin, but this is not ho
+
+ supraclavicular fossa and  there is a <SEVERITY_TYPE><SSLIF>pair of 2 cm right supraclavicular lymph nodes</SSLIF><SEVERITY>2 cm</SEVERITY></SEVERITY_TYPE> . There is a 4.5  cm left axillary nod
+
+ti-TPO antibodies.   He complains of <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>weight gain</SSLIF></SEVERITY_TYPE>  for the past 4-5 months of  approximat
+
+e 98.4, O2 saturation 97% on room air. <SEVERITY_TYPE><SSLIF>Pain 6-7/10 in the back</SSLIF><SEVERITY>6-7/10</SEVERITY></SEVERITY_TYPE> , weight 352 pounds. BMI 50.7. GENERAL:
+
+ No gross organomegaly. EXTREMITIES: <SEVERITY_TYPE><SEVERITY>Trace</SEVERITY> <SSLIF>peripheral edema</SSLIF></SEVERITY_TYPE>  with scattered ecchymoses. There are n
+
+ne in --- Date --- which rendered him  <SEVERITY_TYPE><SEVERITY>profoundly</SEVERITY> <ADE>pancytopenia</ADE></SEVERITY_TYPE>  and this has not been repeated.   AD
+
+wn glucose intolerance. She denies any <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>musculoskeletal pain</SSLIF></SEVERITY_TYPE> . She denies any skin rash.   FAMILY
+
+ He is doing very well. There is some <SEVERITY_TYPE><SEVERITY>minimal</SEVERITY> residual <SSLIF>edema</SSLIF></SEVERITY_TYPE>  in the left ankle, but he stopped weari
+
+ His baseline sodium is  133-134. No <SEVERITY_TYPE><SEVERITY>significant</SEVERITY> <SSLIF>change from baseline</SSLIF></SEVERITY_TYPE> .  3. Acidosis, mild. A non-gap acido
+
+y because he  does have this cough and <SEVERITY_TYPE><SEVERITY>mild</SEVERITY> <SSLIF>congestion</SSLIF></SEVERITY_TYPE> . The patient is a full code  patient.

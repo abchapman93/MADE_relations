@@ -4,24 +4,13 @@ Total # relations: 23165
 # unique entity types: 9
 # unique relations: 17
 
-Most common edges: 
-	('Drug => Dose', 5150)
-	('Drug => Indication', 4530)
-	('Drug => Frequency', 4407)
-	('SSLIF => Severity', 2909)
-	('Drug => Route', 2544)
-	('Drug => ADE', 2055)
-	('Drug => Duration', 901)
-	('ADE => Severity', 282)
-	('Indication => Severity', 269)
-	('Dose => Dose', 27)
-	('Indication => Indication', 24)
-	('ADE => ADE', 23)
-	('Severity => Severity', 16)
-	('Frequency => Frequency', 12)
-	('Route => Route', 7)
-	('Duration => Duration', 5)
-	('SSLIF => ADE', 4)
+Most common relation types: ('manner/route', defaultdict(<class 'int'>, {'Drug => Route': 2544, 'Route => Route': 7}))
+	('reason', defaultdict(<class 'int'>, {'Drug => Indication': 4530, 'Indication => Indication': 24}))
+	('severity_type', defaultdict(<class 'int'>, {'SSLIF => Severity': 2909, 'ADE => Severity': 282, 'Indication => Severity': 269, 'Severity => Severity': 16}))
+	('do', defaultdict(<class 'int'>, {'Drug => Dose': 5150, 'Dose => Dose': 27}))
+	('fr', defaultdict(<class 'int'>, {'Drug => Frequency': 4407, 'Frequency => Frequency': 12}))
+	('du', defaultdict(<class 'int'>, {'Drug => Duration': 901, 'Duration => Duration': 5}))
+	('adverse', defaultdict(<class 'int'>, {'Drug => ADE': 2055, 'ADE => ADE': 23, 'SSLIF => ADE': 4}))
 
 Most common entities: 
 	('Drug', 19587)
@@ -35,84 +24,84 @@ Most common entities:
 	('Duration', 911)
 
 Impossible edges: 
-	Dose => Drug
-	Duration => Dose
 	Severity => Indication
-	ADE => Severity
-	Duration => ADE
-	Frequency => Indication
-	SSLIF => Duration
-	Dose => ADE
-	Frequency => Route
-	SSLIF => Frequency
-	Severity => Drug
-	Drug => Indication
-	Indication => Dose
-	ADE => SSLIF
-	Route => Drug
-	Drug => SSLIF
-	Route => Severity
-	Indication => Severity
-	Severity => Duration
-	Frequency => Severity
-	Drug => ADE
-	ADE => Duration
-	Indication => Frequency
-	Indication => Drug
-	Drug => Drug
-	Frequency => Frequency
-	Duration => Drug
-	Dose => Frequency
-	Dose => Severity
-	SSLIF => Route
-	Dose => Indication
-	Duration => Severity
 	Drug => Duration
-	Route => Indication
-	ADE => Drug
-	Severity => SSLIF
-	Severity => Dose
-	Frequency => Duration
-	Drug => Severity
-	Frequency => SSLIF
-	Duration => Duration
-	SSLIF => SSLIF
-	Frequency => Drug
-	Drug => Frequency
-	Route => Route
-	SSLIF => Indication
-	Dose => Duration
-	Drug => Route
-	Route => Dose
-	Indication => ADE
-	Severity => Frequency
-	Indication => Duration
-	Duration => Route
-	Severity => ADE
-	Indication => Indication
-	SSLIF => ADE
-	Severity => Severity
-	Duration => Indication
 	ADE => Indication
 	Dose => SSLIF
-	ADE => Frequency
-	Duration => SSLIF
-	SSLIF => Dose
-	Indication => SSLIF
-	Dose => Route
-	Severity => Route
-	Route => SSLIF
-	Route => ADE
-	ADE => ADE
-	Drug => Dose
-	Route => Duration
-	Frequency => Dose
-	ADE => Dose
-	Frequency => ADE
-	ADE => Route
-	Indication => Route
-	Dose => Dose
-	Duration => Frequency
-	SSLIF => Severity
-	Route => Frequency
+	Severity => Severity
+	Drug => SSLIF
+	Frequency => Frequency
+	Frequency => SSLIF
 	SSLIF => Drug
+	SSLIF => Indication
+	SSLIF => Frequency
+	Drug => Severity
+	Drug => Frequency
+	Route => SSLIF
+	Frequency => Dose
+	Duration => SSLIF
+	SSLIF => ADE
+	Duration => Dose
+	Indication => Duration
+	Duration => Duration
+	Drug => ADE
+	Route => Dose
+	Indication => Indication
+	SSLIF => Dose
+	Indication => Severity
+	Indication => SSLIF
+	Indication => Drug
+	Severity => ADE
+	Duration => Indication
+	Frequency => Duration
+	Severity => Frequency
+	Route => Drug
+	Drug => Dose
+	Route => Frequency
+	Frequency => Severity
+	Frequency => Indication
+	Route => Severity
+	Indication => Route
+	Duration => Route
+	ADE => Severity
+	SSLIF => SSLIF
+	Route => Indication
+	Severity => Route
+	Duration => Drug
+	Duration => ADE
+	Severity => SSLIF
+	ADE => Duration
+	ADE => SSLIF
+	ADE => ADE
+	Duration => Severity
+	Drug => Route
+	Dose => Frequency
+	ADE => Frequency
+	ADE => Drug
+	Indication => Dose
+	Frequency => ADE
+	SSLIF => Severity
+	ADE => Route
+	ADE => Dose
+	Dose => Indication
+	Severity => Drug
+	Drug => Indication
+	Dose => Drug
+	Dose => Dose
+	Dose => Duration
+	Frequency => Route
+	Indication => ADE
+	Frequency => Drug
+	Route => Route
+	Route => ADE
+	Dose => ADE
+	Severity => Dose
+	Drug => Drug
+	SSLIF => Route
+	Indication => Frequency
+	Dose => Severity
+	Dose => Route
+	Duration => Frequency
+	Route => Duration
+	Severity => Duration
+	SSLIF => Duration

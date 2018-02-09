@@ -1,199 +1,199 @@
-1 tablet oral every twenty four hours  <MANNER/ROUTE><DRUG>zinc oxide</DRUG> 20 % Ointment, Ordered By: [** Name **] [** Name **] [** Name **]  Directions: 1 application <ROUTE>topical</ROUTE></MANNER/ROUTE>  every two hours PRN SKIN IRRITATIONAddi
+C 200 UNIT DAILY NASAL ---- Date ----  <MANNER/ROUTE><DRUG>CYCLOPHOSPHAMIDE</DRUG> 50 MG QSUNMONWEDFRI <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ---- Date ----  CYCLOPHOSPHAMIDE 100 M
 
-             Every Day   <MANNER/ROUTE><DRUG>NEURONTIN</DRUG>                300 MG  <ROUTE>PO</ROUTE></MANNER/ROUTE>   (GABAPENTIN)             
+ Vitamin D 400 units p.o. daily.  2. <MANNER/ROUTE><DRUG>Compazine</DRUG> 1 pill <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  b.i.d.  3. Reglan 10 mg p.o. q. 6-8 h
 
-         Three Times a Day   <MANNER/ROUTE><DRUG>HCTZ</DRUG>                   25 MG   <ROUTE>PO</ROUTE></MANNER/ROUTE>   (HYDROCHLOROTHIAZIDE)        
+d  to IV, but quickly switched back to <MANNER/ROUTE><ROUTE>oral</ROUTE> <DRUG>omeprazole</DRUG></MANNER/ROUTE> . Currently, not having any  issues wi
 
-lly daily, doxazosin 4 mg orally daily, <MANNER/ROUTE><DRUG>oxybutynin</DRUG> extended release 5 mg <ROUTE>orally</ROUTE></MANNER/ROUTE>  daily, simvastatin 20 mg orally daily. 
+ease fluid load and improve O2 sat.  - <MANNER/ROUTE><DRUG>Lasix</DRUG> 20mg <ROUTE>IV</ROUTE></MANNER/ROUTE>  x 1  - Albuterol neb  - Maintain O2 S
 
- where her  nausea was controlled with <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>Zofran</DRUG></MANNER/ROUTE>  and discharged on [** Date **]. On  a
+__ motility, --- Name --- was placed on <MANNER/ROUTE><ROUTE>oral</ROUTE> <DRUG>erythromycin</DRUG></MANNER/ROUTE>  on --- Date ---, which  continued unti
 
-hma exacerbation but have  written for <MANNER/ROUTE><DRUG>albuterol</DRUG> <ROUTE>nebs</ROUTE></MANNER/ROUTE>  in case of wheezing.  Last Modified: 
+he consensus was that he should receive <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> <DRUG>methotrexate</DRUG></MANNER/ROUTE>  prophylactically as well as 4 cycles of
 
-,  prednisone 10 mg p.o. twice a week, <MANNER/ROUTE><DRUG>Testim</DRUG> 1% 5 g <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily, and vitamin D  1000 units p.o. 
+---  Directions: 1 tablet oral DAILY  <MANNER/ROUTE><DRUG>MULTIVITAMINS (TAB-A-VITE</DRUG>- 1 TABLET = 1 TABLET <ROUTE>Oral</ROUTE></MANNER/ROUTE>  TABLET DAILY STAT and then Routine for 
 
-iSONE 60 MG DAILY ORAL ([** Date **])  <MANNER/ROUTE><DRUG>folic acid</DRUG> 1 MG DAILY <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ([** Date **])  CALCITONIN, SALMON, SY
+L CA/VIT D TAB        1500 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>CALCIUM CARBONATE/VITAMIN D</DRUG></MANNER/ROUTE> -           Every Day   CL
 
-*]  Directions: 1 capsule oral DAILY  <MANNER/ROUTE><DRUG>LEVOFLOXACIN</DRUG> (levofloxacin) 500 MG = 1 TABLET Oral TABLET Q24H for 30 Days  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  every twenty four hours  zinc oxide 20
+m chloride 10 mEq 1 tablet oral daily  <MANNER/ROUTE><DRUG>prochlorperazine maleate</DRUG> 10 mg 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  every six hours PRN N/V  vancomycin 50
 
-SODIUM 100 MG BID ORAL ([** Date **])  <MANNER/ROUTE><DRUG>SENNOSIDES</DRUG> 17.2 MG QHS <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ([** Date **])  ESOMEPRAZOLE MAG TRIHY
+ML- 50 UNIT INTRALUMIN PER  PROTOCOL  <MANNER/ROUTE><DRUG>POSACONAZOLE (NOXAFIL</DRUG>- 200 MG <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  TID W MEALS  NYSTATIN -MYCOSTATIN- 500
 
- ASSESSMENT: We will proceed with the <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> <DRUG>methotrexate</DRUG></MANNER/ROUTE> .   PROCEDURE NOTE: The patient was 
+he prescriptions for prednisone 2.5 mg, <MANNER/ROUTE><DRUG>fentanyl</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE>  25 mg every 3 mcg every 3 days, Vicodin
 
-eded for headache, aspirin 81 mg a day, <MANNER/ROUTE><DRUG>atenolol</DRUG> 50 mg <ROUTE>orally</ROUTE></MANNER/ROUTE>  daily, doxazosin 4 mg orally daily and 
+g 4 times a day as needed for diarrhea, <MANNER/ROUTE><DRUG>lorazepam</DRUG>  0.5 mg every 6 hours p.r.n. <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  for nausea, miracle mouthwash 5 mL 3 ti
 
-ETRON (ZOFRAN) 8 MG INTRAVENOU Q8HPRN  <MANNER/ROUTE><DRUG>HEPARIN FLUSH</DRUG> 10 UNIT/ML (HEPARIN FLUSH 10 UNIT/ML) 50 UNIT <ROUTE>INTRALUMIN</ROUTE></MANNER/ROUTE>  PER  PROTOCOL  POSACONAZOLE (NOXAFIL)
+tinued By: --- Name --- --- Name ---  <MANNER/ROUTE><DRUG>cefTRIAXone</DRUG> 2 gram Recon Soln  Directions: 5 mL <ROUTE>intravenous</ROUTE></MANNER/ROUTE>  daily  Extended Instructions: x10days 
 
-s and nutrition: The patient was given <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>fluid</DRUG></MANNER/ROUTE>  as per  chemotherapy protocol. He was
+ HCl 25 MG PREMED ORAL ---- Date ----  <MANNER/ROUTE><DRUG>ACETAMINOPHEN</DRUG> 650 MG PREMED <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ---- Date ----  LORATADINE 10 MG DAILY
 
-IDES 17.2 MG QDAY ORAL ([** Date **])  <MANNER/ROUTE><DRUG>HYDROCHLOROTHIAZIDE</DRUG> 25 MG QPM <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ([** Date **])     ASSESSMENT   
+ p.r.n., omeprazole 20 mg p.o.  daily, <MANNER/ROUTE><DRUG>alprazolam</DRUG> 0.25 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  t.i.d. p.r.n., prednisone 60 mg after c
 
-x  0.25 mg p.o. q.i.d. p.r.n. anxiety, <MANNER/ROUTE><DRUG>etodolac</DRUG> 400 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  b.i.d. p.r.n. back  pain, pamidronate 
+H 10 UNIT/ML- 25 UNIT INTRALUMIN Q48H  <MANNER/ROUTE><DRUG>KCL</DRUG> 20 MEQ/50 ML -KCL 20 MEQ/50 ML- See MAR <ROUTE>INTRAVENOU</ROUTE></MANNER/ROUTE>  PER PROTOCOL  MAGNESIUM SULF 2 G/50 ML
 
-**]  Directions: 1 tablet oral daily  <MANNER/ROUTE><DRUG>vancomycin</DRUG> 125 MG = 2.5 ML Oral SUSP QID for 30 Days  Directions: 2.5 mL <ROUTE>oral</ROUTE></MANNER/ROUTE>  four times daily  dexamethasone 4 mg T
+AZOLE/TRIMETHOPRIM UD TABLET 1 UDTAB  <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>SULFAMETHOXAZOLE/TRIMETHOPRIM</DRUG></MANNER/ROUTE> -          Twice a Day  Reaso
 
- about nasal irritation. Will consider <MANNER/ROUTE><ROUTE>intravenous</ROUTE> <DRUG>bisphosphonate</DRUG></MANNER/ROUTE>  after the next visit.  2. Hypercalcem
+e SBP to the XXXXXXX which responded to <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>NS</DRUG></MANNER/ROUTE>  bolus. Trops negative, EKG unremarkable
 
-e  patient on his home dose regimen of <MANNER/ROUTE><DRUG>Synthroid</DRUG> 150 mcg one tablet <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily.   Prophylaxis: For GI prophy
+CLE MOUTHWASH- 5 ML MUCOUS MEM TIDPRN  <MANNER/ROUTE><DRUG>GABAPENTIN (NEURONTIN</DRUG>- 200 MG <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  TID  LOPERAMIDE -IMODIUM- 4 MG ORAL QI
 
- of the right  leg which resolved with <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>antibiotics</DRUG></MANNER/ROUTE> .  7. Psoriasis.  8. Hypertension. 
+sk your physician  about prescribing a <MANNER/ROUTE><DRUG>nicotine</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE>  for you and/or allow us to refer you to
 
- Velcade.  4. Chronic Coumadin.  5. <MANNER/ROUTE><DRUG>Pamidronate</DRUG> 90 mg <ROUTE>intravenously</ROUTE></MANNER/ROUTE>  once every 2-3 months.  6. Blood and 
+CURRENT MEDICATIONS: The patient is on <MANNER/ROUTE><DRUG>pip/tazo</DRUG> 2.25 mg <ROUTE>IV</ROUTE></MANNER/ROUTE>  q.8 hours,  vancomycin 750 mg, 1 dose 
 
-eed to increase lopressor.  - c/w home <MANNER/ROUTE><DRUG>Lopressor</DRUG> 25mg <ROUTE>Po</ROUTE></MANNER/ROUTE>  BID   RENAL: hyponatremia   Na of
+.o. daily, atenolol 50 mg  p.o. daily, <MANNER/ROUTE><DRUG>fish oil</DRUG> 1000 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily, simvastatin 20 mg p.o. daily,  
 
- p.o. daily through [** Date **].  5. <MANNER/ROUTE><DRUG>Lactase</DRUG> 6000 units <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  t.i.d.  6. Miconazole powder apply to
-
-       Twice a Day as needed   <MANNER/ROUTE><DRUG>TOPAMAX</DRUG>                 25 MG   <ROUTE>PO</ROUTE></MANNER/ROUTE>   (TOPIRAMATE)             
-
-cyclovir.  4. Chronic Coumadin.  5. <MANNER/ROUTE><DRUG>Pamidronate</DRUG> 90 mg <ROUTE>intravenously</ROUTE></MANNER/ROUTE>  once every 2-3 months.   PAST CHEMOT
-
-               20 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>FAMOTIDINE</DRUG></MANNER/ROUTE> )                    
-
-ame **]  Directions: 1 each oral QHS  <MANNER/ROUTE><DRUG>predniSONE</DRUG> 5 mg Tablet, Ordered By: [** Name **] [** Name **] [** Name **]  Directions: 0.5 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY  sulfamethoxazole-trimethoprim 8
-
-, he was also given a ten-day course of <MANNER/ROUTE><ROUTE>oral</ROUTE> <DRUG>cephalexin</DRUG></MANNER/ROUTE>  to rule out the possibility of infectio
-
-for his fourth cycle. He also received <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> <DRUG>methotrexate</DRUG></MANNER/ROUTE>  prophylactically. Radiation therapy to
-
-DIN 5 MG/325 MG) 2 TABLET ORAL Q4HPRN  <MANNER/ROUTE><DRUG>LISINOPRIL (ZESTRIL)</DRUG> 10 MG <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  DAILY  FUROSEMIDE (LASIX) 10 MG ORAL D
-
-  ADDITIONAL MEDICATIONS: Cartia XT, <MANNER/ROUTE><DRUG>fentanyl</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE>  25 mcg every 3 days,  which I am writi
-
-  ADDITIONAL MEDICATIONS: Cartia XT, <MANNER/ROUTE><DRUG>fentanyl</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE>  150 mcg every 72 hours,  Percocet 5/32
-
-EMIDE 20 MG DAILY ORAL ([** Date **])  <MANNER/ROUTE><DRUG>LIDOCAINE</DRUG> 5% 1 PATCH DAILY <ROUTE>TRANSDERMA</ROUTE></MANNER/ROUTE>  ([** Date **])  PNEUMOCOCCAL DOCUMENTA
-
- 400 mg p.o. b.i.d. p.r.n. back  pain, <MANNER/ROUTE><DRUG>pamidronate</DRUG> 20 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  monthly, prednisone 10 mg p.o. daily, 
-
-es and nutrition: The patient received <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>fluids</DRUG></MANNER/ROUTE>  per  chemotherapy protocol, premedicat
-
- home pain regimen and was started on a <MANNER/ROUTE><DRUG>morphine</DRUG> <ROUTE>drip</ROUTE></MANNER/ROUTE>  for air  hunger and pain treatment and
-
-NTECAVIR (BARACLUDE) 0.5 MG ORAL Q48H  <MANNER/ROUTE><DRUG>methylPREDNISolone sod suc(PF) (SOLU-MEDROL</DRUG>) 70 MG <ROUTE>INTRAVENOU</ROUTE></MANNER/ROUTE>  ONETIME   Drug Allergies/ADR from Ph
-
-. daily, gabapentin 300 mg twice a day, <MANNER/ROUTE><DRUG>levothyroxine</DRUG> 125 mcg  <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily, multivitamin 1 tablet p.o. daily
-
-               240 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>VERAPAMIL HCL SR</DRUG></MANNER/ROUTE> )                 Every 
-
-f 2.63.   He is currently taking his <MANNER/ROUTE><DRUG>Androderm</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE> , 1 baby aspirin p.o. daily, calcium and
-
-lly daily, doxazosin 4 mg orally daily, <MANNER/ROUTE><DRUG>oxybutynin</DRUG> 5 mg <ROUTE>orally</ROUTE></MANNER/ROUTE>  daily, simvastatin 20 mg orally daily. 
-
-t could be poison ivy and had given her <MANNER/ROUTE><DRUG>prednisone</DRUG> b.i.d. <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  x5 days.   HISTORY OF PRESENT ILLNES
-
-n  100, heart rate less than 65.  6. <MANNER/ROUTE><DRUG>PreviDent 5000</DRUG> <ROUTE>toothpaste</ROUTE></MANNER/ROUTE>  medicated to be used as indicated.   
-
- Directions: 1 capsule oral QMON QMON  <MANNER/ROUTE><DRUG>fentaNYL</DRUG> 25 mcg/hour Patch 72 hr, Ordered By: [** Name **] [** Name **] [** Name **]  Directions: 1 each <ROUTE>transdermal</ROUTE></MANNER/ROUTE>  Q72H Q72HAdditional Instructions: CHANG
-
-               81 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>ASPIRIN</DRUG></MANNER/ROUTE>  CHEWABLE)               
-
-in [** Date **]; she is on  indefinite <MANNER/ROUTE><ROUTE>oral</ROUTE> <DRUG>anticoagulant</DRUG></MANNER/ROUTE>  therapy because of her hypercoagulable 
-
- x1 liter,  vancomycin 1.5 g IV x1 and <MANNER/ROUTE><DRUG>Zosyn</DRUG> 3.375 g <ROUTE>IV</ROUTE></MANNER/ROUTE>  x1.   PAST MEDICAL HISTORY:  1. Mi
-
-. Multivitamin one tablet daily.  3. <MANNER/ROUTE><DRUG>Omeprazole</DRUG> 20 mg 1 <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily.  4. Ondansetron 8 mg one p.o. 
-
-               40 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>FUROSEMIDE</DRUG></MANNER/ROUTE> )                    
-
-e is now on 120 mg a day. She received <MANNER/ROUTE><ROUTE>intravenous</ROUTE> <DRUG>gammaglobulin</DRUG></MANNER/ROUTE>  in the hospital. She is on folic acid a
-
- hospitalization. He was treated with <MANNER/ROUTE><ROUTE>intravenous</ROUTE> <DRUG>antibiotics</DRUG></MANNER/ROUTE>  and the  cellulitis has cleared. He i
-
-ions: 1 dispersible tablet oral DAILY  <MANNER/ROUTE><DRUG>atenolol</DRUG> 50 mg Tablet, Ordered By: [** Name **] [** Name **]  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY Additional Instructions: HOLD IF 
-
-phine SR and morphine IR initially with <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>Dilaudid</DRUG></MANNER/ROUTE> ; however, this did  not control his pa
-
- NAME OF PROCEDURE: Administration of <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> chemotherapy with <DRUG>methotrexate</DRUG></MANNER/ROUTE>  15 mg and hydrocortisone 15 mg and 10 m
-
-trexate, intrathecal hydrocortisone and <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> <DRUG>cytarabine</DRUG></MANNER/ROUTE> , a total of 7 doses in different combin
-
-tion. His Zosyn is renally dosed. His <MANNER/ROUTE><DRUG>vancomycin</DRUG> level  is still below the target range of 15-20 for which we will recommend to give  another 500 mg <ROUTE>IV</ROUTE></MANNER/ROUTE>  today and recheck the level in 48 hours
-
-               60 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>OXYCODONE HCL SR</DRUG></MANNER/ROUTE> )                 Twice 
-
-p.o. b.i.d., doxazosin 4 mg p.o. daily, <MANNER/ROUTE><DRUG>Lasix</DRUG>  40 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily, gabapentin 300 mg p.o. b.i.d., l
-
-HOP-R chemotherapy x6 cycles along with <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> <DRUG>methotrexate</DRUG></MANNER/ROUTE>  x4 cycles.   PET CT scan done on [**
-
- Azithromycin 500 mg p.o. daily.  5. <MANNER/ROUTE><DRUG>Metoprolol extended release</DRUG> 25 mg <ROUTE>p.o</ROUTE></MANNER/ROUTE> . daily.  6. Lorazepam 0.5 mg p.o. dai
-
- using.   He was recently started on <MANNER/ROUTE><DRUG>Lasix</DRUG> 40 mg <ROUTE>p.o</ROUTE></MANNER/ROUTE> . once daily by Dr. [** Name **] for bil
-
- b.i.d. with last dose on [** Date **], <MANNER/ROUTE><DRUG>diltiazem</DRUG> 300 mg extended  release <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily, Colace 100 mg p.o. b.i.d., doxaz
-
- mg p.o. b.i.d., Ativan 0.25 mg p.r.n., <MANNER/ROUTE><DRUG>Coumadin</DRUG> 2.5 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily, fentanyl patch 25 mcg every 72 h
-
-daily, Remeron 15 mg p.o. at bedtime,  <MANNER/ROUTE><DRUG>prednisolone</DRUG> 10 mL via <ROUTE>G-tube</ROUTE></MANNER/ROUTE>  daily. Please note all the patient's m
-
- our nurse practitioner in 2 months for <MANNER/ROUTE><DRUG>rituximab</DRUG> <ROUTE>infusion</ROUTE></MANNER/ROUTE> .     Attending: [** Name **] [** Na
-
-ral every six hours PRN pain-moderate  <MANNER/ROUTE><DRUG>leucovorin calcium</DRUG> 25 mg Tablet, Ordered By: [** Name **] [** Name **]  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  every six hours take for 2 days after d
-
-           Every Evening   <MANNER/ROUTE><DRUG>COMPAZINE</DRUG>                10 MG   <ROUTE>PO</ROUTE></MANNER/ROUTE>   (PROCHLORPERAZINE MALEATE)      
-
-               50 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>TOPIRAMATE</DRUG></MANNER/ROUTE> )                    
-
-    Every Four Hours as needed   <MANNER/ROUTE><DRUG>MULTIPLE VITAMIN</DRUG>             1 UDCAP  <ROUTE>PO</ROUTE></MANNER/ROUTE>   (MULTIVITAMINS)           
-
- mg p.o. daily started on [** Date **], <MANNER/ROUTE><DRUG>vitamin D</DRUG> 2000 units <ROUTE>oral</ROUTE></MANNER/ROUTE>  tablet once  daily, One A Day multivit
-
-GLYCOL POWDER (Miralax) 17 G ORAL QHS  <MANNER/ROUTE><DRUG>predniSONE (predniSONE)</DRUG> 2.5 MG <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  DAILY  CALCITONIN, SALMON, SYNTHETIC (
-
- **]. He has also received 4 cycles of <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> <DRUG>methotrexate</DRUG></MANNER/ROUTE> , which was administered by Dr. [** Name
-
-SODIUM 100 MG BID ORAL ([** Date **])  <MANNER/ROUTE><DRUG>HYDROCHLOROTHIAZIDE</DRUG> 25 MG QDAY <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ([** Date **])     ASSESSMENT   
-
-ional Instructions: HOLD IF SBP < ___  <MANNER/ROUTE><DRUG>LORazepam</DRUG> 0.5 mg Tablet, Ordered By: Talya [** Name **] [** Name **]  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  three times a day PRN ANXIETY  metopro
-
- pain in his back. He did have several <MANNER/ROUTE><DRUG>steroid</DRUG> <ROUTE>injections</ROUTE></MANNER/ROUTE>  which were not  helpful. He has been 
-
- Prednisone 5 mg 3 times a week.  3. <MANNER/ROUTE><DRUG>Pamidronate</DRUG> 90 mg <ROUTE>intravenously</ROUTE></MANNER/ROUTE>  every other month.  4. Velcade 1-1.3 
-
-he is on this for his blood pressure.  <MANNER/ROUTE><DRUG>Claritin D</DRUG> 1 tablet <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily, prochlorperazine 10 mg t.i.d. p.
-
-5MG              650 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>ACETAMINOPHEN</DRUG></MANNER/ROUTE> )                  Eve
-
-TARTRATE 25 MG BID ORAL ([** Date **]) <MANNER/ROUTE><DRUG>\nPOLYETHYLENE GLYCOL</DRUG> POWDER 17 G DAILY <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ([** Date **])  omeprazole 20 MG DAILY
-
-c. Consider increasing the dose of the <MANNER/ROUTE><DRUG>doxazosin</DRUG> to 2 mg <ROUTE>by mouth</ROUTE></MANNER/ROUTE>  daily based on his blood pressure recor
+               1000 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>FISH OIL</DRUG></MANNER/ROUTE> -                    
 
 . Prednisone 10 mg twice a week.  3. <MANNER/ROUTE><DRUG>Pamidronate</DRUG> 90 mg <ROUTE>intravenously</ROUTE></MANNER/ROUTE>  once a month.  4. Velcade 1.3 mg/m2 o
 
- Psychosocial: [** Name **] remains on <MANNER/ROUTE><DRUG>amitriptyline</DRUG>. He will decrease his dose to 12.5 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily. If tolerated well, he will cont
+---  Directions: 2 tablet oral DAILY  <MANNER/ROUTE><DRUG>furosemide</DRUG> 40 mg Tablet, Ordered By: --- Name --- --- Name ---  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY  gabapentin 300 mg Capsule, Orde
 
-               240 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  (<DRUG>VERAPAMIL HCL SR</DRUG></MANNER/ROUTE> )                 One Ti
+               800 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>SEVELAMER CARBONATE</DRUG></MANNER/ROUTE> -               Three Tim
 
-ER PROTOCOL INTRAVENOU ([** Date **])  <MANNER/ROUTE><DRUG>CITALOPRAM</DRUG> 20 MG QHS <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ([** Date **])  CYCLOPHOSPHAMIDE 100 M
+            How to Take   <MANNER/ROUTE><DRUG>AMITRIPTYLINE HCL</DRUG>            50 MG   <ROUTE>PO</ROUTE></MANNER/ROUTE>   -AMITRIPTYLINE HCL-         
 
-ation Name, Dose, Route, Instructions  <MANNER/ROUTE><DRUG>acyclovir</DRUG> 400 mg Tablet  Directions: 1 tablet <ROUTE>gastrostomy (PEG)</ROUTE></MANNER/ROUTE>  three times a day  Continued By: [** N
+---  Directions: 1 tablet oral daily  <MANNER/ROUTE><DRUG>vancomycin</DRUG> 125 MG = 2.5 ML Oral SUSP QID for 30 Days  Directions: 2.5 mL <ROUTE>oral</ROUTE></MANNER/ROUTE>  four times daily  dexamethasone 4 mg T
 
-before he sees Dr. [** Name **] so that <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> <DRUG>chemotherapy</DRUG></MANNER/ROUTE>  can be given safely. If he is on Couma
+ 2. Compazine 1 pill p.o. b.i.d.  3. <MANNER/ROUTE><DRUG>Reglan</DRUG> 10 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  q. 6-8 hours p.r.n. nausea or vomiting.
 
-ly, Bactrim 160 mg of the TMP component <MANNER/ROUTE><ROUTE>orally</ROUTE><ROUTE>orally</ROUTE></MANNER/ROUTE>  twice a day on Friday, Saturday, Sunday
+T ADMISSION: Aspirin 81 mg p.o. daily, <MANNER/ROUTE><DRUG>Claritin D</DRUG> 1 tab <ROUTE>p.o.</ROUTE></MANNER/ROUTE>   daily p.r.n. allergic rhinitis sympto
 
-due to methotrexate. He was started on <MANNER/ROUTE><DRUG>fluconazole</DRUG> 200 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  x 1 and then 100 mg p.o. x 9 days as we
+ate 90 mg IV every q. 2 months.     <MANNER/ROUTE><DRUG>Vitamin D</DRUG> 1000 units <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily.     Calcium citrate with vit
 
-zole powder apply to groin t.i.d.  7. <MANNER/ROUTE><DRUG>Omeprazole</DRUG> 20 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily.  8. Bactrim DS 1 tablet p.o. b
+e 0.5 mg p.o. daily.  3. Senna.  4. <MANNER/ROUTE><DRUG>Azithromycin</DRUG> 500 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily.  5. Metoprolol extended releas
 
-icodin 2 per day , percocet 4 per day  <MANNER/ROUTE><DRUG>lasix</DRUG> 40 mg <ROUTE>po</ROUTE></MANNER/ROUTE>  bid daily  - - - - -  ALLERGIES  Dru
+id his pain was better and he said that <MANNER/ROUTE><DRUG>cortisone</DRUG> <ROUTE>injections</ROUTE></MANNER/ROUTE>  were being  considered. He is quite c
 
-tablet oral every four hours PRN PAIN  <MANNER/ROUTE><DRUG>sulfamethoxazole-trimethoprim</DRUG> 800 mg-160 mg Tablet, Ordered By: [** Name **] [** Name **]  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  QMONWEDFRI QMONWEDFRI  Stopped medicat
+AMIDE 100 MG QTHU ORAL ---- Date ----  <MANNER/ROUTE><DRUG>CYCLOPHOSPHAMIDE</DRUG> 50 MG QSAT <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ---- Date ----  CYCLOPHOSPHAMIDE 50 MG
 
-e **]  Directions: 1 each oral DAILY  <MANNER/ROUTE><DRUG>POSACONAZOLE (NOXAFIL</DRUG>) 200 MG = 5 ML Oral ORAL SUSP TID for 30 Days  Directions: 5 mL <ROUTE>oral</ROUTE></MANNER/ROUTE>  three times a day  prochlorperazine ma
+    --- Date --- at 11:42am     <MANNER/ROUTE><DRUG>PANTOPROZOLE</DRUG>               40 MG   <ROUTE>PO</ROUTE></MANNER/ROUTE>                     
 
- applied topically to PD catheter site, <MANNER/ROUTE><DRUG>Zosyn</DRUG> 2.25 g q.6 h.  <ROUTE>IV</ROUTE></MANNER/ROUTE> , oxycodone 20 mg q.3 h. p.r.n., methado
+. daily, mag oxide 400 mg p.o. daily,  <MANNER/ROUTE><DRUG>morphine sulfate</DRUG> 30 mg <ROUTE>p.o</ROUTE></MANNER/ROUTE> . q.4 h. as needed, multivitamins one ta
 
- chemotherapy and is now on maintenance <MANNER/ROUTE><DRUG>rituximab</DRUG> since [** Date **]. He is coming in for his next <ROUTE>infusion</ROUTE></MANNER/ROUTE> .   He had pain in his shoulder, whic
+he patient's hemoglobin is stable. Her <MANNER/ROUTE><DRUG>prednisone</DRUG> will be tapered to 15 mg <ROUTE>p.o</ROUTE></MANNER/ROUTE> . daily. She will be seen in 2 weeks fo
 
-daily, last dose on [** Date **].  5. <MANNER/ROUTE><DRUG>Metronidazole</DRUG> 500 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  q.8h., last dose on [** Date **].  6. 
+. daily, Cartia  XT 240 mg p.o. daily, <MANNER/ROUTE><DRUG>fentanyl</DRUG> <ROUTE>transdermal</ROUTE></MANNER/ROUTE>  25 mcg patch change every 72  hours ap
 
-xtended release 25 mg p.o. daily.  6. <MANNER/ROUTE><DRUG>Lorazepam</DRUG> 0.5 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily p.r.n. anxiety.  7. Lisinopril 
+               15 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  -PREDNISONE-                    Twice a Day  Reason for this Medication: <DRUG>Chemotherapy</DRUG></MANNER/ROUTE>   Comment: To be taken AM, PM on Day # 
 
-sed with him the side effect profile of <MANNER/ROUTE><DRUG>erythropoietin</DRUG> and would start with weekly <ROUTE>injections</ROUTE></MANNER/ROUTE>  with a weekly CBC. He will be treated 
+hours p.r.n. for nausea and vomiting,  <MANNER/ROUTE><DRUG>simethicone</DRUG> 80 mg 1 tablet <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  4 times a day p.r.n. for gas, zolpidem 
 
-ions: 1 tablet oral three times a day  <MANNER/ROUTE><DRUG>entecavir (Baraclude</DRUG>) 0.5 mg Tablet, Ordered By: [** Name **] [** Name **]  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY  gabapentin 100 mg Capsule, Orde
+pleted.     Discharge medications  <MANNER/ROUTE><DRUG>acyclovir</DRUG> 400 mg Tablet, Ordered By: --- Name --- --- Name ---  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  twice a day  allopurinol 300 mg Tablet
 
-aily; Levofloxacin 500 mg p.o.  daily; <MANNER/ROUTE><DRUG>posaconazole</DRUG> 5 mL/200 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  t.i.d.; Percocet 1 tablet p.o. q.6 h. 
+dtime.  2. Aspirin 81 mg daily.  3. <MANNER/ROUTE><DRUG>Vitamin D</DRUG> 1000 units <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily.  4. Calcium carbonate tablet 1
 
-ine 1500 mg 1 tablet p.o. daily.  22. <MANNER/ROUTE><DRUG>Calcium citrate with vitamin D</DRUG> 350 mg 1 tablet <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily.  23. Garlic.  24. Fish oil. 
+2%              10 ML   <MANNER/ROUTE><ROUTE>MM</ROUTE>  -<DRUG>CHLORHEXIDINE GLUC. 0.12%</DRUG></MANNER/ROUTE> -            Three Times a D
+
+is. Psychotherapy was consulted and his <MANNER/ROUTE><DRUG>sertraline</DRUG> was increased to 50mg <ROUTE>PO</ROUTE></MANNER/ROUTE>   daily. He tolerated the increase well
+
+ from.   PLAN:  1. I will hold the <MANNER/ROUTE><DRUG>rituximab</DRUG> <ROUTE>infusion</ROUTE></MANNER/ROUTE>  today because of his upper respiratory 
+
+---  Directions: 1 tablet oral daily  <MANNER/ROUTE><DRUG>acyclovir</DRUG> 400 mg Tablet, Ordered By: --- Name --- --- Name --- --- Name ---  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  three times a day  Stopped medications
+
+TAMIN             1 UDCAP  <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>MULTIVITAMINS</DRUG></MANNER/ROUTE> -                  Eve
+
+he 70s, which improved after 2  liters <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>fluid</DRUG></MANNER/ROUTE>  resuscitation. Her troponins were trend
+
+: 1 tablet oral QMONWEDFRI QMONWEDFRI  <MANNER/ROUTE><DRUG>metoprolol succinate 25 mg Tablet Extended Release 24 hr</DRUG>, Ordered By: --- Name --- --- Name ---  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  twice a day  LORazepam -Ativan- 0.5 mg
+
+d after this most recent admission on  <MANNER/ROUTE><ROUTE>oral</ROUTE><ROUTE>oral</ROUTE></MANNER/ROUTE>  antibiotics and did not improve so at t
+
+he patient reported had no itching with <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>contrast</DRUG></MANNER/ROUTE>  or other symptoms with the steroid/bena
+
+ DISCHARGE MEDICATIONS: Include;  1. <MANNER/ROUTE><DRUG>Amitriptyline</DRUG> HCL 50 mg <ROUTE>by mouth</ROUTE></MANNER/ROUTE>  at bedtime.  2. Peridex 5 mL mouth wa
+
+         One Time Per Day   <MANNER/ROUTE><DRUG>CALAN SR</DRUG>                 240 MG  <ROUTE>PO</ROUTE></MANNER/ROUTE>   -VERAPAMIL HCL SR-          
+
+tus post 4 cycles of chemotherapy and 4 <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> instillations of <DRUG>methotrexate</DRUG></MANNER/ROUTE> .   He also did have a pulmonary embo
+
+ The  patient was on a Lidoderm patch, <MANNER/ROUTE><DRUG>fentanyl</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE>  as well as Vicodin. The patient  was 
+
+nlocalizing symptoms. He did receive 1 <MANNER/ROUTE><DRUG>Neupogen</DRUG> <ROUTE>injection</ROUTE></MANNER/ROUTE> . His fever resolved after 24 hours. H
+
+ea and vomiting; Levaquin 500 mg daily, <MANNER/ROUTE><DRUG>posaconazole</DRUG> 5 mL <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  t.i.d.  with meals, Zofran 8 mg tablet
+
+tinued By: --- Name --- --- Name ---  <MANNER/ROUTE><DRUG>metroNIDAZOLE (Flagyl)</DRUG> 500 mg Tablet  Directions: 1 tablet <ROUTE>gastrostomy (PEG)</ROUTE></MANNER/ROUTE>  three times a day  mirtazapine 15 mg T
+
+Yes  Is Med replacing another? No   <MANNER/ROUTE><DRUG>RENVELA</DRUG>                 800 MG  <ROUTE>PO</ROUTE></MANNER/ROUTE>   -SEVELAMER CARBONATE-        
+
+ch  has improved after only 2 doses of <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>acyclovir</DRUG></MANNER/ROUTE> .   RECOMMENDATIONS: May continue ac
+
+moderate sedation with no problems. 1% <MANNER/ROUTE><DRUG>lidocaine</DRUG> was  <ROUTE>infiltrated</ROUTE></MANNER/ROUTE>  at L2-L3 for local anesthesia. Using s
+
+               100 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>DOCUSATE SODIUM</DRUG></MANNER/ROUTE> -                 Twice
+
+OCEDURE: Lumbar puncture to administer <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> chemotherapy -hydrocortisone 15 mg and <DRUG>cytarabine</DRUG></MANNER/ROUTE>  30 mg in 10 mL normal saline- with intr
+
+NOPRIL 20 MG QDAY ORAL ---- Date ----  <MANNER/ROUTE><DRUG>DOCUSATE SODIUM</DRUG> 100 MG BID <ROUTE>ORAL</ROUTE></MANNER/ROUTE>  ---- Date ----  HYDROCHLOROTHIAZIDE 25
+
+nectomy, autoimmune hemolytic anemia on <MANNER/ROUTE><ROUTE>oral</ROUTE> <DRUG>steroids</DRUG></MANNER/ROUTE> , stable  hemoglobin and reticulocyte c
+
+evothyroxine 150 mcg p.o. daily.    <MANNER/ROUTE><DRUG>Multivitamin</DRUG> 1 tab <ROUTE>p.o</ROUTE></MANNER/ROUTE>  daily.     Pamidronate 90 mg IV eve
+
+h., again, to  finish on --- Date ---, <MANNER/ROUTE><DRUG>diltiazem XR</DRUG> 240 mg <ROUTE>by mouth</ROUTE></MANNER/ROUTE>  daily, Cardura 4 mg by  mouth daily, C
+
+ritation, I have suggested she stop the <MANNER/ROUTE><ROUTE>nasal</ROUTE> <DRUG>calcitonin</DRUG></MANNER/ROUTE>  and give me a call. Will still check o
+
+Hydrocodone 5/500 by mouth p.r.n.  3. <MANNER/ROUTE><DRUG>Lisinopril</DRUG> 10 mg <ROUTE>p.o</ROUTE></MANNER/ROUTE> . daily, hold for systolic blood pressur
+
+ hcl SR 10 MG BID ORAL ---- Date ----  <MANNER/ROUTE><DRUG>HYDROCORTISONE SOD SUCCINATE</DRUG> 25 MG Q8HR <ROUTE>INTRAVEN</ROUTE></MANNER/ROUTE>  ---- Date ----  ACETYLCYSTEINE 3 ML BI
+
+               1000 MG  <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>FISH OIL</DRUG></MANNER/ROUTE> -                    
+
+aily, Colace 100 mg p.o. twice  a day, <MANNER/ROUTE><DRUG>ferrous gluconate</DRUG> 325 mg <ROUTE>p.o</ROUTE></MANNER/ROUTE> . twice a day, fexofenadine 60 mg p.o., 
+
+ placed on nasal canula given 250 mL of <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>fluid</DRUG></MANNER/ROUTE>  x1 and  transferred to the CCU for fur
+
+pt some arrhythmia at the site  of the <MANNER/ROUTE><DRUG>bortezomib</DRUG> <ROUTE>injection</ROUTE></MANNER/ROUTE>  subcutaneously.   PHYSICAL EXAMINATI
+
+l every six hours PRN NAUSEA/VOMITING  <MANNER/ROUTE><DRUG>omeprazole 20 mg Capsule, Delayed Release</DRUG>-E.C.-, Ordered By: --- Name --- --- Name --- --- Name ---  Directions: 1 capsule <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY  prochlorperazine maleate 10 mg 
+
+            How to Take   <MANNER/ROUTE><DRUG>AMITRIPTYLINE HCL</DRUG>            25 MG   <ROUTE>PO</ROUTE></MANNER/ROUTE>   -AMITRIPTYLINE HCL-         
+
+LFATE             30 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  -<DRUG>MORPHINE SULFATE</DRUG></MANNER/ROUTE>  TAB IR 30MG-          Every 
+
+ 8. OxyContin 40 mg p.o. q.a.m.  9. <MANNER/ROUTE><DRUG>OxyContin</DRUG> 60 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  at bedtime.  10. Compazine 10 mg p.o.
+
+ the --- Named_Sites ---. You received <MANNER/ROUTE><DRUG>oxygen</DRUG> via a <ROUTE>nasal canula</ROUTE></MANNER/ROUTE>  during your stay in the hospital, and y
+
+rections: 5 mL oral three times a day  <MANNER/ROUTE><DRUG>prochlorperazine maleate</DRUG> 10 mg Tablet, Ordered By: --- Name --- --- Name ---  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  every six hours PRN NAUSEA  levofloxac
+
+d clots.   How do I take warfarin?  <MANNER/ROUTE><DRUG>Warfarin</DRUG> comes as a tablet to take <ROUTE>by mouth</ROUTE></MANNER/ROUTE> . It is usually taken once a day.  You
+
+: Amitriptyline 25 mg p.o. at bedtime, <MANNER/ROUTE><DRUG>Pepcid</DRUG> 20 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  b.i.d., Zofran, Peridex mouthwash, lact
+
+tment since then. She is on indefinite <MANNER/ROUTE><ROUTE>oral</ROUTE> <DRUG>anticoagulant</DRUG></MANNER/ROUTE>  treatment for her hypercoagulable state
+
+ted exercises course. She has had some <MANNER/ROUTE><DRUG>anti-inflammatory</DRUG>  medication. She had an anterior based <ROUTE>injection</ROUTE></MANNER/ROUTE>  approximately a month ago  without muc
+
+s for now.     Hypothyroidism: On <MANNER/ROUTE><DRUG>levothyroxine</DRUG> 150 mcg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily and tolerating well, taking appro
+
+ Reason for this Medication: PAIN   <MANNER/ROUTE><DRUG>MULTIPLE VITAMIN</DRUG>             1 UDCAP  <ROUTE>PO</ROUTE></MANNER/ROUTE>   -MULTIVITAMINS-           
+
+to Take         Last Dose   <MANNER/ROUTE><DRUG>XANAX</DRUG>                  0.25 MG  <ROUTE>PO</ROUTE></MANNER/ROUTE>   -ALPRAZOLAM-             
+
+e ---  Directions: 1 tablet oral QAM  <MANNER/ROUTE><DRUG>morphine 30 mg Tablet Extended Release</DRUG>, Ordered By: --- Name --- --- Name ---  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  QPM  morphine 30 mg Tablet, Ordered By
+
+ from  Velcade, which is relieved with <MANNER/ROUTE><DRUG>Neurontin</DRUG> 200 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  b.i.d. He also has  constipation and 
+
+ rash.     ADDITIONAL MEDICATIONS: <MANNER/ROUTE><DRUG>Fentanyl</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE>  12.5 mcg, Cartia XT, doxazosin,  low-d
+
+for further management and  started on <MANNER/ROUTE><DRUG>heparin</DRUG> <ROUTE>drip</ROUTE></MANNER/ROUTE> . This was discussed with the --- Locat
+
+             Every Day   <MANNER/ROUTE><DRUG>MULTIVITAMINS</DRUG>              1 UDCAP  <ROUTE>PO</ROUTE></MANNER/ROUTE>   -MULTIVITAMINS-           
+
+in --- Date ---; she is on indefinite  <MANNER/ROUTE><ROUTE>oral</ROUTE> <DRUG>anticoagulant</DRUG></MANNER/ROUTE>  therapy because of her hypercoagulable 
+
+s on chest exam,  and was treated with <MANNER/ROUTE><ROUTE>IV</ROUTE> <DRUG>Lasix</DRUG></MANNER/ROUTE> . The patient did have a right lower lo
+
+aily p.r.n. allergic rhinitis symptoms, <MANNER/ROUTE><DRUG>multivitamin</DRUG> 1 tab <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily,  glucosamine sulfate 1500 mg p.
+
+to Take         Last Dose   <MANNER/ROUTE><DRUG>ASPIRIN</DRUG>                 325 MG  <ROUTE>PO</ROUTE></MANNER/ROUTE>   -ASPIRIN-              
+
+to Take         Last Dose   <MANNER/ROUTE><DRUG>OYSTER SHELL CA/VIT D</DRUG> TAB        500 MG  <ROUTE>PO</ROUTE></MANNER/ROUTE>   -CALCIUM CARBONATE/VITAMIN D-    
+
+Dr. --- Name ---.  3. He will receive <MANNER/ROUTE><DRUG>pamidronate</DRUG> 90 mg <ROUTE>intravenously</ROUTE></MANNER/ROUTE>  today.  4. The patient will receive V
+
+Directions: 1 tablet oral twice a day  <MANNER/ROUTE><DRUG>docusate sodium (DOK</DRUG>- 100 mg Capsule, Ordered By: --- Name --- --- Name --- --- Name ---  Directions: 1 capsule <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY  levothyroxine -Synthroid- 150 m
+
+  ADDITIONAL MEDICATIONS: Cartia XT, <MANNER/ROUTE><DRUG>fentanyl</DRUG> <ROUTE>patch</ROUTE></MANNER/ROUTE>  150 mcg every 72 hours,  Percocet 5/32

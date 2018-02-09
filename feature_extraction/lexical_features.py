@@ -9,6 +9,8 @@ from collections import defaultdict
 import pickle
 from nltk import ngrams as nltk_ngrams
 
+from sklearn.feature_extraction import DictVectorizer
+
 sys.path.append(os.path.join('..', 'basic'))
 import base_feature
 
@@ -42,7 +44,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         vocab_idx = {}
         min_length, max_length = self.ngram_window
         for i, gram in enumerate(vocab.keys()):
-
+            # If it's too big or too small, don't include it
             if (min(self.ngram_window) > len(gram.split()) or
                         len(gram.split()) > max(self.ngram_window)):
                 continue
@@ -85,7 +87,6 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         grams_before = self.get_grams_before(relat, doc)
         grams_after = self.get_grams_after(relat, doc)
 
-
         lex_features['same_sentence'] = in_same_sentence
         lex_features['num_tokens_between'] = num_tokens_between
         lex_features['grams_between'] = grams_between
@@ -93,9 +94,6 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         lex_features['grams_after'] = grams_after
 
         return lex_features
-
-
-
 
 
 
@@ -110,9 +108,12 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         end = spans[1][0]
         start, end = sorted((start, end))
         tokens_in_span = doc.get_text_at_span((start, end))
+        # NOTE: lower-casing the ngrams, come back to this if you want to encode the casing
+        tokens_in_span = [token.lower() for token in tokens_in_span]
         for n in set(ngram_window):
             # Now sort the ngrams so that it doesn't matter what order they occur in
-            grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
+            grams = list(nltk_ngrams(tokens_in_span, n))
+            grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
         return grams
 
 
@@ -123,8 +124,11 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         grams = []
         offset = relat.span[0]
         tokens_before = doc.get_tokens_before_or_after(offset, delta=-1, n=self.context_window[0])
+        tokens_before = [token.lower() for token in tokens_before]
         for n in set(self.ngram_window):
-            grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_before, n))]
+            grams = list(nltk_ngrams(tokens_before, n))
+            grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
+            #grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_before, n))]
         return grams
 
     def get_grams_after(self, relat, doc):
@@ -134,9 +138,15 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         grams = []
         offset = relat.span[1]
         tokens_after = doc.get_tokens_before_or_after(offset, delta=1, n=self.context_window[1])
+        tokens_after = [token.lower() for token in tokens_after]
         for n in set(self.ngram_window):
-            grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_after, n))]
+            grams = list(nltk_ngrams(tokens_after, n))
+            grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
+            #grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_after, n))]
         return grams
+
+    def sort_ngrams(self, ngrams):
+        return [' '.join(sorted(tup)) for tup in ngrams]
 
 
     def get_tokens_in_window(self, relat, doc):
@@ -169,20 +179,18 @@ def main():
     with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
         vocab = pickle.load(f)
 
+
+
     feature_extractor = LexicalFeatureExtractor(ngram_window=(1, 2), vocab=vocab)
-
-
-
-    feat_dicts = {} # mapping from relation to feature dictionary
-    # Create features for each relation
-
-
-
     vector_creator = base_feature.FeatureVectorCreator()
-    feature_vector_idxs = vector_creator.create_feature_vector_indices([feature_extractor])
+    vector_creator.create_vectorizer(feature_extractor)
+    #vector_creator.enum_feature_values(feature_extractor)
+    #vectorizer = vector_creator.create_vectorizer([feature_extractor])
+    #feature_vector_idxs = vector_creator.create_feature_vector_indices([feature_extractor])
 
-    print(feature_extractor)
-    for i, relat in enumerate(relats[1:]):
+    feat_dicts = [] # mappings of feature names to values
+    y = []
+    for i, relat in enumerate(relats[:5]):
 
         #if relat.span[1] - relat.span[0] > 500:
         #    print(i)
@@ -190,13 +198,34 @@ def main():
         #continue
         doc = docs[relat.file_name]
         span = relat.span
+
+        # This returns a dictionary with lists of values
         feature_dict = feature_extractor.create_feature_dict(relat, doc)
+        print(feature_dict)
+        # You now have to flatten it so that it's a single-dimension dictionary
+        feature_vect_dict = vector_creator.transform_feature_vector(feature_dict)
+        feat_dicts.append(feature_vect_dict)
+
+        y.append(relat.type)
+        print(feat_dicts)
+        continue
+        print(feature_vect); continue
         feat_dicts[relat] = feature_dict
         for feature_name, feature_values in feature_dict.items():
             if isinstance(feature_values, list):
                 all_lex_features[feature_name].extend(feature_values)
-
-        break
+    print(feat_dicts)
+    X = vector_creator.vectorize(feat_dicts)
+    print(X)
+    print(X.shape)
+    print(y)
+    print(len(y))
+    print("Made it to the end")
+    exit()
+    vectorizer = DictVectorizer(sparse=True)
+    X = vectorizer.fit_transform(feature_dicts)
+    print(X); exit()
+    exit()
 
     # Now that we have all possible values for each feature,
     # we can assign each feature-value pair an index

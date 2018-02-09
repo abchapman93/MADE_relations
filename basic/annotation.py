@@ -237,10 +237,11 @@ class AnnotatedDocument(object):
             if offset in self._sentences: # this means it's the start of a new sentence
                 if delta == -1: # If this ist the beginning, we want to include this
                     tokens.append(self._tokens[offset])
-                for diff in range(n - len(tokens)): # Add PHI as many times as necessary
-                    to_append = '<PHI>' if delta == -1 else '<OMEGA>'
-                    tokens.append(to_append)
                 break
+                # TODO: Decide what to do with sentence boundries
+                #for diff in range(n - len(tokens)): # Add PHI as many times as necessary
+                #    to_append = '<PHI>' if delta == -1 else '<OMEGA>'
+                #    tokens.append(to_append)
             elif offset in self._tokens: # This means we've found a new token
                 tokens.append(self._tokens[offset])
                 offset += delta
@@ -256,13 +257,17 @@ class AnnotatedDocument(object):
         """
         Checks whether a relation entity is within a single sentence.
         """
-        start, end = span
-        idx = start
-        while idx < end:
-            if idx in self._sentences: # If the current idx is a key in the sentence spans, it marks a new sentence
-                return 1
-            idx += 1
-        return 0
+        if len(self.get_sentences_overlap_span(span)) == 1:
+            return 1
+        else:
+            return 0
+        #start, end = span
+        #idx = start
+        #while idx < end:
+        #    if idx in self._sentences: # If the current idx is a key in the sentence spans, it marks a new sentence
+        #        return 1
+        #    idx += 1
+        #return 0
 
     def get_sentences_overlap_span(self, span):
         """

@@ -64,21 +64,22 @@ class ClinicalRushSentenceTokenizer(object):
         self.rush = RuSH(self.rules)
 
     def tokenize_sents(self, text):
-        try:
-            sent_spans = self.rush.segToSentenceSpans(text)
-        except Exception as e:
-            # Let's try to track down where this is happening in the text
-            for i in range(int(len(text)/10)):
-                start = i * 10
-                end = start + 10
-                try:
-                    self.rush.segToSentenceSpans(text[start:end])
-                except Exception as e:
-                    with open('failed_snippet.txt', 'a') as f:
-                        f.write(text[start:end] + '\n')
-                    print("Failed at {}".format(start))
-                    raise e
-        sent_spans = [(s.begin, s.end) for s in sent_spans]
+        #try:
+        #    sent_spans = self.rush.segToSentenceSpans(text)
+        #except Exception as e:
+        #    # Let's try to track down where this is happening in the text
+        #    for i in range(int(len(text)/10)):
+        #        start = i * 10
+        #        end = start + 10
+        #        try:
+        #            self.rush.segToSentenceSpans(text[start:end])
+        #        except Exception as e:
+        #            with open('failed_snippet.txt', 'a') as f:
+        #                f.write(text[start:end] + '\n')
+        #            print("Failed at {}".format(start))
+        #            raise e
+        #sent_spans = [(s.begin, s.end) for s in sent_spans]
+        sent_spans = self.rush.segToSentenceSpans(text)
         return sent_spans
 
 
@@ -101,7 +102,8 @@ if __name__ == '__main__':
              "address edema issue question was related to his liver hepatitis C. Hospital consult" +\
              " was obtained. This included an ultrasound of his abdomen, which showed just mild " +\
              "cirrhosis. "
-    #input_str = open('failed.txt').read()[:-9001]
+    with open('failed.txt') as f:
+        input_str = f.read()
 
     sent_tokenizer = ClinicalRushSentenceTokenizer('rush_rules.tsv')
     sent_tokenizer = DefaultSentenceTokenizer()

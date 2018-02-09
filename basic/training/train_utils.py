@@ -4,6 +4,8 @@ from collections import defaultdict
 sys.path.append('..')
 import made_utils, annotation
 
+DATADIR = os.path.join('..', '..', 'data')
+
 
 def define_legal_edges(thresh=1):
     """
@@ -23,6 +25,11 @@ def define_legal_edges(thresh=1):
         for relation in doc.relations:
             edge = relation.entity_types
             entity_type1, entity_type2 = edge
+            # If the two entity edges are the same, exclude them
+            if entity_type1 == entity_type2:
+                # Include this with a count of 0, so we can have a feature for it w/ real annotations
+                edges[edge] = 0
+                continue
             # Add one to this edge
             edges[edge] += 1
             # Append this entity
@@ -35,7 +42,7 @@ def define_legal_edges(thresh=1):
         for other in entities:
             edges[(entity, other)] += 0
 
-    with open('edge_counts.pkl', 'wb') as f:
+    with open(os.path.join(DATADIR, 'edge_counts.pkl'), 'wb') as f:
         pickle.dump(edges, f)
 
     print("Saved edge counts")
@@ -47,7 +54,7 @@ def load_legal_edges(thresh=1):
    Reads a pickled dictionary of edge counts.
    Returns a list of edges with a count > thresh
    """
-   with open('edge_counts.pkl', 'rb') as f:
+   with open(os.path.join(DATADIR, 'edge_counts.pkl'), 'rb') as f:
        edges = pickle.load(f)
    print("Loaded legal edges")
    return [x for x in edges.keys() if edges[x] >= thresh]
@@ -88,3 +95,6 @@ def pair_annotations_in_doc(doc, legal_edges=[]):
                 generated_relations.append(generated_relation)
     relations = true_relations + generated_relations
     return relations
+
+if __name__ == '__main__':
+    define_legal_edges()

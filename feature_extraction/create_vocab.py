@@ -13,6 +13,7 @@ sys.path.append(os.path.join('..', 'basic'))
 from basic import annotation
 from basic import tokenizing
 from basic.annotation import min_preprocess as preprocess
+import made_utils
 
 
 DATADIR = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0')
@@ -20,24 +21,24 @@ OUTDIR = os.path.join('..', 'data')
 
 def main():
     vocab = defaultdict(int)
+    # TODO: Should we remove stop words?
     word_tokenizer = TreebankWordTokenizer()
     sent_tokenizer = tokenizing.DefaultSentenceTokenizer()
-    corpus = glob.glob(os.path.join(DATADIR, 'corpus', '*'))
-    for text_file in corpus:
-        text = preprocess(open(text_file).read().lower())
-        doc = annotation.AnnotatedDocument(text_file, text)
-        for sent in doc.get_sentences():
-            # Place PHI and OMEGA on either side of the sentence
-            sent_list = list(sent)
-            for i in range(2):
-                sent_list.insert(0, '<PHI>')
-                sent_list.append('<OMEGA>')
 
-            # Create up to trigrams
-            for n in (1, 2, 3):
-                grams = ngrams(sent_list, n)
-                for gram in grams:
-                    vocab[' '.join(gram)] += 1
+    docs = made_utils.read_made_data()
+    #for text_file in corpus:
+        #doc = annotation.AnnotatedDocument(text_file, text)
+    for rpt_id, doc in docs.items():
+        tokens = doc.get_tokens()
+        # NOTE: lowercasing tokens for the vocab, will include capitalization in a separate feature
+        tokens_list = [t.lower() for t in tokens]
+
+        # Create up to trigrams
+        for n in (1, 2, 3):
+            grams = ngrams(tokens_list, n)
+            for gram in grams:
+                # Sort the ngram so that it doesn't matter the order it occurs in
+                vocab[' '.join(sorted(gram))] += 1
 
 
     outpath = os.path.join(OUTDIR, 'vocab.pkl')

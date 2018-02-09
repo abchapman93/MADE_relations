@@ -1,199 +1,199 @@
-nded in [** Date **].  2. He received <DU><DURATION>3 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  in [** Date **].  3. He received flud
+ secondary to a severe skin rash.  4. <DU><DURATION>One cycle</DURATION> of <DRUG>fludarabine</DRUG></DU>  in --- Date ---, which rendered him pro
 
-gnosed in [** Date **].  A. Completed <DU><DURATION>6 cycles</DURATION> of <DRUG>chemotherapy</DRUG></DU>  with R-CHOP in [** Date **].  B. Rece
+ou will be discharged to home with oral <DU><DRUG>antibiotics</DRUG> for <DURATION>10 more \ndays</DURATION></DU>  and follow up next week with Dr. --- Na
 
-ecently in [** Date **]. He finished a <DU><DURATION>6-month</DURATION> course of <DRUG>Coumadin</DRUG></DU>  after initially being  treated with Lo
+d intrathecal methotrexate, intrathecal <DU><DRUG>hydrocortisone</DRUG> and intrathecal cytarabine, a total of <DURATION>7 doses</DURATION></DU>  in different combinations, Doxorubicin 
 
-ine, which ended in [** Date **].  2. <DU><DURATION>Three cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  in [** Date **].  3. Fludarabine in [
+ Date ---. You will complete a total of <DU><DURATION>10 days</DURATION> <DRUG>Augmentin</DRUG></DU>  to prevent any sinus infection.  Atten
 
-mphoma treatment since then. She is on <DU><DURATION>indefinite</DURATION> oral <DRUG>anticoagulant</DRUG></DU>  treatment for her hypercoagulable state
+lly 4 times a week.  3. She completed <DU><DURATION>4 cycles</DURATION> of <DRUG>Rituxan</DRUG></DU>  375 mg/m2 weekly, x4 doses in late --- 
 
-due to methotrexate. He was started on <DU><DRUG>fluconazole</DRUG> 200 mg p.o. x 1 and then 100 mg p.o. x <DURATION>9 days</DURATION></DU>  as well as nystatin cream to his groin 
+continued secondary to skin rash.  3. <DU><DRUG>Fludarabine</DRUG> in --- Date ---. He received <DURATION>1 cycle</DURATION></DU> , but it rendered him profoundly pancyto
 
-nded in [** Date **].  2. He received <DU><DURATION>3 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  in [** Date **].  3. He received flud
+in --- Date ---. He was treated with a <DU><DURATION>6-month</DURATION> course of <DRUG>Coumadin</DRUG></DU> , which has been then discontinued.  5.
 
-aced and left leg DVT in [** Date **], <DU><DRUG>Warfarin</DRUG> was continued for approximately <DURATION>3 years</DURATION></DU> , but he is on no anticoagulation curren
+lulitis of the right leg treated with a <DU><DURATION>10-day</DURATION> course of <DRUG>antibiotics</DRUG></DU> , now resolved.  5. Extensive hospital
 
-ENT THERAPY:  1. The patient received <DU><DURATION>one cycle</DURATION> of <DRUG>fludarabine</DRUG></DU>  in [** Date **], which  rendered him p
+e ---.    PAST CHEMOTHERAPY:  1. <DU><DURATION>Four cycles</DURATION> of <DRUG>fludarabine</DRUG></DU> , which ended in --- Date ---.  2. Th
 
-he thalidomide.  4. The patient is on <DU><DRUG>Coumadin</DRUG>, which was started in [** Date **], and  should be given for <DURATION>6 months</DURATION></DU> .  5. The patient receives monthly pam
+pleted in --- Date --- with maintenance <DU><DRUG>Rituxan</DRUG> for <DURATION>1 year</DURATION></DU>  with which he went into remission.  4.
 
-one marrow. He  subsequently received <DU><DURATION>2 cycles</DURATION> of <DRUG>chemotherapy</DRUG></DU>  with bortezomib and bendamustine  base
+tinued By: --- Name --- --- Name ---  <DU><DRUG>metroNIDAZOLE (Flagyl)</DRUG> 500 mg Tablet  Directions: 1 tablet gastrostomy -PEG- three times a day  Extended Instructions: x<DURATION>10days</DURATION></DU>   Continued By: --- Name --- --- Name 
 
-completed in [** Date **] and completed <DU><DURATION>2 years</DURATION> of maintenance <DRUG>Rituxan</DRUG></DU>  in [** Date **]. She is on indefinite 
+lidomide.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Six cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  completed in --- Date ---.  2. Mainte
 
-pleted in [** Date **] with maintenance <DU><DRUG>Rituxan</DRUG> for <DURATION>1 year</DURATION></DU> .  4. Fludarabine x1 cycle in [** Date
+PY:  1. The patient recently received <DU><DRUG>Rituxan</DRUG> 375 mg/m2 weekly for <DURATION>4 weeks</DURATION></DU> .  2. Before that his most recent regi
 
-]  Directions: 0.5 tablet oral DAILY  <DU><DRUG>ENOXAPARIN (LOVENOX</DRUG>) 70 MG = 0.7 ML Subcutaneous SYRINGE Q12H for <DURATION>30 Days</DURATION></DU>   Directions: 0.7 mL subcutaneous ever
+---  Directions: 1 tablet oral DAILY  <DU><DRUG>MULTIVITAMINS (TAB-A-VITE</DRUG>- 1 TABLET = 1 TABLET Oral TABLET DAILY STAT and then Routine for <DURATION>30 Days</DURATION></DU>   Directions: 1 tablet oral DAILY  ac
 
-  CURRENT THERAPY: He is status post <DU><DRUG>Rituxan plus CHOP</DRUG> x<DURATION>6 cycles</DURATION></DU>  along with intrathecal methotrexate x4 
+--- Date ---. In the past, he received <DU><DURATION>6 cycles</DURATION> of <DRUG>CHOP chemotherapy</DRUG></DU>  in --- Date ---  and perhaps fludarabi
 
-otherapy on the hyper-CVAD protocol and <DU><DURATION>2 cycles</DURATION> of Rituxan, bendamustine and <DRUG>bortezomib</DRUG></DU> .   HISTORY OF PRESENT ILLNESS: Mr. 
+ measurable.   I will consider using <DU><DRUG>Rituxan</DRUG>, perhaps in several months. I would give her  a weekly dose for <DURATION>4 weeks</DURATION></DU>  and then once every 3 months for 2 year
 
- serum are increasing. He has only had <DU><DURATION>1 cycle</DURATION>; however, of the next <DRUG>chemotherapy</DRUG></DU> .             E-Signed By [*
+MENT HISTORY: So far, she has received <DU><DURATION>6 cycles</DURATION> of <DRUG>chemotherapy</DRUG></DU> , full  dose of R-CHOP, the chemotherap
 
-  1. Mantle cell lymphoma status post <DU><DURATION>7 cycles</DURATION> of <DRUG>chemotherapy</DRUG></DU>  on the hyper-CVAD protocol. The last 2
+tinued By: --- Name --- --- Name ---  <DU><DRUG>MULTIVITAMINS (TAB-A-VITE</DRUG>- 1 TABLET = 1 TABLET Gastrostomy -PEG- TABLET DAILY -900- for <DURATION>30 Days</DURATION></DU>   posaconazole 200 mg/5 mL -40 mg/mL- S
 
-EMOTHERAPY: Subsequently, she received <DU><DURATION>6 cycles</DURATION> of chemotherapy with <DRUG>R-CHOP</DRUG></DU> . This was finished in [** Date **]. Th
+1 tablet p.o. q.6 h.  p.r.n. pain; and <DU><DRUG>leucovorin</DRUG> 25 mg q.6 h. x<DURATION>2 days</DURATION></DU>  following discharge.      Attendi
 
-  in [** Date **] for her next weekly x<DU><DURATION>4 doses</DURATION> of <DRUG>Rituxan</DRUG></DU> . As Dr. [** Name **] had  outlined, w
+sed in --- Date ---, who is status post <DU><DURATION>6 cycles</DURATION> of <DRUG>ABVD chemotherapy</DRUG></DU>  completed in --- Date ---, who has main
 
- I will plan to start another course of <DU><DRUG>Rituxan</DRUG> on  [** Date **] and he will receive <DURATION>4</DURATION></DU>  weekly doses. We have objective  evid
-
-continued secondary to skin rash.  3. <DU><DRUG>Fludarabine</DRUG> monotherapy in [** Date **], which caused profound pancytopenia and he had no more after <DURATION>1 cycle</DURATION></DU> .   ADDITIONAL MEDICATIONS: Low-dose
-
-subclavian vein.   CURRENT THERAPY: <DU><DRUG>CVP</DRUG>. The patient has completed <DURATION>3 courses</DURATION></DU> . He previously has exhibited disease p
-
-dgkin lymphoma, stage IIIA, status post <DU><DURATION>6 cycles</DURATION> <DRUG>ABVD chemotherapy</DRUG></DU>  completed in [** Date **], maintaining 
-
-conference. It was decided to give him <DU><DURATION>6 cycles</DURATION> of <DRUG>R-CHOP</DRUG></DU>  and prophylactic intrathecal chemothera
-
-   ONCOLOGICAL THERAPY: Status post <DU><DURATION>6 cycles</DURATION> of combination biochemotherapy with <DRUG>R-CHOP</DRUG></DU>  completed in [** Date **] and received 
-
- CURRENT TREATMENT: The patient was on <DU><DURATION>5 days</DURATION> of <DRUG>Keflex</DRUG></DU>  500 mg 3 times a day.   INTERIM HIST
-
-y for her lymphoma. She is status post <DU><DURATION>6 courses</DURATION> of <DRUG>CVP</DRUG></DU>  (Cytoxan/vincristine/prednisone) comple
-
-e on valacyclovir.  He will complete a <DU><DURATION>seven-day</DURATION> course of both the valacyclovir and <DRUG>doxycycline</DRUG></DU> .   For the patient's CLL, we discont
-
-**]  Directions: 1 tablet oral DAILY  <DU><DRUG>MULTIVITAMINS (TAB-A-VITE</DRUG>) 1 TABLET = 1 TABLET Oral TABLET DAILY STAT and then Routine for <DURATION>30 Days</DURATION></DU>   Directions: 1 tablet oral DAILY  pr
-
-g orally 4 times a week. She completed <DU><DURATION>4 cycles</DURATION> of <DRUG>Rituxan</DRUG></DU>  375 mg/m2 in [** Date **], folic acid 1
-
-wing this, she was discharged to take  <DU><DRUG>prednisone</DRUG> and finish a <DURATION>5-day course</DURATION></DU> . She today comes for followup of  abo
-
-creatinine of 6.16.  He is status post <DU><DURATION>4-week cycle</DURATION> of <DRUG>chemotherapy</DRUG></DU>  with rituximab and status post  IVC fi
-
-I will  advise the patient to decrease <DU><DRUG>testosterone</DRUG> level to 2.5 g a day for <DURATION>2-3 \nweeks</DURATION></DU>  and then stop it. I will repeat testos
-
-lymphadenopathy.   CURRENT THERAPY: <DU><DRUG>Rituxan</DRUG> was restarted [** Date **]. He received <DURATION>4</DURATION></DU>  weekly  courses separated by a month i
-
-  1. Mantle cell lymphoma status post <DU><DURATION>7 cycles</DURATION> of <DRUG>chemotherapy</DRUG></DU>  on the hyper-CVAD protocol and two cycl
-
-s discontinued in  [** Date **].  4. <DU><DURATION>Six cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU> , which was completed in [** Date **]. 
-
-ing bendamustine and rituximab. He had <DU><DURATION>1 cycle</DURATION> of bendamustine and <DRUG>Rituxan</DRUG></DU>  with the bendamustine at very reduced d
-
-  PAST CHEMOTHERAPY:  1. He received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  completed in [** Date **] and then main
-
-ximab infusion today. He has completed <DU><DURATION>2 years</DURATION> of maintenance <DRUG>rituximab</DRUG></DU>  therapy.   Smoking cessation was aga
-
-].  1. Most recently, he had received <DU><DRUG>bendamustine</DRUG> 45 mg/m2 daily for <DURATION>2 days</DURATION></DU>  and Rituxan on day #1, but developed se
-
- hospitalizations, but has completed a <DU><DURATION>4-week</DURATION> cycle of <DRUG>rituximab</DRUG></DU>  1 month ago. He  takes morphine for c
-
-tment with rituximab in combination and <DU><DRUG>CHOP</DRUG> with in [** Date **]-[** Date **] for <DURATION>6 cycles</DURATION></DU> .  I have explained to him the conseque
-
-burst of anger.   MEDICATIONS:  1. <DU><DRUG>Clindamycin</DRUG> 300 mg three times a day that he is taking a <DURATION>10-day</DURATION></DU>  course for folliculitis on his legs tha
-
-y mouth. The patient will complete a  <DU><DURATION>2-week course</DURATION> of <DRUG>levofloxacin</DRUG></DU>  250 mg p.o. daily, which will complete 
-
-per-CVAD based chemotherapy followed by <DU><DURATION>2 cycles</DURATION> of bendamustine, <DRUG>bortezomib</DRUG></DU>  protection based therapy; peripheral ne
-
- 3. Fludarabine in [** Date **].  4. <DU><DURATION>Six cycles</DURATION> of <DRUG>CHOP</DRUG></DU>  in [** Date **].   ADDITIONAL MEDICA
-
- only for lymphoma. She is status post <DU><DURATION>6 courses</DURATION> of Cytoxan/vincristine/prednisone (<DRUG>CVP</DRUG></DU> ) completed in [** Date **] and she comp
-
-re, I have given her a prescription for <DU><DRUG>doxycycline</DRUG> 100 mg orally twice a day to be taken for <DURATION>no more than 7 days</DURATION></DU> .  3. I also sent a serology for ehrli
-
-pation, Cardura 4 mg p.o. at bedtime,  <DU><DRUG>doxycycline</DRUG> 100 mg p.o. b.i.d. x<DURATION>7 days</DURATION></DU> , wear a hat and sunscreen when outside,
-
-HEMOTHERAPY:  1. The patient received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  which was completed  in [** Date **]. 
-
-t could be poison ivy and had given her <DU><DRUG>prednisone</DRUG> b.i.d. p.o. <DURATION>x5 days</DURATION></DU> .   HISTORY OF PRESENT ILLNESS: See 
-
-  1. Mantel cell lymphoma status post <DU><DURATION>7 cycles</DURATION> of chemotherapy with <DRUG>hyper-CVAD</DRUG></DU> .  The patient is slowly recovering his
-
-s discontinued secondary to rash.  3. <DU><DRUG>Fludarabine</DRUG> given in [** Date **]. He received <DURATION>1 cycle</DURATION></DU> , but it caused profound pancytopenic an
-
-CURRENT THERAPY: The patient started a <DU><DURATION>second course</DURATION> of <DRUG>bendamustine</DRUG></DU>  given days 1 and 2 every 28 days at red
-
-URRENT THERAPY: None.   He received <DU><DURATION>4 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  with the last cycle being given in [** 
-
-ve him a cyclophosphamide 500 mg/m2 and <DU><DRUG>prednisone</DRUG> 50 mg daily for <DURATION>5 days</DURATION></DU>  with or without vincristine, and we wil
-
-le of bendamustine and Rituxan with the <DU><DRUG>bendamustine</DRUG> at very reduced dose of 45 mg/m squared x<DURATION>1 day</DURATION></DU> .   PAST CHEMOTHERAPY:  1. Thalidom
-
-vidence of this. Nevertheless, we tried <DU><DRUG>Nystatin</DRUG>  swish and spit, which relieved her symptoms and she will continue this as out  patient for <DURATION>4 days</DURATION></DU> .  5. Anemia - pt's Hb was down through
-
-e rituximab.   He initially received <DU><DRUG>chemotherapy</DRUG> with rituximab plus CHOP x<DURATION>6 cycles</DURATION></DU>  along with intrathecal methotrexate x4 
-
-us Disease: The patient is status post <DU><DRUG>Rocephin</DRUG> and Zosyn for  <DURATION>three weeks</DURATION></DU>  for the Salmonella bacteremia and septi
-
-t.   PLAN: The patient will receive <DU><DRUG>fludarabine</DRUG> today and for 5 days once a  month for <DURATION>2-3 cycles</DURATION></DU> . He does have followup with Dr. [** Na
-
- maxillary sinus. The patient received <DU><DRUG>CHOP chemotherapy</DRUG> for <DURATION>6 cycles</DURATION></DU>  followed by consolidation radiation man
-
-tisone, Benadryl and famotidine.  3.  <DU><DRUG>Coumadin</DRUG> will be held for <DURATION>2 days</DURATION></DU> .  3. I will see him in followup in 1 
-
-trim and penicillin VK for a total of a <DU><DURATION>10-day</DURATION> course of  <DRUG>antibiotic</DRUG></DU>  therapy. The patient underwent venous 
-
- CVP (cyclophosphamide, vincristine and <DU><DRUG>prednisone</DRUG>) for a total of <DURATION>6 \ncourses</DURATION></DU> , which was completed in [** Date **]. 
-
-l supraclavicular lymphadenopathy after <DU><DURATION>3 courses</DURATION> of <DRUG>CVP</DRUG></DU> , the first given on [** Date **]. This
-
-h maintenance Rituxan for 1 year.  4. <DU><DRUG>Fludarabine</DRUG> x<DURATION>1 cycle</DURATION></DU>  in [** Date **], which caused profound 
-
-pleted in [** Date **] with maintenance <DU><DRUG>Rituxan</DRUG> for <DURATION>1 year</DURATION></DU> .  4. Fludarabine x1 cycle in [** Date
-
-was discontinued in [** Date **].  2. <DU><DURATION>Six cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  which was finished in [** Date **].  3
-
- antibiotics. The patient has received <DU><DURATION>4 days</DURATION> of IV <DRUG>vancomycin</DRUG></DU>  and Zosyn. The patient's symptoms of s
-
-e marrow. He subsequently has received <DU><DURATION>2 cycles</DURATION> of chemotherapy with bortezomib and <DRUG>bendamustine</DRUG></DU>  based therapy. His last marrow had sho
-
-per-CVAD based therapy  following with <DU><DURATION>2 cycles</DURATION> of <DRUG>bendamustine</DRUG></DU> , bortezomib, and rituximab based  ther
-
-per-CVAD based therapy  following with <DU><DURATION>2 cycles</DURATION> of bendamustine, bortezomib, and <DRUG>rituximab</DRUG></DU>  based  therapy who is being admitted f
-
-continued secondary to skin rash.  3. <DU><DRUG>Fludarabine</DRUG> monotherapy given in [** Date **]. With <DURATION>1 cycle</DURATION></DU> , he developed profound pancytopenia and
-
-HEMOTHERAPY:  1. The patient received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU> , completed in [** Date **].  2. He re
-
-r pneumonia.   CURRENT THERAPY: s/p <DU><DURATION>4 treatments</DURATION> of <DRUG>Rituximab</DRUG></DU>  ([** Date **]). He will now receive ma
-
-sone a day.  2. The patient received <DU><DURATION>3 days</DURATION> of 600 mg/kg of intravenous <DRUG>gammaglobulin</DRUG></DU>  because hemolysis had worsened which wa
-
-nce Rituxan in [** Date **]. She is on <DU><DURATION>lifelong</DURATION> <DRUG>warfarin</DRUG></DU>  because of her hypercoagulable state. 
-
-**]  Directions: 1 tablet oral daily  <DU><DRUG>vancomycin</DRUG> 125 MG = 2.5 ML Oral SUSP QID for <DURATION>30 Days</DURATION></DU>   Directions: 2.5 mL oral four times d
-
-mphoma treatment since then. She is on <DU><DURATION>indefinite</DURATION> oral <DRUG>anticoagulant</DRUG></DU>  treatment for her hypercoagulable state
-
-st 7 cycles of hyper-CVAD  followed by <DU><DURATION>2 cycles</DURATION> of <DRUG>bendamustine</DRUG></DU>  and bortezomib, rituximab; also periphe
-
-le being given in 05/2007. He received <DU><DURATION>3 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>   in [** Date **]. In the past, he rec
-
-e patient was subsequently treated with <DU><DURATION>2 \ncycles</DURATION> on chemotherapy with bortezomib and <DRUG>bendamustine</DRUG></DU>  based therapy. His bone  marrow biops
-
-s discontinued secondary to rash.  3. <DU><DRUG>Fludarabine</DRUG> given in [** Date **]. He received <DURATION>1 cycle</DURATION></DU> , but it caused profound pancytopenia an
-
-Date **].   PAST CHEMOTHERAPY:  1. <DU><DURATION>Four cycles</DURATION> of <DRUG>fludarabine</DRUG></DU> , which ended in [** Date **].  2. Thr
-
-nor stem cell transplant. He completed <DU><DURATION>7 cycles</DURATION> of <DRUG>hyper-CVAD</DRUG></DU>  based chemotherapy still with persisten
+e patient was subsequently treated with <DU><DURATION>2 \ncycles</DURATION> on chemotherapy with <DRUG>bortezomib</DRUG></DU>  and bendamustine based therapy. His bo
 
 mphoma diagnosed in the 70's treat with <DU><DRUG>CHOP</DRUG> for <DURATION>1 year</DURATION></DU>   constipation  GERD  nephrolithiasis
 
-ERAPY:  1. Most recently, he received <DU><DURATION>4 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  which ended in [** Date **].  2. He r
+ERAPY:  1. Most recently, he received <DU><DURATION>4 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU> , which ended in --- Date ---.  2. He 
 
-Most recently, he has been treated with <DU><DURATION>3 courses</DURATION> of <DRUG>CVP</DRUG></DU>  with little response. He has never bee
+ell lymphoma. The patient has received <DU><DURATION>2 cycles</DURATION> of chemotherapy on bendamustine, <DRUG>rituximab</DRUG></DU>  and bortezomib. Previously, he had bee
 
-HEMOTHERAPY:  1. The patient received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  completed in [** Date **].  2. He rec
+ in --- Date ---. He has also received <DU><DURATION>4 cycles</DURATION> of intrathecal <DRUG>methotrexate</DRUG></DU> , which was administered by Dr. --- Name
 
-HEMOTHERAPY.  1. The patient received <DU><DURATION>six cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU> , which was  completed in [** Date **].
+le of bendamustine and Rituxan with the <DU><DRUG>bendamustine</DRUG> at very reduced dose of 45 mg/m squared x<DURATION>1 day</DURATION></DU> .   PAST CHEMOTHERAPY:  1. Thalidom
 
-nued in [** Date **].  4. He received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  which was completed in  [** Date **]. 
+the right extremity. The patient is on <DU><DURATION>lifelong</DURATION> <DRUG>warfarin</DRUG></DU> .  5. Factor V Leiden and prothrombin 
+
+t any adverse event, she will then take <DU><DRUG>gabapentin</DRUG> 100 mg p.o. b.i.d. She will do this for another <DURATION>three days</DURATION></DU> . If again no adverse events, she will 
+
+te --- and treated with CVP followed by <DU><DURATION>2 years</DURATION> of maintenance <DRUG>rituximab</DRUG></DU>  concluded in --- Date ---.  2. Hyperc
+
+  PAST CHEMOTHERAPY:  1. He received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  completed in --- Date ---.  2. Mainte
+
+Date ---.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Four cycles</DURATION> of <DRUG>fludarabine</DRUG></DU> , which ended in --- Date ---.  2. Thr
+
+Coumadin.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Six cycles</DURATION> of <DRUG>RCVP</DRUG></DU>  completed in --- Date --- and maintenan
+
+tment with rituximab in combination and <DU><DRUG>CHOP</DRUG> with in --- Date ------- Date --- for <DURATION>6 cycles</DURATION></DU> .  I have explained to him the conseque
+
+t well. Today we discussed maintenance <DU><DRUG>rituxan</DRUG> given every 2 most for a total of <DURATION>2 years</DURATION></DU> .  PLAN:  He will receive Ritaxan q 2m
+
+ the last 2 with bortezomib followed by <DU><DURATION>2 cycles</DURATION> of <DRUG>bendamustine</DRUG></DU> , bortezomib, rituximab based therapy. 
+
+e treatment for years and on the  same <DU><DRUG>opiate</DRUG> regimen for the past <DURATION>6 months</DURATION></DU> . Mr. --- Name --- hypogonadism  could
+
+s needed.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Six cycles</DURATION> of <DRUG>R-CVP</DRUG></DU>  completed in --- Date --- and then main
+
+vidence of this. Nevertheless, we tried <DU><DRUG>Nystatin</DRUG>  swish and spit, which relieved her symptoms and she will continue this as out  patient for <DURATION>4 days</DURATION></DU> .  5. Anemia - pt's Hb was down through
+
+ce cycle.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Four cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  ending in --- Date ---.  2. Three cyc
+
+but very high. I have treated him with <DU><DURATION>1 cycle</DURATION> of bendamustine and <DRUG>Rituxan</DRUG></DU> . During his second cycle, he developed
+
+ secondary to a severe skin rash.  4. <DU><DURATION>One cycle</DURATION> of <DRUG>fludarabine</DRUG></DU>  in --- Date ---, which rendered him pro
+
+.   TREATMENT HISTORY: She received <DU><DURATION>6 cycles</DURATION> of <DRUG>chemotherapy</DRUG></DU>  with R-CHOP. This was finished in --- 
+
+ his lymphoma.  After he completed his <DU><DURATION>fourth cycle</DURATION> of <DRUG>fludarabine</DRUG></DU>  he was hospitalized with  acute fever 
+
+creatinine of 6.16.  He is status post <DU><DURATION>4-week cycle</DURATION> of <DRUG>chemotherapy</DRUG></DU>  with rituximab and status post  IVC fi
+
+ell lymphoma status post treatment with <DU><DRUG>rituximab</DRUG> in combination with CHOP chemotherapy from --- Date ---, through --- Date ---, x <DURATION>6 total cycles</DURATION></DU> . The patient entered complete remissio
+
+nor stem cell transplant. He completed <DU><DURATION>7 cycles</DURATION> of hyper-CVAD based <DRUG>chemotherapy</DRUG></DU>  still with persistent disease. He subs
+
+lly 4 times a week.  3. She completed <DU><DURATION>4 cycles</DURATION> of <DRUG>Rituxan</DRUG></DU>  375 mg/m2 weekly x4 doses in --- Date -
+
+point of view, he completed a course of <DU><DURATION>three \nweeks</DURATION> of <DRUG>Rocephin</DRUG></DU>  of Zosyn for the Salmonella bacteremia 
+
+ch unrelated  donor. He has completed <DU><DURATION>7 cycles</DURATION> of <DRUG>hyper-CVAD</DRUG></DU>  based therapy with still  persistent d
+
+he thalidomide.  4. The patient is on <DU><DRUG>Coumadin</DRUG>, which was started in --- Date ---, and  should be given for <DURATION>6 months</DURATION></DU> .  5. The patient receives monthly pam
+
+ts of blood.  2. The patient received <DU><DURATION>3 days</DURATION> of 600 mg/kg of intravenous <DRUG>gammaglobulin</DRUG></DU>  because of the hemolysis had worsened i
+
+continued secondary to skin rash.  3. <DU><DRUG>Fludarabine</DRUG> in --- Date ---. He received <DURATION>1 cycle</DURATION></DU> , but it rendered him profoundly pancyto
+
+---.   ONCOLOGICAL THERAP: Completed <DU><DURATION>6 cycles</DURATION> of <DRUG>chemotherapy</DRUG></DU>  with R-CHOP completed in --- Date ---. 
+
+ulin as well as 2 units of blood.  2. <DU><DURATION>Three days</DURATION> of 600 mg/kg of <DRUG>IVIG</DRUG></DU> .  3. Marginal zone lymphoma. She was
+
+ CXR REVEALED RLL INFILTRATES, RECEIVED <DU><DRUG>VANCO</DRUG>/ZOSYN/LEVAQUIN FOR <DURATION>2 DAYS</DURATION></DU>  AND  WILL CONTINUE ON LEVAQUIN PO -REN
 
 per-CVAD based chemotherapy followed by <DU><DURATION>2 cycles</DURATION> of <DRUG>bendamustine</DRUG></DU> , bortezomib protection based therapy; p
 
-e  are unrevealing, he should complete <DU><DURATION>10-14 days</DURATION> of current <DRUG>antibiotic</DRUG></DU>  therapy in  an attempt to treat presum
+HEMOTHERAPY:  1. The patient received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU> , completed in --- Date ---.  2. He re
 
-ion only.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Four cycles</DURATION> of <DRUG>fludarabine</DRUG></DU> , which ended in [** Date **].  2. Thr
+ hospitalizations, but has completed a <DU><DURATION>4-week</DURATION> cycle of <DRUG>rituximab</DRUG></DU>  1 month ago. He  takes morphine for c
 
-be on Coumadin. We plan to keep her on <DU><DRUG>Coumadin</DRUG> for <DURATION>at least a year</DURATION></DU> .  6. She is found to have premature v
+t leg DVT in --- Date ---. He finished <DU><DURATION>6-month</DURATION>  course of <DRUG>Coumadin</DRUG></DU>  after initially being treated with Love
 
-MENT HISTORY: So far, she has received <DU><DURATION>6 cycles</DURATION> of chemotherapy, full  dose of <DRUG>R-CHOP</DRUG></DU> , the chemotherapy finished on [** Date 
+- Date ---. The patient is status post <DU><DURATION>6 cycles</DURATION> of <DRUG>ABVD</DRUG></DU> . Large Hodgkin cells are positive for 
 
-ab and is status post cyclophosphamide, <DU><DRUG>vincristine</DRUG>  and prednisone for <DURATION>6 courses</DURATION></DU>  completed in [** Date **]. Her current
+ Hyper-CVAD based therapy followed  by <DU><DURATION>2 cycles</DURATION> of <DRUG>bendamustine</DRUG></DU> , bortezomib, rituximab based therapy an
 
-ine, which ended in [** Date **].  2. <DU><DURATION>Three cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  in [** Date **].  3. Fludarabine in [
+ed monthly rituximab and is status post <DU><DRUG>CVP</DRUG> -cyclophosphamide, vincristine, prednisone- for <DURATION>6 courses</DURATION></DU> , completed in --- Date ---.   HISTOR
+
+, which he did go into remission.  4. <DU><DRUG>Fludarabine</DRUG> for <DURATION>1 cycle</DURATION></DU>  in --- Date ---, which caused profound 
+
+ The patient continued to hemolyze and <DU><DRUG>rituxan</DRUG> 375mg/m2 IV weekly <DURATION>X4</DURATION></DU>  has been started.   Greater than 20 
+
+e neck which was initially treated with <DU><DRUG>Valtrex</DRUG> and she received a  total of <DURATION>3 days</DURATION></DU>  of therapy for presumable shingles, but
+
+EVEALED RLL INFILTRATES, RECEIVED VANCO/<DU><DRUG>ZOSYN</DRUG>/LEVAQUIN FOR <DURATION>2 DAYS</DURATION></DU>  AND  WILL CONTINUE ON LEVAQUIN PO -REN
+
+ rituximab in --- Date ---; she is on  <DU><DURATION>indefinite</DURATION> oral <DRUG>anticoagulant</DRUG></DU>  therapy because of her hypercoagulable 
+
+otherapy on the hyper-CVAD protocol and <DU><DURATION>two cycles</DURATION> of chemotherapy with <DRUG>bendamustine</DRUG></DU> , rituximab and bortezomib  2. Periphe
+
+ERAPY:  1. Most recently, he received <DU><DURATION>4 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  which ended in --- Date ---.  2. He r
+
+y for her lymphoma. She is status post <DU><DURATION>6 courses</DURATION> of CVP -Cytoxan/<DRUG>vincristine</DRUG></DU> /prednisone- completed in --- Date --- a
+
+ine, which ended in --- Date ---.  2. <DU><DURATION>Three cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  in --- Date ---.  3. Fludarabine in -
+
+  PAST CHEMOTHERAPY:  1. He received <DU><DURATION>6 cycles</DURATION> of <DRUG>Rituxan plus CBP</DRUG></DU>  completed in --- Date ---.  2. Mainte
+
+at if poison ivy, may flare after short <DU><DURATION>5-d</DURATION> course of <DRUG>Prednisone</DRUG></DU> , but that areas are more localized than
+
+the last recurrence. He had  received <DU><DURATION>4 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU>  and recently was hospitalized with  br
+
+---  Directions: 1 tablet oral DAILY  <DU><DRUG>MULTIVITAMINS (TAB-A-VITE</DRUG>- 1 TABLET = 1 TABLET Oral TABLET DAILY STAT and then Routine for <DURATION>30 Days</DURATION></DU>   Directions: 1 tablet oral DAILY  pr
+
+ith depression. The patient will start <DU><DRUG>Citalopram</DRUG> 10 mg p.o. daily x<DURATION>2 weeks</DURATION></DU> , then increase to 20 mg p.o. once each 
+
+/4 weeks.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Six cycles</DURATION> of RCVP completed in --- Date --- and maintenance <DRUG>Rituxan</DRUG></DU>  completed in --- Date ---.  2. Revlim
+
+ ago; mantle cell lymphoma, status post <DU><DURATION>7 cycles</DURATION> of <DRUG>hyper-CVAD</DRUG></DU>   followed by 2 cycles of bendamustine 
+
+Most recently, he has been treated with <DU><DURATION>3 courses</DURATION> of <DRUG>CVP</DRUG></DU>  with little response. He has never bee
+
+ntinued secondary to a skin rash.  3. <DU><DRUG>Fludarabine</DRUG> in --- Date ---. He received <DURATION>1 cycle</DURATION></DU> , but it rendered him profoundly pancyto
+
+ce the patient is here, he will receive <DU><DRUG>pamidronate</DRUG> 90 mg intravenously <DURATION>over 2 hours</DURATION></DU> . He receives this every other month. 
+
+ and nasopharynx. The patient underwent <DU><DURATION>6 cycles</DURATION> of <DRUG>CHOP chemotherapy</DRUG></DU>  followed by supplemental radiation mana
+
+continued secondary to skin rash.  3. <DU><DRUG>Fludarabine</DRUG> monotherapy in --- Date ---. With <DURATION>1 cycle</DURATION></DU> , he developed profound pancytopenia and
+
+ance Rituxan in --- Date ---; she is on <DU><DURATION>indefinite</DURATION> oral <DRUG>anticoagulant</DRUG></DU>  therapy for her hypercoagulable state. 
+
+wup examination today. He has received <DU><DURATION>2 cycles</DURATION> of chemotherapy with <DRUG>bendamustine</DRUG></DU> , bortezomib and rituximab. He is appro
+
+egimen was bendamustine and rituximab. <DU><DRUG>Bendamustine</DRUG> was given with a reduced dose or 45 mg/m2 for <DURATION>1 day</DURATION></DU> .   PAST CHEMOTHERAPY:  1. Thalidom
+
+ Observation only; the patient receives <DU><DURATION>6 courses</DURATION> of  cyclophosphamide, <DRUG>vincristine</DRUG></DU> , and prednisone completed --- Date --- 
+
+ost cyclophosphamide, vincristine  and <DU><DRUG>prednisone</DRUG> for <DURATION>6 courses</DURATION></DU>  completed in --- Date ---. Her current
+
+subclavian vein.   CURRENT THERAPY: <DU><DRUG>CVP</DRUG>. The patient has completed <DURATION>3 courses</DURATION></DU> . He previously has exhibited disease p
+
+the right extremity. The patient is on <DU><DURATION>lifelong</DURATION> <DRUG>warfarin</DRUG></DU>  as she is factor V Leiden and prothromb
+
+due to methotrexate. He was started on <DU><DRUG>fluconazole</DRUG> 200 mg p.o. x 1 and then 100 mg p.o. x <DURATION>9 days</DURATION></DU>  as well as nystatin cream to his groin 
+
+ He was on chronic anticoagulation with <DU><DRUG>Coumadin</DRUG> and completed <DURATION>1-year course</DURATION></DU>  2 weeks ago. I had discontinued Coumad
+
+/4 weeks.   PAST CHEMOTHERAPY:  1. <DU><DURATION>Six cycles</DURATION> of <DRUG>Rituxan plus CVP</DRUG></DU>  completed in --- Date --- and then main
+
+---  Directions: 1 tablet oral DAILY  <DU><DRUG>TESTOSTERONE (ANDRODERM</DRUG>- 4 MG/24H = 2 PATCH Transdermal PATCH DAILY for <DURATION>30 Days</DURATION></DU>   Directions: 2 each transdermal DAILY
+
+ the right maxillary sinus and received <DU><DURATION>6 cycles</DURATION> of <DRUG>CHOP</DRUG></DU>  followed by radiation chemotherapy. He
+
+6 cycles. He also received intrathecal <DU><DRUG>methotrexate</DRUG> x<DURATION>4 cycles</DURATION></DU> . Chemotherapy was completed in --- Dat
+
+ERAPY:  1. Most recently, he received <DU><DURATION>4 cycles</DURATION> of <DRUG>fludarabine</DRUG></DU> , which ended in --- Date ---.  2. Thr
+
+continued secondary to skin rash.  3. <DU><DURATION>Six cycles</DURATION> of <DRUG>RCVP</DRUG></DU>  completed in --- Date --- with maintena
+
+ bone marrow. He subsequently received <DU><DURATION>2 cycles</DURATION> of  <DRUG>chemotherapy</DRUG></DU>  with bortezomib and bendamustine based 
+
+s CHOP x6 cycles along with intrathecal <DU><DRUG>methotrexate</DRUG> x<DURATION>4 cycles</DURATION></DU> . Chemotherapy got completed in --- Dat
