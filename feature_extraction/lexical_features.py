@@ -5,6 +5,7 @@ This script generates lexical features including:
     - number of entities between the two relation entities
 """
 import os, sys
+from collections import defaultdict
 import pickle
 from nltk import ngrams as nltk_ngrams
 
@@ -25,8 +26,9 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         if min(ngram_window) < 1 or max(ngram_window) > 3:
             raise NotImplementedError("Ngram Window must be between one and 3")
         self.context_window = context_window
-        self._unfiltered_vocab = vocab
-        self.vocab = self.create_vocab_idx(vocab)
+        self._unfiltered_vocab = vocab # Contains unigrams-trigrams
+        self.vocab = self.create_vocab_idx(vocab) # Only contains ngrams defined by context_window
+        self.pos = {} # Will eventually contain mapping for POS tags
 
     def create_vocab_idx(self, vocab):
         """
@@ -40,34 +42,64 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             if (min(self.ngram_window) > len(gram.split()) or
                         len(gram.split()) > max(self.ngram_window)):
                 continue
-            vocab_idx[i] = gram
+            vocab_idx[gram] = i
         return vocab_idx
 
-    def create_feature_vector(self, relat, doc):
+    def create_feature_dict(self, relat, doc):
         """
         Takes a RelationAnnotation and an AnnotatedDocument.
-        Returns the defined lexical features.
+        Returns the a dictionary containing the defined lexical features.
         """
-        print(relat)
+
+        lex_features = {}
+
         # Binary feature: Are they in the same sentence?
-        print("Same sentence?")
         in_same_sentence = doc.in_same_sentence(relat.get_span())
-        print(in_same_sentence)
+
+        # Get the number of tokens between
+        num_tokens_between = len(self.get_grams_between(relat, doc, (1, 1)))
         # Get all tokens in between
-        grams_between = self.get_grams_between(relat, doc)
-        print("Grams between")
-        print(grams_between)
-        print("Grams before")
+        grams_between = self.get_grams_between(relat, doc, self.ngram_window)
         grams_before = self.get_grams_before(relat, doc)
-        print(grams_before)
-        print("Grams after")
         grams_after = self.get_grams_after(relat, doc)
-        print(grams_after)
 
+
+        lex_features['same_sentence'] = in_same_sentence
+        lex_features['tokens_between'] = num_tokens_between
+        lex_features['grams_between'] = grams_between
+        lex_features['grams_before'] = grams_before
+        lex_features['grams_after'] = grams_after
+
+        return lex_features
+
+
+    def create_feature_vector(self, relat, feature_dict):
+        """
+        Converts tokens, pos tags, labels, etc. to indexes
+        """
+        curr_idx = 0
+        feature_values = defaultdict(int) # {idx: value}
+        feature_index_ranges = {}
+        # First, unroll all possible features into index spaces
+        feature_index_ranges['grams_before'] = []
+        # This should the be number of ngrams in the vocabulary
+        # This defines the indices in feature_values for ngrams before the relation
+        features_grams_before = {gram: idx + curr_idx for (gram, idx) in self.vocab.items()}
+        for gram in feature_dict['grams_before']:
+            feature_idx = features_grams_before[gram]
+            feature_values[feature_idx] += 1
+            print(gram)
+        print(feature_values)
+        print([x for x in feature_values.items() if x[1] > 0])
         exit()
-        self.get_tokens_in_window(relat, doc)
+        #features_grams_before = [curr_idx + x for x in range(len(self.vocab))]
+        print(features_grams_before)
+        exit()
 
-    def get_grams_between(self, relat, doc):
+
+
+
+    def get_grams_between(self, relat, doc, ngram_window):
         """
         Returns the N-grams between the two entities connected in relat
         """
@@ -77,8 +109,9 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         end = spans[1][0]
         start, end = sorted((start, end))
         tokens_in_span = doc.get_text_at_span((start, end))
-        for n in set(self.ngram_window):
-            grams = grams + [' '.join(tup) for tup in list(nltk_ngrams(tokens_in_span, n))]
+        for n in set(ngram_window):
+            # Now sort the ngrams so that it doesn't matter what order they occur in
+            grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
         return grams
 
 
@@ -90,7 +123,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         offset = relat.span[0]
         tokens_before = doc.get_tokens_before_or_after(offset, delta=-1, n=self.context_window[0])
         for n in set(self.ngram_window):
-            grams = grams + [' '.join(tup) for tup in list(nltk_ngrams(tokens_before, n))]
+            grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_before, n))]
         return grams
 
     def get_grams_after(self, relat, doc):
@@ -101,7 +134,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         offset = relat.span[1]
         tokens_after = doc.get_tokens_before_or_after(offset, delta=1, n=self.context_window[1])
         for n in set(self.ngram_window):
-            grams = grams + [' '.join(tup) for tup in list(nltk_ngrams(tokens_after, n))]
+            grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_after, n))]
         return grams
 
 
@@ -146,7 +179,8 @@ def main():
         #continue
         doc = docs[relat.file_name]
         span = relat.span
-        feature_vector = feature_extractor.create_feature_vector(relat, doc)
+        feature_dict = feature_extractor.create_feature_dict(relat, doc)
+        feature_vector = feature_extractor.create_feature_vector(relat, feature_dict)
         print(feature_vector)
         break
 
