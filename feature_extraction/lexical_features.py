@@ -28,7 +28,11 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         self.context_window = context_window
         self._unfiltered_vocab = vocab # Contains unigrams-trigrams
         self.vocab = self.create_vocab_idx(vocab) # Only contains ngrams defined by context_window
+        self.tokens = [gram for (gram, idx) in self.vocab.items() if len(gram.split()) == 1] # Only unigrams
         self.pos = {} # Will eventually contain mapping for POS tags
+
+        self.all_features_values = self.create_base_features()
+
 
     def create_vocab_idx(self, vocab):
         """
@@ -45,6 +49,24 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             vocab_idx[gram] = i
         return vocab_idx
 
+    def create_base_features(self):
+        """
+        Enumerates possible feature values from the vocab, as well as an OOV value.
+        Any features that are binary should only get one index and are encoded as 0.
+        """
+        # This will be a dictionary that contains all possible values for each feature
+        all_features_values = {
+            'same_sentence': 0,
+            'num_tokens_between': 0,
+            'grams_between': ['OOV'] + list(self.vocab),
+            'grams_before': ['OOV'] + list(self.vocab),
+            'grams_after': ['OOV'] + list(self.vocab),
+            'pos_grams_between': ['OOV'],
+            'pos_grams_before': ['OOV'],
+            'pos_grams_after': ['OOV']
+
+            }
+        return all_features_values
     def create_feature_dict(self, relat, doc):
         """
         Takes a RelationAnnotation and an AnnotatedDocument.
@@ -65,7 +87,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
 
         lex_features['same_sentence'] = in_same_sentence
-        lex_features['tokens_between'] = num_tokens_between
+        lex_features['num_tokens_between'] = num_tokens_between
         lex_features['grams_between'] = grams_between
         lex_features['grams_before'] = grams_before
         lex_features['grams_after'] = grams_after
@@ -73,28 +95,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         return lex_features
 
 
-    def create_feature_vector(self, relat, feature_dict):
-        """
-        Converts tokens, pos tags, labels, etc. to indexes
-        """
-        curr_idx = 0
-        feature_values = defaultdict(int) # {idx: value}
-        feature_index_ranges = {}
-        # First, unroll all possible features into index spaces
-        feature_index_ranges['grams_before'] = []
-        # This should the be number of ngrams in the vocabulary
-        # This defines the indices in feature_values for ngrams before the relation
-        features_grams_before = {gram: idx + curr_idx for (gram, idx) in self.vocab.items()}
-        for gram in feature_dict['grams_before']:
-            feature_idx = features_grams_before[gram]
-            feature_values[feature_idx] += 1
-            print(gram)
-        print(feature_values)
-        print([x for x in feature_values.items() if x[1] > 0])
-        exit()
-        #features_grams_before = [curr_idx + x for x in range(len(self.vocab))]
-        print(features_grams_before)
-        exit()
+
 
 
 
@@ -168,8 +169,18 @@ def main():
     with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
         vocab = pickle.load(f)
 
-    # Create features for each relation
     feature_extractor = LexicalFeatureExtractor(ngram_window=(1, 2), vocab=vocab)
+
+
+
+    feat_dicts = {} # mapping from relation to feature dictionary
+    # Create features for each relation
+
+
+
+    vector_creator = base_feature.FeatureVectorCreator()
+    feature_vector_idxs = vector_creator.create_feature_vector_indices([feature_extractor])
+
     print(feature_extractor)
     for i, relat in enumerate(relats[1:]):
 
@@ -180,9 +191,17 @@ def main():
         doc = docs[relat.file_name]
         span = relat.span
         feature_dict = feature_extractor.create_feature_dict(relat, doc)
-        feature_vector = feature_extractor.create_feature_vector(relat, feature_dict)
-        print(feature_vector)
+        feat_dicts[relat] = feature_dict
+        for feature_name, feature_values in feature_dict.items():
+            if isinstance(feature_values, list):
+                all_lex_features[feature_name].extend(feature_values)
+
         break
+
+    # Now that we have all possible values for each feature,
+    # we can assign each feature-value pair an index
+    vector_creator = base_feature.FeatureVectorCreator()
+    feature_vector = vector_creator.create_feature_vector_indices(all_lex_features)
 
 
 
