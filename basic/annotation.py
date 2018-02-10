@@ -4,6 +4,8 @@ import made_utils
 import tokenizing
 from PyRuSH.RuSH import RuSH
 
+from nltk import pos_tag
+
 
 def min_preprocess(text):
    """
@@ -166,11 +168,13 @@ class AnnotatedDocument(object):
         self.annotations = []
         self._sentences = {} # Tokenized sentences, {offset: sentence}
         self._tokens = {} # Tokenized words, {offset: token}
+        self._tag_seqs = {} # POS tag seentences
+        self._tags = {} # POS tags
         # NOTE : This "positive_label" relates to positive/possible cases of pneumonia
         self.positive_label = -1
         self.tokenized_document = None
 
-        self.tokenize_document()
+        self.tokenize_and_tag_document() # Tokenizes and tags
         self.connect_relation_pairs()
 
 
@@ -190,60 +194,106 @@ class AnnotatedDocument(object):
         return relation_annotation
 
 
-    def tokenize_document(self, doc_tokenizer=None):
+    def tokenize_and_tag_document(self, doc_tokenizer=None, pos_tagger=None):
+        """
+        Tokenizes and tags a document.
+        """
+        # TODO: Make a more sophisticated POS tagging method
+        if not pos_tagger:
+            pass
+        if pos_tagger:
+            raise NotImplementedError("Custom taggers have not been added yet")
+
         if not doc_tokenizer:
             doc_tokenizer = tokenizing.DocumentTokenizer()
         tokenized_doc = doc_tokenizer.tokenize_doc(self.text)
         for tokenized_sentence in tokenized_doc:
             tokens, spans = zip(*tokenized_sentence)
+            #POS tags
+            tags = [tag for (token, tag) in pos_tag(tokens)]
             idx = 0
             sentence = []
+            tag_seq = []
             offset = spans[0][0] # Beginning offset of the sentence
-            for token, span in tokenized_sentence:
+
+
+            # Save each token
+            for token, span, tag in zip(tokens, spans, tags):
                 self._tokens[span[0]] = token
+                self._tags[span[0]] = tag
                 sentence.append(token)
+                tag_seq.append(tag)
             self._sentences[offset] = sentence
+            self._tag_seqs[offset] = tag_seq
 
 
     def get_text_at_span(self, span):
-        token_spans = sorted(self._tokens.items(), key=lambda x:x[0])
-        length = len(token_spans)
+        return self.get_tokens_or_tags_at_span(span, 'tokens')
+
+    def get_tokens_at_span(self, span):
+        return self.get_tokens_or_tags_at_span(span, 'tags')
+
+    def get_tokens_or_tags_at_span(self, span, seq_type='tokens'):
+        if seq_type == 'tokens':
+            items = sorted(self._tokens.items(), key=lambda x:x[0])
+        else:
+            items = sorted(self._tags.items(), key=lambda x:x[0])
+
+        length = len(items)
         # First, get to the initial offset
         offset = 0
         while offset < span[0]:
-            offset, _= token_spans[1] # Look at the next span in the list
-            token_spans.pop(0)
+            offset, _= items[1] # Look at the next span in the list
+            items.pop(0)
 
         # Now iterate through until we get to the end of the span
         tokens = []
         idx = 0
-        for offset, token in token_spans:
+        for offset, token in items:
             if offset >= span[1]:
                 break
             tokens.append(token)
         return tokens
 
     def get_tokens_before_or_after(self, offset, delta=-1, n=1):
+        return self.get_tokens_or_tags_before_or_after(offset, 'tokens',
+                                                            delta=delta, n=n)
+
+    def get_tags_before_or_after(self, offset, delta=-1, n=1):
+        return self.get_tokens_or_tags_before_or_after(offset, 'tokens',
+                                                            delta=delta, n=n)
+
+    def get_tokens_or_tags_before_or_after(self, offset, seq='sentences', delta=-1, n=1):
         """
         Returns a list of all tokens that occur before or after offset up to n.
         Delta should be either 1 or -1 and defines whether to go forwards or backwards.
         If it reaches the beginning of a sentence, returns <PHI>.
         If it reaches the end, returns <OMEGA>
         """
+        if seq == 'tokens':
+            items = self._tokens
+        elif seq == 'tags':
+            items = self._tags
+
+        else:
+            raise ValueError("Must be either 'tokens' or 'tags'")
+
         tokens = []
-        if delta == -1:
-            offset += delta # Step backwards/forwards until we find a new token
+        offset += delta # Step backwards/forwards until we find a new token
         while len(tokens) < n:
+            # If you've gone either before the first token or past the last
+            if offset < 0 or offset > max(items.keys()):
+                break
             if offset in self._sentences: # this means it's the start of a new sentence
                 if delta == -1: # If this ist the beginning, we want to include this
-                    tokens.append(self._tokens[offset])
+                    tokens.append(items[offset])
                 break
                 # TODO: Decide what to do with sentence boundries
                 #for diff in range(n - len(tokens)): # Add PHI as many times as necessary
                 #    to_append = '<PHI>' if delta == -1 else '<OMEGA>'
                 #    tokens.append(to_append)
-            elif offset in self._tokens: # This means we've found a new token
-                tokens.append(self._tokens[offset])
+            elif offset in items: # This means we've found a new token
+                tokens.append(items[offset])
                 offset += delta
             else:
                 offset += delta
@@ -366,6 +416,12 @@ class AnnotatedDocument(object):
         """
         return [token for (offset, token) in sorted(self._tokens.items(), key=lambda x:x[0])]
 
+    def get_tags(self):
+        """
+        Returns the pos tags as a list of strings
+        """
+        return [string for (offset, string) in sorted(self._tags.items(), key=lambda x:x[0])]
+
 
     def get_annotations(self):
         return self.annotations
@@ -383,6 +439,9 @@ if __name__ == '__main__':
     reader = made_utils.TextAndBioCParser()
     docs = reader.read_texts_and_xmls(1)
     doc = list(docs.values())[0]
+    print(doc.get_tags_before_or_after(0, 1, 6))
+    print(doc.get_tokens_before_or_after(0, 1, 6))
+    exit()
     annos = doc.get_annotations()
     for anno in annos:
         print(anno)

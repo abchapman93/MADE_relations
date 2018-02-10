@@ -6,6 +6,7 @@ This script generates lexical features including:
 """
 import os, sys
 from collections import defaultdict
+from random import shuffle
 import pickle
 from nltk import ngrams as nltk_ngrams
 
@@ -18,37 +19,62 @@ import base_feature
 DATADIR = os.path.join('..', 'data') # the processed data
 MADE_DIR = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0') # the original MADE data
 
+
+ENTITY_TYPES_MAPPING = {
+    'DRUG': 0, 'DOSE': 1,
+    'INDICATION': 2, 'FREQUENCY': 3,
+    'SSLIF': 4, 'ADE': 5,
+    'ROUTE': 6, 'DURATION': 7,
+    'SEVERITY': 8
+}
+
+
 class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
     """
     ngram_window - the length of ngrams to include in the vocabulary.
     context_window - the number of ngrams to include before and after the entity.
     """
-    def __init__(self, ngram_window=(1, 1), context_window=(2, 2), vocab=None):
+    def __init__(self, ngram_window=(1, 1), context_window=(2, 2),
+                vocab=None, pos_vocab=None, min_vocab_count=5, min_pos_count=5):
         self.ngram_window = ngram_window
         if min(ngram_window) < 1 or max(ngram_window) > 3:
             raise NotImplementedError("Ngram Window must be between one and 3")
         self.context_window = context_window
-        self._unfiltered_vocab = vocab # Contains unigrams-trigrams
-        self.vocab = self.create_vocab_idx(vocab) # Only contains ngrams defined by context_window
-        self.tokens = [gram for (gram, idx) in self.vocab.items() if len(gram.split()) == 1] # Only unigrams
+        self.min_vocab_count = min_vocab_count
+        self.min_pos_count = min_pos_count
+
+        # Set vocab and POS vocab
+        self._unfiltered_vocab = vocab # Contains unigrams-trigrams, no count threshold
+        self._unfiltered_pos_vocab = pos_vocab
+
+        self.vocab = self.create_vocab(vocab, min_vocab_count) # Only contains ngrams defined by context_window
+        #print(self.vocab); exit()
+        self.pos_vocab =  self.create_vocab(pos_vocab, min_pos_count)
+        #self.tokens = [gram for (gram, idx) in self.vocab.items() if len(gram.split()) == 1] # Only unigrams
         self.pos = {} # Will eventually contain mapping for POS tags
 
         self.all_features_values = self.create_base_features()
 
 
-    def create_vocab_idx(self, vocab):
+    def create_vocab(self, vocab, thresh=5):
         """
         Creates a mapping from integers to the terms in vocab.
         Only includes the ngrams whose length are equal to or less than ngram_window.
         """
+        # TODO: Also preprocess to transform numbers, etc.
         vocab_idx = {}
         min_length, max_length = self.ngram_window
         for i, gram in enumerate(vocab.keys()):
+            # If it doesn't meet the count threshold, skip it
+            if vocab[gram] < thresh:
+                continue
+
+
             # If it's too big or too small, don't include it
             if (min(self.ngram_window) > len(gram.split()) or
                         len(gram.split()) > max(self.ngram_window)):
                 continue
-            vocab_idx[gram] = i
+            vocab_idx[gram] = vocab[gram]
         return vocab_idx
 
     def create_base_features(self):
@@ -63,12 +89,15 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             'grams_between': ['OOV'] + list(self.vocab),
             'grams_before': ['OOV'] + list(self.vocab),
             'grams_after': ['OOV'] + list(self.vocab),
-            'pos_grams_between': ['OOV'],
-            'pos_grams_before': ['OOV'],
-            'pos_grams_after': ['OOV']
+            'pos_grams_between': ['OOV'] + list(self.pos_vocab),
+            #'pos_grams_before': ['OOV'] + list(self.pos_vocab),
+            #'pos_grams_after': ['OOV'] + list(self.pos_vocab),
+            'first_entity_type': 0,#list(ENTITY_TYPES_MAPPING.values()),
+            'second_entity_type': 0,#list(ENTITY_TYPES_MAPPING.values()),
 
             }
         return all_features_values
+
     def create_feature_dict(self, relat, doc):
         """
         Takes a RelationAnnotation and an AnnotatedDocument.
@@ -78,72 +107,117 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         lex_features = {}
 
         # Binary feature: Are they in the same sentence?
+        # print("in same sentence")
         in_same_sentence = doc.in_same_sentence(relat.get_span())
 
         # Get the number of tokens between
-        num_tokens_between = len(self.get_grams_between(relat, doc, (1, 1)))
+        # print("tokens between")
+        num_tokens_between = len(self.get_grams_between(relat, doc))
         # Get all tokens in between
-        grams_between = self.get_grams_between(relat, doc, self.ngram_window)
+        # print("grams between")
+        grams_between = self.get_grams_between(relat, doc)
+        # print("grams before")
         grams_before = self.get_grams_before(relat, doc)
+        # print("grams after")
         grams_after = self.get_grams_after(relat, doc)
+
+        tags_between = self.get_grams_between(relat, doc, seq='tags')
+
+
+        entity_type1 = relat.entity_types[0].upper()
+        entity_type2 = relat.entity_types[1].upper()
 
         lex_features['same_sentence'] = in_same_sentence
         lex_features['num_tokens_between'] = num_tokens_between
+
         lex_features['grams_between'] = grams_between
         lex_features['grams_before'] = grams_before
         lex_features['grams_after'] = grams_after
 
+        lex_features['pos_grams_between'] = tags_between
+
+        lex_features['first_entity_type'] = ENTITY_TYPES_MAPPING[entity_type1]
+        lex_features['second_entity_type'] = ENTITY_TYPES_MAPPING[entity_type2]
+        assert len(set(lex_features.keys()).difference(set(self.all_features_values.keys()))) == 0
+        assert len(set(self.all_features_values.keys()).difference(set(lex_features.keys()))) == 0
+
+
+
         return lex_features
 
 
-
-
-    def get_grams_between(self, relat, doc, ngram_window):
+    def get_grams_between(self, relat, doc, seq='tokens'):
         """
-        Returns the N-grams between the two entities connected in relat
+        Returns the N-grams between the two entities connected in relat.
+        Represents it as OOV if it's not in the vocabulary.
+        Returns a unique set.
         """
-        grams = []
+
+        if seq == 'tokens':
+            vocab = self.vocab
+        elif seq == 'tags':
+            vocab = self.pos_vocab
+        else:
+            raise ValueError("Must specify seq: {}".format(seq))
+
+        all_grams = []
         spans = relat.spans
         start = spans[0][1]
         end = spans[1][0]
         start, end = sorted((start, end))
-        tokens_in_span = doc.get_text_at_span((start, end))
+        tokens_in_span = doc.get_tokens_or_tags_at_span((start, end), seq)
         # NOTE: lower-casing the ngrams, come back to this if you want to encode the casing
         tokens_in_span = [token.lower() for token in tokens_in_span]
-        for n in set(ngram_window):
+        for n in range(self.ngram_window[0], self.ngram_window[1] + 1):
             # Now sort the ngrams so that it doesn't matter what order they occur in
             grams = list(nltk_ngrams(tokens_in_span, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
-        return grams
+            all_grams.extend(set(grams))
+        all_grams = [x if x in vocab else 'OOV' for x in all_grams]
+        return set(all_grams)
 
 
-    def get_grams_before(self, relat,doc):
+    def get_grams_before(self, relat,doc, seq='tokens'):
         """
         Returns the n-grams before the first entity.
         """
-        grams = []
+        if seq == 'tokens':
+            vocab = self.vocab
+        elif seq == 'tags':
+            vocab = self.pos_vocab
+        all_grams = []
         offset = relat.span[0]
-        tokens_before = doc.get_tokens_before_or_after(offset, delta=-1, n=self.context_window[0])
+        tokens_before = doc.get_tokens_or_tags_before_or_after(offset, delta=-1,
+            n=self.context_window[0], seq=seq)
         tokens_before = [token.lower() for token in tokens_before]
-        for n in set(self.ngram_window):
+        for n in range(self.ngram_window[0], self.ngram_window[1] + 1):
             grams = list(nltk_ngrams(tokens_before, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
+            all_grams.extend(set(grams))
             #grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_before, n))]
-        return grams
+        all_grams = [x if x in vocab else 'OOV' for x in all_grams]
+        return set(grams)
 
-    def get_grams_after(self, relat, doc):
+    def get_grams_after(self, relat, doc, seq='tokens'):
         """
         Returns the n-grams after the final entity.
         """
-        grams = []
+        if seq == 'tokens':
+            vocab = self.vocab
+        elif seq == 'tags':
+            vocab = self.pos_vocab
+        all_grams = []
         offset = relat.span[1]
-        tokens_after = doc.get_tokens_before_or_after(offset, delta=1, n=self.context_window[1])
+        tokens_after = doc.get_tokens_or_tags_before_or_after(offset, delta=1,
+                                        n=self.context_window[1], seq=seq)
         tokens_after = [token.lower() for token in tokens_after]
         for n in set(self.ngram_window):
             grams = list(nltk_ngrams(tokens_after, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
+            all_grams.extend(set(grams))
             #grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_after, n))]
-        return grams
+        all_grams = [x if x in vocab else 'OOV' for x in all_grams]
+        return set(all_grams)
 
     def sort_ngrams(self, ngrams):
         return [' '.join(sorted(tup)) for tup in ngrams]
@@ -152,16 +226,12 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
     def get_tokens_in_window(self, relat, doc):
         """
         """
-        print(relat, doc)
         # Get the text between the two entities
         start, end = relat.get_span()
-        print(doc.in_same_sentence((start, end)))
         exit()
 
     def get_pos_tags(self):
         pass
-
-
 
     def __repr__(self):
         return "LexicalFeatureExtractor Ngram Window: {} Vocab: {} terms".format(
@@ -171,67 +241,63 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 def main():
     # Load in data
     #print(list(nltk_ngrams('This is a sentence'.split(), 2))); exit()
-    with open(os.path.join(DATADIR, 'generated_train.pkl'), 'rb') as f:
-        relats = pickle.load(f)
-    with open(os.path.join(DATADIR, 'annotated_documents.pkl'), 'rb') as f:
-        docs = pickle.load(f)
-    print("Loaded {} relations and {} docs".format(len(relats), len(docs)))
+    inpath = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
+    with open(inpath, 'rb') as f:
+        docs_, relats = pickle.load(f)
+
+    docs = {doc.file_name: doc for doc in docs_}
+    print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
+    shuffle(relats)
     with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
-        vocab = pickle.load(f)
+        vocab, pos_vocab = pickle.load(f)
 
 
 
-    feature_extractor = LexicalFeatureExtractor(ngram_window=(1, 2), vocab=vocab)
+
+    feature_extractor = LexicalFeatureExtractor(context_window=(2, 2),
+                            ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
+                            min_vocab_count=20, min_pos_count=20)
     vector_creator = base_feature.FeatureVectorCreator()
+
+    # Enumerate the feature space, fit a DictVectorizer
     vector_creator.create_vectorizer(feature_extractor)
-    #vector_creator.enum_feature_values(feature_extractor)
-    #vectorizer = vector_creator.create_vectorizer([feature_extractor])
-    #feature_vector_idxs = vector_creator.create_feature_vector_indices([feature_extractor])
 
     feat_dicts = [] # mappings of feature names to values
-    y = []
-    for i, relat in enumerate(relats[:5]):
-
-        #if relat.span[1] - relat.span[0] > 500:
-        #    print(i)
-        #    break
-        #continue
+    y = [] # the relation types
+    for i, relat in enumerate(relats):
+        if i % 100 == 0:
+            print("{}/{}".format(i, len(relats)))
         doc = docs[relat.file_name]
         span = relat.span
 
         # This returns a dictionary with lists of values
         feature_dict = feature_extractor.create_feature_dict(relat, doc)
-        print(feature_dict)
         # You now have to flatten it so that it's a single-dimension dictionary
         feature_vect_dict = vector_creator.transform_feature_vector(feature_dict)
         feat_dicts.append(feature_vect_dict)
+        if i == 0:
+            print(feature_dict.keys())
+            print(feature_dict['first_entity_type'])
 
         y.append(relat.type)
-        print(feat_dicts)
-        continue
-        print(feature_vect); continue
-        feat_dicts[relat] = feature_dict
-        for feature_name, feature_values in feature_dict.items():
-            if isinstance(feature_values, list):
-                all_lex_features[feature_name].extend(feature_values)
-    print(feat_dicts)
+
+
+    #print(feat_dicts)
     X = vector_creator.vectorize(feat_dicts)
     print(X)
     print(X.shape)
     print(y)
     print(len(y))
+
+    # Now pickle the data
+    outpath = os.path.join(DATADIR, 'data_lexical.pkl')
+    with open(outpath, 'wb') as f:
+        pickle.dump((X, y), f)
+
+    print("Saved data at {}".format(outpath))
+    print()
+
     print("Made it to the end")
-    exit()
-    vectorizer = DictVectorizer(sparse=True)
-    X = vectorizer.fit_transform(feature_dicts)
-    print(X); exit()
-    exit()
-
-    # Now that we have all possible values for each feature,
-    # we can assign each feature-value pair an index
-    vector_creator = base_feature.FeatureVectorCreator()
-    feature_vector = vector_creator.create_feature_vector_indices(all_lex_features)
-
 
 
 

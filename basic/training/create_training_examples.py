@@ -6,6 +6,8 @@ import random
 import os
 import sys
 import pickle
+from sklearn.model_selection import train_test_split
+
 
 sys.path.append('..')
 import made_utils
@@ -64,6 +66,9 @@ def main():
     # First, read in data as a dictionary
     docs = made_utils.read_made_data()
     doc = docs[list(docs.keys())[0]]
+
+
+
     # Load in legal edges
     legal_edges = load_legal_edges()
     # Now generate all possible relation annotations
@@ -77,6 +82,41 @@ def main():
     #    relation_types[relat.type] += 1
 
     sample_relats = sample_negative_examples(all_relations, neg_prop=1.0)
+
+    # Now split them up into train and hold-out
+    doc_names = list(docs.keys())
+    train_docs_names, val_docs_names = train_test_split(doc_names, test_size=0.2)
+
+    train_docs = [docs[name] for name in train_docs_names]
+    val_docs = [docs[name] for name in val_docs_names]
+    train_relats = []
+    val_relats = []
+
+    for relat in sample_relats:
+        if relat.file_name in train_docs_names:
+            train_relats.append(relat)
+        else:
+            val_relats.append(relat)
+
+    train_data = (train_docs, train_relats)
+    val_data = (val_docs, val_relats)
+
+    print(len(train_data[0]))
+    print(len(val_data[0]))
+    train_outpath = os.path.join(outdir, 'training_documents_and_relations.pkl')
+    val_outpath = os.path.join(outdir, 'validation_documents_and_relations.pkl')
+    with open(train_outpath, 'wb') as f:
+        pickle.dump(train_data, f)
+    with open(val_outpath, 'wb') as f:
+        pickle.dump(val_data, f)
+
+    print("Saved {} relations at {} and {} validation relations at {}".format(
+    train_outpath, len(train_relats), val_outpath, len(val_relats)
+    ))
+    exit()
+
+
+
 
     outpath = os.path.join(outdir, 'generated_train.pkl')
     with open(outpath, 'wb') as f:
