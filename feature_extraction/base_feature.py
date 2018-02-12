@@ -15,7 +15,7 @@ class FeatureVectorCreator(object):
     """
 
     def __init__(self, *args):
-        self.vectorizer = DictVectorizer(sparse=True)
+        self.vectorizer = DictVectorizer(sparse=True, sort=True)
         self.possible_values = set()
         pass
 
@@ -54,31 +54,33 @@ class FeatureVectorCreator(object):
         sparse_vector_dict = {} # Will start with dicts of indices and values
         for feature_name, v in feature_dict.items():
             if isinstance(v, int):# Really just a single value
-                #idx = self.feature_idxs[feature_name][0]
-
-                # If this is an unknown feature, we don't want to add it
-                if feature_name not in self.possible_values:
-                    raise ValueError("Unknown Feature Name: {}".format(feature_name))
-                    continue
                 sparse_vector_dict['{}'.format(feature_name)] = v
                 continue
-            # Otherwise it's a list of tokens we can iterate through
-            for value in v:
-                # Get the index
-                feature_value_name = "{}:<{}>".format(feature_name, value)
-                if feature_value_name not in self.possible_values: # Call it OOV
-                    raise ValueError("Unknown Feature: {}".format(feature_value_name))
-                    feature_value_name = "{}:<OOV>".format(featur)
+
+            # Or it's a string value, such as <first entity type>:<DRUG>
+            elif isinstance(v, str):
+                feature_value_name = "{}:<{}>".format(feature_name, v)
                 sparse_vector_dict[feature_value_name] = 1
-                #idx = self.feature_idxs[feature_name][value.lower()] # NOTE: Lower-casing to match in the vocab
-                #sparse_vector_dict[idx] = 1# value.lower() # TODO: Change to 1
+
+            # Otherwise it's a list of tokens we can iterate through
+            else:
+                for value in v:
+                    feature_value_name = "{}:<{}>".format(feature_name, value)
+                    sparse_vector_dict[feature_value_name] = 1
         return sparse_vector_dict
+
+
+    def fit_transform(self, d):
+        X = self.vectorizer.fit_transform(d)
+        return X
 
 
     def vectorize(self, d):
         """
         Takes a list of dictonairies. Returns a sparse vector
         """
-
-        X = self.vectorizer.transform(d)
+        try:
+            X = self.vectorizer.transform(d)
+        except AttributeError as e:
+            raise AttributeError("Vectorizer has not been fit yet. Call fit_transform(d)")
         return X

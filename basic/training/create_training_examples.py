@@ -36,6 +36,9 @@ def sample_negative_examples(relations, neg_prop=1.0):
     neg_sample_size = int(neg_prop * pos_size)
 
     neg_sample = random.sample(neg_relations, neg_sample_size)
+    print("Original Distribution: {} positive relations, {} negative relations".format(
+                len(pos_relations),
+                len(neg_relations)))
     print("{} positive relations, {} negative relations".format(len(pos_relations),
                 len(neg_sample)))
     return pos_relations + neg_sample
@@ -64,8 +67,11 @@ def write_doc_debug(doc, outdir):
 
 def main():
     # First, read in data as a dictionary
-    docs = made_utils.read_made_data()
+    #docs = made_utils.read_made_data(10)
+    with open('../../data/annotated_documents.pkl', 'rb') as f:
+        docs = pickle.load(f)
     doc = docs[list(docs.keys())[0]]
+    print("{} docs".format(len(docs)))
 
 
 
@@ -74,14 +80,26 @@ def main():
     # Now generate all possible relation annotations
     #all_possible_relations = create_all_relations(docs, legal_edges)
     all_relations = []
+
+    idx = 0
     for fname, doc in docs.items():
+        if idx % 10 == 0:
+            print("{}/{}".format(idx, len(docs)))
+            print("{} relations".format(len(all_relations)))
+        #if idx == 10:
+        #    break
         all_relations.extend(pair_annotations_in_doc(doc, legal_edges))
+        idx += 1
 
     #relation_types = defaultdict(int)
     #for relat in all_relations:
     #    relation_types[relat.type] += 1
 
-    sample_relats = sample_negative_examples(all_relations, neg_prop=1.0)
+    # If you want to change the proportion of negative : positive
+    sample_relats = sample_negative_examples(all_relations, neg_prop=2.0)
+
+    # Otherwise
+    #sample_relats = all_relations
 
     # Now split them up into train and hold-out
     doc_names = list(docs.keys())
@@ -103,6 +121,7 @@ def main():
 
     print(len(train_data[0]))
     print(len(val_data[0]))
+    # Let's count how many are positive and how many are negative
     train_outpath = os.path.join(outdir, 'training_documents_and_relations.pkl')
     val_outpath = os.path.join(outdir, 'validation_documents_and_relations.pkl')
     with open(train_outpath, 'wb') as f:
@@ -113,6 +132,8 @@ def main():
     print("Saved {} relations at {} and {} validation relations at {}".format(
     train_outpath, len(train_relats), val_outpath, len(val_relats)
     ))
+
+
     exit()
 
 

@@ -107,21 +107,18 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         lex_features = {}
 
         # Binary feature: Are they in the same sentence?
-        # print("in same sentence")
         in_same_sentence = doc.in_same_sentence(relat.get_span())
 
         # Get the number of tokens between
-        # print("tokens between")
-        num_tokens_between = len(self.get_grams_between(relat, doc))
+        # NOTE: only unigrams
+        num_tokens_between = len(self.get_grams_between(relat, doc), ngram_window=(1, 1))
         # Get all tokens in between
-        # print("grams between")
         grams_between = self.get_grams_between(relat, doc)
-        # print("grams before")
         grams_before = self.get_grams_before(relat, doc)
-        # print("grams after")
         grams_after = self.get_grams_after(relat, doc)
 
         tags_between = self.get_grams_between(relat, doc, seq='tags')
+        num_sentences_overlap = doc.get_sentences_overlap_span(relat.get_span())
 
 
         entity_type1 = relat.entity_types[0].upper()
@@ -136,8 +133,9 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
         lex_features['pos_grams_between'] = tags_between
 
-        lex_features['first_entity_type'] = ENTITY_TYPES_MAPPING[entity_type1]
-        lex_features['second_entity_type'] = ENTITY_TYPES_MAPPING[entity_type2]
+        lex_features['first_entity_type'] = entity_type1#ENTITY_TYPES_MAPPING[entity_type1]
+        lex_features['second_entity_type'] = entity_type2#ENTITY_TYPES_MAPPING[entity_type2]
+        lex_features['num_sentences_overlap'] = num_sentences_overlap
         assert len(set(lex_features.keys()).difference(set(self.all_features_values.keys()))) == 0
         assert len(set(self.all_features_values.keys()).difference(set(lex_features.keys()))) == 0
 
@@ -146,7 +144,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         return lex_features
 
 
-    def get_grams_between(self, relat, doc, seq='tokens'):
+    def get_grams_between(self, relat, doc, seq='tokens', ngram_window=None):
         """
         Returns the N-grams between the two entities connected in relat.
         Represents it as OOV if it's not in the vocabulary.
@@ -160,6 +158,9 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         else:
             raise ValueError("Must specify seq: {}".format(seq))
 
+        if not ngram_window:
+            ngram_window = self.ngram_window
+
         all_grams = []
         spans = relat.spans
         start = spans[0][1]
@@ -168,7 +169,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         tokens_in_span = doc.get_tokens_or_tags_at_span((start, end), seq)
         # NOTE: lower-casing the ngrams, come back to this if you want to encode the casing
         tokens_in_span = [token.lower() for token in tokens_in_span]
-        for n in range(self.ngram_window[0], self.ngram_window[1] + 1):
+        for n in range(ngram_window[0], ngram_window[1] + 1):
             # Now sort the ngrams so that it doesn't matter what order they occur in
             grams = list(nltk_ngrams(tokens_in_span, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
@@ -177,7 +178,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         return set(all_grams)
 
 
-    def get_grams_before(self, relat,doc, seq='tokens'):
+    def get_grams_before(self, relat,doc, seq='tokens', ngram_window=None):
         """
         Returns the n-grams before the first entity.
         """
@@ -185,12 +186,15 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             vocab = self.vocab
         elif seq == 'tags':
             vocab = self.pos_vocab
+        if not ngram_window:
+            ngram_window = self.ngram_window
+
         all_grams = []
         offset = relat.span[0]
         tokens_before = doc.get_tokens_or_tags_before_or_after(offset, delta=-1,
             n=self.context_window[0], seq=seq)
         tokens_before = [token.lower() for token in tokens_before]
-        for n in range(self.ngram_window[0], self.ngram_window[1] + 1):
+        for n in range(ngram_window[0], ngram_window[1] + 1):
             grams = list(nltk_ngrams(tokens_before, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
             all_grams.extend(set(grams))
@@ -206,12 +210,15 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             vocab = self.vocab
         elif seq == 'tags':
             vocab = self.pos_vocab
+        if not ngram_window:
+            ngram_window = self.ngram_window
+
         all_grams = []
         offset = relat.span[1]
         tokens_after = doc.get_tokens_or_tags_before_or_after(offset, delta=1,
                                         n=self.context_window[1], seq=seq)
         tokens_after = [token.lower() for token in tokens_after]
-        for n in set(self.ngram_window):
+        for n in range(ngram_window[0], ngram_window[1] + 1):
             grams = list(nltk_ngrams(tokens_after, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
             all_grams.extend(set(grams))
@@ -260,11 +267,14 @@ def main():
     vector_creator = base_feature.FeatureVectorCreator()
 
     # Enumerate the feature space, fit a DictVectorizer
-    vector_creator.create_vectorizer(feature_extractor)
+    # NOTE: Instead, enumerate the feature space with actual features
+    #vector_creator.create_vectorizer(feature_extractor)
 
     feat_dicts = [] # mappings of feature names to values
     y = [] # the relation types
     for i, relat in enumerate(relats):
+        #if i == 10:
+        #    break
         if i % 100 == 0:
             print("{}/{}".format(i, len(relats)))
         doc = docs[relat.file_name]
@@ -282,12 +292,16 @@ def main():
         y.append(relat.type)
 
 
-    #print(feat_dicts)
-    X = vector_creator.vectorize(feat_dicts)
-    print(X)
+    X = vector_creator.fit_transform(feat_dicts)
+    #print(X)
     print(X.shape)
-    print(y)
     print(len(y))
+
+    # Let's save the names of the feature names
+    feature_names = vector_creator.vectorizer.get_feature_names()
+    print(type(feature_names))
+    with open('lexical_feature_names.txt', 'w') as f:
+        f.write('\n'.join(feature_names))
 
     # Now pickle the data
     outpath = os.path.join(DATADIR, 'data_lexical.pkl')
