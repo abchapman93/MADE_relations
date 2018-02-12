@@ -328,25 +328,28 @@ class AnnotatedDocument(object):
         offset, end = span
 
         # first find the beginning of the current sentences
-        if offset not in self._sentences:
-            offsets = sorted([v for v in self._sentences.keys() if v < offset],
-                            key=lambda v: offset-v)
-            begin_offset = offsets[0]
         while offset not in self._sentences:
+            #sorted_offsets = list(sorted([v for v in self._sentences.keys()]))
+            # Find the closest start of sentence to offset
             if offset <= 0:
                 break
             offset -= 1
+
+        # Now that we've broken out of that loop, we've found the beginning
+        # of the sentence that contains offset
         to_return.append(self._sentences[offset])
+
         # Now go back to the first offset and find the next sentence
         offset = span[0] + 1
         while offset < end:
             if offset in self._sentences:
+                # This means we've found a new sentence
                 to_return.append(self._sentences[offset])
-                break
             else:
-                offset += 1
+                pass
+            offset += 1
 
-            if offset > len(self.text):
+            if offset > len(self.text): # We've already appended the final sentence
                 break
 
         return to_return
