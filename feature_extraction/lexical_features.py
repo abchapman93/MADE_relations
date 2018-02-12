@@ -14,9 +14,11 @@ from sklearn.feature_extraction import DictVectorizer
 
 sys.path.append(os.path.join('..', 'basic'))
 import base_feature
+from feature_utils import save_example_feature_dict
 
 
 DATADIR = os.path.join('..', 'data') # the processed data
+MODELDIR = os.path.join('..', 'saved_models')
 MADE_DIR = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0') # the original MADE data
 
 
@@ -53,7 +55,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         #self.tokens = [gram for (gram, idx) in self.vocab.items() if len(gram.split()) == 1] # Only unigrams
         self.pos = {} # Will eventually contain mapping for POS tags
 
-        self.all_features_values = self.create_base_features()
+        #self.all_features_values = self.create_base_features()
 
 
     def create_vocab(self, vocab, thresh=5):
@@ -111,14 +113,20 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
         # Get the number of tokens between
         # NOTE: only unigrams
-        num_tokens_between = len(self.get_grams_between(relat, doc), ngram_window=(1, 1))
+        num_tokens_between = len(self.get_grams_between(relat, doc, ngram_window=(1, 1)))
         # Get all tokens in between
         grams_between = self.get_grams_between(relat, doc)
         grams_before = self.get_grams_before(relat, doc)
         grams_after = self.get_grams_after(relat, doc)
 
         tags_between = self.get_grams_between(relat, doc, seq='tags')
-        num_sentences_overlap = doc.get_sentences_overlap_span(relat.get_span())
+        num_sentences_overlap = len(doc.get_sentences_overlap_span(relat.get_span()))
+
+        entities_between = self.get_entities_between(relat, doc)
+        num_entities_between = len(entities_between)
+        types_entities_between = set([e.type for e in entities_between])
+
+        #num_entities_between =
 
 
         entity_type1 = relat.entity_types[0].upper()
@@ -136,8 +144,11 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         lex_features['first_entity_type'] = entity_type1#ENTITY_TYPES_MAPPING[entity_type1]
         lex_features['second_entity_type'] = entity_type2#ENTITY_TYPES_MAPPING[entity_type2]
         lex_features['num_sentences_overlap'] = num_sentences_overlap
-        assert len(set(lex_features.keys()).difference(set(self.all_features_values.keys()))) == 0
-        assert len(set(self.all_features_values.keys()).difference(set(lex_features.keys()))) == 0
+
+        lex_features['num_entities_between'] = num_entities_between
+        lex_features['types_entities_between'] = types_entities_between
+        #assert len(set(lex_features.keys()).difference(set(self.all_features_values.keys()))) == 0
+        #assert len(set(self.all_features_values.keys()).difference(set(lex_features.keys()))) == 0
 
 
 
@@ -202,7 +213,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         all_grams = [x if x in vocab else 'OOV' for x in all_grams]
         return set(grams)
 
-    def get_grams_after(self, relat, doc, seq='tokens'):
+    def get_grams_after(self, relat, doc, seq='tokens', ngram_window=None):
         """
         Returns the n-grams after the final entity.
         """
@@ -240,6 +251,30 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
     def get_pos_tags(self):
         pass
 
+    def get_entities_between(self, relat, doc):
+        """
+        Returns a list of entities that occur between entity1 and entity2
+        """
+        offset, end = relat.get_span()
+        overlapping_entities = []
+        # Index the entity in doc by span
+        offset_to_entity = {entity.span[0]: entity for entity in doc.get_annotations()
+                    if entity.id not in (
+                        relat.annotation_1.id, relat.annotation_2.id)
+                        }
+
+        while offset < end:
+            if offset in offset_to_entity:
+                overlapping_entities.append(offset_to_entity[offset])
+            offset += 1
+
+        return overlapping_entities
+
+
+
+
+        span = relat.get_span
+
     def __repr__(self):
         return "LexicalFeatureExtractor Ngram Window: {} Vocab: {} terms".format(
                 self.ngram_window, len(self.vocab))
@@ -273,10 +308,6 @@ def main():
     feat_dicts = [] # mappings of feature names to values
     y = [] # the relation types
     for i, relat in enumerate(relats):
-        #if i == 10:
-        #    break
-        if i % 100 == 0:
-            print("{}/{}".format(i, len(relats)))
         doc = docs[relat.file_name]
         span = relat.span
 
@@ -288,6 +319,16 @@ def main():
         if i == 0:
             print(feature_dict.keys())
             print(feature_dict['first_entity_type'])
+        if i % 10 == 0:
+            pass
+            #break
+        #   print(feature_dict)
+#
+        #   save_example_feature_dict(feature_dict, relat, doc)
+           #exit()
+           #break
+        if i % 100 == 0 and i > 0:
+            print("{}/{}".format(i, len(relats)))
 
         y.append(relat.type)
 
@@ -310,6 +351,11 @@ def main():
 
     print("Saved data at {}".format(outpath))
     print()
+
+    # Finally, save the vectorizer
+    with open(os.path.join(MODELDIR, 'lex_dict_vectorizer.pkl'), 'wb') as f:
+        pickle.dump(vector_creator.vectorizer, f)
+
 
     print("Made it to the end")
 

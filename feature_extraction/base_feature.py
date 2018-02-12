@@ -19,32 +19,6 @@ class FeatureVectorCreator(object):
         self.possible_values = set()
         pass
 
-    def create_vectorizer(self, *args):
-        d = {}
-        feature_extractors = args
-        for feature_extractor in feature_extractors:
-            for feature_enum in self.enum_feature_values(feature_extractor):
-                if feature_enum in d:
-                    pass
-                else:
-                    d[feature_enum] = 0
-        self.vectorizer.fit([d])
-
-    def enum_feature_values(self, feature_extractor):
-        L = []
-        for feature_name, v in feature_extractor.all_features_values.items():
-            #continue
-            if isinstance(v, int): # this is a single-column feature
-                L.append(feature_name)
-            elif isinstance(v, list): # This is a list of possible values
-                for value in v:
-                    L.append("{}:<{}>".format(feature_name, value))
-            else:
-                raise TypeError("Something's wrong: {}:<{}>".format(feature_name, v))
-        # Set possible values
-        self.possible_values = set(L)
-        return L
-
 
     def transform_feature_vector(self, feature_dict):
         """
