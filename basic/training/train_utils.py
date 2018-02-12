@@ -60,11 +60,13 @@ def load_legal_edges(thresh=1):
    return [x for x in edges.keys() if edges[x] >= thresh]
 
 
-def pair_annotations_in_doc(doc, legal_edges=[]):
+def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=2):
     """
     Takes a single AnnotatedDocument that contains annotations.
-    All annotations that have a legal edge between them are paired
-    to create RelationAnnotations.
+    All annotations that have a legal edge between them
+    and are have an overlapping sentence length <= max_sent_length,
+        ie., they are in either the same sentence or n adjancent sentences,
+    are paired to create RelationAnnotations.
     Takes an optional list legal_edges that defines which edges should be allowed.
 
     Returns a list of RelationAnnotations.
@@ -84,11 +86,35 @@ def pair_annotations_in_doc(doc, legal_edges=[]):
 
     for anno1 in true_annotations:
         for anno2 in true_annotations:
+
+            # Don't pair the same annotation with itself
             if anno1.id == anno2.id:
                 continue
+
+            # Don't generate paris that have already been paried
+            if anno2.id in edges[anno1.id]:
+                continue
+
+            # Exclude illegal relations
             if len(legal_edges) and (anno1.type, anno2.type) not in legal_edges:
                 continue
-            elif anno2.id not in edges[anno1.id]:
+
+            # Check the span between them, make sure it's either 1 or 2
+            start1, end1 = anno1.span
+            start2, end2 = anno2.span
+            sorted_spans = list(sorted([start1, end1, start2, end2]))
+            span = (sorted_spans[0], sorted_spans[-1])
+            overlapping_sentences = doc.get_sentences_overlap_span(span)
+            #print(anno1, anno2)
+            #print(span)
+            #print(doc.text[span[0]: span[1]])
+            #print(overlapping_sentences)
+            #print(len(overlapping_sentences))
+            if len(overlapping_sentences) > max_sent_length:
+                continue
+
+            # If they haven't already been paired, pair them
+            else:
                 generated_relation = annotation.RelationAnnotation.from_null_rel(
                     anno1, anno2, doc.file_name
                 )
