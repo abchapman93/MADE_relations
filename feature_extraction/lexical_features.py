@@ -6,6 +6,7 @@ This script generates lexical features including:
 """
 import os, sys
 from collections import defaultdict
+import re
 from random import shuffle
 import pickle
 from nltk import ngrams as nltk_ngrams
@@ -16,6 +17,7 @@ sys.path.append(os.path.join('..', 'basic'))
 import base_feature
 from feature_utils import save_example_feature_dict
 
+import create_vocab
 
 DATADIR = os.path.join('..', 'data') # the processed data
 MODELDIR = os.path.join('..', 'saved_models')
@@ -63,10 +65,13 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         Creates a mapping from integers to the terms in vocab.
         Only includes the ngrams whose length are equal to or less than ngram_window.
         """
-        # TODO: Also preprocess to transform numbers, etc.
+        # Preprocess to transform numbers, etc.
+        #vocab = {self.normalize_grams(gram): vocab[gram] for gram in vocab}
         vocab_idx = {}
         min_length, max_length = self.ngram_window
         for i, gram in enumerate(vocab.keys()):
+            # Normalize the gram
+            #gram = self.normalize_grams(gram)
             # If it doesn't meet the count threshold, skip it
             if vocab[gram] < thresh:
                 continue
@@ -109,14 +114,21 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         lex_features = {}
 
         # Binary feature: Are they in the same sentence?
-        in_same_sentence = doc.in_same_sentence(relat.get_span())
-
+        lex_features['same_sentence'] = doc.in_same_sentence(relat.get_span())
         # Get the number of tokens between
         # NOTE: only unigrams
-        num_tokens_between = len(self.get_grams_between(relat, doc, ngram_window=(1, 1)))
+        lex_features['num_tokens_between'] = len(self.get_grams_between(relat, doc, ngram_window=(1, 1)))
         # Get all tokens in between
-        grams_between = self.get_grams_between(relat, doc)
-        grams_before = self.get_grams_before(relat, doc)
+        lex_features.update({
+            'grams_between:<{}>'.format(v): 1 for v in self.get_grams_between(relat, doc)
+            })
+        lex_features.update({
+            'grams_before:<{}>'.format(v): 1 for v in self.get_grams_before(relat, doc)
+            })
+        lex_features.update({
+            'grams_after:<{}>'.format(v): 1 for v in self.get_grams_after(relat, doc)
+            })
+        print(lex_features); exit()
         grams_after = self.get_grams_after(relat, doc)
 
         tags_between = self.get_grams_between(relat, doc, seq='tags')
@@ -126,7 +138,6 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         num_entities_between = len(entities_between)
         types_entities_between = set([e.type for e in entities_between])
 
-        #num_entities_between =
 
 
         entity_type1 = relat.entity_types[0].upper()
@@ -135,6 +146,10 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         lex_features['same_sentence'] = in_same_sentence
         lex_features['num_tokens_between'] = num_tokens_between
 
+        # Transform lists into binary key-value pairs
+        for list_of_values in (grams_between, grams_before, grams_after,
+            tags_between, entity_type, types_entities_between):
+            pass
         lex_features['grams_between'] = grams_between
         lex_features['grams_before'] = grams_before
         lex_features['grams_after'] = grams_after
@@ -185,6 +200,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             grams = list(nltk_ngrams(tokens_in_span, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
             all_grams.extend(set(grams))
+        all_grams = [self.normalize_grams(x) for x in set(all_grams)]
         all_grams = [x if x in vocab else 'OOV' for x in all_grams]
         return set(all_grams)
 
@@ -203,15 +219,16 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         all_grams = []
         offset = relat.span[0]
         tokens_before = doc.get_tokens_or_tags_before_or_after(offset, delta=-1,
-            n=self.context_window[0], seq=seq)
+            n=self.context_window[0], seq=seq, padding=True)
         tokens_before = [token.lower() for token in tokens_before]
         for n in range(ngram_window[0], ngram_window[1] + 1):
             grams = list(nltk_ngrams(tokens_before, n))
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
             all_grams.extend(set(grams))
             #grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_before, n))]
+        all_grams = [self.normalize_grams(x) for x in set(all_grams)]
         all_grams = [x if x in vocab else 'OOV' for x in all_grams]
-        return set(grams)
+        return set(all_grams)
 
     def get_grams_after(self, relat, doc, seq='tokens', ngram_window=None):
         """
@@ -234,19 +251,19 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             grams = self.sort_ngrams(grams)# + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_in_span, n))]
             all_grams.extend(set(grams))
             #grams = grams + [' '.join(sorted(tup)) for tup in list(nltk_ngrams(tokens_after, n))]
+        all_grams = [self.normalize_grams(x) for x in set(all_grams)]
         all_grams = [x if x in vocab else 'OOV' for x in all_grams]
         return set(all_grams)
 
     def sort_ngrams(self, ngrams):
         return [' '.join(sorted(tup)) for tup in ngrams]
 
-
-    def get_tokens_in_window(self, relat, doc):
+    def normalize_grams(self, ngram_string):
         """
+        Normalizes the values in a string of joined ngrams
         """
-        # Get the text between the two entities
-        start, end = relat.get_span()
-        exit()
+        # Substitute numbers
+        return create_vocab.normalize_grams(ngram_string)
 
     def get_pos_tags(self):
         pass
@@ -282,7 +299,6 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
 def main():
     # Load in data
-    #print(list(nltk_ngrams('This is a sentence'.split(), 2))); exit()
     inpath = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
     with open(inpath, 'rb') as f:
         docs_, relats = pickle.load(f)
@@ -300,10 +316,6 @@ def main():
                             ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
                             min_vocab_count=20, min_pos_count=20)
     vector_creator = base_feature.FeatureVectorCreator()
-
-    # Enumerate the feature space, fit a DictVectorizer
-    # NOTE: Instead, enumerate the feature space with actual features
-    #vector_creator.create_vectorizer(feature_extractor)
 
     feat_dicts = [] # mappings of feature names to values
     y = [] # the relation types

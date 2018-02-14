@@ -3,6 +3,7 @@ This script generates a vocabulary out of all texts in the corpus.
 Creates up to trigrams, cushioned by PHI and OMEGA.
 """
 import glob, os, sys
+import re
 import pickle
 from collections import defaultdict
 from nltk.tokenize.treebank import TreebankWordTokenizer
@@ -19,6 +20,14 @@ import made_utils
 #DATADIR = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0')
 DATADIR = os.path.join('..', 'data')
 INPATH = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
+
+def normalize_grams(ngram_string):
+    """
+    Normalizes the values in a string of joined ngrams
+    """
+    # Substitute numbers
+    ngram_string = re.sub('[\d]+|one|two|three|four|five|six|seven|eight|nine|ten', '<NUMBER>', ngram_string)
+    return ngram_string
 
 def main():
     vocab = defaultdict(int)
@@ -47,7 +56,11 @@ def main():
             tag_grams = ngrams(tags, n)
             for gram in grams:
                 # Sort the ngram so that it doesn't matter the order it occurs in
-                vocab[' '.join(sorted(gram))] += 1
+                # Transform it into a string
+                gram_string = ' '.join(sorted(gram))
+                # Normalize
+                gram_string = normalize_grams(gram_string)
+                vocab[gram_string] += 1
             for tag_gram in tag_grams:
                 vocab_tags[' '.join(sorted(tag_gram))] += 1
 

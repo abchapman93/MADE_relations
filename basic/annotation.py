@@ -1,3 +1,4 @@
+import os
 import bioc
 import re
 import made_utils
@@ -255,15 +256,17 @@ class AnnotatedDocument(object):
             tokens.append(token)
         return tokens
 
-    def get_tokens_before_or_after(self, offset, delta=-1, n=1):
+    def get_tokens_before_or_after(self, offset, delta=-1, n=1, padding=True):
         return self.get_tokens_or_tags_before_or_after(offset, 'tokens',
-                                                            delta=delta, n=n)
+                                                            delta=delta, n=n,
+                                                            padding=padding)
 
-    def get_tags_before_or_after(self, offset, delta=-1, n=1):
-        return self.get_tokens_or_tags_before_or_after(offset, 'tokens',
-                                                            delta=delta, n=n)
+    def get_tags_before_or_after(self, offset, delta=-1, n=1, padding=True):
+        return self.get_tokens_or_tags_before_or_after(offset, 'tags',
+                                                            delta=delta, n=n,
+                                                            padding=padding)
 
-    def get_tokens_or_tags_before_or_after(self, offset, seq='sentences', delta=-1, n=1):
+    def get_tokens_or_tags_before_or_after(self, offset, seq='sentences', delta=-1, n=1, padding=True):
         """
         Returns a list of all tokens that occur before or after offset up to n.
         Delta should be either 1 or -1 and defines whether to go forwards or backwards.
@@ -277,21 +280,25 @@ class AnnotatedDocument(object):
 
         else:
             raise ValueError("Must be either 'tokens' or 'tags'")
-
         tokens = []
         offset += delta # Step backwards/forwards until we find a new token
         while len(tokens) < n:
             # If you've gone either before the first token or past the last
             if offset < 0 or offset > max(items.keys()):
+                if padding and delta == 1:
+                    tokens.append('OMEGA')
+                elif padding and delta == -1:
+                    tokens.append('PHI')
                 break
             if offset in self._sentences: # this means it's the start of a new sentence
-                if delta == -1: # If this ist the beginning, we want to include this
+                if delta == -1: # If this is the beginning, we want to include this
                     tokens.append(items[offset])
+                # If padding is true, include PHI or OMEGA
+                if len(tokens) < n and padding and delta == -1:
+                    tokens.append('PHI')
+                elif len(tokens) < n and padding and delta == 1:
+                    tokens.append('OMEGA')
                 break
-                # TODO: Decide what to do with sentence boundries
-                #for diff in range(n - len(tokens)): # Add PHI as many times as necessary
-                #    to_append = '<PHI>' if delta == -1 else '<OMEGA>'
-                #    tokens.append(to_append)
             elif offset in items: # This means we've found a new token
                 tokens.append(items[offset])
                 offset += delta
@@ -439,12 +446,19 @@ class AnnotatedDocument(object):
         #return '[type=[{3} {1}:{2}]'.format(self.type, self.annotation_1.type, self.annotation_2.type,)
 
 if __name__ == '__main__':
+    outdir = '../data'
+    assert os.path.exists(outdir)
     reader = made_utils.TextAndBioCParser()
-    docs = reader.read_texts_and_xmls(1)
-    doc = list(docs.values())[0]
-    print(doc.get_tags_before_or_after(0, 1, 6))
-    print(doc.get_tokens_before_or_after(0, 1, 6))
+    docs = reader.read_texts_and_xmls()
+    # Pickle the documents
+    outpath = os.path.join(outdir, 'annotated_documents.pkl')
+    with open(outpath, 'wb') as f:
+        pickle.dump(docs, f)
+    print("Saved at {}".format(outpath))
     exit()
+    doc = list(docs.values())[0]
+    print(doc.get_tags_before_or_after(0, -1, 6, padding=True))
+    print(doc.get_tokens_before_or_after(10, -1, 6, padding=True))
     annos = doc.get_annotations()
     for anno in annos:
         print(anno)
