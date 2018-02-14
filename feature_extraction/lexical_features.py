@@ -163,6 +163,10 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         # Features for types of the entities
         lex_features['first_entity_type:<{}>'.format(relat.entity_types[0].upper())] = 1
         lex_features['second_entity_type:<{}>'.format(relat.entity_types[1].upper())] = 1
+        lex_features['entity_types_concat'] = '<=>'.join(sorted(['<{}>'.format(et.upper()) for et in
+            (relat.entity_types[0].upper(), relat.entity_types[1].upper())
+        ]))
+
 
         return lex_features
 
@@ -185,10 +189,9 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             ngram_window = self.ngram_window
 
         all_grams = []
-        spans = relat.spans
-        start = spans[0][1]
-        end = spans[1][0]
-        start, end = sorted((start, end))
+        span1, span2 = relat.spans
+        # Fixed this: get the start and span of the middle, not of the entire relation
+        _, start, end, _ = sorted(span1 +span2)
         tokens_in_span = doc.get_tokens_or_tags_at_span((start, end), seq)
         # NOTE: lower-casing the ngrams, come back to this if you want to encode the casing
         tokens_in_span = [token.lower() for token in tokens_in_span]
@@ -298,7 +301,7 @@ def main():
 
     docs = {doc.file_name: doc for doc in docs_}
     print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
-    shuffle(relats)
+    #shuffle(relats)
     with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
         vocab, pos_vocab = pickle.load(f)
 
@@ -311,7 +314,18 @@ def main():
 
     feat_dicts = [] # mappings of feature names to values
     y = [] # the relation types
+    #for i, relat in enumerate(relats[6972:]):
     for i, relat in enumerate(relats):
+        #if relat.file_name != '1_1044':
+        #    continue
+        #else:
+        #    if str(relat) == "'Percocet':'3', Drug:Dose, type=do":
+        #        print("Found it!")
+        #        print(i)
+        #        print(relat)
+        #        exit()
+        #    continue
+
         doc = docs[relat.file_name]
         span = relat.span
 
@@ -319,8 +333,9 @@ def main():
         feat_dicts.append(feature_dict)
         y.append(relat.type)
         #if i % 10 == 0:
-        #    break
-        #   save_example_feature_dict(feature_dict, relat, doc)
+        #    if i != 0:
+        #        break
+           #save_example_feature_dict(feature_dict, relat, doc)
            #exit()
         if i % 100 == 0 and i > 0:
             print("{}/{}".format(i, len(relats)))
@@ -339,32 +354,33 @@ def main():
     print(X.shape)
     print(len(y))
 
+    k= 100
 
     ## Now do some feature selection and transformation
-    #binary_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=1000)
-    #y_bin = ['any' if y_ != 'none' else 'none' for y_ in y]
-    #X_bin = binary_feature_selector.fit_transform(X, y_bin)
-    #print(X_bin.shape)
-    ## Save feature names and scores
-    #binary_feature_selector.write_feature_scores('binary_lex_feature_scores.txt')
-    ## Pickle data for training and error analysis
-    #binary_data = (relats, X_bin, y_bin, vectorizer, binary_feature_selector)
-    #outpath = '../data/binary_lexical_data.pkl'
-    #with open(outpath, 'wb') as f:
-    #    pickle.dump(binary_data, f)
-    #print("Saved binary data at {}".format(outpath))
+    binary_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)
+    y_bin = ['any' if y_ != 'none' else 'none' for y_ in y]
+    X_bin = binary_feature_selector.fit_transform(X, y_bin)
+    print(X_bin.shape)
+    # Save feature names and scores
+    binary_feature_selector.write_feature_scores('binary_lex_feature_scores.txt')
+    # Pickle data for training and error analysis
+    binary_data = (feat_dicts, relats, X_bin, y_bin, vectorizer, binary_feature_selector)
+    outpath = '../data/binary_lexical_data.pkl'
+    with open(outpath, 'wb') as f:
+        pickle.dump(binary_data, f)
+    print("Saved binary data at {}".format(outpath))
 #
-    ## To avoid running out of memory
-    #del X_bin
-    #del y_bin
-    #del binary_feature_selector
+    # To avoid running out of memory
+    del X_bin
+    del y_bin
+    del binary_feature_selector
 
     # Now do the same for non-binary
-    full_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=1000)
+    full_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)
     X_full = full_feature_selector.fit_transform(X, y)
     print(X_full.shape)
     full_feature_selector.write_feature_scores('full_lex_feature_scores.txt')
-    full_data = (relats, X_full, y, vectorizer, full_feature_selector)
+    full_data = (feat_dicts, relats, X_full, y, vectorizer, full_feature_selector)
     outpath = '../data/full_lexical_data.pkl'
     with open(outpath, 'wb') as f:
         pickle.dump(full_data, f)
