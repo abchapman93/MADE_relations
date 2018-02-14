@@ -48,7 +48,7 @@ class MyFeatureSelector(object):
                         in enumerate(self.ch2.scores_)]
 
         # Sort by score
-        top_ranked = list(sorted(top_ranked, key=lambda x:x[1]))
+        top_ranked = list(sorted(top_ranked, key=lambda x:x[1]), reverse=True)
 
         # Use the original index to find the feature name
         feature_names_and_scores = ['{}\t{}'.format(feature_names[idx], score)

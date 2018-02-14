@@ -367,7 +367,7 @@ def main():
     full_data = (relats, X_full, y, vectorizer, full_feature_selector)
     outpath = '../data/full_lexical_data.pkl'
     with open(outpath, 'wb') as f:
-        pickle.dump(binary_data, f)
+        pickle.dump(full_data, f)
     print("Saved non-binary data at {}".format(outpath))
 
 
