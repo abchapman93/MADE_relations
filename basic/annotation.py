@@ -129,6 +129,29 @@ class RelationAnnotation(BaseAnnotation):
         spans = self.annotation_1.span + self.annotation_2.span
         return (min(spans), max(spans))
 
+    def get_example_string(self, doc):
+        first_span = self.annotation_1.span
+        second_span = self.annotation_2.span
+        sorted_entities = sorted((self.annotation_1, self.annotation_2), key=lambda x:x.span[0])
+        entity1, entity2 = sorted_entities
+        start, end = self.span
+        string = ''
+        string += doc.text[start -40 : start]
+        string += '<{}>'.format(self.type.upper())
+        string += '<{}>'.format(entity1.type.upper())
+        string += entity1.text
+        string += '</{}>'.format(entity1.type.upper())
+        string += doc.text[entity1.span[1]:entity2.span[0]]
+        string += '<{}>'.format(entity2.type.upper())
+        string += entity2.text
+        string += '</{}>'.format(entity2.type.upper())
+        string += '</{}>\n\n'.format(self.type.upper())
+        string += doc.text[end: end+40]
+        string = re.sub('\n', ' ', string)
+        string = re.sub('\t', ' ', string)
+        string = re.sub('  ', ' ', string)
+        return string
+
     @classmethod
     def create_relation(cls, bioc_anno1, bioc_anno2):
         return cls()
@@ -433,13 +456,16 @@ if __name__ == '__main__':
     assert os.path.exists(outdir)
     reader = made_utils.TextAndBioCParser()
     docs = reader.read_texts_and_xmls()
-    # Pickle the documents
+    ## Pickle the documents
     outpath = os.path.join(outdir, 'annotated_documents.pkl')
     with open(outpath, 'wb') as f:
         pickle.dump(docs, f)
     print("Saved at {}".format(outpath))
     exit()
     doc = list(docs.values())[0]
+    relat = doc.get_relations()[0]
+    print(relat.get_example_string(doc))
+    exit()
     print(doc.get_tags_before_or_after(0, -1, 6, padding=True))
     print(doc.get_tokens_before_or_after(10, -1, 6, padding=True))
     annos = doc.get_annotations()
