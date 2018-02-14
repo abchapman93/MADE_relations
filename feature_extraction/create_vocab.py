@@ -16,18 +16,12 @@ from basic import tokenizing
 from basic.annotation import min_preprocess as preprocess
 import made_utils
 
+from lexical_features import normalize_grams
+
 
 #DATADIR = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0')
 DATADIR = os.path.join('..', 'data')
 INPATH = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
-
-def normalize_grams(ngram_string):
-    """
-    Normalizes the values in a string of joined ngrams
-    """
-    # Substitute numbers
-    ngram_string = re.sub('[\d]+|one|two|three|four|five|six|seven|eight|nine|ten', '<NUMBER>', ngram_string)
-    return ngram_string
 
 def main():
     vocab = defaultdict(int)

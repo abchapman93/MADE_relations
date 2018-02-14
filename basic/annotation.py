@@ -1,4 +1,4 @@
-import os
+import os, pickle
 import bioc
 import re
 import made_utils
@@ -280,6 +280,8 @@ class AnnotatedDocument(object):
 
         else:
             raise ValueError("Must be either 'tokens' or 'tags'")
+        # TODO: Fix PHI and omega
+        # Move all of these functions to the lexical features
         tokens = []
         offset += delta # Step backwards/forwards until we find a new token
         while len(tokens) < n:
@@ -362,33 +364,6 @@ class AnnotatedDocument(object):
         return to_return
 
 
-    def wrong_get_sentences_in_span(self, span):
-        """
-        Iterates through the sentences and returns the lists of tokens up to span
-        """
-        sent_spans = sorted(self._sentences.items(), key=lambda x:x[0])
-        # TODO: Use a faster search algorithm if you have to
-        offset = 0
-        while offset < span[0]:
-            offset, _ = sent_spans[0]
-            sent_spans.pop(0)
-
-        # Now iterate through to the end of span
-        sents = []
-        idx = 0
-        partial_sents = []
-        for i in sent_spans:
-        #for offset, sent in sent_spans:
-            # If the next offset is larger, only append part of it
-            offset = sent_spans[i][0]
-            next_offset = sent_spans[i + 1][0]
-            if next_offset >= span[1]:
-                partial_sent = get_text_at_span()
-                break
-            sents.append(sent)
-
-
-
     def get_token_at_offset(self, offset):
         if offset in self._tokens:
             return self._tokens[offset]
@@ -420,17 +395,25 @@ class AnnotatedDocument(object):
         """
         return [tokens for (offset, tokens) in sorted(self._sentences.items(), key=lambda x:x[0])]
 
-    def get_tokens(self):
+    def get_tokens(self, spans=False):
         """
         Returns the tokens as a list of words
         """
-        return [token for (offset, token) in sorted(self._tokens.items(), key=lambda x:x[0])]
+        if not spans:
+            return [token for (offset, token) in sorted(self._tokens.items(), key=lambda x:x[0])]
+        else:
+            return [(offset, token) for (offset, token) in sorted(self._tokens.items(), key=lambda x:x[0])]
 
-    def get_tags(self):
+
+
+    def get_tags(self, spans=False):
         """
         Returns the pos tags as a list of strings
         """
-        return [string for (offset, string) in sorted(self._tags.items(), key=lambda x:x[0])]
+        if not spans:
+            return [string for (offset, string) in sorted(self._tags.items(), key=lambda x:x[0])]
+        else:
+            return [(offset, string) for (offset, string) in sorted(self._tags.items(), key=lambda x:x[0])]
 
 
     def get_annotations(self):

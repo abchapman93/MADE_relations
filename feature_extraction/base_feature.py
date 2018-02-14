@@ -1,5 +1,63 @@
+"""
+This module contains classes that
+    1) Take feature dictionaries and vectorize them
+    2) Use Chi2 to select K best and can transform X arrays or
+    write the feature names and scordes
+"""
 from collections import defaultdict
 from sklearn.feature_extraction import DictVectorizer
+
+import os
+import numpy as np
+import pickle
+
+from sklearn.feature_selection import SelectKBest, chi2
+
+DATADIR = os.path.join('..', '..', 'data')
+MODELDIR = os.path.join('..', '..', 'saved_models')
+
+class MyFeatureSelector(object):
+    def __init__(self, vectorizer, k=1000):
+        self.ch2 = SelectKBest(chi2, k)
+        self.k = k
+        self.vectorizer = vectorizer
+
+    def fit(self, X, y):
+        """
+        Fits to a feature matrix.
+        """
+        self.ch2.fit(X, y)
+
+    def transform(self, X):
+        """
+        Transforms a feature matrix
+        """
+        return self.ch2.transform(X)
+
+    def fit_transform(self, X, y):
+        return self.ch2.fit_transform(X, y)
+
+    def write_feature_names(self, outpath):
+        with open(outpath, 'w') as f:
+            f.write('\n'.join(self.vectorizer.get_feature_names()))
+
+    def write_feature_scores(self, outpath):
+        feature_names = self.vectorizer.get_feature_names()
+        # (index, score)
+        top_ranked = [(index, score) for (index, score)
+                        in enumerate(self.ch2.scores_)]
+
+        # Sort by score
+        top_ranked = list(sorted(top_ranked, key=lambda x:x[1]))
+
+        # Use the original index to find the feature name
+        feature_names_and_scores = ['{}\t{}'.format(feature_names[idx], score)
+                    for (idx, score) in top_ranked]
+
+        f = open(outpath, 'w')
+        f.write('\n'.join(feature_names_and_scores))
+        print("Saved scores at {}".format(outpath))
+        f.close()
 
 class BaseFeatureExtractor(object):
     def __init__(self):
@@ -7,54 +65,3 @@ class BaseFeatureExtractor(object):
 
     def extract_features(self, relation, doc):
         return np.empty(0)
-
-class FeatureVectorCreator(object):
-    """
-    Takes a dictionary of features from 1 or more FeatureExtractors
-    and returns a sparse vector
-    """
-
-    def __init__(self, *args):
-        self.vectorizer = DictVectorizer(sparse=True, sort=True)
-        self.possible_values = set()
-        pass
-
-
-    def transform_feature_vector(self, feature_dict):
-        """
-        Takes the dictionary of feature names and values for a single instance.
-        Returns a sparse vector where the indices of the vector are valued by the values.
-        """
-        sparse_vector_dict = {} # Will start with dicts of indices and values
-        for feature_name, v in feature_dict.items():
-            if isinstance(v, int):# Really just a single value
-                sparse_vector_dict['{}'.format(feature_name)] = v
-                continue
-
-            # Or it's a string value, such as <first entity type>:<DRUG>
-            elif isinstance(v, str):
-                feature_value_name = "{}:<{}>".format(feature_name, v)
-                sparse_vector_dict[feature_value_name] = 1
-
-            # Otherwise it's a list of tokens we can iterate through
-            else:
-                for value in v:
-                    feature_value_name = "{}:<{}>".format(feature_name, value)
-                    sparse_vector_dict[feature_value_name] = 1
-        return sparse_vector_dict
-
-
-    def fit_transform(self, d):
-        X = self.vectorizer.fit_transform(d)
-        return X
-
-
-    def vectorize(self, d):
-        """
-        Takes a list of dictonairies. Returns a sparse vector
-        """
-        try:
-            X = self.vectorizer.transform(d)
-        except AttributeError as e:
-            raise AttributeError("Vectorizer has not been fit yet. Call fit_transform(d)")
-        return X

@@ -91,9 +91,6 @@ def main():
         all_relations.extend(pair_annotations_in_doc(doc, legal_edges))
         idx += 1
 
-    #relation_types = defaultdict(int)
-    #for relat in all_relations:
-    #    relation_types[relat.type] += 1
 
     # If you want to change the proportion of negative : positive
     sample_relats = sample_negative_examples(all_relations, neg_prop=2.0)
@@ -135,22 +132,6 @@ def main():
 
 
     exit()
-
-
-
-
-    outpath = os.path.join(outdir, 'generated_train.pkl')
-    with open(outpath, 'wb') as f:
-        pickle.dump(sample_relats, f)
-    print("Saved {} training examples".format(len(sample_relats)))
-
-    # Save the documents as well
-    outpath = os.path.join(outdir, 'annotated_documents.pkl')
-    with open(outpath, 'wb') as f:
-        pickle.dump(docs, f)
-    print("Saved {} documents at {}".format(len(docs), outpath))
-    with open(os.path.join(outdir, 'string_train.txt'), 'w') as f:
-        f.write('\n'.join([str(r) for r in random.sample(sample_relats, 100)]))
 
 if __name__ == '__main__':
     outdir = os.path.join('..', '..', 'data')

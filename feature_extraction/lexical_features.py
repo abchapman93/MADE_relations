@@ -17,8 +17,6 @@ sys.path.append(os.path.join('..', 'basic'))
 import base_feature
 from feature_utils import save_example_feature_dict
 
-import create_vocab
-
 DATADIR = os.path.join('..', 'data') # the processed data
 MODELDIR = os.path.join('..', 'saved_models')
 MADE_DIR = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0') # the original MADE data
@@ -31,6 +29,16 @@ ENTITY_TYPES_MAPPING = {
     'ROUTE': 6, 'DURATION': 7,
     'SEVERITY': 8
 }
+
+
+def normalize_grams(ngram_string):
+    """
+    Normalizes the values in a string of joined ngrams
+    """
+    # Substitute numbers
+    ngram_string = re.sub('[\d]+|one|two|three|four|five|six|seven|eight|nine|ten', '<NUMBER>', ngram_string)
+    return ngram_string
+
 
 
 class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
@@ -113,12 +121,11 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
         lex_features = {}
 
-        # Binary feature: Are they in the same sentence?
-        lex_features['same_sentence'] = doc.in_same_sentence(relat.get_span())
         # Get the number of tokens between
         # NOTE: only unigrams
         lex_features['num_tokens_between'] = len(self.get_grams_between(relat, doc, ngram_window=(1, 1)))
-        # Get all tokens in between
+        # Get all tokens/POS tags in between
+        # Create one feature for each ngram/tag
         lex_features.update({
             'grams_between:<{}>'.format(v): 1 for v in self.get_grams_between(relat, doc)
             })
@@ -128,44 +135,34 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         lex_features.update({
             'grams_after:<{}>'.format(v): 1 for v in self.get_grams_after(relat, doc)
             })
-        print(lex_features); exit()
-        grams_after = self.get_grams_after(relat, doc)
 
-        tags_between = self.get_grams_between(relat, doc, seq='tags')
-        num_sentences_overlap = len(doc.get_sentences_overlap_span(relat.get_span()))
+        lex_features.update({
+            'tags_between:<{}>'.format(v): 1 for v in self.get_grams_between(relat, doc, seq='tags')
+            })
+        lex_features.update({
+            'tags_before:<{}>'.format(v): 1 for v in self.get_grams_before(relat, doc, seq='tags')
+            })
+        lex_features.update({
+            'tags_after:<{}>'.format(v): 1 for v in self.get_grams_after(relat, doc, seq='tags')
+            })
 
+        # Get features for information about entities/context between
+        # Binary feature: Are they in the same sentence?
+        lex_features['same_sentence'] = doc.in_same_sentence(relat.get_span())
+
+        # One binary feature for every type of entity between
         entities_between = self.get_entities_between(relat, doc)
-        num_entities_between = len(entities_between)
-        types_entities_between = set([e.type for e in entities_between])
+        # TODO: Maybe change this to a count
+        lex_features.update({
+            'entities_between:<{}>'.format(v.type.upper()): 1 for v in entities_between
+            })
+        lex_features['num_entities_between'] = len(entities_between)
 
+        lex_features['num_sentences_overlap'] = len(doc.get_sentences_overlap_span(relat.get_span()))
 
-
-        entity_type1 = relat.entity_types[0].upper()
-        entity_type2 = relat.entity_types[1].upper()
-
-        lex_features['same_sentence'] = in_same_sentence
-        lex_features['num_tokens_between'] = num_tokens_between
-
-        # Transform lists into binary key-value pairs
-        for list_of_values in (grams_between, grams_before, grams_after,
-            tags_between, entity_type, types_entities_between):
-            pass
-        lex_features['grams_between'] = grams_between
-        lex_features['grams_before'] = grams_before
-        lex_features['grams_after'] = grams_after
-
-        lex_features['pos_grams_between'] = tags_between
-
-        lex_features['first_entity_type'] = entity_type1#ENTITY_TYPES_MAPPING[entity_type1]
-        lex_features['second_entity_type'] = entity_type2#ENTITY_TYPES_MAPPING[entity_type2]
-        lex_features['num_sentences_overlap'] = num_sentences_overlap
-
-        lex_features['num_entities_between'] = num_entities_between
-        lex_features['types_entities_between'] = types_entities_between
-        #assert len(set(lex_features.keys()).difference(set(self.all_features_values.keys()))) == 0
-        #assert len(set(self.all_features_values.keys()).difference(set(lex_features.keys()))) == 0
-
-
+        # Features for types of the entities
+        lex_features['first_entity_type:<{}>'.format(relat.entity_types[0].upper())] = 1
+        lex_features['second_entity_type:<{}>'.format(relat.entity_types[1].upper())] = 1
 
         return lex_features
 
@@ -263,7 +260,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         Normalizes the values in a string of joined ngrams
         """
         # Substitute numbers
-        return create_vocab.normalize_grams(ngram_string)
+        return normalize_grams(ngram_string)
 
     def get_pos_tags(self):
         pass
@@ -288,10 +285,6 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         return overlapping_entities
 
 
-
-
-        span = relat.get_span
-
     def __repr__(self):
         return "LexicalFeatureExtractor Ngram Window: {} Vocab: {} terms".format(
                 self.ngram_window, len(self.vocab))
@@ -315,7 +308,6 @@ def main():
     feature_extractor = LexicalFeatureExtractor(context_window=(2, 2),
                             ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
                             min_vocab_count=20, min_pos_count=20)
-    vector_creator = base_feature.FeatureVectorCreator()
 
     feat_dicts = [] # mappings of feature names to values
     y = [] # the relation types
@@ -323,50 +315,61 @@ def main():
         doc = docs[relat.file_name]
         span = relat.span
 
-        # This returns a dictionary with lists of values
         feature_dict = feature_extractor.create_feature_dict(relat, doc)
-        # You now have to flatten it so that it's a single-dimension dictionary
-        feature_vect_dict = vector_creator.transform_feature_vector(feature_dict)
-        feat_dicts.append(feature_vect_dict)
-        if i == 0:
-            print(feature_dict.keys())
-            print(feature_dict['first_entity_type'])
-        if i % 10 == 0:
-            pass
-            #break
-        #   print(feature_dict)
-#
+        feat_dicts.append(feature_dict)
+        y.append(relat.type)
+        #if i % 10 == 0:
+        #    break
         #   save_example_feature_dict(feature_dict, relat, doc)
            #exit()
-           #break
         if i % 100 == 0 and i > 0:
             print("{}/{}".format(i, len(relats)))
+            #break
 
-        y.append(relat.type)
 
+    print(feat_dicts[0])
+    #for d in feat_dicts:
+    #    for v in d.values():
+    #        assert isinstance(v, int)
+    # Create feature vectors
+    vectorizer = DictVectorizer(sparse=True, sort=True)
 
-    X = vector_creator.fit_transform(feat_dicts)
-    #print(X)
+    X = vectorizer.fit_transform(feat_dicts)
+    print(X)
     print(X.shape)
     print(len(y))
 
-    # Let's save the names of the feature names
-    feature_names = vector_creator.vectorizer.get_feature_names()
-    print(type(feature_names))
-    with open('lexical_feature_names.txt', 'w') as f:
-        f.write('\n'.join(feature_names))
 
-    # Now pickle the data
-    outpath = os.path.join(DATADIR, 'data_lexical.pkl')
+    ## Now do some feature selection and transformation
+    #binary_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=1000)
+    #y_bin = ['any' if y_ != 'none' else 'none' for y_ in y]
+    #X_bin = binary_feature_selector.fit_transform(X, y_bin)
+    #print(X_bin.shape)
+    ## Save feature names and scores
+    #binary_feature_selector.write_feature_scores('binary_lex_feature_scores.txt')
+    ## Pickle data for training and error analysis
+    #binary_data = (relats, X_bin, y_bin, vectorizer, binary_feature_selector)
+    #outpath = '../data/binary_lexical_data.pkl'
+    #with open(outpath, 'wb') as f:
+    #    pickle.dump(binary_data, f)
+    #print("Saved binary data at {}".format(outpath))
+#
+    ## To avoid running out of memory
+    #del X_bin
+    #del y_bin
+    #del binary_feature_selector
+
+    # Now do the same for non-binary
+    full_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=1000)
+    X_full = full_feature_selector.fit_transform(X, y)
+    print(X_full.shape)
+    full_feature_selector.write_feature_scores('full_lex_feature_scores.txt')
+    full_data = (relats, X_full, y, vectorizer, full_feature_selector)
+    outpath = '../data/full_lexical_data.pkl'
     with open(outpath, 'wb') as f:
-        pickle.dump((X, y), f)
+        pickle.dump(binary_data, f)
+    print("Saved non-binary data at {}".format(outpath))
 
-    print("Saved data at {}".format(outpath))
-    print()
-
-    # Finally, save the vectorizer
-    with open(os.path.join(MODELDIR, 'lex_dict_vectorizer.pkl'), 'wb') as f:
-        pickle.dump(vector_creator.vectorizer, f)
 
 
     print("Made it to the end")
