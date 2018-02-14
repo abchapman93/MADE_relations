@@ -9,10 +9,15 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score, cross_val_predict
 
+import train_utils
+
 DATADIR = os.path.join('..', '..', 'data')
 MODELDIR = os.path.join('..', '..', 'saved_models')
 assert os.path.exists(DATADIR)
 assert os.path.exists(MODELDIR)
+
+sys.path.append('..')
+sys.path.append('../../feature_extraction')
 
 label_mapping = {'none': 0,
                 'do':1,
@@ -24,33 +29,37 @@ label_mapping = {'none': 0,
                 'du': 7
                 }
 
-def transform_features(X):
-    with open(os.path.join(MODELDIR, 'binary_chi2.pkl'), 'rb') as f:
-        chi2 = pickle.load(f)
-    X = chi2.transform(X)
-    print("New X shape: {}".format(X.shape))
-    return X
+def get_positive_preds(y_pred, pos='any'):
+    """
+    Gets the indices for any data points that were predicted to have a relation.
+    """
+    idxs = []
+    for i, y_ in enumerate(y_pred):
+        if y_ == pos:
+            idxs.append(i)
+    return idxs
 
 def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
-        X, y_non_bin = pickle.load(f)
-    #X = X[:10000, :]
-    #y_non_bin = y_non_bin[:10000]
+        feat_dicts, relats, X, y, _, _ = pickle.load(f)
+    del _
+    #X = X[:10, :]
+    #y = y[:10]
     print("X: {}".format(X.shape))
-    print("y: {}".format(len(y_non_bin)))
+    print("y: {}".format(len(y)))
+    print(set(y))
 
     #X = X
     #y = y
 
 
     # Transform y
-    y = [int(0) if label == 'none' else int(1)  for label in y_non_bin]
+    #y = [int(0) if label == 'none' else int(1)  for label in y_non_bin]
     y = np.array(y)
-    y_non_bin = np.array(y_non_bin)
     print(y[:10])
 
-    X = transform_features(X)
+    #X = transform_features(X)
 
     #clf = LinearRegression()
     clf = SVC()
@@ -58,16 +67,15 @@ def main():
     score = classification_report(y, pred)
     print(score)
 
-    non_zero_pred_idxs = np.nonzero(pred)[0]
-    X_filter = X[non_zero_pred_idxs, :]
-    y_filter = y_non_bin[non_zero_pred_idxs]
+    yes_preds = get_positive_preds(pred, pos='any')
+    with open('bin_yes_preds.pkl', 'wb') as f:
+        pickle.dump(yes_preds, f)
+    print("Saved indices of predicted relations")
 
-    # Save the predictions
-    outpath = os.path.join(DATADIR, 'filtered_data_lexical.pkl')
-    with open(outpath, 'wb') as f:
-        pickle.dump((X_filter, y_filter), f)
-    print("Saved filtered data at {}".format(outpath))
-    print("{}, {}".format(X_filter.shape, y_filter.shape))
+    # Save some examples of errors
+    with open(os.path.join(DATADIR, 'annotated_documents.pkl'), 'rb') as f:
+        docs = pickle.load(f)
+    train_utils.save_errors('binary_errors.txt', y, pred, feat_dicts, relats, docs)
 
     # Save the model
     # TODO: Do you have to do something special because of cross-validation?
@@ -90,5 +98,5 @@ def main():
 
 
 if __name__ == '__main__':
-    data_file = sys.argv[1]
+    data_file = 'binary_lexical_data.pkl'
     main()

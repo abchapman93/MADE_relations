@@ -9,10 +9,14 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score, cross_val_predict
 
+import train_utils
+
 DATADIR = os.path.join('..', '..', 'data')
 MODELDIR = os.path.join('..', '..', 'saved_models')
 assert os.path.exists(DATADIR)
 assert os.path.exists(MODELDIR)
+sys.path.append('..')
+sys.path.append('../../feature_extraction')
 
 LABEL_MAPPING = {'none': 0,
                 'do':1,
@@ -31,21 +35,32 @@ def transform_features(X):
     print("New X shape: {}".format(X.shape))
     return X
 
+def filter_by_idx(idxs, *args):
+    arrs = args
+    z = list(zip(*arrs))
+    z = [z[i] for i in idxs]
+    return zip(*z)
+
 def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
-        X, y = pickle.load(f)
+        feat_dicts, relats, X, y, _, _ = pickle.load(f)
+    del _
     #X = X[:10000, :]
     #y = y[:10000]
     print("X: {}".format(X.shape))
     print("y: {}".format(len(y)))
-
-    #X = X
-    #y = y
-
-
-    # Transform y
-    #y = [LABEL_MAPPING[label]  for label in y]
+    print(len(feat_dicts))
+    print(len(relats))
+    # Filter out any examples that the filtering classifier said had no relation
+    with open('bin_yes_preds.pkl', 'rb') as f:
+        idxs = pickle.load(f)
+    X = X[idxs]
+    feat_dicts, relats, y = filter_by_idx(idxs, feat_dicts, relats, y)
+    print("X: {}".format(X.shape))
+    print("y: {}".format(len(y)))
+    print(len(feat_dicts))
+    print(len(relats))
     y = np.array(y)
     print(y[:10])
 
@@ -54,9 +69,15 @@ def main():
     pred = cross_val_predict(clf, X, y)
     score = classification_report(y, pred)
     print(score)
+
+    # Save some examples of errors
+    with open(os.path.join(DATADIR, 'annotated_documents.pkl'), 'rb') as f:
+        docs = pickle.load(f)
+    train_utils.save_errors('binary_errors.txt', y, pred, feat_dicts, relats, docs)
+
     # Save the model
     # TODO: Do you have to do something special because of cross-validation?
-    model_file = os.path.join(MODELDIR, 'filter_baseline.pkl')
+    model_file = os.path.join(MODELDIR, 'full_baseline.pkl')
     with open(model_file, 'wb') as f:
         pickle.dump(clf, f)
     print("Saved binary classifier at {}".format(model_file))
@@ -83,5 +104,5 @@ def main():
 
 
 if __name__ == '__main__':
-    data_file = sys.argv[1]
+    data_file = 'full_lexical_data.pkl'
     main()

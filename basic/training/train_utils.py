@@ -1,10 +1,39 @@
 import os, sys
+import re
 import pickle
 from collections import defaultdict
 sys.path.append('..')
 import made_utils, annotation
 
 DATADIR = os.path.join('..', '..', 'data')
+
+
+def save_errors(outpath, y, y_pred, feat_dicts, relats, docs):
+    errors = defaultdict(list)
+    for i in range(len(y)):
+        if y[i] == y_pred[i]:
+            continue
+        relat = relats[i]
+        doc = docs[relat.file_name]
+        true_type = y[i]
+        pred_type = y_pred[i]
+        example_string = relat.get_example_string(doc)
+
+        string = 'TRUE TYPE: {} ------ PRED TYPE: {}\n'.format(true_type, pred_type)
+        string += '{}\n'.format(doc.file_name)
+        string += '{}\n\n'.format(str(relat))
+        string += 'CONTEXT STRING: {}\n\n'.format(example_string)
+        string += 'FEATURE DICTIONARY: \n{}'.format(str(feat_dicts[i]))
+
+        string += '\n\n-----------------------------------\n\n'
+        errors[true_type].append(string)
+    for true_type, strings in errors.items():
+        fname = '{}_errors.txt'.format(re.sub('/', '-', true_type))
+        with open(fname, 'w') as f:
+            f.write('\n'.join(strings))
+        print("Saved {} error examples".format(true_type))
+
+    pass
 
 
 def define_legal_edges(thresh=1):
@@ -91,6 +120,9 @@ def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=2):
             if anno1.id == anno2.id:
                 continue
 
+            if anno1.span == anno2.span:
+                continue
+
             # Don't generate paris that have already been paried
             if anno2.id in edges[anno1.id]:
                 continue
@@ -105,11 +137,6 @@ def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=2):
             sorted_spans = list(sorted([start1, end1, start2, end2]))
             span = (sorted_spans[0], sorted_spans[-1])
             overlapping_sentences = doc.get_sentences_overlap_span(span)
-            #print(anno1, anno2)
-            #print(span)
-            #print(doc.text[span[0]: span[1]])
-            #print(overlapping_sentences)
-            #print(len(overlapping_sentences))
             if len(overlapping_sentences) > max_sent_length:
                 continue
 
