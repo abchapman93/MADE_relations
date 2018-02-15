@@ -1,0 +1,263 @@
+TRUE TYPE: severity_type ------ PRED TYPE: none
+10_682
+'disseminated \nherpes zoster infection':'mild', Indication:Severity, type=severity_type
+
+CONTEXT STRING: motherapy who presents with evidence of <SEVERITY_TYPE><INDICATION>disseminated \nherpes zoster infection</INDICATION>. This episode seems particularly <SEVERITY>mild</SEVERITY></SEVERITY_TYPE>  as the patient  feels quite well with 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<seems>': 1, 'grams_between:<OOV>': 1, 'grams_between:<particularly>': 1, 'grams_between:<.>': 1, 'grams_between:<episode>': 1, 'grams_between:<. this>': 1, 'grams_between:<this>': 1, 'grams_before:<of>': 1, 'grams_before:<evidence of>': 1, 'grams_before:<evidence>': 1, 'grams_after:<as>': 1, 'grams_after:<as the>': 1, 'grams_after:<the>': 1, 'tags_between:<nn>': 1, 'tags_between:<. dt nn>': 1, 'tags_between:<vbz>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<. dt>': 1, 'tags_between:<.>': 1, 'tags_between:<rb>': 1, 'tags_between:<nn rb vbz>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt nn vbz>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<dt in>': 1, 'tags_after:<in>': 1, 'tags_after:<dt>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+13_209
+'pain':'1-2 out of 10', Indication:Severity, type=severity_type
+
+CONTEXT STRING: lasty. Kyphoplasty did help relieve the <SEVERITY_TYPE><INDICATION>pain</INDICATION> significantly and now it is only <SEVERITY>1-2 out of 10</SEVERITY></SEVERITY_TYPE>  compared to 10/10 before. He is not ta
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<is it>': 1, 'grams_between:<it>': 1, 'grams_between:<and now>': 1, 'grams_between:<OOV>': 1, 'grams_between:<now>': 1, 'grams_between:<and>': 1, 'grams_between:<significantly>': 1, 'grams_between:<only>': 1, 'grams_between:<is>': 1, 'grams_before:<OOV>': 1, 'grams_before:<the>': 1, 'grams_after:<to>': 1, 'grams_after:<compared>': 1, 'grams_after:<compared to>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<cc rb>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp rb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<cc rb rb>': 1, 'tags_between:<cc prp rb>': 1, 'tags_between:<cc>': 1, 'tags_between:<prp>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<dt vb>': 1, 'tags_before:<dt>': 1, 'tags_before:<vb>': 1, 'tags_after:<vbn>': 1, 'tags_after:<to>': 1, 'tags_after:<to vbn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+13_435
+'pain':'1-2 out of 10', Indication:Severity, type=severity_type
+
+CONTEXT STRING: lasty. Kyphoplasty did help relieve the <SEVERITY_TYPE><INDICATION>pain</INDICATION> significantly and now it is only <SEVERITY>1-2 out of 10</SEVERITY></SEVERITY_TYPE>  compared to 10/10 before. He is not ta
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<is it>': 1, 'grams_between:<it>': 1, 'grams_between:<and now>': 1, 'grams_between:<OOV>': 1, 'grams_between:<now>': 1, 'grams_between:<and>': 1, 'grams_between:<significantly>': 1, 'grams_between:<only>': 1, 'grams_between:<is>': 1, 'grams_before:<OOV>': 1, 'grams_before:<the>': 1, 'grams_after:<to>': 1, 'grams_after:<compared>': 1, 'grams_after:<compared to>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<cc rb>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp rb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<cc rb rb>': 1, 'tags_between:<cc prp rb>': 1, 'tags_between:<cc>': 1, 'tags_between:<prp>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<dt vb>': 1, 'tags_before:<dt>': 1, 'tags_before:<vb>': 1, 'tags_after:<vbn>': 1, 'tags_after:<to>': 1, 'tags_after:<to vbn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+13_500
+'left arm pain started as well as left neck, shoulder and elbow':'8-10/10', Indication:Severity, type=severity_type
+
+CONTEXT STRING: s it. He thinks that maybe helpful his <SEVERITY_TYPE><INDICATION>left arm pain started as well as left neck, shoulder and elbow</INDICATION> and he has point tenderness in these areas. He has been using Icy Hot and took a few extra Vicodin, but he says it is still at <SEVERITY>8-10/10</SEVERITY></SEVERITY_TYPE> . He did sit in a tub for couple of day
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 23, 'grams_between:<. he>': 1, 'grams_between:<at>': 1, 'grams_between:<but>': 1, 'grams_between:<and>': 1, 'grams_between:<took>': 1, 'grams_between:<, but he>': 1, 'grams_between:<has he>': 1, 'grams_between:<been has>': 1, 'grams_between:<<NUMBER>derness>': 1, 'grams_between:<is>': 1, 'grams_between:<and he>': 1, 'grams_between:<is it>': 1, 'grams_between:<it>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<is still>': 1, 'grams_between:<vicodin>': 1, 'grams_between:<been has he>': 1, 'grams_between:<. has he>': 1, 'grams_between:<a few>': 1, 'grams_between:<but he>': 1, 'grams_between:<he says>': 1, 'grams_between:<, but>': 1, 'grams_between:<using>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<a>': 1, 'grams_between:<in>': 1, 'grams_between:<, vicodin>': 1, 'grams_between:<few>': 1, 'grams_between:<and has he>': 1, 'grams_between:<has>': 1, 'grams_between:<areas>': 1, 'grams_between:<still>': 1, 'grams_between:<says>': 1, 'grams_between:<these>': 1, 'grams_between:<point>': 1, 'grams_before:<helpful>': 1, 'grams_before:<OOV>': 1, 'grams_before:<his>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<prp vbn vbz>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<jj>': 1, 'tags_between:<prp vbz vbz>': 1, 'tags_between:<in nn nn>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<, jj nnp>': 1, 'tags_between:<dt vbd>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in nn>': 1, 'tags_between:<jj nnp>': 1, 'tags_between:<, cc nnp>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<jj jj>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cc vbd>': 1, 'tags_between:<, cc>': 1, 'tags_between:<vbg>': 1, 'tags_between:<in rb>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. nns>': 1, 'tags_between:<. prp>': 1, 'tags_between:<cc prp vbz>': 1, 'tags_between:<nnp vbg>': 1, 'tags_between:<, cc prp>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<. nns prp>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<. dt nns>': 1, 'tags_between:<prp>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<dt jj jj>': 1, 'tags_between:<dt in nns>': 1, 'tags_between:<cc nnp vbd>': 1, 'tags_between:<dt jj vbd>': 1, 'tags_between:<cc dt vbd>': 1, 'tags_between:<in rb vbz>': 1, 'tags_between:<dt in>': 1, 'tags_between:<prp prp vbz>': 1, 'tags_between:<nn prp vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<nnp vbg vbn>': 1, 'tags_between:<cc nnp nnp>': 1, 'tags_between:<nnp nnp vbg>': 1, 'tags_between:<nn nn vbz>': 1, 'tags_between:<vbg vbn>': 1, 'tags_between:<vbg vbn vbz>': 1, 'tags_between:<dt nns>': 1, 'tags_between:<jj jj nnp>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<prp$ vb>': 1, 'tags_before:<prp$>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+13_815
+'lower back pain':'10/10', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: ery 2 months.   He continues to have <SEVERITY_TYPE><SSLIF>lower back pain</SSLIF> secondary to arthritis and also left shoulder pain which is new and ongoing for the last 2 months. It has been quite severe and at times, he has rated it as <SEVERITY>10/10</SEVERITY></SEVERITY_TYPE> . He is taking Vicodin with not much re
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 29, 'grams_between:<for the>': 1, 'grams_between:<secondary to>': 1, 'grams_between:<, he>': 1, 'grams_between:<months>': 1, 'grams_between:<new>': 1, 'grams_between:<and>': 1, 'grams_between:<at>': 1, 'grams_between:<, has he>': 1, 'grams_between:<has he>': 1, 'grams_between:<been has>': 1, 'grams_between:<<NUMBER> last the>': 1, 'grams_between:<is>': 1, 'grams_between:<shoulder>': 1, 'grams_between:<it>': 1, 'grams_between:<he>': 1, 'grams_between:<has it>': 1, 'grams_between:<also>': 1, 'grams_between:<OOV>': 1, 'grams_between:<and at>': 1, 'grams_between:<which>': 1, 'grams_between:<times>': 1, 'grams_between:<,>': 1, 'grams_between:<. it>': 1, 'grams_between:<for>': 1, 'grams_between:<quite>': 1, 'grams_between:<as>': 1, 'grams_between:<. <NUMBER> months>': 1, 'grams_between:<left>': 1, 'grams_between:<is which>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<ongoing>': 1, 'grams_between:<the>': 1, 'grams_between:<last>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<been has it>': 1, 'grams_between:<<NUMBER> months>': 1, 'grams_between:<has>': 1, 'grams_between:<for last the>': 1, 'grams_between:<<NUMBER> last>': 1, 'grams_between:<arthritis>': 1, 'grams_between:<severe>': 1, 'grams_between:<. months>': 1, 'grams_between:<as it>': 1, 'grams_between:<pain>': 1, 'grams_between:<to>': 1, 'grams_between:<secondary>': 1, 'grams_between:<also and>': 1, 'grams_between:<last the>': 1, 'grams_before:<have to>': 1, 'grams_before:<to>': 1, 'grams_before:<have>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<cc jj rb>': 1, 'tags_between:<cc to vb>': 1, 'tags_between:<prp vbn vbz>': 1, 'tags_between:<cc in nns>': 1, 'tags_between:<, prp>': 1, 'tags_between:<jj>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<to vb>': 1, 'tags_between:<nn wdt>': 1, 'tags_between:<in prp>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<cc in vbg>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt in vbg>': 1, 'tags_between:<cc jj vbg>': 1, 'tags_between:<nn nn vbd>': 1, 'tags_between:<, nns>': 1, 'tags_between:<nn vbz wdt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<jj vbz wdt>': 1, 'tags_between:<nns>': 1, 'tags_between:<wdt>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc vbg>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc rb vb>': 1, 'tags_between:<vbg>': 1, 'tags_between:<cc jj>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<in nns>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. nns>': 1, 'tags_between:<. prp>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cc rb>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<prp vbn>': 1, 'tags_between:<in vbg>': 1, 'tags_between:<cd dt jj>': 1, 'tags_between:<. nns prp>': 1, 'tags_between:<jj rb vbn>': 1, 'tags_between:<, in nns>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<in>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<cc in jj>': 1, 'tags_between:<, prp vbz>': 1, 'tags_between:<rb vbn vbz>': 1, 'tags_between:<cc vb>': 1, 'tags_between:<cc in>': 1, 'tags_between:<dt in>': 1, 'tags_between:<cd jj nns>': 1, 'tags_between:<, nns prp>': 1, 'tags_between:<jj to>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<vbz wdt>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<in prp vbn>': 1, 'tags_between:<nn rb vbd>': 1, 'tags_between:<jj vbz>': 1, 'tags_between:<cc rb vbd>': 1, 'tags_between:<jj to vb>': 1, 'tags_between:<nn nn wdt>': 1, 'tags_between:<. cd nns>': 1, 'tags_between:<to>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<cc jj vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<to>': 1, 'tags_before:<to vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<SSLIF>': 1, 'entities_between:<SEVERITY>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+13_851
+'bilateral fat-containing \naxillary nodes':'2.5 cm', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: s done in --- Date ---, showed multiple <SEVERITY_TYPE><SSLIF>bilateral fat-containing \naxillary nodes</SSLIF> and the largest 1 seen on the left measures <SEVERITY>2.5 cm</SEVERITY></SEVERITY_TYPE> . No  pathologically enlarged mediasti
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<<NUMBER>>': 1, 'grams_between:<OOV>': 1, 'grams_between:<seen>': 1, 'grams_between:<left the>': 1, 'grams_between:<and the>': 1, 'grams_between:<and>': 1, 'grams_between:<left on the>': 1, 'grams_between:<the>': 1, 'grams_between:<on>': 1, 'grams_between:<on the>': 1, 'grams_between:<left>': 1, 'grams_before:<multiple>': 1, 'grams_before:<OOV>': 1, 'grams_before:<showed>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<jjs>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<dt jjs>': 1, 'tags_between:<dt>': 1, 'tags_between:<cd vbn>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd>': 1, 'tags_between:<dt in vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<cd jjs>': 1, 'tags_between:<dt in>': 1, 'tags_between:<cd in vbn>': 1, 'tags_between:<cc dt>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<dt nn vbz>': 1, 'tags_before:<vbd>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj vbd>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<SSLIF>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+14_171
+'supraclavicular \nlymph node':'0.5 cm', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING:  is nonpalpable. There is a very small <SEVERITY_TYPE><SSLIF>supraclavicular \nlymph node</SSLIF> palpated on the right side that is about <SEVERITY>0.5 cm</SEVERITY></SEVERITY_TYPE>  fixed and  nonmobile. Under the left 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<about is>': 1, 'grams_between:<on right the>': 1, 'grams_between:<side>': 1, 'grams_between:<OOV>': 1, 'grams_between:<right the>': 1, 'grams_between:<right side the>': 1, 'grams_between:<palpated>': 1, 'grams_between:<that>': 1, 'grams_between:<the>': 1, 'grams_between:<right>': 1, 'grams_between:<is that>': 1, 'grams_between:<right side>': 1, 'grams_between:<on>': 1, 'grams_between:<on the>': 1, 'grams_between:<about>': 1, 'grams_between:<is>': 1, 'grams_before:<small>': 1, 'grams_before:<very>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in vbn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<in vbz wdt>': 1, 'tags_between:<nn vbz wdt>': 1, 'tags_between:<vbz wdt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<jj nn wdt>': 1, 'tags_between:<jj>': 1, 'tags_between:<wdt>': 1, 'tags_between:<in vbz>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<nn wdt>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<dt>': 1, 'tags_before:<jj rb>': 1, 'tags_before:<jj>': 1, 'tags_before:<rb>': 1, 'tags_after:<cc>': 1, 'tags_after:<vbn>': 1, 'tags_after:<cc vbn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+14_192
+'cutaneous disease beneath the medial end of the left clavicle extending downward on to the chest wall':'5 cm', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: the left scapula and there is clustered <SEVERITY_TYPE><SSLIF>cutaneous disease beneath the medial end of the left clavicle extending downward on to the chest wall</SSLIF> and the extent of this is about <SEVERITY>5 cm</SEVERITY></SEVERITY_TYPE> . There is left axillary adenopathy wit
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<about is>': 1, 'grams_between:<of>': 1, 'grams_between:<OOV>': 1, 'grams_between:<the>': 1, 'grams_between:<and>': 1, 'grams_between:<and the>': 1, 'grams_between:<of this>': 1, 'grams_between:<is this>': 1, 'grams_between:<about>': 1, 'grams_between:<is>': 1, 'grams_between:<this>': 1, 'grams_before:<OOV>': 1, 'grams_before:<is>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<cc dt nn>': 1, 'tags_between:<in nn>': 1, 'tags_between:<dt vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<cc dt>': 1, 'tags_between:<cc>': 1, 'tags_between:<in vbz>': 1, 'tags_between:<in>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_before:<vbn>': 1, 'tags_before:<vbz>': 1, 'tags_before:<vbn vbz>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+14_372
+'pain':'10 on a scale of 1-10', Indication:Severity, type=severity_type
+
+CONTEXT STRING: ly. At this point, it is causing him  <SEVERITY_TYPE><INDICATION>pain</INDICATION> that he says without narcotics, it is <SEVERITY>10 on a scale of 1-10</SEVERITY></SEVERITY_TYPE> . With  significant doses of sustained
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<is it>': 1, 'grams_between:<it>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<that>': 1, 'grams_between:<,>': 1, 'grams_between:<he says that>': 1, 'grams_between:<says>': 1, 'grams_between:<he that>': 1, 'grams_between:<without>': 1, 'grams_between:<, is it>': 1, 'grams_between:<, it>': 1, 'grams_between:<narcotics>': 1, 'grams_between:<is>': 1, 'grams_between:<he says>': 1, 'grams_before:<OOV>': 1, 'grams_before:<causing>': 1, 'grams_before:<him>': 1, 'grams_after:<OOV>': 1, 'tags_between:<, nns prp>': 1, 'tags_between:<, nns>': 1, 'tags_between:<in nns vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, prp>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<, in nns>': 1, 'tags_between:<prp>': 1, 'tags_between:<in vbz>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<in>': 1, 'tags_between:<, prp vbz>': 1, 'tags_between:<in prp>': 1, 'tags_between:<in nns>': 1, 'tags_before:<prp>': 1, 'tags_before:<vbg>': 1, 'tags_before:<prp vbg>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+14_678
+'pain':'0/10', Indication:Severity, type=severity_type
+
+CONTEXT STRING: m 5-6 tablets per day. He reports this <SEVERITY_TYPE><INDICATION>pain</INDICATION> is  fairly well controlled and is <SEVERITY>0/10</SEVERITY></SEVERITY_TYPE>  scale. He reports he has no difficulty
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<well>': 1, 'grams_between:<and is>': 1, 'grams_between:<OOV>': 1, 'grams_between:<fairly>': 1, 'grams_between:<controlled well>': 1, 'grams_between:<and>': 1, 'grams_between:<fairly well>': 1, 'grams_between:<is>': 1, 'grams_between:<controlled>': 1, 'grams_before:<OOV>': 1, 'grams_before:<reports>': 1, 'grams_before:<this>': 1, 'grams_after:<.>': 1, 'grams_after:<OOV>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<cc vbz>': 1, 'tags_between:<rb rb>': 1, 'tags_between:<rb rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<cc vbn vbz>': 1, 'tags_between:<cc>': 1, 'tags_between:<vbn>': 1, 'tags_between:<cc vbn>': 1, 'tags_between:<cc rb vbn>': 1, 'tags_between:<rb rb vbn>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<dt vbz>': 1, 'tags_before:<dt>': 1, 'tags_before:<vbz>': 1, 'tags_after:<nn>': 1, 'tags_after:<.>': 1, 'tags_after:<. nn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+17_1003
+'Hodgkin disease':'stage IIIA', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: ycle of chemotherapy.  1. Oncology: <SEVERITY_TYPE><SSLIF>Hodgkin disease</SSLIF>: The patient has his pulmonary function tests have been normal. His echocardiogram showed a good functioning heart with a normal EF. His bone marrow does not show any evidence of disease. So, his staging is <SEVERITY>stage IIIA</SEVERITY></SEVERITY_TYPE>  -due to the involvement of paraaortic l
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 32, 'grams_between:<patient>': 1, 'grams_between:<tests>': 1, 'grams_between:<has patient>': 1, 'grams_between:<heart>': 1, 'grams_between:<. normal>': 1, 'grams_between:<, so>': 1, 'grams_between:<not show>': 1, 'grams_between:<with>': 1, 'grams_between:<any evidence of>': 1, 'grams_between:<any>': 1, 'grams_between:<so>': 1, 'grams_between:<patient the>': 1, 'grams_between:<is>': 1, 'grams_between:<b<NUMBER>>': 1, 'grams_between:<OOV>': 1, 'grams_between:<show>': 1, 'grams_between:<,>': 1, 'grams_between:<:>': 1, 'grams_between:<b<NUMBER> marrow>': 1, 'grams_between:<a normal>': 1, 'grams_between:<does>': 1, 'grams_between:<. disease>': 1, 'grams_between:<echocardiogram>': 1, 'grams_between:<evidence of>': 1, 'grams_between:<: patient the>': 1, 'grams_between:<been have>': 1, 'grams_between:<, his>': 1, 'grams_between:<has patient the>': 1, 'grams_between:<of>': 1, 'grams_between:<have>': 1, 'grams_between:<disease of>': 1, 'grams_between:<showed>': 1, 'grams_between:<pulmonary>': 1, 'grams_between:<a good>': 1, 'grams_between:<disease>': 1, 'grams_between:<good>': 1, 'grams_between:<the>': 1, 'grams_between:<does not>': 1, 'grams_between:<any not show>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<a>': 1, 'grams_between:<staging>': 1, 'grams_between:<not>': 1, 'grams_between:<: the>': 1, 'grams_between:<. his>': 1, 'grams_between:<has>': 1, 'grams_between:<marrow>': 1, 'grams_between:<any show>': 1, 'grams_between:<a showed>': 1, 'grams_between:<function>': 1, 'grams_between:<evidence>': 1, 'grams_between:<his>': 1, 'grams_between:<any evidence>': 1, 'grams_between:<b<NUMBER> his>': 1, 'grams_between:<normal>': 1, 'grams_between:<a with>': 1, 'grams_before:<OOV>': 1, 'grams_before:<oncology>': 1, 'grams_before:<:>': 1, 'grams_after:<OOV>': 1, 'grams_after:<to>': 1, 'tags_between:<nn>': 1, 'tags_between:<. rb>': 1, 'tags_between:<jj nn nns>': 1, 'tags_between:<jj prp$>': 1, 'tags_between:<vbp>': 1, 'tags_between:<nn nns>': 1, 'tags_between:<jj>': 1, 'tags_between:<dt nn vb>': 1, 'tags_between:<in nn nn>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<, nn prp$>': 1, 'tags_between:<, prp$ rb>': 1, 'tags_between:<jj nn prp$>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<dt vbd>': 1, 'tags_between:<nn prp$ vbd>': 1, 'tags_between:<: dt>': 1, 'tags_between:<nn nn prp$>': 1, 'tags_between:<vbz>': 1, 'tags_between:<dt jj nnp>': 1, 'tags_between:<in nn>': 1, 'tags_between:<jj nnp>': 1, 'tags_between:<. jj vbn>': 1, 'tags_between:<nns>': 1, 'tags_between:<:>': 1, 'tags_between:<,>': 1, 'tags_between:<dt nn vbd>': 1, 'tags_between:<. nn>': 1, 'tags_between:<nn nn vbz>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<. nnp>': 1, 'tags_between:<nns vbn vbp>': 1, 'tags_between:<nn rb vbz>': 1, 'tags_between:<dt rb vb>': 1, 'tags_between:<, . rb>': 1, 'tags_between:<prp$>': 1, 'tags_between:<. prp$>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<jj prp$ vbz>': 1, 'tags_between:<vbd>': 1, 'tags_between:<nn prp$>': 1, 'tags_between:<. nn prp$>': 1, 'tags_between:<nn prp$ vbz>': 1, 'tags_between:<. jj nnp>': 1, 'tags_between:<. nnp prp$>': 1, 'tags_between:<rb vb>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<. nn rb>': 1, 'tags_between:<in>': 1, 'tags_between:<jj vbn vbp>': 1, 'tags_between:<rb vb vbz>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt jj vbd>': 1, 'tags_between:<. in nn>': 1, 'tags_between:<nns vbp>': 1, 'tags_between:<, prp$>': 1, 'tags_between:<dt in>': 1, 'tags_between:<. jj prp$>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<vbn vbp>': 1, 'tags_between:<jj nn nn>': 1, 'tags_between:<jj vbn>': 1, 'tags_between:<nn nns vbp>': 1, 'tags_between:<. jj>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<: dt nn>': 1, 'tags_between:<rb>': 1, 'tags_between:<, rb>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<prp$ vbz>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<dt nn vbz>': 1, 'tags_before:<nn>': 1, 'tags_before:<:>': 1, 'tags_before:<: nn>': 1, 'tags_after:<to>': 1, 'tags_after:<nnp to>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 4, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+17_1036
+'pain':'5/10', Indication:Severity, type=severity_type
+
+CONTEXT STRING:  snow ploughing. He usually notices the <SEVERITY_TYPE><INDICATION>pain</INDICATION> after the snow ploughing and it is <SEVERITY>5/10</SEVERITY></SEVERITY_TYPE>  for which he takes Tylenol. He recentl
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<is it>': 1, 'grams_between:<it>': 1, 'grams_between:<OOV>': 1, 'grams_between:<the>': 1, 'grams_between:<and>': 1, 'grams_between:<and it>': 1, 'grams_between:<after the>': 1, 'grams_between:<is>': 1, 'grams_between:<after>': 1, 'grams_before:<OOV>': 1, 'grams_before:<the>': 1, 'grams_after:<which>': 1, 'grams_after:<for which>': 1, 'grams_after:<for>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<cc prp vbz>': 1, 'tags_between:<cc jj nn>': 1, 'tags_between:<cc nn prp>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<jj>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<dt>': 1, 'tags_before:<dt vbz>': 1, 'tags_before:<dt>': 1, 'tags_before:<vbz>': 1, 'tags_after:<in wdt>': 1, 'tags_after:<in>': 1, 'tags_after:<wdt>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+17_852
+'Hodgkin's lymphoma':'stage IIIB', Indication:Severity, type=severity_type
+
+CONTEXT STRING: --- Name ---, a 59-year-old male with  <SEVERITY_TYPE><INDICATION>Hodgkin's lymphoma</INDICATION> diagnosed in --- Date --- <SEVERITY>stage IIIB</SEVERITY></SEVERITY_TYPE>  on chemotherapy,  came to the ED with 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<-- date>': 1, 'grams_between:<-- diagnosed in>': 1, 'grams_between:<- -->': 1, 'grams_between:<->': 1, 'grams_between:<date>': 1, 'grams_between:<-->': 1, 'grams_between:<in>': 1, 'grams_between:<diagnosed in>': 1, 'grams_between:<- date>': 1, 'grams_between:<- -- in>': 1, 'grams_between:<- -- date>': 1, 'grams_between:<-- in>': 1, 'grams_between:<diagnosed>': 1, 'grams_before:<male>': 1, 'grams_before:<with>': 1, 'grams_before:<male with>': 1, 'grams_after:<on>': 1, 'grams_after:<chemotherapy on>': 1, 'grams_after:<chemotherapy>': 1, 'tags_between:<nn>': 1, 'tags_between:<: : in>': 1, 'tags_between:<: :>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<: nn>': 1, 'tags_between:<: in>': 1, 'tags_between:<:>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<: in vbn>': 1, 'tags_between:<in>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<nn>': 1, 'tags_after:<in nn>': 1, 'tags_after:<in>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+19_604
+'nasal NK T-cell lymphoma':'stage I', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: , but it appears to be from description <SEVERITY_TYPE><SSLIF>nasal NK T-cell lymphoma</SSLIF>. He was classified as <SEVERITY>stage I</SEVERITY></SEVERITY_TYPE>  and at that time, according to the pati
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<he>': 1, 'grams_between:<he was>': 1, 'grams_between:<. he>': 1, 'grams_between:<was>': 1, 'grams_between:<OOV>': 1, 'grams_between:<.>': 1, 'grams_between:<as>': 1, 'grams_between:<. he was>': 1, 'grams_before:<OOV>': 1, 'grams_before:<description>': 1, 'grams_before:<from>': 1, 'grams_after:<and>': 1, 'grams_after:<at>': 1, 'grams_after:<and at>': 1, 'tags_between:<vbd>': 1, 'tags_between:<prp vbd vbn>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<prp vbd>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<cc>': 1, 'tags_after:<in>': 1, 'tags_after:<cc in>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+19_824
+'nasal NK T-cell lymphoma':'stage I', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: , but it appears to be from description <SEVERITY_TYPE><SSLIF>nasal NK T-cell lymphoma</SSLIF>. He was classified as <SEVERITY>stage I</SEVERITY></SEVERITY_TYPE>  and at that time, according to the pati
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<he>': 1, 'grams_between:<he was>': 1, 'grams_between:<. he>': 1, 'grams_between:<was>': 1, 'grams_between:<OOV>': 1, 'grams_between:<.>': 1, 'grams_between:<as>': 1, 'grams_between:<. he was>': 1, 'grams_before:<OOV>': 1, 'grams_before:<description>': 1, 'grams_before:<from>': 1, 'grams_after:<and>': 1, 'grams_after:<at>': 1, 'grams_after:<and at>': 1, 'tags_between:<vbd>': 1, 'tags_between:<prp vbd vbn>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<prp vbd>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<cc>': 1, 'tags_after:<in>': 1, 'tags_after:<cc in>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+19_904
+'nasal NK T-cell lymphoma':'stage I', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: , but it appears to be from description <SEVERITY_TYPE><SSLIF>nasal NK T-cell lymphoma</SSLIF>. He was classified as <SEVERITY>stage I</SEVERITY></SEVERITY_TYPE>  and at that time, according to the pati
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<he>': 1, 'grams_between:<he was>': 1, 'grams_between:<. he>': 1, 'grams_between:<was>': 1, 'grams_between:<OOV>': 1, 'grams_between:<.>': 1, 'grams_between:<as>': 1, 'grams_between:<. he was>': 1, 'grams_before:<OOV>': 1, 'grams_before:<description>': 1, 'grams_before:<from>': 1, 'grams_after:<and>': 1, 'grams_after:<at>': 1, 'grams_after:<and at>': 1, 'tags_between:<vbd>': 1, 'tags_between:<prp vbd vbn>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<prp vbd>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<cc>': 1, 'tags_after:<in>': 1, 'tags_after:<cc in>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+1_239
+'weight gain':'60 pounds', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING:  thinks that is secondary to  a recent <SEVERITY_TYPE><SSLIF>weight gain</SSLIF>. He states that he has gained more than <SEVERITY>60 pounds</SEVERITY></SEVERITY_TYPE>  in  the past 6 months as he has been f
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<he>': 1, 'grams_between:<has>': 1, 'grams_between:<. he>': 1, 'grams_between:<than>': 1, 'grams_between:<states that>': 1, 'grams_between:<OOV>': 1, 'grams_between:<that>': 1, 'grams_between:<gained>': 1, 'grams_between:<more>': 1, 'grams_between:<.>': 1, 'grams_between:<he that>': 1, 'grams_between:<more than>': 1, 'grams_between:<states>': 1, 'grams_between:<has he>': 1, 'grams_between:<he states>': 1, 'grams_between:<he states that>': 1, 'grams_between:<has he that>': 1, 'grams_before:<a recent>': 1, 'grams_before:<recent>': 1, 'grams_before:<a>': 1, 'grams_after:<in>': 1, 'grams_after:<the>': 1, 'grams_after:<in the>': 1, 'tags_between:<. prp>': 1, 'tags_between:<prp vbn vbz>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<vbz>': 1, 'tags_between:<jjr>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbz>': 1, 'tags_between:<in>': 1, 'tags_between:<in jjr>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<in prp>': 1, 'tags_between:<. prp vbz>': 1, 'tags_before:<dt jj>': 1, 'tags_before:<jj>': 1, 'tags_before:<dt>': 1, 'tags_after:<dt in>': 1, 'tags_after:<in>': 1, 'tags_after:<dt>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+1_720
+'pain':'4/10', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: oma. He is doing reasonably well. His <SEVERITY_TYPE><SSLIF>pain</SSLIF> is quite well controlled. It is at most <SEVERITY>4/10</SEVERITY></SEVERITY_TYPE> . He did walk with a cane down to the c
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<is it>': 1, 'grams_between:<it>': 1, 'grams_between:<quite well>': 1, 'grams_between:<well>': 1, 'grams_between:<. controlled well>': 1, 'grams_between:<at is>': 1, 'grams_between:<. is it>': 1, 'grams_between:<OOV>': 1, 'grams_between:<controlled>': 1, 'grams_between:<controlled well>': 1, 'grams_between:<at>': 1, 'grams_between:<. it>': 1, 'grams_between:<most>': 1, 'grams_between:<.>': 1, 'grams_between:<is quite>': 1, 'grams_between:<quite>': 1, 'grams_between:<is>': 1, 'grams_between:<. controlled>': 1, 'grams_before:<his>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'tags_between:<jjs>': 1, 'tags_between:<. prp vbn>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<. rb vbn>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<in jjs>': 1, 'tags_between:<. vbn>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<rb rb vbn>': 1, 'tags_between:<rb rb>': 1, 'tags_between:<rb rb vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<in vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<OOV>': 1, 'tags_before:<prp$>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+1_73
+'back pain':'4/10', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING: Unfortunately, he does continue to have <SEVERITY_TYPE><SSLIF>back pain</SSLIF>, which he feels is a little bit worse and is about <SEVERITY>4/10</SEVERITY></SEVERITY_TYPE> . It is most painful for him when he is
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 11, 'grams_between:<feels he>': 1, 'grams_between:<and>': 1, 'grams_between:<, which>': 1, 'grams_between:<about>': 1, 'grams_between:<bit little>': 1, 'grams_between:<is>': 1, 'grams_between:<little>': 1, 'grams_between:<about is>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<worse>': 1, 'grams_between:<feels>': 1, 'grams_between:<a is little>': 1, 'grams_between:<a bit little>': 1, 'grams_between:<a>': 1, 'grams_between:<he which>': 1, 'grams_between:<, he which>': 1, 'grams_between:<and is>': 1, 'grams_between:<a is>': 1, 'grams_between:<bit>': 1, 'grams_between:<which>': 1, 'grams_between:<a little>': 1, 'grams_before:<have to>': 1, 'grams_before:<to>': 1, 'grams_before:<have>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<prp wdt>': 1, 'tags_between:<cc jjr>': 1, 'tags_between:<jj>': 1, 'tags_between:<prp vbz vbz>': 1, 'tags_between:<cc jjr nn>': 1, 'tags_between:<cc rb vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<prp vbz wdt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<wdt>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<vbz vbz>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<jjr>': 1, 'tags_between:<dt vbz>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<jjr nn>': 1, 'tags_between:<jj jjr nn>': 1, 'tags_between:<cc vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, prp wdt>': 1, 'tags_between:<rb>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<dt jj vbz>': 1, 'tags_before:<to>': 1, 'tags_before:<to vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+5_48
+'mesenteric lymph nodes':'2 cm in diameter', SSLIF:Severity, type=severity_type
+
+CONTEXT STRING:  than in the past. There were multiple <SEVERITY_TYPE><SSLIF>mesenteric lymph nodes</SSLIF>, which were quite small, although one of them measured <SEVERITY>2 cm in diameter</SEVERITY></SEVERITY_TYPE> . There was no evidence of nodularity i
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 10, 'grams_between:<of <NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<, although>': 1, 'grams_between:<OOV>': 1, 'grams_between:<although>': 1, 'grams_between:<small>': 1, 'grams_between:<, were which>': 1, 'grams_between:<were which>': 1, 'grams_between:<,>': 1, 'grams_between:<which>': 1, 'grams_between:<were>': 1, 'grams_between:<, which>': 1, 'grams_between:<quite>': 1, 'grams_between:<them>': 1, 'grams_before:<multiple>': 1, 'grams_before:<OOV>': 1, 'grams_before:<were>': 1, 'grams_after:<OOV>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<, in jj>': 1, 'tags_between:<jj>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<, jj>': 1, 'tags_between:<in prp>': 1, 'tags_between:<,>': 1, 'tags_between:<wdt>': 1, 'tags_between:<, jj rb>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<rb vbd wdt>': 1, 'tags_between:<cd in in>': 1, 'tags_between:<, vbd wdt>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<vbd wdt>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<in prp vbd>': 1, 'tags_between:<, cd in>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<cd in prp>': 1, 'tags_between:<jj rb vbd>': 1, 'tags_between:<, in>': 1, 'tags_between:<rb>': 1, 'tags_before:<vbd>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj vbd>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<SEVERITY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<SSLIF>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<SEVERITY><=><SSLIF>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+6_67
+'non-Hodgkin's lymphoma Burkitt':'stage III', Indication:Severity, type=severity_type
+
+CONTEXT STRING: oval of the mass, which was found to be <SEVERITY_TYPE><INDICATION>non-Hodgkin's lymphoma Burkitt</INDICATION>. He was classified as <SEVERITY>stage III</SEVERITY></SEVERITY_TYPE>  and treated per COG protocol 5961 group
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<he>': 1, 'grams_between:<he was>': 1, 'grams_between:<. he>': 1, 'grams_between:<was>': 1, 'grams_between:<OOV>': 1, 'grams_between:<.>': 1, 'grams_between:<as>': 1, 'grams_between:<. he was>': 1, 'grams_before:<be>': 1, 'grams_before:<to>': 1, 'grams_before:<be to>': 1, 'grams_after:<OOV>': 1, 'grams_after:<treated>': 1, 'grams_after:<and>': 1, 'tags_between:<vbd>': 1, 'tags_between:<prp vbd vbn>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<prp vbd>': 1, 'tags_before:<to>': 1, 'tags_before:<to vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<cc>': 1, 'tags_after:<vbn>': 1, 'tags_after:<cc vbn>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: severity_type ------ PRED TYPE: none
+9_899
+'Diffuse large B cell \nlymphoma':'stage IE', Indication:Severity, type=severity_type
+
+CONTEXT STRING: RY: Chronic hepatitis C, genotype 1b. <SEVERITY_TYPE><INDICATION>Diffuse large B cell \nlymphoma</INDICATION> status post treatment with rituximab in combination with CHOP therapy  from --- Date ---, to --- Date ---, x6 cycles. He is followed by Dr.  --- Name --- --- Name ---, he last saw him in --- Date ---, who mentions that he is in  remission. He was <SEVERITY>stage IE</SEVERITY></SEVERITY_TYPE>  x bulky abdominal mass with extension t
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 32, 'grams_between:<followed>': 1, 'grams_between:<-- .>': 1, 'grams_between:<. he>': 1, 'grams_between:<- - -->': 1, 'grams_between:<, he>': 1, 'grams_between:<from>': 1, 'grams_between:<, - who>': 1, 'grams_between:<that>': 1, 'grams_between:<chop>': 1, 'grams_between:<->': 1, 'grams_between:<he that>': 1, 'grams_between:<with>': 1, 'grams_between:<. by dr>': 1, 'grams_between:<rituximab>': 1, 'grams_between:<by>': 1, 'grams_between:<cycles>': 1, 'grams_between:<him>': 1, 'grams_between:<post>': 1, 'grams_between:<- -- -->': 1, 'grams_between:<- -- date>': 1, 'grams_between:<is>': 1, 'grams_between:<treatment with>': 1, 'grams_between:<, - -->': 1, 'grams_between:<in remission>': 1, 'grams_between:<. remission>': 1, 'grams_between:<he>': 1, 'grams_between:<, - he>': 1, 'grams_between:<him in>': 1, 'grams_between:<, x<NUMBER>>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<-- name>': 1, 'grams_between:<he is>': 1, 'grams_between:<-->': 1, 'grams_between:<by followed>': 1, 'grams_between:<- date>': 1, 'grams_between:<by followed is>': 1, 'grams_between:<by dr>': 1, 'grams_between:<by dr followed>': 1, 'grams_between:<. dr>': 1, 'grams_between:<- -- .>': 1, 'grams_between:<. he was>': 1, 'grams_between:<-- . dr>': 1, 'grams_between:<therapy>': 1, 'grams_between:<-- date>': 1, 'grams_between:<status>': 1, 'grams_between:<, who>': 1, 'grams_between:<saw>': 1, 'grams_between:<last>': 1, 'grams_between:<name>': 1, 'grams_between:<.>': 1, 'grams_between:<, to>': 1, 'grams_between:<he in is>': 1, 'grams_between:<remission>': 1, 'grams_between:<in>': 1, 'grams_between:<date>': 1, 'grams_between:<, ->': 1, 'grams_between:<-- from>': 1, 'grams_between:<followed is>': 1, 'grams_between:<- -- in>': 1, 'grams_between:<x<NUMBER>>': 1, 'grams_between:<post status>': 1, 'grams_between:<-- in>': 1, 'grams_between:<in is>': 1, 'grams_between:<. he is>': 1, 'grams_between:<- -- from>': 1, 'grams_between:<- -- name>': 1, 'grams_between:<he was>': 1, 'grams_between:<dr>': 1, 'grams_between:<-- to>': 1, 'grams_between:<was>': 1, 'grams_between:<- -->': 1, 'grams_between:<he is that>': 1, 'grams_between:<who>': 1, 'grams_between:<treatment>': 1, 'grams_between:<- name>': 1, 'grams_between:<- -- to>': 1, 'grams_between:<him saw>': 1, 'grams_between:<to>': 1, 'grams_between:<combination>': 1, 'grams_before:<.>': 1, 'grams_before:<OOV>': 1, 'grams_after:<bulky>': 1, 'grams_after:<x>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<in nn vbz>': 1, 'tags_between:<in vbn vbz>': 1, 'tags_between:<prp vbn vbz>': 1, 'tags_between:<. :>': 1, 'tags_between:<, vbz wp>': 1, 'tags_between:<, prp>': 1, 'tags_between:<jj>': 1, 'tags_between:<. : nnp>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in nn nn>': 1, 'tags_between:<, jj>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<in prp>': 1, 'tags_between:<nn nn nn>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<nnp>': 1, 'tags_between:<in nn nnp>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<vbz>': 1, 'tags_between:<: nn>': 1, 'tags_between:<: to>': 1, 'tags_between:<in nn>': 1, 'tags_between:<: in>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<:>': 1, 'tags_between:<jj prp>': 1, 'tags_between:<jj vbd>': 1, 'tags_between:<in in nn>': 1, 'tags_between:<, jj nns>': 1, 'tags_between:<. nn>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<in nnp vbn>': 1, 'tags_between:<. nnp>': 1, 'tags_between:<: in prp>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. nns>': 1, 'tags_between:<. prp>': 1, 'tags_between:<, : wp>': 1, 'tags_between:<nn nnp>': 1, 'tags_between:<: :>': 1, 'tags_between:<: : to>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<. in nnp>': 1, 'tags_between:<. : :>': 1, 'tags_between:<. nns prp>': 1, 'tags_between:<, : :>': 1, 'tags_between:<jj prp vbd>': 1, 'tags_between:<: : :>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<, to>': 1, 'tags_between:<in>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<: in nn>': 1, 'tags_between:<, : jj>': 1, 'tags_between:<in prp vbd>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<wp>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<, jj prp>': 1, 'tags_between:<in vbz wp>': 1, 'tags_between:<jj nns>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<, wp>': 1, 'tags_between:<. in nn>': 1, 'tags_between:<, :>': 1, 'tags_between:<: : in>': 1, 'tags_between:<. jj nns>': 1, 'tags_between:<vbz wp>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, : prp>': 1, 'tags_between:<, : to>': 1, 'tags_between:<in vbz>': 1, 'tags_between:<to>': 1, 'tags_before:<.>': 1, 'tags_before:<. cd>': 1, 'tags_before:<cd>': 1, 'tags_after:<vbd>': 1, 'tags_after:<nnp vbd>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 0, 'entities_between:<DRUG>': 1, 'entities_between:<DURATION>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 4, 'first_entity_type:<INDICATION>': 1, 'second_entity_type:<SEVERITY>': 1, 'entity_types_concat': '<INDICATION><=><SEVERITY>'}
+
+-----------------------------------
+

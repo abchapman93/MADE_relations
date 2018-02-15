@@ -1,0 +1,983 @@
+TRUE TYPE: fr ------ PRED TYPE: none
+10_257
+'prednisone':'every other day', Drug:Frequency, type=fr
+
+CONTEXT STRING: e to follow on that. We will taper his <FR><DRUG>prednisone</DRUG> to 20mg every other day on Friday if his rash remains resolved. He is currently taking 20mg alternating with 10mg <FREQUENCY>every other day</FREQUENCY></FR> . After that, we will start initiating 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 19, 'grams_between:<every other>': 1, 'grams_between:<. he>': 1, 'grams_between:<taking>': 1, 'grams_between:<day other>': 1, 'grams_between:<currently>': 1, 'grams_between:<his if>': 1, 'grams_between:<with>': 1, 'grams_between:<day every other>': 1, 'grams_between:<is>': 1, 'grams_between:<he>': 1, 'grams_between:<day>': 1, 'grams_between:<OOV>': 1, 'grams_between:<he is>': 1, 'grams_between:<friday>': 1, 'grams_between:<alternating>': 1, 'grams_between:<if>': 1, 'grams_between:<currently he is>': 1, 'grams_between:<other>': 1, 'grams_between:<remains>': 1, 'grams_between:<. resolved>': 1, 'grams_between:<day on>': 1, 'grams_between:<.>': 1, 'grams_between:<currently is>': 1, 'grams_between:<resolved>': 1, 'grams_between:<. he is>': 1, 'grams_between:<<NUMBER>mg>': 1, 'grams_between:<on>': 1, 'grams_between:<alternating with>': 1, 'grams_between:<every>': 1, 'grams_between:<his>': 1, 'grams_between:<to>': 1, 'grams_between:<rash>': 1, 'grams_before:<taper>': 1, 'grams_before:<OOV>': 1, 'grams_before:<his>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<in nn prp$>': 1, 'tags_between:<jj>': 1, 'tags_between:<in prp$>': 1, 'tags_between:<. prp vbn>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<in nn nnp>': 1, 'tags_between:<in nnp prp$>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<in nn>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<cd in vbg>': 1, 'tags_between:<vbg>': 1, 'tags_between:<. vbn vbz>': 1, 'tags_between:<. vbn>': 1, 'tags_between:<prp$>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<. prp>': 1, 'tags_between:<nn prp$>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<nn prp$ vbz>': 1, 'tags_between:<to>': 1, 'tags_between:<cd vbg>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<in vbg>': 1, 'tags_between:<in in nnp>': 1, 'tags_between:<cd dt jj>': 1, 'tags_between:<cd dt to>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<cd to>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<cd rb vbg>': 1, 'tags_between:<rb vbg>': 1, 'tags_between:<cd dt>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<rb vbg vbz>': 1, 'tags_between:<nn vbn vbz>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<prp$ vb>': 1, 'tags_before:<prp$>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+10_509
+'gabapentin':'every other day', Drug:Frequency, type=fr
+
+CONTEXT STRING: lved, I am going to be tapering him off <FR><DRUG>gabapentin</DRUG>. He is only on low-dose, which is 100 mg daily and I have asked him to start 100 mg <FREQUENCY>every other day</FREQUENCY></FR> . I am going to take him off gabapentin
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 18, 'grams_between:<. he>': 1, 'grams_between:<and>': 1, 'grams_between:<, which>': 1, 'grams_between:<and have i>': 1, 'grams_between:<and i>': 1, 'grams_between:<him>': 1, 'grams_between:<mg>': 1, 'grams_between:<start>': 1, 'grams_between:<i>': 1, 'grams_between:<is>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<<NUMBER> daily mg>': 1, 'grams_between:<he is>': 1, 'grams_between:<low-dose>': 1, 'grams_between:<only>': 1, 'grams_between:<is which>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<, is which>': 1, 'grams_between:<have>': 1, 'grams_between:<him to>': 1, 'grams_between:<asked>': 1, 'grams_between:<.>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> is>': 1, 'grams_between:<and daily mg>': 1, 'grams_between:<. he is>': 1, 'grams_between:<on>': 1, 'grams_between:<start to>': 1, 'grams_between:<have i>': 1, 'grams_between:<daily mg>': 1, 'grams_between:<, low-dose>': 1, 'grams_between:<which>': 1, 'grams_between:<to>': 1, 'grams_between:<and daily>': 1, 'grams_between:<daily>': 1, 'grams_before:<OOV>': 1, 'grams_before:<him>': 1, 'grams_before:<off>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<vbp>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cc jj prp>': 1, 'tags_between:<to vb>': 1, 'tags_between:<in nn rb>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<cd vb>': 1, 'tags_between:<cd jj jj>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in nn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<prp vbn vbp>': 1, 'tags_between:<jj jj>': 1, 'tags_between:<,>': 1, 'tags_between:<wdt>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<prp vbp>': 1, 'tags_between:<cd>': 1, 'tags_between:<, nn wdt>': 1, 'tags_between:<in rb>': 1, 'tags_between:<cc jj>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<. prp>': 1, 'tags_between:<cd vbz>': 1, 'tags_between:<cd nn vb>': 1, 'tags_between:<, vbz wdt>': 1, 'tags_between:<prp vbn>': 1, 'tags_between:<cc prp vbp>': 1, 'tags_between:<prp to>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<in>': 1, 'tags_between:<prp to vbn>': 1, 'tags_between:<cc jj jj>': 1, 'tags_between:<cd jj vbz>': 1, 'tags_between:<, in nn>': 1, 'tags_between:<in rb vbz>': 1, 'tags_between:<vbz wdt>': 1, 'tags_between:<vb>': 1, 'tags_between:<vbn vbp>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<prp to vb>': 1, 'tags_between:<cd vbz wdt>': 1, 'tags_between:<cd to vb>': 1, 'tags_between:<to>': 1, 'tags_between:<rb>': 1, 'tags_before:<prp>': 1, 'tags_before:<rp>': 1, 'tags_before:<prp rp>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+10_782
+'Rapamune':'every Monday', Drug:Frequency, type=fr
+
+CONTEXT STRING: ff his immunosuppression. He is taking <FR><DRUG>Rapamune</DRUG> every Monday and Thursday which we will taper to <FREQUENCY>every Monday</FREQUENCY></FR> . He did start on steroids, but is more 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 9, 'grams_between:<OOV>': 1, 'grams_between:<taper>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<we will>': 1, 'grams_between:<we>': 1, 'grams_between:<thursday>': 1, 'grams_between:<monday>': 1, 'grams_between:<every>': 1, 'grams_between:<which>': 1, 'grams_between:<to>': 1, 'grams_before:<taking>': 1, 'grams_before:<is>': 1, 'grams_before:<is taking>': 1, 'grams_after:<OOV>': 1, 'tags_between:<cc dt nnp>': 1, 'tags_between:<prp wdt>': 1, 'tags_between:<md prp>': 1, 'tags_between:<nnp wdt>': 1, 'tags_between:<md prp wdt>': 1, 'tags_between:<to vb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<OOV>': 1, 'tags_between:<wdt>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<md>': 1, 'tags_between:<dt nnp>': 1, 'tags_between:<prp>': 1, 'tags_between:<vb>': 1, 'tags_between:<cc nnp nnp>': 1, 'tags_between:<md vb>': 1, 'tags_between:<md to vb>': 1, 'tags_between:<to>': 1, 'tags_before:<vbg>': 1, 'tags_before:<vbg vbz>': 1, 'tags_before:<vbz>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+10_845
+'mesna':'days 1, 2 and 3', Drug:Frequency, type=fr
+
+CONTEXT STRING: , 11, 12, 13, 15. He will also receive <FR><DRUG>mesna</DRUG> 720 mg/sq m for a  calculated dose of 1340 mg, for which he will receive this daily starting 1  hour prior to his cyclophosphamide on <FREQUENCY>days 1, 2 and 3</FREQUENCY></FR> . Cyclophosphamide 300  mg/sq m for a 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 21, 'grams_between:<prior to>': 1, 'grams_between:<dose>': 1, 'grams_between:<will>': 1, 'grams_between:<, for>': 1, 'grams_between:<, <NUMBER> mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<for which>': 1, 'grams_between:<receive will>': 1, 'grams_between:<, mg>': 1, 'grams_between:<he>': 1, 'grams_between:<<NUMBER> dose of>': 1, 'grams_between:<OOV>': 1, 'grams_between:<he will>': 1, 'grams_between:<his to>': 1, 'grams_between:<,>': 1, 'grams_between:<for he which>': 1, 'grams_between:<for>': 1, 'grams_between:<he receive will>': 1, 'grams_between:<hour>': 1, 'grams_between:<his prior to>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<prior>': 1, 'grams_between:<dose of>': 1, 'grams_between:<<NUMBER> of>': 1, 'grams_between:<a>': 1, 'grams_between:<he which>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<receive>': 1, 'grams_between:<this>': 1, 'grams_between:<cyclophosphamide>': 1, 'grams_between:<<NUMBER> mg of>': 1, 'grams_between:<starting>': 1, 'grams_between:<on>': 1, 'grams_between:<, for which>': 1, 'grams_between:<a for>': 1, 'grams_between:<his>': 1, 'grams_between:<which>': 1, 'grams_between:<to>': 1, 'grams_between:<daily>': 1, 'grams_before:<OOV>': 1, 'grams_before:<receive>': 1, 'grams_before:<also>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, in wdt>': 1, 'tags_between:<prp$ rb to>': 1, 'tags_between:<md prp>': 1, 'tags_between:<prp wdt>': 1, 'tags_between:<cd jj vbg>': 1, 'tags_between:<in nn prp$>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cd nn nn>': 1, 'tags_between:<md prp wdt>': 1, 'tags_between:<in nn nn>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<nn rb>': 1, 'tags_between:<in nn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<wdt>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<in prp wdt>': 1, 'tags_between:<rb to>': 1, 'tags_between:<vbg>': 1, 'tags_between:<prp$ to>': 1, 'tags_between:<prp$>': 1, 'tags_between:<jj vbg>': 1, 'tags_between:<, cd nn>': 1, 'tags_between:<in wdt>': 1, 'tags_between:<nn prp$>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<md>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<to>': 1, 'tags_between:<cd vbg>': 1, 'tags_between:<nn rb to>': 1, 'tags_between:<dt jj vbg>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<, in nn>': 1, 'tags_between:<cd nn vbg>': 1, 'tags_between:<dt in>': 1, 'tags_between:<cd nn rb>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<vb>': 1, 'tags_between:<, in>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<nn prp$ to>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<dt jj vb>': 1, 'tags_between:<rb>': 1, 'tags_before:<vb>': 1, 'tags_before:<rb vb>': 1, 'tags_before:<rb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_186
+'rituximab':'once every 2 months', Drug:Frequency, type=fr
+
+CONTEXT STRING:  above. He is currently on maintenance <FR><DRUG>rituximab</DRUG> treatment, which is given <FREQUENCY>once every 2 months</FREQUENCY></FR>  for a total of 2 years. He continues to
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<, is which>': 1, 'grams_between:<is which>': 1, 'grams_between:<OOV>': 1, 'grams_between:<given>': 1, 'grams_between:<,>': 1, 'grams_between:<, which>': 1, 'grams_between:<treatment>': 1, 'grams_between:<, treatment>': 1, 'grams_between:<which>': 1, 'grams_between:<is>': 1, 'grams_before:<on>': 1, 'grams_before:<OOV>': 1, 'grams_before:<main<NUMBER>ance>': 1, 'grams_after:<a>': 1, 'grams_after:<for>': 1, 'grams_after:<a for>': 1, 'tags_between:<nn>': 1, 'tags_between:<, vbz wdt>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<vbz wdt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<wdt>': 1, 'tags_between:<vbn vbz wdt>': 1, 'tags_between:<vbn>': 1, 'tags_between:<, nn wdt>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<dt in>': 1, 'tags_after:<in>': 1, 'tags_after:<dt>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_333
+'Lovenox':'twice a day', Drug:Frequency, type=fr
+
+CONTEXT STRING:  I do not think that we should give him <FR><DRUG>Lovenox</DRUG> because he is morbidly obese. I think we should give him a maximum dose of 100 mg <FREQUENCY>twice a day</FREQUENCY></FR>  instead of the recommended 1 mg/kg twic
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 17, 'grams_between:<dose>': 1, 'grams_between:<because he>': 1, 'grams_between:<a him>': 1, 'grams_between:<give>': 1, 'grams_between:<i think>': 1, 'grams_between:<him>': 1, 'grams_between:<mg>': 1, 'grams_between:<i>': 1, 'grams_between:<is>': 1, 'grams_between:<he>': 1, 'grams_between:<<NUMBER> dose of>': 1, 'grams_between:<OOV>': 1, 'grams_between:<he is>': 1, 'grams_between:<think>': 1, 'grams_between:<. i>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<dose of>': 1, 'grams_between:<we>': 1, 'grams_between:<<NUMBER> of>': 1, 'grams_between:<.>': 1, 'grams_between:<a>': 1, 'grams_between:<should>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<because>': 1, 'grams_between:<give him>': 1, 'grams_between:<. i think>': 1, 'grams_between:<obese>': 1, 'grams_between:<. obese>': 1, 'grams_between:<<NUMBER> mg of>': 1, 'grams_before:<him>': 1, 'grams_before:<give him>': 1, 'grams_before:<give>': 1, 'grams_after:<OOV>': 1, 'grams_after:<of>': 1, 'grams_after:<instead>': 1, 'tags_between:<nn>': 1, 'tags_between:<. prp vbp>': 1, 'tags_between:<md prp>': 1, 'tags_between:<vbp>': 1, 'tags_between:<. jj prp>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<in prp>': 1, 'tags_between:<dt>': 1, 'tags_between:<md prp vbp>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<prp vbp>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<. prp>': 1, 'tags_between:<dt prp vb>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<md>': 1, 'tags_between:<dt prp>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<prp prp vbp>': 1, 'tags_between:<prp>': 1, 'tags_between:<.>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<. jj rb>': 1, 'tags_between:<vb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<. jj>': 1, 'tags_between:<md vb>': 1, 'tags_between:<jj rb vbz>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<prp>': 1, 'tags_before:<prp vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<in rb>': 1, 'tags_after:<in>': 1, 'tags_after:<rb>': 1, 'same_sentence': 0, 'entities_between:<SEVERITY>': 1, 'entities_between:<SSLIF>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_333
+'Lovenox':'twice a day', Drug:Frequency, type=fr
+
+CONTEXT STRING:  I do not think that we should give him <FR><DRUG>Lovenox</DRUG> because he is morbidly obese. I think we should give him a maximum dose of 100 mg twice a day instead of the recommended 1 mg/kg <FREQUENCY>twice a day</FREQUENCY></FR> . Monitoring factor and monitoring anti
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 22, 'grams_between:<a mg twice>': 1, 'grams_between:<<NUMBER> mg twice>': 1, 'grams_between:<dose>': 1, 'grams_between:<because he>': 1, 'grams_between:<a him>': 1, 'grams_between:<give>': 1, 'grams_between:<i think>': 1, 'grams_between:<a day twice>': 1, 'grams_between:<him>': 1, 'grams_between:<mg>': 1, 'grams_between:<mg twice>': 1, 'grams_between:<i>': 1, 'grams_between:<is>': 1, 'grams_between:<he>': 1, 'grams_between:<day>': 1, 'grams_between:<<NUMBER> dose of>': 1, 'grams_between:<a twice>': 1, 'grams_between:<of the>': 1, 'grams_between:<OOV>': 1, 'grams_between:<he is>': 1, 'grams_between:<think>': 1, 'grams_between:<twice>': 1, 'grams_between:<. i>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<instead>': 1, 'grams_between:<dose of>': 1, 'grams_between:<we>': 1, 'grams_between:<<NUMBER> of>': 1, 'grams_between:<the>': 1, 'grams_between:<.>': 1, 'grams_between:<a>': 1, 'grams_between:<should>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<because>': 1, 'grams_between:<give him>': 1, 'grams_between:<recommended>': 1, 'grams_between:<. i think>': 1, 'grams_between:<obese>': 1, 'grams_between:<. obese>': 1, 'grams_between:<<NUMBER> mg of>': 1, 'grams_between:<a day>': 1, 'grams_before:<him>': 1, 'grams_before:<give him>': 1, 'grams_before:<give>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<. prp vbp>': 1, 'tags_between:<cd jj nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<vbp>': 1, 'tags_between:<. jj prp>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<in nn rb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<in prp>': 1, 'tags_between:<dt>': 1, 'tags_between:<md prp vbp>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<nn rb>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<in nn>': 1, 'tags_between:<jj rb vbz>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<prp vbp>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<dt nn rb>': 1, 'tags_between:<in rb>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<. prp>': 1, 'tags_between:<dt prp vb>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<md>': 1, 'tags_between:<dt prp>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<cd dt jj>': 1, 'tags_between:<prp prp vbp>': 1, 'tags_between:<prp>': 1, 'tags_between:<.>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<cd nn rb>': 1, 'tags_between:<. jj rb>': 1, 'tags_between:<vb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<. jj>': 1, 'tags_between:<md vb>': 1, 'tags_between:<dt in rb>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<rb>': 1, 'tags_before:<prp>': 1, 'tags_before:<prp vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<SEVERITY>': 1, 'entities_between:<SSLIF>': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 5, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_373
+'rituximab':'every 2 months', Drug:Frequency, type=fr
+
+CONTEXT STRING: s.   I will start him on maintenance <FR><DRUG>rituximab</DRUG> treatment since he had mixed follicular and large B cell lymphoma. This will be given at a dose of 375 mg/m2 once <FREQUENCY>every 2 months</FREQUENCY></FR>  as an intravenous infusion. We will st
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 23, 'grams_between:<once>': 1, 'grams_between:<cell>': 1, 'grams_between:<lymphoma>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<at>': 1, 'grams_between:<large>': 1, 'grams_between:<follicular>': 1, 'grams_between:<dose>': 1, 'grams_between:<b cell large>': 1, 'grams_between:<<NUMBER> mg/m<NUMBER>>': 1, 'grams_between:<had>': 1, 'grams_between:<he>': 1, 'grams_between:<follicular mixed>': 1, 'grams_between:<<NUMBER> dose of>': 1, 'grams_between:<<NUMBER> mg/m<NUMBER> of>': 1, 'grams_between:<OOV>': 1, 'grams_between:<be given>': 1, 'grams_between:<had he>': 1, 'grams_between:<b>': 1, 'grams_between:<be>': 1, 'grams_between:<cell lymphoma>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<given>': 1, 'grams_between:<dose of>': 1, 'grams_between:<<NUMBER> of>': 1, 'grams_between:<. cell lymphoma>': 1, 'grams_between:<.>': 1, 'grams_between:<b cell lymphoma>': 1, 'grams_between:<a>': 1, 'grams_between:<a at>': 1, 'grams_between:<. lymphoma>': 1, 'grams_between:<he since>': 1, 'grams_between:<mg/m<NUMBER>>': 1, 'grams_between:<since>': 1, 'grams_between:<this>': 1, 'grams_between:<. this>': 1, 'grams_between:<this will>': 1, 'grams_between:<mg/m<NUMBER> once>': 1, 'grams_between:<be will>': 1, 'grams_between:<treatment>': 1, 'grams_between:<mixed>': 1, 'grams_between:<b large>': 1, 'grams_between:<b cell>': 1, 'grams_before:<on>': 1, 'grams_before:<OOV>': 1, 'grams_before:<main<NUMBER>ance>': 1, 'grams_after:<as>': 1, 'grams_after:<an>': 1, 'grams_after:<an as>': 1, 'tags_between:<nn>': 1, 'tags_between:<nn nn nnp>': 1, 'tags_between:<jj nn nnp>': 1, 'tags_between:<jj>': 1, 'tags_between:<. dt>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<in nn prp>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<cc jj nnp>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<in prp>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<nn rb>': 1, 'tags_between:<in nn>': 1, 'tags_between:<jj nnp>': 1, 'tags_between:<jj jj>': 1, 'tags_between:<. nn nn>': 1, 'tags_between:<jj vbd>': 1, 'tags_between:<cc>': 1, 'tags_between:<vb vbn>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<md vb vbn>': 1, 'tags_between:<cc jj>': 1, 'tags_between:<vbd>': 1, 'tags_between:<dt in vbn>': 1, 'tags_between:<md>': 1, 'tags_between:<nn nnp>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<in vb vbn>': 1, 'tags_between:<jj prp vbd>': 1, 'tags_between:<prp>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<in prp vbd>': 1, 'tags_between:<cc jj jj>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<. dt nn>': 1, 'tags_between:<jj jj vbd>': 1, 'tags_between:<dt in>': 1, 'tags_between:<. dt md>': 1, 'tags_between:<cd nn rb>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt md>': 1, 'tags_between:<md vb>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<dt in>': 1, 'tags_after:<in>': 1, 'tags_after:<dt>': 1, 'same_sentence': 0, 'entities_between:<INDICATION>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_544
+'omega-3':'daily', Drug:Frequency, type=fr
+
+CONTEXT STRING: tohepatitis. He is continuing with his <FR><DRUG>omega-3</DRUG>. He does see Dr. --- Name --- --- Name --- for hyperlipidemia. He is increasing to 2 capsules <FREQUENCY>daily</FREQUENCY></FR>  and will follow up with me in about 6 m
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 15, 'grams_between:<. he>': 1, 'grams_between:<- - -->': 1, 'grams_between:<increasing is>': 1, 'grams_between:<<NUMBER> to>': 1, 'grams_between:<->': 1, 'grams_between:<- -- -->': 1, 'grams_between:<is>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<-- name>': 1, 'grams_between:<does>': 1, 'grams_between:<-->': 1, 'grams_between:<for>': 1, 'grams_between:<he is>': 1, 'grams_between:<. does he>': 1, 'grams_between:<. dr>': 1, 'grams_between:<- -- .>': 1, 'grams_between:<-- . dr>': 1, 'grams_between:<increasing>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<- for>': 1, 'grams_between:<name>': 1, 'grams_between:<.>': 1, 'grams_between:<. dr see>': 1, 'grams_between:<. he is>': 1, 'grams_between:<- -- name>': 1, 'grams_between:<dr>': 1, 'grams_between:<see>': 1, 'grams_between:<- -->': 1, 'grams_between:<. hyperlipidemia>': 1, 'grams_between:<hyperlipidemia>': 1, 'grams_between:<- name>': 1, 'grams_between:<-- .>': 1, 'grams_between:<to>': 1, 'grams_between:<- -- for>': 1, 'grams_between:<dr see>': 1, 'grams_between:<does he>': 1, 'grams_before:<his>': 1, 'grams_before:<with>': 1, 'grams_before:<his with>': 1, 'grams_after:<and will>': 1, 'grams_after:<will>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<. :>': 1, 'tags_between:<. : nnp>': 1, 'tags_between:<to vbg>': 1, 'tags_between:<prp vbg vbz>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<nnp>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<: nn>': 1, 'tags_between:<in nn>': 1, 'tags_between:<: in>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<:>': 1, 'tags_between:<to vbg vbz>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<. nnp>': 1, 'tags_between:<vbg>': 1, 'tags_between:<nnp vb>': 1, 'tags_between:<. prp>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<: :>': 1, 'tags_between:<. : :>': 1, 'tags_between:<: : :>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<: in nn>': 1, 'tags_between:<in>': 1, 'tags_between:<cd nns to>': 1, 'tags_between:<cd to>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<. in nn>': 1, 'tags_between:<: : in>': 1, 'tags_between:<vbg vbz>': 1, 'tags_between:<. nnp vb>': 1, 'tags_between:<prp vb vbz>': 1, 'tags_between:<vb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<vb vbz>': 1, 'tags_between:<to>': 1, 'tags_before:<in>': 1, 'tags_before:<in prp$>': 1, 'tags_before:<prp$>': 1, 'tags_after:<cc>': 1, 'tags_after:<md>': 1, 'tags_after:<cc md>': 1, 'same_sentence': 0, 'entities_between:<INDICATION>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 4, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_618
+'Lasix':'daily', Drug:Frequency, type=fr
+
+CONTEXT STRING: fective. We are going to change him to <FR><DRUG>Lasix</DRUG>. He says he has not tried it before. I am going to give him 10 mg <FREQUENCY>daily</FREQUENCY></FR> . I explained the potential side effect
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 16, 'grams_between:<. he>': 1, 'grams_between:<am going>': 1, 'grams_between:<has not>': 1, 'grams_between:<has he>': 1, 'grams_between:<give>': 1, 'grams_between:<him>': 1, 'grams_between:<mg>': 1, 'grams_between:<i>': 1, 'grams_between:<it>': 1, 'grams_between:<he>': 1, 'grams_between:<going>': 1, 'grams_between:<. he says>': 1, 'grams_between:<. before>': 1, 'grams_between:<OOV>': 1, 'grams_between:<am i>': 1, 'grams_between:<he says>': 1, 'grams_between:<give to>': 1, 'grams_between:<. i>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<he he says>': 1, 'grams_between:<has he not>': 1, 'grams_between:<am going i>': 1, 'grams_between:<.>': 1, 'grams_between:<before>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<not>': 1, 'grams_between:<give him>': 1, 'grams_between:<. am i>': 1, 'grams_between:<am going to>': 1, 'grams_between:<has>': 1, 'grams_between:<going to>': 1, 'grams_between:<says>': 1, 'grams_between:<am>': 1, 'grams_between:<to>': 1, 'grams_before:<him>': 1, 'grams_before:<to>': 1, 'grams_before:<him to>': 1, 'grams_after:<OOV>': 1, 'tags_between:<prp vbg vbp>': 1, 'tags_between:<. prp vbp>': 1, 'tags_between:<vbp>': 1, 'tags_between:<jj>': 1, 'tags_between:<vbg vbp>': 1, 'tags_between:<prp vbz vbz>': 1, 'tags_between:<to vb>': 1, 'tags_between:<to vbg>': 1, 'tags_between:<in prp>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<to vb vbg>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<prp rb vbn>': 1, 'tags_between:<prp vbp>': 1, 'tags_between:<cd>': 1, 'tags_between:<vbg>': 1, 'tags_between:<. in>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<. prp>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<to>': 1, 'tags_between:<prp vbn>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<in>': 1, 'tags_between:<rb vbn vbz>': 1, 'tags_between:<to vbg vbp>': 1, 'tags_between:<in prp vbn>': 1, 'tags_between:<vb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<prp to vb>': 1, 'tags_between:<. in prp>': 1, 'tags_between:<prp prp vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<prp>': 1, 'tags_before:<to>': 1, 'tags_before:<prp to>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_68
+'Toradol':'up to 3 times a day', Drug:Frequency, type=fr
+
+CONTEXT STRING: n. For pain control, I have prescribed <FR><DRUG>Toradol</DRUG>, which he can take <FREQUENCY>up to 3 times a day</FREQUENCY></FR>  for relief of symptoms. If this does n
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<he>': 1, 'grams_between:<, he which>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<take>': 1, 'grams_between:<, which>': 1, 'grams_between:<he which>': 1, 'grams_between:<can>': 1, 'grams_between:<which>': 1, 'grams_between:<can he>': 1, 'grams_before:<prescribed>': 1, 'grams_before:<OOV>': 1, 'grams_before:<have>': 1, 'grams_after:<OOV>': 1, 'grams_after:<for>': 1, 'grams_after:<relief>': 1, 'tags_between:<md>': 1, 'tags_between:<prp wdt>': 1, 'tags_between:<md prp>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<vb>': 1, 'tags_between:<,>': 1, 'tags_between:<wdt>': 1, 'tags_between:<, prp wdt>': 1, 'tags_between:<prp>': 1, 'tags_between:<md prp wdt>': 1, 'tags_between:<md vb>': 1, 'tags_between:<md prp vb>': 1, 'tags_before:<vbn vbp>': 1, 'tags_before:<vbn>': 1, 'tags_before:<vbp>': 1, 'tags_after:<nn>': 1, 'tags_after:<in nn>': 1, 'tags_after:<in>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_792
+'Rituxan':'every other month', Drug:Frequency, type=fr
+
+CONTEXT STRING: a, I think that a course of maintenance <FR><DRUG>Rituxan</DRUG> would be reasonable. He will be set up for this once <FREQUENCY>every other month</FREQUENCY></FR>  for 2 years at 375 mg/m2.  2. Should 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 11, 'grams_between:<up>': 1, 'grams_between:<be>': 1, 'grams_between:<he>': 1, 'grams_between:<set>': 1, 'grams_between:<. he>': 1, 'grams_between:<be will>': 1, 'grams_between:<reasonable>': 1, 'grams_between:<OOV>': 1, 'grams_between:<once>': 1, 'grams_between:<he will>': 1, 'grams_between:<will>': 1, 'grams_between:<for up>': 1, 'grams_between:<.>': 1, 'grams_between:<be would>': 1, 'grams_between:<for>': 1, 'grams_between:<. he will>': 1, 'grams_between:<for this>': 1, 'grams_between:<be he will>': 1, 'grams_between:<would>': 1, 'grams_between:<this>': 1, 'grams_before:<main<NUMBER>ance of>': 1, 'grams_before:<of>': 1, 'grams_before:<main<NUMBER>ance>': 1, 'grams_after:<<NUMBER> for>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<for>': 1, 'tags_between:<md prp>': 1, 'tags_between:<dt in rp>': 1, 'tags_between:<. jj prp>': 1, 'tags_between:<rp vbn>': 1, 'tags_between:<jj>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<vb vbn>': 1, 'tags_between:<jj vb>': 1, 'tags_between:<md vb vbn>': 1, 'tags_between:<rp>': 1, 'tags_between:<. prp>': 1, 'tags_between:<md>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<rp vb vbn>': 1, 'tags_between:<in rp>': 1, 'tags_between:<in rp vbn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<. jj vb>': 1, 'tags_between:<vb>': 1, 'tags_between:<jj md vb>': 1, 'tags_between:<. jj>': 1, 'tags_between:<md vb>': 1, 'tags_between:<dt in rb>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<in>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd in>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+13_961
+'Aleve':'p.r.n.', Drug:Frequency, type=fr
+
+CONTEXT STRING: to his spinal cord compression, but the <FR><DRUG>Aleve</DRUG> is managing the pain for him well on a <FREQUENCY>p.r.n.</FREQUENCY></FR>  basis and he does take gabapentin.   
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 9, 'grams_between:<pain>': 1, 'grams_between:<well>': 1, 'grams_between:<a on>': 1, 'grams_between:<OOV>': 1, 'grams_between:<the>': 1, 'grams_between:<pain the>': 1, 'grams_between:<on>': 1, 'grams_between:<a>': 1, 'grams_between:<for pain>': 1, 'grams_between:<for>': 1, 'grams_between:<him>': 1, 'grams_between:<for him>': 1, 'grams_between:<is>': 1, 'grams_before:<the>': 1, 'grams_before:<but>': 1, 'grams_before:<but the>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<in nn prp>': 1, 'tags_between:<in prp>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt in rb>': 1, 'tags_between:<dt vbg vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in nn>': 1, 'tags_between:<vbg>': 1, 'tags_between:<in rb>': 1, 'tags_between:<dt vbg>': 1, 'tags_between:<prp rb>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt nn vbg>': 1, 'tags_between:<dt in>': 1, 'tags_between:<vbg vbz>': 1, 'tags_between:<in prp rb>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<cc>': 1, 'tags_before:<dt>': 1, 'tags_before:<cc dt>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+14_19
+'prednisone':'every 3 weeks', Drug:Frequency, type=fr
+
+CONTEXT STRING: ycle 2 of CVP, Cytoxan, vincristine and <FR><DRUG>prednisone</DRUG> dose reduced secondary to being previously heavily pretreated. He will repeat this once <FREQUENCY>every 3 weeks</FREQUENCY></FR>  and see Dr. --- Name --- in 3 weeks' ti
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 13, 'grams_between:<repeat>': 1, 'grams_between:<reduced>': 1, 'grams_between:<. he>': 1, 'grams_between:<he>': 1, 'grams_between:<repeat will>': 1, 'grams_between:<secondary to>': 1, 'grams_between:<OOV>': 1, 'grams_between:<being>': 1, 'grams_between:<once>': 1, 'grams_between:<dose>': 1, 'grams_between:<will>': 1, 'grams_between:<previously>': 1, 'grams_between:<he will>': 1, 'grams_between:<.>': 1, 'grams_between:<. he will>': 1, 'grams_between:<to>': 1, 'grams_between:<secondary>': 1, 'grams_between:<this>': 1, 'grams_before:<and>': 1, 'grams_before:<and vincristine>': 1, 'grams_before:<vincristine>': 1, 'grams_after:<OOV>': 1, 'grams_after:<see>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<rb rb vbg>': 1, 'tags_between:<jj>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<to vbg>': 1, 'tags_between:<. prp vbn>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<dt>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<. rb vbn>': 1, 'tags_between:<jj vbd>': 1, 'tags_between:<jj to vbg>': 1, 'tags_between:<dt rb vb>': 1, 'tags_between:<vbg>': 1, 'tags_between:<. vbn>': 1, 'tags_between:<rb to vbg>': 1, 'tags_between:<vbd>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<md>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<jj to vbd>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<rb rb vbn>': 1, 'tags_between:<rb vbg>': 1, 'tags_between:<rb rb>': 1, 'tags_between:<jj to>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<to>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<cc nn>': 1, 'tags_before:<cc>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc vb>': 1, 'tags_after:<vb>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+14_19
+'Cytoxan':'every 3 weeks', Drug:Frequency, type=fr
+
+CONTEXT STRING: - Name --- will receive cycle 2 of CVP, <FR><DRUG>Cytoxan</DRUG>, vincristine and prednisone dose reduced secondary to being previously heavily pretreated. He will repeat this once <FREQUENCY>every 3 weeks</FREQUENCY></FR>  and see Dr. --- Name --- in 3 weeks' ti
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 17, 'grams_between:<repeat>': 1, 'grams_between:<. he>': 1, 'grams_between:<secondary to>': 1, 'grams_between:<dose>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<prednis<NUMBER>>': 1, 'grams_between:<he>': 1, 'grams_between:<reduced>': 1, 'grams_between:<OOV>': 1, 'grams_between:<previously>': 1, 'grams_between:<he will>': 1, 'grams_between:<,>': 1, 'grams_between:<, vincristine>': 1, 'grams_between:<repeat will>': 1, 'grams_between:<vincristine>': 1, 'grams_between:<being>': 1, 'grams_between:<.>': 1, 'grams_between:<and vincristine>': 1, 'grams_between:<this>': 1, 'grams_between:<and prednis<NUMBER>>': 1, 'grams_between:<. he will>': 1, 'grams_between:<to>': 1, 'grams_between:<secondary>': 1, 'grams_between:<once>': 1, 'grams_before:<OOV>': 1, 'grams_before:<cvp>': 1, 'grams_before:<,>': 1, 'grams_after:<OOV>': 1, 'grams_after:<see>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<rb rb vbg>': 1, 'tags_between:<jj>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<to vbg>': 1, 'tags_between:<. prp vbn>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<dt>': 1, 'tags_between:<nn nn vbd>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<. rb vbn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<jj vbd>': 1, 'tags_between:<cc>': 1, 'tags_between:<jj to vbg>': 1, 'tags_between:<dt rb vb>': 1, 'tags_between:<vbg>': 1, 'tags_between:<. vbn>': 1, 'tags_between:<rb to vbg>': 1, 'tags_between:<vbd>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<md>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<jj to vbd>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<rb rb vbn>': 1, 'tags_between:<rb vbg>': 1, 'tags_between:<rb rb>': 1, 'tags_between:<jj to>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<cc nn nn>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<md vb>': 1, 'tags_between:<to>': 1, 'tags_between:<, cc nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<, nnp>': 1, 'tags_before:<,>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc vb>': 1, 'tags_after:<vb>': 1, 'same_sentence': 0, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+14_19
+'vincristine':'every 3 weeks', Drug:Frequency, type=fr
+
+CONTEXT STRING: - will receive cycle 2 of CVP, Cytoxan, <FR><DRUG>vincristine</DRUG> and prednisone dose reduced secondary to being previously heavily pretreated. He will repeat this once <FREQUENCY>every 3 weeks</FREQUENCY></FR>  and see Dr. --- Name --- in 3 weeks' ti
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 15, 'grams_between:<repeat>': 1, 'grams_between:<. he>': 1, 'grams_between:<secondary to>': 1, 'grams_between:<dose>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<prednis<NUMBER>>': 1, 'grams_between:<he>': 1, 'grams_between:<reduced>': 1, 'grams_between:<OOV>': 1, 'grams_between:<previously>': 1, 'grams_between:<he will>': 1, 'grams_between:<repeat will>': 1, 'grams_between:<being>': 1, 'grams_between:<.>': 1, 'grams_between:<this>': 1, 'grams_between:<and prednis<NUMBER>>': 1, 'grams_between:<. he will>': 1, 'grams_between:<to>': 1, 'grams_between:<secondary>': 1, 'grams_between:<once>': 1, 'grams_before:<OOV>': 1, 'grams_before:<,>': 1, 'grams_after:<OOV>': 1, 'grams_after:<see>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<rb rb vbg>': 1, 'tags_between:<jj>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<to vbg>': 1, 'tags_between:<. prp vbn>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<dt>': 1, 'tags_between:<nn nn vbd>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<. rb vbn>': 1, 'tags_between:<jj vbd>': 1, 'tags_between:<cc>': 1, 'tags_between:<jj to vbg>': 1, 'tags_between:<dt rb vb>': 1, 'tags_between:<vbg>': 1, 'tags_between:<. vbn>': 1, 'tags_between:<rb to vbg>': 1, 'tags_between:<vbd>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<. prp>': 1, 'tags_between:<md>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<jj to vbd>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<rb rb vbn>': 1, 'tags_between:<rb vbg>': 1, 'tags_between:<rb rb>': 1, 'tags_between:<jj to>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<cc nn nn>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<md vb>': 1, 'tags_between:<to>': 1, 'tags_between:<rb>': 1, 'tags_before:<, nnp>': 1, 'tags_before:<,>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc vb>': 1, 'tags_after:<vb>': 1, 'same_sentence': 0, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+14_194
+'Rituxan':'weekly', Drug:Frequency, type=fr
+
+CONTEXT STRING:  I will plan to start another course of <FR><DRUG>Rituxan</DRUG> on  --- Date --- and he will receive 4 <FREQUENCY>weekly</FREQUENCY></FR>  doses. We have objective  evidence of
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 9, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<->': 1, 'grams_between:<- -- and>': 1, 'grams_between:<- -- date>': 1, 'grams_between:<receive will>': 1, 'grams_between:<and he>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<he will>': 1, 'grams_between:<-->': 1, 'grams_between:<- date>': 1, 'grams_between:<he receive will>': 1, 'grams_between:<-- date>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<date>': 1, 'grams_between:<-- on>': 1, 'grams_between:<receive>': 1, 'grams_between:<- -- on>': 1, 'grams_between:<- and>': 1, 'grams_between:<- -->': 1, 'grams_between:<<NUMBER> receive>': 1, 'grams_between:<on>': 1, 'grams_before:<of>': 1, 'grams_before:<course of>': 1, 'grams_before:<course>': 1, 'grams_after:<.>': 1, 'grams_after:<OOV>': 1, 'grams_after:<doses>': 1, 'tags_between:<nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<cd vb>': 1, 'tags_between:<: nn>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<: in>': 1, 'tags_between:<:>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<: cc prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd>': 1, 'tags_between:<: : cc>': 1, 'tags_between:<md>': 1, 'tags_between:<: :>': 1, 'tags_between:<prp>': 1, 'tags_between:<: cc>': 1, 'tags_between:<in>': 1, 'tags_between:<cc md prp>': 1, 'tags_between:<: : in>': 1, 'tags_between:<vb>': 1, 'tags_between:<cd md vb>': 1, 'tags_between:<md vb>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<.>': 1, 'tags_after:<. nns>': 1, 'tags_after:<nns>': 1, 'same_sentence': 1, 'entities_between:<DURATION>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+14_442
+'Rituxan':'weekly', Drug:Frequency, type=fr
+
+CONTEXT STRING: phoma. We will start another course of <FR><DRUG>Rituxan</DRUG>, planning to administer  it <FREQUENCY>weekly</FREQUENCY></FR>  x4, starting --- Date ---, and on that 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<it>': 1, 'grams_between:<OOV>': 1, 'grams_between:<planning>': 1, 'grams_between:<,>': 1, 'grams_between:<to>': 1, 'grams_before:<of>': 1, 'grams_before:<course of>': 1, 'grams_before:<course>': 1, 'grams_after:<,>': 1, 'grams_after:<x<NUMBER>>': 1, 'grams_after:<, x<NUMBER>>': 1, 'tags_between:<to vb vbg>': 1, 'tags_between:<vb>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<OOV>': 1, 'tags_between:<prp to vb>': 1, 'tags_between:<,>': 1, 'tags_between:<prp>': 1, 'tags_between:<to vb>': 1, 'tags_between:<, vbg>': 1, 'tags_between:<to vbg>': 1, 'tags_between:<vbg>': 1, 'tags_between:<to>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<nn>': 1, 'tags_after:<, nn>': 1, 'tags_after:<,>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+14_716
+'rituximab':'weekly', Drug:Frequency, type=fr
+
+CONTEXT STRING: Meanwhile, we will plan to start him on <FR><DRUG>rituximab</DRUG> on --- Date ---,  --- Date ---, to treat him <FREQUENCY>weekly</FREQUENCY></FR>  x4. He has previously had a very  fav
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<treat>': 1, 'grams_between:<him treat>': 1, 'grams_between:<->': 1, 'grams_between:<him>': 1, 'grams_between:<, -->': 1, 'grams_between:<- -- date>': 1, 'grams_between:<, - -->': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<-->': 1, 'grams_between:<- date>': 1, 'grams_between:<to treat>': 1, 'grams_between:<-- date>': 1, 'grams_between:<, ->': 1, 'grams_between:<, to>': 1, 'grams_between:<date>': 1, 'grams_between:<-- on>': 1, 'grams_between:<- -- on>': 1, 'grams_between:<- -->': 1, 'grams_between:<on>': 1, 'grams_between:<to>': 1, 'grams_before:<on>': 1, 'grams_before:<him>': 1, 'grams_before:<him on>': 1, 'grams_after:<.>': 1, 'grams_after:<. x<NUMBER>>': 1, 'grams_after:<x<NUMBER>>': 1, 'tags_between:<nn>': 1, 'tags_between:<: : in>': 1, 'tags_between:<, :>': 1, 'tags_between:<: :>': 1, 'tags_between:<vb>': 1, 'tags_between:<: nn>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<: in>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<prp to vb>': 1, 'tags_between:<,>': 1, 'tags_between:<:>': 1, 'tags_between:<, : to>': 1, 'tags_between:<prp>': 1, 'tags_between:<, to>': 1, 'tags_between:<, : :>': 1, 'tags_between:<to vb>': 1, 'tags_between:<in>': 1, 'tags_between:<, to vb>': 1, 'tags_between:<to>': 1, 'tags_before:<prp>': 1, 'tags_before:<in>': 1, 'tags_before:<in prp>': 1, 'tags_after:<nn>': 1, 'tags_after:<.>': 1, 'tags_after:<. nn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+17_835
+'omeprazole':'as needed', Drug:Frequency, type=fr
+
+CONTEXT STRING: Reglan, ondansetron and Compazine on an <FR><FREQUENCY>as needed</FREQUENCY> basis and he does the same with <DRUG>omeprazole</DRUG></FR>  20 mg.   ALLERGIES: He has no known
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<he>': 1, 'grams_between:<same the>': 1, 'grams_between:<OOV>': 1, 'grams_between:<the>': 1, 'grams_between:<and>': 1, 'grams_between:<and does he>': 1, 'grams_between:<does>': 1, 'grams_between:<basis>': 1, 'grams_between:<with>': 1, 'grams_between:<same>': 1, 'grams_between:<and he>': 1, 'grams_between:<does he>': 1, 'grams_before:<on>': 1, 'grams_before:<an>': 1, 'grams_before:<an on>': 1, 'grams_after:<mg>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<<NUMBER> mg>': 1, 'tags_between:<nn>': 1, 'tags_between:<cc prp vbz>': 1, 'tags_between:<cc nn prp>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<dt vbz>': 1, 'tags_between:<in jj>': 1, 'tags_between:<jj>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<dt prp vbz>': 1, 'tags_between:<in>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt jj vbz>': 1, 'tags_before:<dt in>': 1, 'tags_before:<in>': 1, 'tags_before:<dt>': 1, 'tags_after:<nn>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd nn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+17_835
+'Reglan':'as needed', Drug:Frequency, type=fr
+
+CONTEXT STRING:  well as a clotrimazole cream. He uses <FR><DRUG>Reglan</DRUG>, ondansetron and Compazine on an <FREQUENCY>as needed</FREQUENCY></FR>  basis and he does the same with omepraz
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<an on>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<and>': 1, 'grams_between:<on>': 1, 'grams_between:<an>': 1, 'grams_between:<ondansetron>': 1, 'grams_between:<compazine>': 1, 'grams_before:<he uses>': 1, 'grams_before:<he>': 1, 'grams_before:<uses>': 1, 'grams_after:<OOV>': 1, 'grams_after:<basis>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<cc nn nnp>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<cc in nnp>': 1, 'tags_between:<cc>': 1, 'tags_between:<in>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<, cc nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_before:<prp>': 1, 'tags_before:<prp vbz>': 1, 'tags_before:<vbz>': 1, 'tags_after:<nn>': 1, 'tags_after:<cc nn>': 1, 'tags_after:<cc>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+17_835
+'ondansetron':'as needed', Drug:Frequency, type=fr
+
+CONTEXT STRING:  a clotrimazole cream. He uses Reglan, <FR><DRUG>ondansetron</DRUG> and Compazine on an <FREQUENCY>as needed</FREQUENCY></FR>  basis and he does the same with omepraz
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<an on>': 1, 'grams_between:<OOV>': 1, 'grams_between:<and>': 1, 'grams_between:<on>': 1, 'grams_between:<an>': 1, 'grams_between:<compazine>': 1, 'grams_before:<OOV>': 1, 'grams_before:<,>': 1, 'grams_after:<OOV>': 1, 'grams_after:<basis>': 1, 'grams_after:<and>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<cc in nnp>': 1, 'tags_between:<cc>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_before:<, nnp>': 1, 'tags_before:<,>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<cc nn>': 1, 'tags_after:<cc>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+17_98
+'ABVD':'days 1 and 15', Drug:Frequency, type=fr
+
+CONTEXT STRING: on --- Date ---.   CURRENT THERAPY: <FR><DRUG>ABVD</DRUG> -Adriamycin, bleomycin, vinblastine, dacarbazine- repeated on <FREQUENCY>days 1 and 15</FREQUENCY></FR> . This is cycle #4, day 15.   HISTOR
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<OOV>': 1, 'grams_between:<repeated>': 1, 'grams_between:<on>': 1, 'grams_between:<,>': 1, 'grams_before:<therapy>': 1, 'grams_before:<: therapy>': 1, 'grams_before:<:>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<in jj vbn>': 1, 'tags_between:<, nn nnp>': 1, 'tags_between:<nnp>': 1, 'tags_between:<jj vbn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<,>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<, jj vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<, jj nn>': 1, 'tags_between:<in>': 1, 'tags_between:<, jj>': 1, 'tags_between:<, nn nn>': 1, 'tags_between:<, , nn>': 1, 'tags_before:<nn>': 1, 'tags_before:<:>': 1, 'tags_before:<: nn>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 4, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+17_98
+'Adriamycin':'days 1 and 15', Drug:Frequency, type=fr
+
+CONTEXT STRING:  Date ---.   CURRENT THERAPY: ABVD -<FR><DRUG>Adriamycin</DRUG>, bleomycin, vinblastine, dacarbazine- repeated on <FREQUENCY>days 1 and 15</FREQUENCY></FR> . This is cycle #4, day 15.   HISTOR
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<OOV>': 1, 'grams_between:<repeated>': 1, 'grams_between:<on>': 1, 'grams_between:<,>': 1, 'grams_before:<OOV>': 1, 'grams_before:<abvd>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<in jj vbn>': 1, 'tags_between:<jj vbn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<,>': 1, 'tags_between:<, jj vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<, jj nn>': 1, 'tags_between:<in>': 1, 'tags_between:<, jj>': 1, 'tags_between:<, nn nn>': 1, 'tags_between:<, , nn>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+17_98
+'bleomycin':'days 1 and 15', Drug:Frequency, type=fr
+
+CONTEXT STRING:   CURRENT THERAPY: ABVD -Adriamycin, <FR><DRUG>bleomycin</DRUG>, vinblastine, dacarbazine- repeated on <FREQUENCY>days 1 and 15</FREQUENCY></FR> . This is cycle #4, day 15.   HISTOR
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<OOV>': 1, 'grams_between:<repeated>': 1, 'grams_between:<on>': 1, 'grams_between:<,>': 1, 'grams_before:<OOV>': 1, 'grams_before:<,>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<in jj vbn>': 1, 'tags_between:<jj vbn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<,>': 1, 'tags_between:<, jj vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<, jj nn>': 1, 'tags_between:<in>': 1, 'tags_between:<, jj>': 1, 'tags_between:<, , nn>': 1, 'tags_before:<, nnp>': 1, 'tags_before:<,>': 1, 'tags_before:<nnp>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+17_98
+'vinblastine':'days 1 and 15', Drug:Frequency, type=fr
+
+CONTEXT STRING:  THERAPY: ABVD -Adriamycin, bleomycin, <FR><DRUG>vinblastine</DRUG>, dacarbazine- repeated on <FREQUENCY>days 1 and 15</FREQUENCY></FR> . This is cycle #4, day 15.   HISTOR
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<OOV>': 1, 'grams_between:<repeated>': 1, 'grams_between:<on>': 1, 'grams_between:<,>': 1, 'grams_before:<OOV>': 1, 'grams_before:<,>': 1, 'grams_after:<OOV>': 1, 'tags_between:<in jj vbn>': 1, 'tags_between:<jj vbn>': 1, 'tags_between:<jj>': 1, 'tags_between:<,>': 1, 'tags_between:<, jj vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<, jj>': 1, 'tags_before:<nn>': 1, 'tags_before:<, nn>': 1, 'tags_before:<,>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_107
+'thalidomide':'2 \nweeks out of each month', Drug:Frequency, type=fr
+
+CONTEXT STRING:  his walking significantly. He is on  <FR><DRUG>thalidomide</DRUG>, but in significantly reduced doses as he is only taking it <FREQUENCY>2 \nweeks out of each month</FREQUENCY></FR>  instead of daily. Velcade which causes
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 12, 'grams_between:<it>': 1, 'grams_between:<reduced>': 1, 'grams_between:<doses>': 1, 'grams_between:<he>': 1, 'grams_between:<, but>': 1, 'grams_between:<OOV>': 1, 'grams_between:<taking>': 1, 'grams_between:<but>': 1, 'grams_between:<,>': 1, 'grams_between:<significantly>': 1, 'grams_between:<he is>': 1, 'grams_between:<only>': 1, 'grams_between:<in>': 1, 'grams_between:<as he>': 1, 'grams_between:<as>': 1, 'grams_between:<is>': 1, 'grams_between:<as he is>': 1, 'grams_before:<on>': 1, 'grams_before:<is on>': 1, 'grams_before:<is>': 1, 'grams_after:<OOV>': 1, 'grams_after:<of>': 1, 'grams_after:<instead>': 1, 'tags_between:<cc in rb>': 1, 'tags_between:<in nns prp>': 1, 'tags_between:<in prp>': 1, 'tags_between:<prp rb vbg>': 1, 'tags_between:<nns vbn>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp vbg>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<in nns vbn>': 1, 'tags_between:<, cc>': 1, 'tags_between:<vbg>': 1, 'tags_between:<in rb>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<in nns>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<in rb vbn>': 1, 'tags_between:<cc in>': 1, 'tags_between:<rb vbg>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, cc in>': 1, 'tags_between:<rb vbg vbz>': 1, 'tags_between:<nns rb vbn>': 1, 'tags_between:<rb>': 1, 'tags_before:<in vbz>': 1, 'tags_before:<in>': 1, 'tags_before:<vbz>': 1, 'tags_after:<in rb>': 1, 'tags_after:<in>': 1, 'tags_after:<rb>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_107
+'thalidomide':'daily', Drug:Frequency, type=fr
+
+CONTEXT STRING:  his walking significantly. He is on  <FR><DRUG>thalidomide</DRUG>, but in significantly reduced doses as he is only taking it 2  weeks out of each month instead of <FREQUENCY>daily</FREQUENCY></FR> . Velcade which causes neuropathy  as 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 19, 'grams_between:<doses>': 1, 'grams_between:<taking>': 1, 'grams_between:<but>': 1, 'grams_between:<significantly>': 1, 'grams_between:<as he>': 1, 'grams_between:<of out>': 1, 'grams_between:<is>': 1, 'grams_between:<out>': 1, 'grams_between:<as he is>': 1, 'grams_between:<it>': 1, 'grams_between:<reduced>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<he is>': 1, 'grams_between:<each>': 1, 'grams_between:<as>': 1, 'grams_between:<only>': 1, 'grams_between:<of out weeks>': 1, 'grams_between:<, but>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<instead>': 1, 'grams_between:<each month of>': 1, 'grams_between:<month>': 1, 'grams_between:<in>': 1, 'grams_between:<each of>': 1, 'grams_between:<<NUMBER> weeks>': 1, 'grams_between:<weeks>': 1, 'grams_between:<each month>': 1, 'grams_between:<each of out>': 1, 'grams_between:<out weeks>': 1, 'grams_between:<<NUMBER> out weeks>': 1, 'grams_before:<on>': 1, 'grams_before:<is on>': 1, 'grams_before:<is>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<cc in rb>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<in nns prp>': 1, 'tags_between:<in nn rb>': 1, 'tags_between:<in prp>': 1, 'tags_between:<prp rb vbg>': 1, 'tags_between:<in in nns>': 1, 'tags_between:<dt>': 1, 'tags_between:<nns vbn>': 1, 'tags_between:<nn rb>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<prp vbg>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<in prp vbz>': 1, 'tags_between:<cd>': 1, 'tags_between:<in nns vbn>': 1, 'tags_between:<, cc>': 1, 'tags_between:<dt nn rb>': 1, 'tags_between:<vbg>': 1, 'tags_between:<in rb>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<in nns>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<dt in in>': 1, 'tags_between:<in in>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<in rb vbn>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<rb vbg>': 1, 'tags_between:<cc in>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, cc in>': 1, 'tags_between:<rb vbg vbz>': 1, 'tags_between:<nns rb vbn>': 1, 'tags_between:<rb>': 1, 'tags_before:<in vbz>': 1, 'tags_before:<in>': 1, 'tags_before:<vbz>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_130
+'Rituxan':'once a month', Drug:Frequency, type=fr
+
+CONTEXT STRING: ore pancytopenic and thus he is only on <FR><DRUG>Rituxan</DRUG>, which I give him <FREQUENCY>once a month</FREQUENCY></FR> .   PAST CHEMOTHERAPY:  1. Thalidom
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<him>': 1, 'grams_between:<OOV>': 1, 'grams_between:<i which>': 1, 'grams_between:<,>': 1, 'grams_between:<, which>': 1, 'grams_between:<, i which>': 1, 'grams_between:<give>': 1, 'grams_between:<which>': 1, 'grams_between:<give him>': 1, 'grams_between:<i>': 1, 'grams_before:<only>': 1, 'grams_before:<on>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<prp wdt>': 1, 'tags_between:<vbp>': 1, 'tags_between:<wdt>': 1, 'tags_between:<,>': 1, 'tags_between:<prp prp vbp>': 1, 'tags_between:<prp>': 1, 'tags_between:<, prp wdt>': 1, 'tags_between:<prp vbp>': 1, 'tags_between:<prp vbp wdt>': 1, 'tags_before:<in rb>': 1, 'tags_before:<in>': 1, 'tags_before:<rb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_302
+'MS \nContin':'at night', Drug:Frequency, type=fr
+
+CONTEXT STRING: ut his pain medications. He was taking <FR><DRUG>MS \nContin</DRUG> 30 mg twice a day. He then did not take the morning dose, but took  2 <FREQUENCY>at night</FREQUENCY></FR>  and that was problematic for him. He i
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 17, 'grams_between:<. he>': 1, 'grams_between:<a mg twice>': 1, 'grams_between:<<NUMBER> mg twice>': 1, 'grams_between:<dose>': 1, 'grams_between:<but>': 1, 'grams_between:<took>': 1, 'grams_between:<a day twice>': 1, 'grams_between:<mg>': 1, 'grams_between:<mg twice>': 1, 'grams_between:<he>': 1, 'grams_between:<day>': 1, 'grams_between:<a twice>': 1, 'grams_between:<OOV>': 1, 'grams_between:<then>': 1, 'grams_between:<,>': 1, 'grams_between:<twice>': 1, 'grams_between:<. day>': 1, 'grams_between:<he then>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<morning the>': 1, 'grams_between:<, but>': 1, 'grams_between:<the>': 1, 'grams_between:<. day he>': 1, 'grams_between:<.>': 1, 'grams_between:<take>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<did not>': 1, 'grams_between:<not>': 1, 'grams_between:<did>': 1, 'grams_between:<. a day>': 1, 'grams_between:<. he then>': 1, 'grams_between:<morning>': 1, 'grams_between:<a day>': 1, 'grams_before:<OOV>': 1, 'grams_before:<taking>': 1, 'grams_before:<was>': 1, 'grams_after:<that>': 1, 'grams_after:<and that>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<dt nn vb>': 1, 'tags_between:<, nn nn>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<rb rb vbd>': 1, 'tags_between:<nn rb>': 1, 'tags_between:<rb vb vbd>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd vbd>': 1, 'tags_between:<cc cd vbd>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc vbd>': 1, 'tags_between:<, cc>': 1, 'tags_between:<dt nn rb>': 1, 'tags_between:<dt rb vb>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. prp>': 1, 'tags_between:<. prp rb>': 1, 'tags_between:<dt nn nn>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<rb vb>': 1, 'tags_between:<prp rb>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<, cc vbd>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<. dt nn>': 1, 'tags_between:<cd nn rb>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<prp rb vbd>': 1, 'tags_between:<, cc nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<vbd>': 1, 'tags_before:<vbg>': 1, 'tags_before:<vbd vbg>': 1, 'tags_after:<cc>': 1, 'tags_after:<dt>': 1, 'tags_after:<cc dt>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_302
+'MS Contin':'at night', Drug:Frequency, type=fr
+
+CONTEXT STRING: night only. There  is 15 mg tablet of <FR><DRUG>MS Contin</DRUG> as well and I will consider writing 15 mg for  him so that perhaps he could take 45 mg <FREQUENCY>at night</FREQUENCY></FR>  if his pain is really  quite severe. 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 17, 'grams_between:<that>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<could he>': 1, 'grams_between:<and i>': 1, 'grams_between:<so>': 1, 'grams_between:<him>': 1, 'grams_between:<mg>': 1, 'grams_between:<i>': 1, 'grams_between:<perhaps>': 1, 'grams_between:<he>': 1, 'grams_between:<well>': 1, 'grams_between:<as well>': 1, 'grams_between:<OOV>': 1, 'grams_between:<i will>': 1, 'grams_between:<consider>': 1, 'grams_between:<for>': 1, 'grams_between:<as>': 1, 'grams_between:<could>': 1, 'grams_between:<for him>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<take>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<and well>': 1, 'grams_between:<and i will>': 1, 'grams_between:<writing>': 1, 'grams_between:<so that>': 1, 'grams_before:<OOV>': 1, 'grams_before:<tablet>': 1, 'grams_before:<of>': 1, 'grams_after:<his>': 1, 'grams_after:<if>': 1, 'grams_after:<his if>': 1, 'tags_between:<nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<cc in rb>': 1, 'tags_between:<in nn prp>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<vb vbg>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<in prp>': 1, 'tags_between:<cd vb>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<OOV>': 1, 'tags_between:<in nn>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd>': 1, 'tags_between:<vbg>': 1, 'tags_between:<in rb>': 1, 'tags_between:<cd nn vb>': 1, 'tags_between:<md>': 1, 'tags_between:<cc rb>': 1, 'tags_between:<cd vbg>': 1, 'tags_between:<prp rb>': 1, 'tags_between:<cc prp rb>': 1, 'tags_between:<prp>': 1, 'tags_between:<md prp rb>': 1, 'tags_between:<in>': 1, 'tags_between:<in rb rb>': 1, 'tags_between:<cc md prp>': 1, 'tags_between:<cd nn vbg>': 1, 'tags_between:<vb>': 1, 'tags_between:<cd md vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<in prp rb>': 1, 'tags_between:<md vb vbg>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<in>': 1, 'tags_after:<in prp$>': 1, 'tags_after:<prp$>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_387
+'Velcade':'once a week for two weeks out of each month', Drug:Frequency, type=fr
+
+CONTEXT STRING: lly 10  mg a day.   He will receive <FR><DRUG>Velcade</DRUG>. I will increase the dose slightly at 1.3 mg per  meters squared as his peripheral blood counts are higher. He will receive  that <FREQUENCY>once a week for two weeks out of each month</FREQUENCY></FR> .   I will see him in followup in one
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 22, 'grams_between:<as his>': 1, 'grams_between:<. he>': 1, 'grams_between:<dose>': 1, 'grams_between:<that>': 1, 'grams_between:<will>': 1, 'grams_between:<at>': 1, 'grams_between:<counts>': 1, 'grams_between:<. i will>': 1, 'grams_between:<blood peripheral>': 1, 'grams_between:<blood counts>': 1, 'grams_between:<mg>': 1, 'grams_between:<are>': 1, 'grams_between:<i>': 1, 'grams_between:<receive will>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER>.<NUMBER> mg>': 1, 'grams_between:<he will>': 1, 'grams_between:<i will>': 1, 'grams_between:<dose the>': 1, 'grams_between:<<NUMBER>.<NUMBER>>': 1, 'grams_between:<as>': 1, 'grams_between:<he receive will>': 1, 'grams_between:<mg per>': 1, 'grams_between:<. i>': 1, 'grams_between:<peripheral>': 1, 'grams_between:<increase will>': 1, 'grams_between:<higher>': 1, 'grams_between:<the>': 1, 'grams_between:<per>': 1, 'grams_between:<.>': 1, 'grams_between:<increase>': 1, 'grams_between:<his peripheral>': 1, 'grams_between:<receive>': 1, 'grams_between:<increase the>': 1, 'grams_between:<blood>': 1, 'grams_between:<. he will>': 1, 'grams_between:<slightly>': 1, 'grams_between:<his>': 1, 'grams_between:<<NUMBER>.<NUMBER> at>': 1, 'grams_before:<receive>': 1, 'grams_before:<will>': 1, 'grams_before:<receive will>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<jj nn nns>': 1, 'tags_between:<md prp>': 1, 'tags_between:<jj prp$>': 1, 'tags_between:<vbp>': 1, 'tags_between:<nn nns>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<. jjr>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<cd in rb>': 1, 'tags_between:<nns vbd>': 1, 'tags_between:<in prp$>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<jj nn prp$>': 1, 'tags_between:<dt>': 1, 'tags_between:<in jj rb>': 1, 'tags_between:<in nns vbd>': 1, 'tags_between:<OOV>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<in rb>': 1, 'tags_between:<prp$>': 1, 'tags_between:<in nns>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. prp>': 1, 'tags_between:<md>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<jjr>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<in prp$ vbd>': 1, 'tags_between:<dt jj rb>': 1, 'tags_between:<nns vbp>': 1, 'tags_between:<in nns nns>': 1, 'tags_between:<vb>': 1, 'tags_between:<nn nns vbp>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<rb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<in jj prp$>': 1, 'tags_between:<dt jj vb>': 1, 'tags_between:<in vbd>': 1, 'tags_before:<md>': 1, 'tags_before:<md vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_437
+'steroids':'3 times a week', Drug:Frequency, type=fr
+
+CONTEXT STRING: managed to lose 6 pounds so far. His  <FR><DRUG>steroids</DRUG> have been decreased from <FREQUENCY>3 times a week</FREQUENCY></FR>  to 2 times a week. I  advised him at 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<have>': 1, 'grams_between:<from>': 1, 'grams_between:<OOV>': 1, 'grams_between:<been>': 1, 'grams_between:<been have>': 1, 'grams_between:<decreased>': 1, 'grams_before:<his>': 1, 'grams_before:<OOV>': 1, 'grams_after:<<NUMBER> to>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<to>': 1, 'tags_between:<vbn vbn>': 1, 'tags_between:<vbp>': 1, 'tags_between:<vbn vbp>': 1, 'tags_between:<in vbn vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<vbn vbn vbp>': 1, 'tags_before:<OOV>': 1, 'tags_before:<prp$>': 1, 'tags_after:<to>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd to>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_437
+'calcium':'once a day', Drug:Frequency, type=fr
+
+CONTEXT STRING: le.  He should continue treatment with <FR><DRUG>calcium</DRUG>, although I advised him that  calcium is better absorbed if taken twice a day, in smaller quantities than  1500 mg <FREQUENCY>once a day</FREQUENCY></FR> . I will also obtain a bone densitometr
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 19, 'grams_between:<that>': 1, 'grams_between:<taken>': 1, 'grams_between:<a day twice>': 1, 'grams_between:<him that>': 1, 'grams_between:<him>': 1, 'grams_between:<mg>': 1, 'grams_between:<calcium>': 1, 'grams_between:<is>': 1, 'grams_between:<i>': 1, 'grams_between:<day>': 1, 'grams_between:<than>': 1, 'grams_between:<a twice>': 1, 'grams_between:<OOV>': 1, 'grams_between:<, although>': 1, 'grams_between:<calcium is>': 1, 'grams_between:<,>': 1, 'grams_between:<if>': 1, 'grams_between:<twice>': 1, 'grams_between:<advised>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<although>': 1, 'grams_between:<, although i>': 1, 'grams_between:<, a day>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<in>': 1, 'grams_between:<although i>': 1, 'grams_between:<<NUMBER> than>': 1, 'grams_between:<better>': 1, 'grams_between:<, day>': 1, 'grams_between:<, in>': 1, 'grams_between:<a day>': 1, 'grams_before:<with>': 1, 'grams_before:<treatment>': 1, 'grams_before:<treatment with>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, in prp>': 1, 'tags_between:<in nn vbz>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<in nn prp>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in prp>': 1, 'tags_between:<dt>': 1, 'tags_between:<jjr nns>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<in nn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<prp prp vbd>': 1, 'tags_between:<in jjr nns>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<dt nn rb>': 1, 'tags_between:<rbr vbn>': 1, 'tags_between:<in nns>': 1, 'tags_between:<vbd>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<dt rb vbn>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<rbr>': 1, 'tags_between:<jjr>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<in prp vbd>': 1, 'tags_between:<in rb vbn>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<, in nn>': 1, 'tags_between:<in vbn vbn>': 1, 'tags_between:<, in>': 1, 'tags_between:<rbr vbz>': 1, 'tags_between:<in jjr>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'entities_between:<FREQUENCY>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_437
+'calcium':'twice a day', Drug:Frequency, type=fr
+
+CONTEXT STRING:  calcium, although I advised him that  <FR><DRUG>calcium</DRUG> is better absorbed if taken <FREQUENCY>twice a day</FREQUENCY></FR> , in smaller quantities than  1500 mg o
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<OOV>': 1, 'grams_between:<taken>': 1, 'grams_between:<if>': 1, 'grams_between:<is>': 1, 'grams_between:<better>': 1, 'grams_before:<him>': 1, 'grams_before:<that>': 1, 'grams_before:<him that>': 1, 'grams_after:<OOV>': 1, 'grams_after:<in>': 1, 'tags_between:<rbr>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in vbn vbn>': 1, 'tags_between:<OOV>': 1, 'tags_between:<rbr vbz>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<rbr vbn>': 1, 'tags_before:<prp>': 1, 'tags_before:<in>': 1, 'tags_before:<in prp>': 1, 'tags_after:<jjr>': 1, 'tags_after:<in>': 1, 'tags_after:<in jjr>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_476
+'erythropoietin':'weekly', Drug:Frequency, type=fr
+
+CONTEXT STRING: -, his hematologist looking to initiate <FR><DRUG>erythropoietin</DRUG>. I have discussed with him the side effect profile of erythropoietin and would start with <FREQUENCY>weekly</FREQUENCY></FR>  injections with a weekly CBC. He will 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 15, 'grams_between:<him with>': 1, 'grams_between:<and>': 1, 'grams_between:<with>': 1, 'grams_between:<him>': 1, 'grams_between:<start>': 1, 'grams_between:<i>': 1, 'grams_between:<him the>': 1, 'grams_between:<. have i>': 1, 'grams_between:<side>': 1, 'grams_between:<OOV>': 1, 'grams_between:<effect>': 1, 'grams_between:<discussed>': 1, 'grams_between:<side the>': 1, 'grams_between:<. i>': 1, 'grams_between:<of>': 1, 'grams_between:<profile>': 1, 'grams_between:<have>': 1, 'grams_between:<the>': 1, 'grams_between:<.>': 1, 'grams_between:<would>': 1, 'grams_between:<have i>': 1, 'grams_between:<discussed with>': 1, 'grams_before:<OOV>': 1, 'grams_before:<to>': 1, 'grams_after:<OOV>': 1, 'grams_after:<with>': 1, 'grams_after:<injections>': 1, 'tags_between:<nn>': 1, 'tags_between:<. prp vbp>': 1, 'tags_between:<cc in nn>': 1, 'tags_between:<in vbn vbp>': 1, 'tags_between:<vbp>': 1, 'tags_between:<cc md vb>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in nn nn>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<in prp>': 1, 'tags_between:<nn nn nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nn>': 1, 'tags_between:<prp vbn vbp>': 1, 'tags_between:<cc>': 1, 'tags_between:<prp vbp>': 1, 'tags_between:<dt nn prp>': 1, 'tags_between:<. prp>': 1, 'tags_between:<cc md nn>': 1, 'tags_between:<dt in prp>': 1, 'tags_between:<md>': 1, 'tags_between:<dt prp>': 1, 'tags_between:<dt nn nn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<in md vb>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<in prp vbn>': 1, 'tags_between:<vb>': 1, 'tags_between:<vbn vbp>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<md vb>': 1, 'tags_between:<in vb>': 1, 'tags_between:<cc md>': 1, 'tags_before:<to>': 1, 'tags_before:<to vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<in>': 1, 'tags_after:<nns>': 1, 'tags_after:<in nns>': 1, 'same_sentence': 0, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_476
+'erythropoietin':'weekly', Drug:Frequency, type=fr
+
+CONTEXT STRING: sed with him the side effect profile of <FR><DRUG>erythropoietin</DRUG> and would start with <FREQUENCY>weekly</FREQUENCY></FR>  injections with a weekly CBC. He will 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<OOV>': 1, 'grams_between:<and>': 1, 'grams_between:<with>': 1, 'grams_between:<start>': 1, 'grams_between:<would>': 1, 'grams_before:<OOV>': 1, 'grams_before:<of>': 1, 'grams_before:<profile>': 1, 'grams_after:<OOV>': 1, 'grams_after:<with>': 1, 'grams_after:<injections>': 1, 'tags_between:<md>': 1, 'tags_between:<cc md vb>': 1, 'tags_between:<vb>': 1, 'tags_between:<cc>': 1, 'tags_between:<in>': 1, 'tags_between:<md vb>': 1, 'tags_between:<in vb>': 1, 'tags_between:<in md vb>': 1, 'tags_between:<cc md>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<in>': 1, 'tags_after:<nns>': 1, 'tags_after:<in nns>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_568
+'fentanyl':'every 3 days', Drug:Frequency, type=fr
+
+CONTEXT STRING: 's pain medications were increased. His <FR><DRUG>fentanyl</DRUG> patch  had recently been increased as an outpatient by Dr. --- Name --- from 25mcg to  50 mcg <FREQUENCY>every 3 days</FREQUENCY></FR> . The patient was requiring increasing 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 19, 'grams_between:<patch>': 1, 'grams_between:<an as>': 1, 'grams_between:<from>': 1, 'grams_between:<<NUMBER> to>': 1, 'grams_between:<an outpatient>': 1, 'grams_between:<->': 1, 'grams_between:<. by dr>': 1, 'grams_between:<an>': 1, 'grams_between:<had>': 1, 'grams_between:<by>': 1, 'grams_between:<OOV>': 1, 'grams_between:<had recently>': 1, 'grams_between:<-- name>': 1, 'grams_between:<an as outpatient>': 1, 'grams_between:<outpatient>': 1, 'grams_between:<-->': 1, 'grams_between:<as>': 1, 'grams_between:<recently>': 1, 'grams_between:<- from>': 1, 'grams_between:<by dr>': 1, 'grams_between:<mcg>': 1, 'grams_between:<. dr>': 1, 'grams_between:<- -- .>': 1, 'grams_between:<-- . dr>': 1, 'grams_between:<increased>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<name>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<- -- from>': 1, 'grams_between:<- -- name>': 1, 'grams_between:<<NUMBER> mcg>': 1, 'grams_between:<dr>': 1, 'grams_between:<- -->': 1, 'grams_between:<- name>': 1, 'grams_between:<-- .>': 1, 'grams_between:<to>': 1, 'grams_before:<his>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<. :>': 1, 'tags_between:<rb vbd vbn>': 1, 'tags_between:<. : nnp>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<cd nn to>': 1, 'tags_between:<cd cd to>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<in nn nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<in nn>': 1, 'tags_between:<: in>': 1, 'tags_between:<:>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<. nnp>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<cd in to>': 1, 'tags_between:<vbd>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<dt in vbn>': 1, 'tags_between:<: :>': 1, 'tags_between:<: cd in>': 1, 'tags_between:<vbn vbn>': 1, 'tags_between:<. in nnp>': 1, 'tags_between:<. : :>': 1, 'tags_between:<rb vbn vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<cd to>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<: : in>': 1, 'tags_between:<dt in>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<nn rb vbd>': 1, 'tags_between:<in vbn vbn>': 1, 'tags_between:<to>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<OOV>': 1, 'tags_before:<prp$>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<ROUTE>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_577
+'per day':'per day', Frequency:Frequency, type=fr
+
+CONTEXT STRING: er day, morphine p.r.n., multivitamin 1 <FR><FREQUENCY>per day</FREQUENCY><FREQUENCY>per day</FREQUENCY></FR> , pamidronate 90 mg per Hem/Onc, pantop
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<day per>': 1, 'grams_between:<day>': 1, 'grams_between:<per>': 1, 'grams_before:<OOV>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<multivitamin>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<pamidronate>': 1, 'grams_after:<<NUMBER> pamidronate>': 1, 'tags_between:<nn>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in>': 1, 'tags_before:<fw>': 1, 'tags_before:<cd fw>': 1, 'tags_before:<cd>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd vb>': 1, 'tags_after:<vb>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_663
+'Coumadin':'daily', Drug:Frequency, type=fr
+
+CONTEXT STRING: me doses of diltiazem  and Lasix. His <FR><DRUG>Coumadin</DRUG> was initially held secondary to epistaxis, but was  restarted on --- Date --- at a low dose and the patient was discharged on 5  mg <FREQUENCY>daily</FREQUENCY></FR>  to follow up in his Coumadin Clinic in 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 23, 'grams_between:<patient>': 1, 'grams_between:<- -- at>': 1, 'grams_between:<, epistaxis>': 1, 'grams_between:<secondary to>': 1, 'grams_between:<dose>': 1, 'grams_between:<but>': 1, 'grams_between:<at>': 1, 'grams_between:<and>': 1, 'grams_between:<->': 1, 'grams_between:<and the>': 1, 'grams_between:<patient was>': 1, 'grams_between:<low>': 1, 'grams_between:<patient the was>': 1, 'grams_between:<- -- date>': 1, 'grams_between:<mg>': 1, 'grams_between:<patient the>': 1, 'grams_between:<a low>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<<NUMBER> on>': 1, 'grams_between:<-->': 1, 'grams_between:<secondary>': 1, 'grams_between:<- date>': 1, 'grams_between:<and patient the>': 1, 'grams_between:<-- date>': 1, 'grams_between:<discharged>': 1, 'grams_between:<, but>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<initially was>': 1, 'grams_between:<the>': 1, 'grams_between:<date>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<a at>': 1, 'grams_between:<-- on>': 1, 'grams_between:<held>': 1, 'grams_between:<- -- on>': 1, 'grams_between:<was>': 1, 'grams_between:<- -->': 1, 'grams_between:<epistaxis>': 1, 'grams_between:<on>': 1, 'grams_between:<discharged was>': 1, 'grams_between:<initially>': 1, 'grams_between:<<NUMBER> mg on>': 1, 'grams_between:<to>': 1, 'grams_between:<- at>': 1, 'grams_before:<his>': 1, 'grams_before:<OOV>': 1, 'grams_after:<follow to>': 1, 'grams_after:<to>': 1, 'grams_after:<follow>': 1, 'tags_between:<nn>': 1, 'tags_between:<nn vbd vbn>': 1, 'tags_between:<rb vbd vbn>': 1, 'tags_between:<jj>': 1, 'tags_between:<jj to vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<to vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<: nn>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<cc dt nn>': 1, 'tags_between:<: in>': 1, 'tags_between:<,>': 1, 'tags_between:<:>': 1, 'tags_between:<dt nn vbd>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd in jj>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc vbd>': 1, 'tags_between:<, cc>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<: dt in>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<: :>': 1, 'tags_between:<cc vbd vbn>': 1, 'tags_between:<jj rb vbn>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<, vb>': 1, 'tags_between:<, to vb>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<, cc vbd>': 1, 'tags_between:<: : in>': 1, 'tags_between:<dt in>': 1, 'tags_between:<, cc vb>': 1, 'tags_between:<cc jj nn>': 1, 'tags_between:<jj to>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<cd in vbn>': 1, 'tags_between:<jj vbn>': 1, 'tags_between:<jj to vb>': 1, 'tags_between:<cc dt>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<: in vbn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<to>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<rb>': 1, 'tags_before:<OOV>': 1, 'tags_before:<prp$>': 1, 'tags_after:<to>': 1, 'tags_after:<to vb>': 1, 'tags_after:<vb>': 1, 'same_sentence': 1, 'entities_between:<ADE>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_672
+'as directed':'as directed', Frequency:Frequency, type=fr
+
+CONTEXT STRING: lacyclovir 500 mg daily.  6. Coumadin <FR><FREQUENCY>as directed</FREQUENCY><FREQUENCY>as directed</FREQUENCY></FR> .  7. Pantoprazole 40 mg a day.  8. 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<as>': 1, 'grams_between:<as directed>': 1, 'grams_between:<directed>': 1, 'grams_before:<OOV>': 1, 'grams_before:<coumadin>': 1, 'grams_after:<OOV>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<in vbn>': 1, 'tags_before:<OOV>': 1, 'tags_before:<nnp>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_808
+'every four hours PRN':'every four hours PRN', Frequency:Frequency, type=fr
+
+CONTEXT STRING: esin 300 Syrup  Directions: 15 mL oral <FR><FREQUENCY>every four hours PRN</FREQUENCY><FREQUENCY>every four hours PRN</FREQUENCY></FR>  cough  Continued By: --- Name --- ---
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<prn>': 1, 'grams_between:<hours>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<hours prn>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER> hours>': 1, 'grams_between:<every <NUMBER> hours>': 1, 'grams_between:<every>': 1, 'grams_between:<every <NUMBER>>': 1, 'grams_before:<OOV>': 1, 'grams_before:<oral>': 1, 'grams_before:<ml>': 1, 'grams_after:<OOV>': 1, 'grams_after:<cough>': 1, 'grams_after:<continued>': 1, 'tags_between:<cd dt>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd nnp nns>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<cd>': 1, 'tags_between:<nnp nns>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_before:<nns>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj nns>': 1, 'tags_after:<nn>': 1, 'tags_after:<vbn>': 1, 'tags_after:<nn vbn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_808
+'daily':'daily', Frequency:Frequency, type=fr
+
+CONTEXT STRING: 24 hr  Directions: 2 patch transdermal <FR><FREQUENCY>daily</FREQUENCY><FREQUENCY>daily</FREQUENCY></FR>   Continued By: --- Name --- --- Name 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<daily>': 1, 'grams_before:<OOV>': 1, 'grams_before:<patch>': 1, 'grams_after:<by>': 1, 'grams_after:<continued>': 1, 'grams_after:<by continued>': 1, 'tags_between:<jj>': 1, 'tags_before:<nn>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj nn>': 1, 'tags_after:<vbn>': 1, 'tags_after:<in>': 1, 'tags_after:<in vbn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_808
+'every eight hours PRN':'every eight hours PRN', Frequency:Frequency, type=fr
+
+CONTEXT STRING: 0 mg Tablet  Directions: 1 tablet oral <FR><FREQUENCY>every eight hours PRN</FREQUENCY><FREQUENCY>every eight hours PRN</FREQUENCY></FR>  nausea or vomiting  Continued By: --- 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<prn>': 1, 'grams_between:<<NUMBER> every hours>': 1, 'grams_between:<hours>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> every>': 1, 'grams_between:<hours prn>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER> hours>': 1, 'grams_between:<every>': 1, 'grams_before:<oral tablet>': 1, 'grams_before:<tablet>': 1, 'grams_before:<oral>': 1, 'grams_after:<nausea>': 1, 'grams_after:<nausea or>': 1, 'grams_after:<or>': 1, 'tags_between:<cd dt>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd nnp nns>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<cd>': 1, 'tags_between:<nnp nns>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_before:<nn>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj nn>': 1, 'tags_after:<nn>': 1, 'tags_after:<cc nn>': 1, 'tags_after:<cc>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_808
+'daily':'daily', Frequency:Frequency, type=fr
+
+CONTEXT STRING: lease 24hr  Directions: 1 capsule oral <FR><FREQUENCY>daily</FREQUENCY><FREQUENCY>daily</FREQUENCY></FR>   Extended Instructions: hold if HR is 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<daily>': 1, 'grams_before:<capsule oral>': 1, 'grams_before:<capsule>': 1, 'grams_before:<oral>': 1, 'grams_after:<OOV>': 1, 'grams_after:<instructions>': 1, 'grams_after:<ex<NUMBER>ded>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj nn>': 1, 'tags_after:<vbn>': 1, 'tags_after:<nns vbn>': 1, 'tags_after:<nns>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_808
+'daily before sleeping':'daily before sleeping', Frequency:Frequency, type=fr
+
+CONTEXT STRING: 8 mg Tablet  Directions: 2 tablet oral <FR><FREQUENCY>daily before sleeping</FREQUENCY><FREQUENCY>daily before sleeping</FREQUENCY></FR>   Continued By: --- Name --- --- Name 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 3, 'grams_between:<OOV>': 1, 'grams_between:<before>': 1, 'grams_between:<daily>': 1, 'grams_before:<oral tablet>': 1, 'grams_before:<tablet>': 1, 'grams_before:<oral>': 1, 'grams_after:<by>': 1, 'grams_after:<continued>': 1, 'grams_after:<by continued>': 1, 'tags_between:<in jj vbg>': 1, 'tags_between:<in vbg>': 1, 'tags_between:<in jj>': 1, 'tags_between:<jj>': 1, 'tags_between:<in>': 1, 'tags_between:<vbg>': 1, 'tags_before:<nn>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj nn>': 1, 'tags_after:<vbn>': 1, 'tags_after:<in>': 1, 'tags_after:<in vbn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_838
+'Rituxan':'once a month', Drug:Frequency, type=fr
+
+CONTEXT STRING:  in 2 weeks to receive bendamustine and <FR><DRUG>Rituxan</DRUG> together. I will try to do this <FREQUENCY>once a month</FREQUENCY></FR> . I am not very optimistic that this wi
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<. i>': 1, 'grams_between:<do to>': 1, 'grams_between:<do>': 1, 'grams_between:<OOV>': 1, 'grams_between:<try>': 1, 'grams_between:<will>': 1, 'grams_between:<.>': 1, 'grams_between:<. i will>': 1, 'grams_between:<i will>': 1, 'grams_between:<to try>': 1, 'grams_between:<to>': 1, 'grams_between:<i>': 1, 'grams_between:<this>': 1, 'grams_before:<bendamustine>': 1, 'grams_before:<and>': 1, 'grams_before:<and bendamustine>': 1, 'grams_after:<OOV>': 1, 'tags_between:<. rb>': 1, 'tags_between:<. prp rb>': 1, 'tags_between:<. prp>': 1, 'tags_between:<md>': 1, 'tags_between:<md prp>': 1, 'tags_between:<to>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt to vb>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<to vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<md to vb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<to vb vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<cc nn>': 1, 'tags_before:<cc>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_838
+'bendamustine':'once a month', Drug:Frequency, type=fr
+
+CONTEXT STRING: . He will return in 2 weeks to receive <FR><DRUG>bendamustine</DRUG> and Rituxan together. I will try to do this <FREQUENCY>once a month</FREQUENCY></FR> . I am not very optimistic that this wi
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 10, 'grams_between:<. i>': 1, 'grams_between:<do to>': 1, 'grams_between:<rituxan>': 1, 'grams_between:<OOV>': 1, 'grams_between:<do>': 1, 'grams_between:<and rituxan>': 1, 'grams_between:<try>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<.>': 1, 'grams_between:<. i will>': 1, 'grams_between:<i will>': 1, 'grams_between:<to try>': 1, 'grams_between:<to>': 1, 'grams_between:<i>': 1, 'grams_between:<this>': 1, 'grams_before:<receive>': 1, 'grams_before:<to>': 1, 'grams_before:<receive to>': 1, 'grams_after:<OOV>': 1, 'tags_between:<. rb>': 1, 'tags_between:<md prp>': 1, 'tags_between:<to vb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<to vb vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<cc nnp rb>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<. prp>': 1, 'tags_between:<. prp rb>': 1, 'tags_between:<nnp rb>': 1, 'tags_between:<md>': 1, 'tags_between:<dt to vb>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<. nnp rb>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<md to vb>': 1, 'tags_between:<to>': 1, 'tags_between:<rb>': 1, 'tags_before:<to>': 1, 'tags_before:<to vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_868
+'Velcade':'twice a week', Drug:Frequency, type=fr
+
+CONTEXT STRING: is also still on cycles of  chemo with <FR><DRUG>Velcade</DRUG>, which he receives <FREQUENCY>twice a week</FREQUENCY></FR>  for 2 weeks at a time.  He is being fo
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<he>': 1, 'grams_between:<receives>': 1, 'grams_between:<, he which>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<, which>': 1, 'grams_between:<he which>': 1, 'grams_between:<which>': 1, 'grams_before:<chemo>': 1, 'grams_before:<OOV>': 1, 'grams_before:<with>': 1, 'grams_after:<<NUMBER> for>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<for>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<prp wdt>': 1, 'tags_between:<prp vbz wdt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<,>': 1, 'tags_between:<wdt>': 1, 'tags_between:<, prp wdt>': 1, 'tags_between:<prp>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<in>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd in>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_894
+'thalidomide':'off for 2 weeks', Drug:Frequency, type=fr
+
+CONTEXT STRING: domide.  Thus, I have started to start <FR><DRUG>thalidomide</DRUG>, but keep him <FREQUENCY>off for 2 weeks</FREQUENCY></FR>   instead of having him on continuously
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<, but>': 1, 'grams_between:<OOV>': 1, 'grams_between:<but>': 1, 'grams_between:<,>': 1, 'grams_between:<keep>': 1, 'grams_between:<him>': 1, 'grams_before:<start to>': 1, 'grams_before:<to>': 1, 'grams_before:<start>': 1, 'grams_after:<OOV>': 1, 'grams_after:<of>': 1, 'grams_after:<instead>': 1, 'tags_between:<, cc vb>': 1, 'tags_between:<cc prp vb>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<vb>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<prp>': 1, 'tags_between:<, cc>': 1, 'tags_between:<cc vb>': 1, 'tags_before:<to>': 1, 'tags_before:<to vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<in rb>': 1, 'tags_after:<in>': 1, 'tags_after:<rb>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_978
+'prednisone':'every other day', Drug:Frequency, type=fr
+
+CONTEXT STRING:  more edematous. I had been giving him <FR><DRUG>prednisone</DRUG> to cut down on  skin reaction from the thalidomide, but I have decreased this  significantly, and he is only on 5 mg <FREQUENCY>every other day</FREQUENCY></FR> . He does have some  dyspnea on exerti
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 22, 'grams_between:<from>': 1, 'grams_between:<, and he>': 1, 'grams_between:<and>': 1, 'grams_between:<but>': 1, 'grams_between:<reaction>': 1, 'grams_between:<significantly>': 1, 'grams_between:<thalidomide>': 1, 'grams_between:<and he is>': 1, 'grams_between:<mg>': 1, 'grams_between:<i>': 1, 'grams_between:<is>': 1, 'grams_between:<and he>': 1, 'grams_between:<decreased>': 1, 'grams_between:<he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<, and>': 1, 'grams_between:<,>': 1, 'grams_between:<from the>': 1, 'grams_between:<<NUMBER> on>': 1, 'grams_between:<, thalidomide>': 1, 'grams_between:<he is>': 1, 'grams_between:<only>': 1, 'grams_between:<, but>': 1, 'grams_between:<but i>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<have>': 1, 'grams_between:<the>': 1, 'grams_between:<down>': 1, 'grams_between:<cut>': 1, 'grams_between:<thalidomide the>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<skin>': 1, 'grams_between:<, but i>': 1, 'grams_between:<this>': 1, 'grams_between:<on>': 1, 'grams_between:<have i>': 1, 'grams_between:<<NUMBER> mg on>': 1, 'grams_between:<to>': 1, 'grams_before:<OOV>': 1, 'grams_before:<him>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<vbp>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<, dt rb>': 1, 'tags_between:<cd in rb>': 1, 'tags_between:<to vb>': 1, 'tags_between:<, cc rb>': 1, 'tags_between:<rp to vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<in jj rp>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<prp rb vbz>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<, nn>': 1, 'tags_between:<prp vbn vbp>': 1, 'tags_between:<,>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<prp vbp>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<dt vbn>': 1, 'tags_between:<, cc>': 1, 'tags_between:<in rb>': 1, 'tags_between:<rp>': 1, 'tags_between:<in rp vb>': 1, 'tags_between:<rb vbz>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<cc prp vbz>': 1, 'tags_between:<dt rb vbn>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<, cc prp>': 1, 'tags_between:<cc prp vbp>': 1, 'tags_between:<dt vbn vbp>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<in rp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<in rb vbz>': 1, 'tags_between:<dt in>': 1, 'tags_between:<vb>': 1, 'tags_between:<vbn vbp>': 1, 'tags_between:<rp vb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, rb>': 1, 'tags_between:<to>': 1, 'tags_between:<, cc nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<prp>': 1, 'tags_before:<vbg>': 1, 'tags_before:<prp vbg>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<INDICATION>': 1, 'entities_between:<DRUG>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_985
+'rituximab':'monthly', Drug:Frequency, type=fr
+
+CONTEXT STRING:  3-4 hours.  2. I will set him up for <FR><DRUG>rituximab</DRUG> next week and weekly x4. He had been getting it <FREQUENCY>monthly</FREQUENCY></FR> .  3. I will see him in followup in 4-
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 11, 'grams_between:<it>': 1, 'grams_between:<he>': 1, 'grams_between:<been had>': 1, 'grams_between:<. he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<. had he>': 1, 'grams_between:<. x<NUMBER>>': 1, 'grams_between:<had he>': 1, 'grams_between:<and>': 1, 'grams_between:<x<NUMBER>>': 1, 'grams_between:<weekly>': 1, 'grams_between:<getting>': 1, 'grams_between:<been had he>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<next>': 1, 'grams_between:<next week>': 1, 'grams_between:<had>': 1, 'grams_between:<and week>': 1, 'grams_between:<week>': 1, 'grams_before:<up>': 1, 'grams_before:<for>': 1, 'grams_before:<for up>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<vbd vbg vbn>': 1, 'tags_between:<. jj nn>': 1, 'tags_between:<OOV>': 1, 'tags_between:<prp vbg>': 1, 'tags_between:<cc>': 1, 'tags_between:<. nn>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<vbg>': 1, 'tags_between:<cc jj>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. prp>': 1, 'tags_between:<prp vbd vbn>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<cc jj nn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<vbg vbn>': 1, 'tags_before:<in rp>': 1, 'tags_before:<rp>': 1, 'tags_before:<in>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<FREQUENCY>': 1, 'entities_between:<DURATION>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+1_985
+'pamidronate':'every other month', Drug:Frequency, type=fr
+
+CONTEXT STRING: Contin for which I write, pantoprazole, <FR><DRUG>pamidronate</DRUG>, which he gets <FREQUENCY>every other month</FREQUENCY></FR> , vitamin D.   INTERIM HISTORY: --- 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<gets>': 1, 'grams_between:<he>': 1, 'grams_between:<, he which>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<, which>': 1, 'grams_between:<he which>': 1, 'grams_between:<which>': 1, 'grams_before:<, pantoprazole>': 1, 'grams_before:<pantoprazole>': 1, 'grams_before:<,>': 1, 'grams_after:<vitamin>': 1, 'grams_after:<d. vitamin>': 1, 'grams_after:<d.>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<prp wdt>': 1, 'tags_between:<prp vbz wdt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<,>': 1, 'tags_between:<wdt>': 1, 'tags_between:<, prp wdt>': 1, 'tags_between:<prp>': 1, 'tags_before:<jj>': 1, 'tags_before:<,>': 1, 'tags_before:<, jj>': 1, 'tags_after:<fw>': 1, 'tags_after:<fw nnp>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+21_46
+'pain medication':'once or twice a \nday', Drug:Frequency, type=fr
+
+CONTEXT STRING: ould like to  see her on a long-acting <FR><DRUG>pain medication</DRUG> that she can take <FREQUENCY>once or twice a \nday</FREQUENCY></FR>  with rescue doses of hydrocodone on an 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<she>': 1, 'grams_between:<OOV>': 1, 'grams_between:<she that>': 1, 'grams_between:<can she>': 1, 'grams_between:<that>': 1, 'grams_between:<take>': 1, 'grams_between:<can>': 1, 'grams_before:<OOV>': 1, 'grams_before:<a>': 1, 'grams_after:<OOV>': 1, 'grams_after:<with>': 1, 'tags_between:<md>': 1, 'tags_between:<md prp>': 1, 'tags_between:<vb>': 1, 'tags_between:<in md prp>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<md vb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<in prp>': 1, 'tags_before:<dt jj>': 1, 'tags_before:<jj>': 1, 'tags_before:<dt>': 1, 'tags_after:<nn>': 1, 'tags_after:<in nn>': 1, 'tags_after:<in>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+21_893
+'DuoDERM Extra Thin':'change this every 5-7 days', Drug:Frequency, type=fr
+
+CONTEXT STRING:  patient. We would like to utilize the <FR><DRUG>DuoDERM Extra Thin</DRUG> to protect the intact skin and therefore she can <FREQUENCY>change this every 5-7 days</FREQUENCY></FR>  or as needed if there is any fluid unde
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 9, 'grams_between:<she>': 1, 'grams_between:<OOV>': 1, 'grams_between:<can she>': 1, 'grams_between:<intact>': 1, 'grams_between:<the>': 1, 'grams_between:<and>': 1, 'grams_between:<skin>': 1, 'grams_between:<therefore>': 1, 'grams_between:<can>': 1, 'grams_between:<to>': 1, 'grams_before:<OOV>': 1, 'grams_before:<the>': 1, 'grams_after:<as>': 1, 'grams_after:<OOV>': 1, 'grams_after:<or>': 1, 'tags_between:<nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<cc in nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<cc in prp>': 1, 'tags_between:<in md prp>': 1, 'tags_between:<to vb>': 1, 'tags_between:<in prp>': 1, 'tags_between:<dt>': 1, 'tags_between:<cc>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<md>': 1, 'tags_between:<dt to vb>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<cc in>': 1, 'tags_between:<cc jj nn>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<to>': 1, 'tags_between:<dt jj vb>': 1, 'tags_before:<dt vb>': 1, 'tags_before:<dt>': 1, 'tags_before:<vb>': 1, 'tags_after:<cc>': 1, 'tags_after:<in>': 1, 'tags_after:<cc in>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+4_925
+'Rituxan':'q. 6-month', Drug:Frequency, type=fr
+
+CONTEXT STRING:  disease progression.  She has been on <FR><DRUG>Rituxan</DRUG> maintenance for a couple of years in a <FREQUENCY>q. 6-month</FREQUENCY></FR>   schedule. I will discontinue that at
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<years>': 1, 'grams_between:<of>': 1, 'grams_between:<a in>': 1, 'grams_between:<main<NUMBER>ance>': 1, 'grams_between:<OOV>': 1, 'grams_between:<couple>': 1, 'grams_between:<a couple of>': 1, 'grams_between:<a>': 1, 'grams_between:<couple of>': 1, 'grams_between:<for>': 1, 'grams_between:<in>': 1, 'grams_between:<of years>': 1, 'grams_between:<a for>': 1, 'grams_between:<a couple>': 1, 'grams_before:<on>': 1, 'grams_before:<been>': 1, 'grams_before:<been on>': 1, 'grams_after:<.>': 1, 'grams_after:<schedule>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<in>': 1, 'tags_between:<dt in nns>': 1, 'tags_between:<in nn nns>': 1, 'tags_between:<in in nns>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<in nns>': 1, 'tags_before:<vbn>': 1, 'tags_before:<in>': 1, 'tags_before:<in vbn>': 1, 'tags_after:<nn>': 1, 'tags_after:<.>': 1, 'tags_after:<. nn>': 1, 'same_sentence': 0, 'entities_between:<DURATION>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+5_788
+'chemo':'4 years', Drug:Frequency, type=fr
+
+CONTEXT STRING: mphoma, and per patient he has required <FR><DRUG>chemo</DRUG> for  treatment of his recurrent lymphoma every <FREQUENCY>4 years</FREQUENCY></FR>  or so -now going on 5 years  since las
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<recurrent>': 1, 'grams_between:<of>': 1, 'grams_between:<OOV>': 1, 'grams_between:<lymphoma>': 1, 'grams_between:<for treatment>': 1, 'grams_between:<lymphoma recurrent>': 1, 'grams_between:<of treatment>': 1, 'grams_between:<treatment>': 1, 'grams_between:<for>': 1, 'grams_between:<every>': 1, 'grams_between:<his>': 1, 'grams_between:<his of>': 1, 'grams_before:<OOV>': 1, 'grams_before:<has>': 1, 'grams_before:<required>': 1, 'grams_after:<OOV>': 1, 'grams_after:<so>': 1, 'grams_after:<or>': 1, 'tags_between:<nn>': 1, 'tags_between:<nn prp$>': 1, 'tags_between:<dt nn nn>': 1, 'tags_between:<nn nn prp$>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in nn prp$>': 1, 'tags_between:<in in nn>': 1, 'tags_between:<prp$>': 1, 'tags_between:<in>': 1, 'tags_between:<in prp$>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt>': 1, 'tags_before:<vbn>': 1, 'tags_before:<vbz>': 1, 'tags_before:<vbn vbz>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc rb>': 1, 'tags_after:<rb>': 1, 'same_sentence': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_136
+'CHLORHEXIDINE GLUC. 0.12%':'Three Times a Day', Drug:Frequency, type=fr
+
+CONTEXT STRING:             10 ML   MM  -<FR><DRUG>CHLORHEXIDINE GLUC. 0.12%</DRUG>-            <FREQUENCY>Three Times a Day</FREQUENCY></FR>    PEPCID              
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<->': 1, 'grams_before:<OOV>': 1, 'grams_before:<mm>': 1, 'grams_after:<OOV>': 1, 'grams_after:<<NUMBER>>': 1, 'tags_between:<:>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cd nnp>': 1, 'tags_after:<cd>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_141
+'prednisone':'once daily', Drug:Frequency, type=fr
+
+CONTEXT STRING: four times a day with meals and snacks, <FR><DRUG>prednisone</DRUG> 30 mg b.i.d. to be taken on the evening of day #6 which is the 24th, the day of discharge, 15 mg to be taken twice a day on day #7 which is the 25th, the following discharge and 15 mg to be taken <FREQUENCY>once daily</FREQUENCY></FR>  on day #8, the 26th   FOLLOWUP APPOI
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 22, 'grams_between:<<NUMBER> mg to>': 1, 'grams_between:<<NUMBER>th the>': 1, 'grams_between:<, discharge>': 1, 'grams_between:<and>': 1, 'grams_between:<, <NUMBER> mg>': 1, 'grams_between:<taken>': 1, 'grams_between:<# <NUMBER>>': 1, 'grams_between:<evening the>': 1, 'grams_between:<. b.i.d>': 1, 'grams_between:<a day twice>': 1, 'grams_between:<mg>': 1, 'grams_between:<<NUMBER> and>': 1, 'grams_between:<following the>': 1, 'grams_between:<is>': 1, 'grams_between:<and discharge>': 1, 'grams_between:<# <NUMBER> day>': 1, 'grams_between:<day>': 1, 'grams_between:<a twice>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER> which>': 1, 'grams_between:<,>': 1, 'grams_between:<evening>': 1, 'grams_between:<is the>': 1, 'grams_between:<twice>': 1, 'grams_between:<b.i.d>': 1, 'grams_between:<#>': 1, 'grams_between:<be>': 1, 'grams_between:<is which>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<discharge of>': 1, 'grams_between:<, the>': 1, 'grams_between:<day on>': 1, 'grams_between:<the>': 1, 'grams_between:<.>': 1, 'grams_between:<day of>': 1, 'grams_between:<a>': 1, 'grams_between:<. to>': 1, 'grams_between:<be to>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<day the>': 1, 'grams_between:<, <NUMBER>>': 1, 'grams_between:<on the>': 1, 'grams_between:<<NUMBER> and mg>': 1, 'grams_between:<# day>': 1, 'grams_between:<discharge>': 1, 'grams_between:<on>': 1, 'grams_between:<<NUMBER>th>': 1, 'grams_between:<a day>': 1, 'grams_between:<which>': 1, 'grams_between:<to>': 1, 'grams_between:<following>': 1, 'grams_before:<OOV>': 1, 'grams_before:<,>': 1, 'grams_after:<on>': 1, 'grams_after:<day on>': 1, 'grams_after:<day>': 1, 'tags_between:<nn>': 1, 'tags_between:<. nn to>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<. to vb>': 1, 'tags_between:<jj>': 1, 'tags_between:<, dt>': 1, 'tags_between:<# nn>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cd nn nn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<, cd>': 1, 'tags_between:<to vb>': 1, 'tags_between:<in nn nn>': 1, 'tags_between:<nn to vb>': 1, 'tags_between:<, jj>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<, cd dt>': 1, 'tags_between:<cd nn to>': 1, 'tags_between:<dt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<in nn>': 1, 'tags_between:<nn to>': 1, 'tags_between:<# cd>': 1, 'tags_between:<, nn>': 1, 'tags_between:<wdt>': 1, 'tags_between:<,>': 1, 'tags_between:<. nn nn>': 1, 'tags_between:<cc>': 1, 'tags_between:<vb vbn>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd wdt>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<dt nn rb>': 1, 'tags_between:<, cd nn>': 1, 'tags_between:<#>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<dt in vbn>': 1, 'tags_between:<dt rb vbn>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<in vb vbn>': 1, 'tags_between:<dt vbz>': 1, 'tags_between:<to vb vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<. to>': 1, 'tags_between:<in>': 1, 'tags_between:<rb vb vbn>': 1, 'tags_between:<cc cd>': 1, 'tags_between:<cc cd nn>': 1, 'tags_between:<, dt jj>': 1, 'tags_between:<, in nn>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<cd dt>': 1, 'tags_between:<dt in>': 1, 'tags_between:<cc jj nn>': 1, 'tags_between:<vbz wdt>': 1, 'tags_between:<vb>': 1, 'tags_between:<cd dt vbz>': 1, 'tags_between:<dt vbz wdt>': 1, 'tags_between:<# cd nn>': 1, 'tags_between:<cd vbz wdt>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<rb>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<to>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<dt jj vbz>': 1, 'tags_before:<,>': 1, 'tags_before:<nns>': 1, 'tags_before:<, nns>': 1, 'tags_after:<nn>': 1, 'tags_after:<in nn>': 1, 'tags_after:<in>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 4, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_40
+'Ativan':'once daily', Drug:Frequency, type=fr
+
+CONTEXT STRING: port some nausea and vomiting requiring <FR><DRUG>Ativan</DRUG> and Zofran on Friday, Saturday and Sunday, approximately <FREQUENCY>once daily</FREQUENCY></FR> . He did also require Percocet once a d
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<zofran>': 1, 'grams_between:<OOV>': 1, 'grams_between:<, saturday>': 1, 'grams_between:<and>': 1, 'grams_between:<,>': 1, 'grams_between:<on>': 1, 'grams_between:<friday>': 1, 'grams_between:<, friday>': 1, 'grams_between:<approximately>': 1, 'grams_between:<saturday>': 1, 'grams_before:<OOV>': 1, 'grams_before:<requiring>': 1, 'grams_before:<vomiting>': 1, 'grams_after:<OOV>': 1, 'tags_between:<, nnp rb>': 1, 'tags_between:<, in nnp>': 1, 'tags_between:<, cc nnp>': 1, 'tags_between:<, nnp nnp>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<,>': 1, 'tags_between:<in nnp nnp>': 1, 'tags_between:<cc in nnp>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc nnp nnp>': 1, 'tags_between:<rb>': 1, 'tags_between:<in>': 1, 'tags_between:<, rb>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<nnp>': 1, 'tags_before:<vbg>': 1, 'tags_before:<vbg vbg>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_40
+'Zofran':'once daily', Drug:Frequency, type=fr
+
+CONTEXT STRING: ausea and vomiting requiring Ativan and <FR><DRUG>Zofran</DRUG> on Friday, Saturday and Sunday, approximately <FREQUENCY>once daily</FREQUENCY></FR> . He did also require Percocet once a d
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<OOV>': 1, 'grams_between:<, saturday>': 1, 'grams_between:<,>': 1, 'grams_between:<and>': 1, 'grams_between:<on>': 1, 'grams_between:<friday>': 1, 'grams_between:<, friday>': 1, 'grams_between:<approximately>': 1, 'grams_between:<saturday>': 1, 'grams_before:<ativan>': 1, 'grams_before:<OOV>': 1, 'grams_before:<and>': 1, 'grams_after:<OOV>': 1, 'tags_between:<, nnp rb>': 1, 'tags_between:<, in nnp>': 1, 'tags_between:<, cc nnp>': 1, 'tags_between:<, nnp nnp>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc nnp nnp>': 1, 'tags_between:<rb>': 1, 'tags_between:<in>': 1, 'tags_between:<, rb>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<nnp>': 1, 'tags_before:<cc>': 1, 'tags_before:<cc nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_524
+'Bactrim':'Friday, Saturday and Sunday', Drug:Frequency, type=fr
+
+CONTEXT STRING: s.  5. ID: --- Name --- continues on <FR><DRUG>Bactrim</DRUG> prophylaxis for Pneumocystis with a schedule of <FREQUENCY>Friday, Saturday and Sunday</FREQUENCY></FR> .  6. Psychosocial: Mother reports th
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<of>': 1, 'grams_between:<OOV>': 1, 'grams_between:<schedule>': 1, 'grams_between:<a>': 1, 'grams_between:<with>': 1, 'grams_between:<for>': 1, 'grams_between:<prophylaxis>': 1, 'grams_between:<a with>': 1, 'grams_before:<on>': 1, 'grams_before:<continues>': 1, 'grams_before:<continues on>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<in nn nnp>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in in nnp>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<in vbz>': 1, 'tags_before:<in>': 1, 'tags_before:<vbz>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_569
+'CHLORHEXIDINE GLUC. 0.12%':'Three Times a Day', Drug:Frequency, type=fr
+
+CONTEXT STRING:             15 ML   MM  -<FR><DRUG>CHLORHEXIDINE GLUC. 0.12%</DRUG>-            <FREQUENCY>Three Times a Day</FREQUENCY></FR>    CODEINE PHOSPHATE/APAP UD TABLET 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<->': 1, 'grams_before:<OOV>': 1, 'grams_before:<mm>': 1, 'grams_after:<OOV>': 1, 'grams_after:<codeine>': 1, 'tags_between:<:>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nnp nnp>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_569
+'MICATIN':'Three Times a Day', Drug:Frequency, type=fr
+
+CONTEXT STRING:          Three Times a Day   <FR><DRUG>MICATIN</DRUG>                 APPLY POWDER TO GROIN TP  -MICONAZOLE NITRATE-                <FREQUENCY>Three Times a Day</FREQUENCY></FR>   Comment: UNTIL RASH COMPLETELY RESOLV
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 3, 'grams_between:<OOV>': 1, 'grams_between:<to>': 1, 'grams_between:<groin>': 1, 'grams_before:<a>': 1, 'grams_before:<day>': 1, 'grams_before:<a day>': 1, 'grams_after:<: comment>': 1, 'grams_after:<:>': 1, 'grams_after:<comment>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<nnp>': 1, 'tags_before:<dt nnp>': 1, 'tags_before:<dt>': 1, 'tags_before:<nnp>': 1, 'tags_after:<: nnp>': 1, 'tags_after:<:>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_735
+'CHLORHEXIDINE GLUC. 0.12':'Three Times a Day', Drug:Frequency, type=fr
+
+CONTEXT STRING:             10 ML   MM  -<FR><DRUG>CHLORHEXIDINE GLUC. 0.12</DRUG>%-            <FREQUENCY>Three Times a Day</FREQUENCY></FR>    PEPCID              
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<->': 1, 'grams_between:<OOV>': 1, 'grams_between:<%>': 1, 'grams_before:<OOV>': 1, 'grams_before:<mm>': 1, 'grams_after:<OOV>': 1, 'grams_after:<<NUMBER>>': 1, 'tags_between:<nn>': 1, 'tags_between:<:>': 1, 'tags_between:<: nn>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cd nnp>': 1, 'tags_after:<cd>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_735
+'Chemotherapy':'Twice a Day', Drug:Frequency, type=fr
+
+CONTEXT STRING: -                    <FR><FREQUENCY>Twice a Day</FREQUENCY>  Reason for this Medication: <DRUG>Chemotherapy</DRUG></FR>   Comment: To be taken PM on Day # 6 --
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<: medication this>': 1, 'grams_between:<medication>': 1, 'grams_between:<: medication>': 1, 'grams_between:<:>': 1, 'grams_between:<for reason this>': 1, 'grams_between:<for medication this>': 1, 'grams_between:<for>': 1, 'grams_between:<for this>': 1, 'grams_between:<reason>': 1, 'grams_between:<medication this>': 1, 'grams_between:<for reason>': 1, 'grams_between:<this>': 1, 'grams_before:<OOV>': 1, 'grams_before:<po>': 1, 'grams_after:<: comment>': 1, 'grams_after:<:>': 1, 'grams_after:<comment>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<:>': 1, 'tags_between:<: dt nn>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<:>': 1, 'tags_after:<: nn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_735
+'Chemotherapy':'Twice a Day', Drug:Frequency, type=fr
+
+CONTEXT STRING: -                    <FR><FREQUENCY>Twice a Day</FREQUENCY>  Reason for this Medication: <DRUG>Chemotherapy</DRUG></FR>   Comment: To be taken AM, PM on Day # 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<: medication this>': 1, 'grams_between:<medication>': 1, 'grams_between:<: medication>': 1, 'grams_between:<:>': 1, 'grams_between:<for reason this>': 1, 'grams_between:<for medication this>': 1, 'grams_between:<for>': 1, 'grams_between:<for this>': 1, 'grams_between:<reason>': 1, 'grams_between:<medication this>': 1, 'grams_between:<for reason>': 1, 'grams_between:<this>': 1, 'grams_before:<OOV>': 1, 'grams_before:<po>': 1, 'grams_after:<: comment>': 1, 'grams_after:<:>': 1, 'grams_after:<comment>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<:>': 1, 'tags_between:<: dt nn>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<:>': 1, 'tags_after:<: nn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_735
+'Chemotherapy':'Every Day', Drug:Frequency, type=fr
+
+CONTEXT STRING: -                    <FR><FREQUENCY>Every Day</FREQUENCY>  Reason for this Medication: <DRUG>Chemotherapy</DRUG></FR>   Comment: To be taken once AM on Day #
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<: medication this>': 1, 'grams_between:<medication>': 1, 'grams_between:<: medication>': 1, 'grams_between:<:>': 1, 'grams_between:<for reason this>': 1, 'grams_between:<for medication this>': 1, 'grams_between:<for>': 1, 'grams_between:<for this>': 1, 'grams_between:<reason>': 1, 'grams_between:<medication this>': 1, 'grams_between:<for reason>': 1, 'grams_between:<this>': 1, 'grams_before:<OOV>': 1, 'grams_before:<po>': 1, 'grams_after:<: comment>': 1, 'grams_after:<:>': 1, 'grams_after:<comment>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<:>': 1, 'tags_between:<: dt nn>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<:>': 1, 'tags_after:<: nn>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_794
+'CHLORHEXIDINE GLUC. 0.12%':'As Needed', Drug:Frequency, type=fr
+
+CONTEXT STRING:             5 ML   MM  -<FR><DRUG>CHLORHEXIDINE GLUC. 0.12%</DRUG>-            <FREQUENCY>As Needed</FREQUENCY></FR>   Reason for this Medication: USE THREE
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<->': 1, 'grams_before:<OOV>': 1, 'grams_before:<mm>': 1, 'grams_after:<for>': 1, 'grams_after:<reason>': 1, 'grams_after:<for reason>': 1, 'tags_between:<:>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<in nnp>': 1, 'tags_after:<in>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_866
+'CHLORHEXIDINE GLUC. 0.12%':'Three Times a Day', Drug:Frequency, type=fr
+
+CONTEXT STRING:             10 ML   MM  -<FR><DRUG>CHLORHEXIDINE GLUC. 0.12%</DRUG>-            <FREQUENCY>Three Times a Day</FREQUENCY></FR>    TYLENOL_ #3           
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<->': 1, 'grams_before:<OOV>': 1, 'grams_before:<mm>': 1, 'grams_after:<OOV>': 1, 'grams_after:<#>': 1, 'tags_between:<:>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nnp>': 1, 'tags_after:<#>': 1, 'tags_after:<# nnp>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_885
+'Trazadone':'prn', Drug:Frequency, type=fr
+
+CONTEXT STRING: s home dose of Bactrim was  continued. <FR><DRUG>Trazadone</DRUG> was added for sleep as a <FREQUENCY>prn</FREQUENCY></FR> . Also Seroquel later  supplemented wit
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<was>': 1, 'grams_between:<OOV>': 1, 'grams_between:<sleep>': 1, 'grams_between:<a>': 1, 'grams_between:<for>': 1, 'grams_between:<as>': 1, 'grams_between:<added>': 1, 'grams_between:<a as>': 1, 'grams_before:<.>': 1, 'grams_before:<OOV>': 1, 'grams_before:<continued>': 1, 'grams_after:<OOV>': 1, 'tags_between:<vbd>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in in nn>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<in nn vbn>': 1, 'tags_between:<dt in nn>': 1, 'tags_before:<.>': 1, 'tags_before:<vbn>': 1, 'tags_before:<. vbn>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_901
+'q.6 hours p.r.n.':'q.6 hours p.r.n.', Frequency:Frequency, type=fr
+
+CONTEXT STRING: nits p.o. t.i.d.  5. Ativan 1 mg p.o. <FR><FREQUENCY>q.6 hours p.r.n.</FREQUENCY><FREQUENCY>q.6 hours p.r.n.</FREQUENCY></FR>  nausea not to exceed 4 mg in 1 day.  6
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<hours q.<NUMBER>>': 1, 'grams_between:<hours>': 1, 'grams_between:<p.r.n>': 1, 'grams_between:<OOV>': 1, 'grams_between:<. p.r.n>': 1, 'grams_between:<. hours p.r.n>': 1, 'grams_between:<.>': 1, 'grams_between:<hours p.r.n>': 1, 'grams_between:<q.<NUMBER>>': 1, 'grams_before:<.>': 1, 'grams_before:<p.o>': 1, 'grams_before:<. p.o>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<nns vbp>': 1, 'tags_between:<vbp>': 1, 'tags_between:<nn nns>': 1, 'tags_between:<nns>': 1, 'tags_between:<. nns vbp>': 1, 'tags_between:<.>': 1, 'tags_between:<nn nns vbp>': 1, 'tags_between:<. vbp>': 1, 'tags_before:<nn>': 1, 'tags_before:<.>': 1, 'tags_before:<. nn>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+6_949
+'twice a day on Friday, Saturday, Sunday':'twice a day on Friday, Saturday, Sunday', Frequency:Frequency, type=fr
+
+CONTEXT STRING: trim 160 mg of the TMP component orally <FR><FREQUENCY>twice a day on Friday, Saturday, Sunday</FREQUENCY><FREQUENCY>twice a day on Friday, Saturday, Sunday</FREQUENCY></FR> .   FAMILY AND SOCIAL HISTORY: Revie
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<day>': 1, 'grams_between:<a twice>': 1, 'grams_between:<, saturday>': 1, 'grams_between:<OOV>': 1, 'grams_between:<day on>': 1, 'grams_between:<,>': 1, 'grams_between:<on>': 1, 'grams_between:<a>': 1, 'grams_between:<a day>': 1, 'grams_between:<friday>': 1, 'grams_between:<a day twice>': 1, 'grams_between:<twice>': 1, 'grams_between:<, friday>': 1, 'grams_between:<saturday>': 1, 'grams_before:<OOV>': 1, 'grams_before:<orally>': 1, 'grams_before:<comp<NUMBER>nt>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, , nnp>': 1, 'tags_between:<in nn nnp>': 1, 'tags_between:<, in nnp>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nn>': 1, 'tags_between:<, nnp nnp>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<,>': 1, 'tags_between:<rb>': 1, 'tags_between:<in>': 1, 'tags_between:<dt nn rb>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<nn>': 1, 'tags_before:<nn rb>': 1, 'tags_before:<rb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+7_472
+'Viactiv':'once a day', Drug:Frequency, type=fr
+
+CONTEXT STRING: at the present time and she has been on <FR><DRUG>Viactiv</DRUG> now for several months where she takes to <FREQUENCY>once a day</FREQUENCY></FR> . She has fallen in the last few months
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<she>': 1, 'grams_between:<OOV>': 1, 'grams_between:<months>': 1, 'grams_between:<takes>': 1, 'grams_between:<now>': 1, 'grams_between:<where>': 1, 'grams_between:<she where>': 1, 'grams_between:<for>': 1, 'grams_between:<several>': 1, 'grams_between:<for now>': 1, 'grams_between:<to>': 1, 'grams_before:<on>': 1, 'grams_before:<been>': 1, 'grams_before:<been on>': 1, 'grams_after:<OOV>': 1, 'tags_between:<in jj nns>': 1, 'tags_between:<jj>': 1, 'tags_between:<in jj rb>': 1, 'tags_between:<vbz>': 1, 'tags_between:<OOV>': 1, 'tags_between:<in jj>': 1, 'tags_between:<nns>': 1, 'tags_between:<prp wrb>': 1, 'tags_between:<in rb>': 1, 'tags_between:<nns prp wrb>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<prp vbz wrb>': 1, 'tags_between:<nns wrb>': 1, 'tags_between:<jj nns>': 1, 'tags_between:<wrb>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<prp to vbz>': 1, 'tags_between:<to vbz>': 1, 'tags_between:<to>': 1, 'tags_between:<rb>': 1, 'tags_before:<vbn>': 1, 'tags_before:<in>': 1, 'tags_before:<in vbn>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+7_523
+'Lasix':'alternating with 40 mg throughout the week', Drug:Frequency, type=fr
+
+CONTEXT STRING: ently increased to 10 mg daily to 20 mg <FR><FREQUENCY>alternating with 40 mg throughout the week</FREQUENCY>. She has been noted to have hypertension in the past, so she was on increased <DRUG>Lasix</DRUG></FR>  dose. Had been upon admission to the E
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 16, 'grams_between:<have to>': 1, 'grams_between:<been has she>': 1, 'grams_between:<been has>': 1, 'grams_between:<. has she>': 1, 'grams_between:<has she>': 1, 'grams_between:<so>': 1, 'grams_between:<OOV>': 1, 'grams_between:<past>': 1, 'grams_between:<,>': 1, 'grams_between:<noted to>': 1, 'grams_between:<hyper<NUMBER>sion>': 1, 'grams_between:<, past the>': 1, 'grams_between:<she was>': 1, 'grams_between:<increased>': 1, 'grams_between:<have>': 1, 'grams_between:<past the>': 1, 'grams_between:<in past the>': 1, 'grams_between:<the>': 1, 'grams_between:<, past>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<in>': 1, 'grams_between:<has>': 1, 'grams_between:<she>': 1, 'grams_between:<was>': 1, 'grams_between:<. she>': 1, 'grams_between:<noted>': 1, 'grams_between:<on was>': 1, 'grams_between:<on>': 1, 'grams_between:<have noted to>': 1, 'grams_between:<to>': 1, 'grams_between:<, so>': 1, 'grams_between:<in the>': 1, 'grams_before:<mg>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> mg>': 1, 'grams_after:<.>': 1, 'grams_after:<dose>': 1, 'grams_after:<. dose>': 1, 'tags_between:<nn>': 1, 'tags_between:<, in prp>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<prp vbn vbz>': 1, 'tags_between:<jj>': 1, 'tags_between:<to vb>': 1, 'tags_between:<nn to vb>': 1, 'tags_between:<vbn vbn vbz>': 1, 'tags_between:<in prp>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<to vbn>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in nn vb>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<in jj vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. prp>': 1, 'tags_between:<vbn vbn>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<to vb vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<in prp vbd>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<, in nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<vb>': 1, 'tags_between:<to vbn vbn>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, in>': 1, 'tags_between:<nn vb>': 1, 'tags_between:<to>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<in vbd>': 1, 'tags_before:<cd nns>': 1, 'tags_before:<nns>': 1, 'tags_before:<cd>': 1, 'tags_after:<nn>': 1, 'tags_after:<.>': 1, 'tags_after:<. nn>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+7_753
+'Lasix':'alternating with 40 mg throughout the week', Drug:Frequency, type=fr
+
+CONTEXT STRING: ently increased to 10 mg daily to 20 mg <FR><FREQUENCY>alternating with 40 mg throughout the week</FREQUENCY>. She has been noted to have hypertension in the past, so  she was on increased <DRUG>Lasix</DRUG></FR>  dose. Had been upon admission to the E
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 16, 'grams_between:<have to>': 1, 'grams_between:<been has she>': 1, 'grams_between:<been has>': 1, 'grams_between:<. has she>': 1, 'grams_between:<has she>': 1, 'grams_between:<so>': 1, 'grams_between:<OOV>': 1, 'grams_between:<past>': 1, 'grams_between:<,>': 1, 'grams_between:<noted to>': 1, 'grams_between:<hyper<NUMBER>sion>': 1, 'grams_between:<, past the>': 1, 'grams_between:<she was>': 1, 'grams_between:<increased>': 1, 'grams_between:<have>': 1, 'grams_between:<past the>': 1, 'grams_between:<in past the>': 1, 'grams_between:<the>': 1, 'grams_between:<, past>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<in>': 1, 'grams_between:<has>': 1, 'grams_between:<she>': 1, 'grams_between:<was>': 1, 'grams_between:<. she>': 1, 'grams_between:<noted>': 1, 'grams_between:<on was>': 1, 'grams_between:<on>': 1, 'grams_between:<have noted to>': 1, 'grams_between:<to>': 1, 'grams_between:<, so>': 1, 'grams_between:<in the>': 1, 'grams_before:<mg>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> mg>': 1, 'grams_after:<.>': 1, 'grams_after:<dose>': 1, 'grams_after:<. dose>': 1, 'tags_between:<nn>': 1, 'tags_between:<, in prp>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<prp vbn vbz>': 1, 'tags_between:<jj>': 1, 'tags_between:<to vb>': 1, 'tags_between:<nn to vb>': 1, 'tags_between:<vbn vbn vbz>': 1, 'tags_between:<in prp>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<to vbn>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in nn vb>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<in jj vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. prp>': 1, 'tags_between:<vbn vbn>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<to vb vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<in prp vbd>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<, in nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<vb>': 1, 'tags_between:<to vbn vbn>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<, in>': 1, 'tags_between:<nn vb>': 1, 'tags_between:<to>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<in vbd>': 1, 'tags_before:<cd nns>': 1, 'tags_before:<nns>': 1, 'tags_before:<cd>': 1, 'tags_after:<nn>': 1, 'tags_after:<.>': 1, 'tags_after:<. nn>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+7_786
+'prednisone':'weekly', Drug:Frequency, type=fr
+
+CONTEXT STRING:  PLAN:  1. I will taper the patient's <FR><DRUG>prednisone</DRUG> and she will be taking 40 mg daily. I would like to continue to taper this by 10 mg <FREQUENCY>weekly</FREQUENCY></FR> , so that she will be getting CBCs weekl
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 17, 'grams_between:<like to would>': 1, 'grams_between:<taking>': 1, 'grams_between:<<NUMBER> by mg>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<like would>': 1, 'grams_between:<. i would>': 1, 'grams_between:<by>': 1, 'grams_between:<mg>': 1, 'grams_between:<i>': 1, 'grams_between:<i would>': 1, 'grams_between:<like to>': 1, 'grams_between:<OOV>': 1, 'grams_between:<. daily>': 1, 'grams_between:<and she>': 1, 'grams_between:<<NUMBER> daily mg>': 1, 'grams_between:<be she will>': 1, 'grams_between:<continue to>': 1, 'grams_between:<be>': 1, 'grams_between:<. i>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> by>': 1, 'grams_between:<.>': 1, 'grams_between:<continue>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<would>': 1, 'grams_between:<she will>': 1, 'grams_between:<this>': 1, 'grams_between:<she>': 1, 'grams_between:<be will>': 1, 'grams_between:<taper>': 1, 'grams_between:<. daily mg>': 1, 'grams_between:<like>': 1, 'grams_between:<daily mg>': 1, 'grams_between:<to>': 1, 'grams_between:<daily>': 1, 'grams_before:<patient>': 1, "grams_before:<'s patient>": 1, "grams_before:<'s>": 1, 'grams_after:<so>': 1, 'grams_after:<that>': 1, 'grams_after:<so that>': 1, 'tags_between:<. rb>': 1, 'tags_between:<md prp>': 1, 'tags_between:<cd jj vbg>': 1, 'tags_between:<jj>': 1, 'tags_between:<vb vbg>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<cd jj rb>': 1, 'tags_between:<to vb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<cd dt in>': 1, 'tags_between:<to vb vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt in vb>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<OOV>': 1, 'tags_between:<cc prp>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd in jj>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<vbg>': 1, 'tags_between:<. prp>': 1, 'tags_between:<. prp rb>': 1, 'tags_between:<md>': 1, 'tags_between:<cd vbg>': 1, 'tags_between:<dt to vb>': 1, 'tags_between:<prp>': 1, 'tags_between:<.>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<in>': 1, 'tags_between:<cc md prp>': 1, 'tags_between:<dt in>': 1, 'tags_between:<to to vb>': 1, 'tags_between:<. jj rb>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<md to vb>': 1, 'tags_between:<to>': 1, 'tags_between:<md vb vbg>': 1, 'tags_between:<rb>': 1, 'tags_before:<nn>': 1, 'tags_before:<nn pos>': 1, 'tags_before:<pos>': 1, 'tags_after:<in>': 1, 'tags_after:<in in>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+7_880
+'Rituxan':'once every 3 months', Drug:Frequency, type=fr
+
+CONTEXT STRING:  measurable.   I will consider using <FR><DRUG>Rituxan</DRUG>, perhaps in several months. I would give her  a weekly dose for 4 weeks and then <FREQUENCY>once every 3 months</FREQUENCY></FR>  for 2 years. There  is, however, no s
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 18, 'grams_between:<months>': 1, 'grams_between:<dose>': 1, 'grams_between:<and>': 1, 'grams_between:<<NUMBER> for>': 1, 'grams_between:<give>': 1, 'grams_between:<. i would>': 1, 'grams_between:<i>': 1, 'grams_between:<and weeks>': 1, 'grams_between:<perhaps>': 1, 'grams_between:<i would>': 1, 'grams_between:<her>': 1, 'grams_between:<OOV>': 1, 'grams_between:<then>': 1, 'grams_between:<,>': 1, 'grams_between:<weekly>': 1, 'grams_between:<for>': 1, 'grams_between:<. i>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<and then>': 1, 'grams_between:<<NUMBER> for weeks>': 1, 'grams_between:<.>': 1, 'grams_between:<a>': 1, 'grams_between:<several>': 1, 'grams_between:<in>': 1, 'grams_between:<would>': 1, 'grams_between:<<NUMBER> weeks>': 1, 'grams_between:<weeks>': 1, 'grams_between:<. months>': 1, 'grams_before:<OOV>': 1, 'grams_before:<using>': 1, 'grams_before:<consider>': 1, 'grams_after:<<NUMBER> for>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<for>': 1, 'tags_between:<nn>': 1, 'tags_between:<in jj nns>': 1, 'tags_between:<md prp>': 1, 'tags_between:<, in rb>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<cc nns>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<in jj rb>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<OOV>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<in rb>': 1, 'tags_between:<. nns>': 1, 'tags_between:<. prp>': 1, 'tags_between:<dt prp vb>': 1, 'tags_between:<md>': 1, 'tags_between:<dt prp>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cc rb>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<. nns prp>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<cc nns rb>': 1, 'tags_between:<jj nns>': 1, 'tags_between:<vb>': 1, 'tags_between:<. jj nns>': 1, 'tags_between:<md vb>': 1, 'tags_between:<, rb>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<cc cd nns>': 1, 'tags_between:<rb>': 1, 'tags_before:<vb vbg>': 1, 'tags_before:<vbg>': 1, 'tags_before:<vb>': 1, 'tags_after:<in>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd in>': 1, 'same_sentence': 0, 'entities_between:<FREQUENCY>': 1, 'entities_between:<DURATION>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+7_880
+'Rituxan':'weekly', Drug:Frequency, type=fr
+
+CONTEXT STRING:  measurable.   I will consider using <FR><DRUG>Rituxan</DRUG>, perhaps in several months. I would give her  a <FREQUENCY>weekly</FREQUENCY></FR>  dose for 4 weeks and then once every 3 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 11, 'grams_between:<would>': 1, 'grams_between:<. i>': 1, 'grams_between:<her>': 1, 'grams_between:<OOV>': 1, 'grams_between:<months>': 1, 'grams_between:<,>': 1, 'grams_between:<.>': 1, 'grams_between:<a>': 1, 'grams_between:<several>': 1, 'grams_between:<. i would>': 1, 'grams_between:<give>': 1, 'grams_between:<in>': 1, 'grams_between:<. months>': 1, 'grams_between:<i>': 1, 'grams_between:<perhaps>': 1, 'grams_between:<i would>': 1, 'grams_before:<OOV>': 1, 'grams_before:<using>': 1, 'grams_before:<consider>': 1, 'grams_after:<OOV>': 1, 'grams_after:<dose>': 1, 'grams_after:<for>': 1, 'tags_between:<in jj nns>': 1, 'tags_between:<md prp>': 1, 'tags_between:<, in rb>': 1, 'tags_between:<jj>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<in jj rb>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<in jj>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<in rb>': 1, 'tags_between:<. nns>': 1, 'tags_between:<. prp>': 1, 'tags_between:<dt prp vb>': 1, 'tags_between:<md>': 1, 'tags_between:<dt prp>': 1, 'tags_between:<prp vb>': 1, 'tags_between:<. nns prp>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<in>': 1, 'tags_between:<jj nns>': 1, 'tags_between:<vb>': 1, 'tags_between:<. jj nns>': 1, 'tags_between:<md vb>': 1, 'tags_between:<, rb>': 1, 'tags_between:<rb>': 1, 'tags_before:<vb vbg>': 1, 'tags_before:<vbg>': 1, 'tags_before:<vb>': 1, 'tags_after:<nn>': 1, 'tags_after:<in nn>': 1, 'tags_after:<in>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+7_973
+'daily':'daily', Frequency:Frequency, type=fr
+
+CONTEXT STRING: 7 g  daily at bedtime, prednisone 5 mg <FR><FREQUENCY>daily</FREQUENCY><FREQUENCY>daily</FREQUENCY></FR> , Bactrim DS 1 tab Monday, Wednesday,  
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<daily>': 1, 'grams_before:<mg>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> mg>': 1, 'grams_after:<ds>': 1, 'grams_after:<bactrim ds>': 1, 'grams_after:<bactrim>': 1, 'tags_between:<rb>': 1, 'tags_before:<cd jj>': 1, 'tags_before:<jj>': 1, 'tags_before:<cd>': 1, 'tags_after:<nnp nnp>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<FREQUENCY>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<FREQUENCY><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+8_279
+'ASPIRIN':'Every Day', Drug:Frequency, type=fr
+
+CONTEXT STRING:             81 MG   PO  -<FR><DRUG>ASPIRIN</DRUG> CHEWABLE-                 <FREQUENCY>Every Day</FREQUENCY></FR>   BENZONATATE             
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<OOV>': 1, 'grams_before:<OOV>': 1, 'grams_before:<po>': 1, 'grams_after:<OOV>': 1, 'grams_after:<<NUMBER>>': 1, 'tags_between:<nnp>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cd nnp>': 1, 'tags_after:<cd>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
+
+TRUE TYPE: fr ------ PRED TYPE: none
+8_366
+'ranitidine':'daily', Drug:Frequency, type=fr
+
+CONTEXT STRING: daily with good control. She had tried <FR><DRUG>ranitidine</DRUG> for her gastroesophageal reflux. At 75 mg <FREQUENCY>daily</FREQUENCY></FR> , she had no relief. She occasionally w
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<<NUMBER>>': 1, 'grams_between:<her>': 1, 'grams_between:<. at>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER> at>': 1, 'grams_between:<at>': 1, 'grams_between:<.>': 1, 'grams_between:<for her>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<for>': 1, 'grams_between:<. <NUMBER> at>': 1, 'grams_between:<<NUMBER> at mg>': 1, 'grams_between:<reflux>': 1, 'grams_between:<mg>': 1, 'grams_before:<OOV>': 1, 'grams_before:<had>': 1, 'grams_after:<she>': 1, 'grams_after:<had>': 1, 'grams_after:<had she>': 1, 'tags_between:<nn>': 1, 'tags_between:<nn prp$>': 1, 'tags_between:<. cd in>': 1, 'tags_between:<nn nn prp$>': 1, 'tags_between:<in nn prp$>': 1, 'tags_between:<jj>': 1, 'tags_between:<. nn nn>': 1, 'tags_between:<.>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<cd in jj>': 1, 'tags_between:<. nn>': 1, 'tags_between:<in>': 1, 'tags_between:<cd>': 1, 'tags_between:<in prp$>': 1, 'tags_between:<cd in>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<. in>': 1, 'tags_between:<prp$>': 1, 'tags_between:<. in nn>': 1, 'tags_before:<vbd>': 1, 'tags_before:<vbn>': 1, 'tags_before:<vbd vbn>': 1, 'tags_after:<prp>': 1, 'tags_after:<vbd>': 1, 'tags_after:<prp vbd>': 1, 'same_sentence': 0, 'entities_between:<INDICATION>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<FREQUENCY>': 1, 'entity_types_concat': '<DRUG><=><FREQUENCY>'}
+
+-----------------------------------
+
