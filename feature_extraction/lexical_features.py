@@ -48,6 +48,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
     """
     def __init__(self, ngram_window=(1, 1), context_window=(2, 2),
                 vocab=None, pos_vocab=None, min_vocab_count=5, min_pos_count=5):
+        super().__init__()
         self.ngram_window = ngram_window
         if min(ngram_window) < 1 or max(ngram_window) > 3:
             raise NotImplementedError("Ngram Window must be between one and 3")
@@ -59,38 +60,15 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         self._unfiltered_vocab = vocab # Contains unigrams-trigrams, no count threshold
         self._unfiltered_pos_vocab = pos_vocab
 
-        self.vocab = self.create_vocab(vocab, min_vocab_count) # Only contains ngrams defined by context_window
+        self.vocab = self.create_vocab(vocab, min_vocab_count, self.ngram_window) # Only contains ngrams defined by context_window
         #print(self.vocab); exit()
-        self.pos_vocab =  self.create_vocab(pos_vocab, min_pos_count)
+        self.pos_vocab =  self.create_vocab(pos_vocab, min_pos_count, self.ngram_window)
         #self.tokens = [gram for (gram, idx) in self.vocab.items() if len(gram.split()) == 1] # Only unigrams
         self.pos = {} # Will eventually contain mapping for POS tags
 
         #self.all_features_values = self.create_base_features()
 
 
-    def create_vocab(self, vocab, thresh=5):
-        """
-        Creates a mapping from integers to the terms in vocab.
-        Only includes the ngrams whose length are equal to or less than ngram_window.
-        """
-        # Preprocess to transform numbers, etc.
-        #vocab = {self.normalize_grams(gram): vocab[gram] for gram in vocab}
-        vocab_idx = {}
-        min_length, max_length = self.ngram_window
-        for i, gram in enumerate(vocab.keys()):
-            # Normalize the gram
-            #gram = self.normalize_grams(gram)
-            # If it doesn't meet the count threshold, skip it
-            if vocab[gram] < thresh:
-                continue
-
-
-            # If it's too big or too small, don't include it
-            if (min(self.ngram_window) > len(gram.split()) or
-                        len(gram.split()) > max(self.ngram_window)):
-                continue
-            vocab_idx[gram] = vocab[gram]
-        return vocab_idx
 
     def create_base_features(self):
         """
@@ -314,38 +292,19 @@ def main():
 
     feat_dicts = [] # mappings of feature names to values
     y = [] # the relation types
-    #for i, relat in enumerate(relats[6972:]):
     for i, relat in enumerate(relats):
-        #if relat.file_name != '1_1044':
-        #    continue
-        #else:
-        #    if str(relat) == "'Percocet':'3', Drug:Dose, type=do":
-        #        print("Found it!")
-        #        print(i)
-        #        print(relat)
-        #        exit()
-        #    continue
 
         doc = docs[relat.file_name]
-        span = relat.span
 
         feature_dict = feature_extractor.create_feature_dict(relat, doc)
         feat_dicts.append(feature_dict)
         y.append(relat.type)
-        #if i % 10 == 0:
-        #    if i != 0:
-        #        break
-           #save_example_feature_dict(feature_dict, relat, doc)
-           #exit()
         if i % 100 == 0 and i > 0:
             print("{}/{}".format(i, len(relats)))
             #break
 
 
     print(feat_dicts[0])
-    #for d in feat_dicts:
-    #    for v in d.values():
-    #        assert isinstance(v, int)
     # Create feature vectors
     vectorizer = DictVectorizer(sparse=True, sort=True)
 

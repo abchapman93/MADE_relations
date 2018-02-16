@@ -63,5 +63,30 @@ class BaseFeatureExtractor(object):
     def __init__(self):
         pass
 
+    def create_vocab(self, vocab, thresh=5, ngram_window=None):
+        """
+        Creates a mapping from integers to the terms in vocab.
+        Only includes the ngrams whose length are equal to or less than ngram_window.
+        """
+        # Preprocess to transform numbers, etc.
+        #vocab = {self.normalize_grams(gram): vocab[gram] for gram in vocab}
+        vocab_idx = {}
+        min_length, max_length = ngram_window
+        for i, gram in enumerate(vocab.keys()):
+            # Normalize the gram
+            #gram = self.normalize_grams(gram)
+            # If it doesn't meet the count threshold, skip it
+            if vocab[gram] < thresh:
+                continue
+
+
+            # If it's too big or too small, don't include it
+            if (min(ngram_window) > len(gram.split()) or
+                        len(gram.split()) > max(ngram_window)):
+                continue
+            vocab_idx[gram] = vocab[gram]
+        return vocab_idx
+
+
     def extract_features(self, relation, doc):
         return np.empty(0)

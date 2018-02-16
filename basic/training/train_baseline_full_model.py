@@ -5,6 +5,7 @@ import os, sys
 import numpy as np
 
 from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score, cross_val_predict
@@ -55,8 +56,8 @@ def main():
     # Filter out any examples that the filtering classifier said had no relation
     with open('bin_yes_preds.pkl', 'rb') as f:
         idxs = pickle.load(f)
-    X = X[idxs]
-    feat_dicts, relats, y = filter_by_idx(idxs, feat_dicts, relats, y)
+    #X = X[idxs]
+    #feat_dicts, relats, y = filter_by_idx(idxs, feat_dicts, relats, y)
     print("X: {}".format(X.shape))
     print("y: {}".format(len(y)))
     print(len(feat_dicts))
@@ -65,7 +66,13 @@ def main():
     print(y[:10])
 
     #clf = LinearRegression()
-    clf = SVC()
+    #clf = SVC()
+    clf = RandomForestClassifier(max_depth = None,
+                            max_features = None,
+                            min_samples_leaf = 2,
+                            min_samples_split = 2,
+                            n_estimators = 10,
+                            n_jobs = 3)
     pred = cross_val_predict(clf, X, y)
     score = classification_report(y, pred)
     print(score)
@@ -80,7 +87,7 @@ def main():
     model_file = os.path.join(MODELDIR, 'full_baseline.pkl')
     with open(model_file, 'wb') as f:
         pickle.dump(clf, f)
-    print("Saved binary classifier at {}".format(model_file))
+    print("Saved non-binary classifier at {}".format(model_file))
     exit()
 
     # Save the predictions

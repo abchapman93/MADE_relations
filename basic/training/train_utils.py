@@ -2,10 +2,45 @@ import os, sys
 import re
 import pickle
 from collections import defaultdict
+from sklearn.model_selection import cross_val_score, cross_val_predict, GridSearchCV
 sys.path.append('..')
 import made_utils, annotation
 
 DATADIR = os.path.join('..', '..', 'data')
+
+
+def grid_search(X, y, clf, parameters):
+    grid = GridSearchCV(clf, parameters, n_jobs=3, cv=3, verbose=1)
+    print("doing grid search")
+    fit_model = grid.fit(X, y)
+    learned_parameters = fit_model.best_params_
+
+    print(learned_parameters)
+
+    return learned_parameters
+
+
+def correct_preds_by_edges(relats, y, y_pred):
+
+    EDGE_MAPPINGS = {
+        '<DRUG>--<DOSE>': 'do',
+        '<DRUG>--<INDICATION>':  'reason',
+        '<DRUG>--<FREQUENCY>': 'fr',
+        '<SSLIF>--<SEVERITY>': 'severity_type',
+        '<ADE>--<SEVERITY>': 'severity_type',
+        '<INDICATION>--<SEVERITY>': 'severity_type',
+        '<DRUG>--<ROUTE>': 'manner/route',
+        '<DRUG>--<ADE>': 'adverse',
+        '<DRUG>--<DURATION>': 'du'
+    }
+
+    # Identify possible errors
+    for i in range(len(relats)):
+        if y[i] == y_pred[i]:
+            continue
+
+
+
 
 
 def save_errors(outpath, y, y_pred, feat_dicts, relats, docs):
@@ -28,7 +63,7 @@ def save_errors(outpath, y, y_pred, feat_dicts, relats, docs):
         string += '\n\n-----------------------------------\n\n'
         errors[true_type].append(string)
     for true_type, strings in errors.items():
-        fname = '{}_errors.txt'.format(re.sub('/', '-', true_type))
+        fname = '{}_{}_errors.txt'.format(re.sub('/', '-', true_type), outpath)
         with open(fname, 'w') as f:
             f.write('\n'.join(strings))
         print("Saved {} error examples".format(true_type))

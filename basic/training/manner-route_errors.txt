@@ -1,4 +1,16 @@
 TRUE TYPE: manner/route ------ PRED TYPE: none
+10_1045
+'oxycodone':'p.o.', Drug:Route, type=manner/route
+
+CONTEXT STRING: start 500 mg daily vancomycin and 25 mg <MANNER/ROUTE><ROUTE>p.o.</ROUTE>  q.i.d. <DRUG>oxycodone</DRUG></MANNER/ROUTE>  40 mg on --- Date ---, --- Date ---, --
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<.>': 1, 'grams_between:<OOV>': 1, 'grams_before:<mg>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> mg>': 1, 'grams_after:<mg>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<<NUMBER> mg>': 1, 'tags_between:<nn>': 1, 'tags_between:<.>': 1, 'tags_between:<. nn>': 1, 'tags_before:<nn>': 1, 'tags_before:<cd>': 1, 'tags_before:<cd nn>': 1, 'tags_after:<nn>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd nn>': 1, 'same_sentence': 0, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 10_508
 'omeprazole':'IV', Drug:Route, type=manner/route
 
@@ -6,6 +18,18 @@ CONTEXT STRING: GI prophylaxis, the patient was kept on <MANNER/ROUTE><DRUG>omep
 
 FEATURE DICTIONARY: 
 {'num_tokens_between': 15, 'grams_between:<patient>': 1, 'grams_between:<mg p.o>': 1, 'grams_between:<patient was>': 1, 'grams_between:<patient the was>': 1, 'grams_between:<mg>': 1, 'grams_between:<patient the>': 1, 'grams_between:<, patient the>': 1, 'grams_between:<OOV>': 1, 'grams_between:<. daily>': 1, 'grams_between:<,>': 1, 'grams_between:<when>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<able>': 1, 'grams_between:<, the>': 1, 'grams_between:<the>': 1, 'grams_between:<. daily p.o>': 1, 'grams_between:<.>': 1, 'grams_between:<able to>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<not>': 1, 'grams_between:<. p.o>': 1, 'grams_between:<. when>': 1, 'grams_between:<was>': 1, 'grams_between:<. . daily>': 1, 'grams_between:<. mg p.o>': 1, 'grams_between:<<NUMBER> mg p.o>': 1, 'grams_between:<p.o>': 1, 'grams_between:<not was>': 1, 'grams_between:<to>': 1, 'grams_between:<tolerate>': 1, 'grams_between:<daily>': 1, 'grams_before:<on>': 1, 'grams_before:<OOV>': 1, 'grams_before:<kept>': 1, 'grams_after:<OOV>': 1, 'grams_after:<but>': 1, 'tags_between:<nn>': 1, 'tags_between:<. rb>': 1, 'tags_between:<nn vbd vbn>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<, dt>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<cd nn nn>': 1, 'tags_between:<to vb>': 1, 'tags_between:<nn to vb>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<. wrb>': 1, 'tags_between:<to vbn>': 1, 'tags_between:<OOV>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<. nn nn>': 1, 'tags_between:<. . rb>': 1, 'tags_between:<dt nn vbd>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<, nn vb>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<jj rb to>': 1, 'tags_between:<vbd>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<. nn rb>': 1, 'tags_between:<dt nn wrb>': 1, 'tags_between:<dt wrb>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<wrb>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<jj to>': 1, 'tags_between:<jj rb vbd>': 1, 'tags_between:<nn rb vbd>': 1, 'tags_between:<to vbd vbn>': 1, 'tags_between:<jj to vb>': 1, 'tags_between:<nn vb>': 1, 'tags_between:<to>': 1, 'tags_between:<rb>': 1, 'tags_before:<vbn>': 1, 'tags_before:<in>': 1, 'tags_before:<in vbn>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc rb>': 1, 'tags_after:<rb>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<ROUTE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+10_836
+'LEVOFLOXACIN':'oral', Drug:Route, type=manner/route
+
+CONTEXT STRING:  topical every two hours PRN DRY SKIN  <MANNER/ROUTE><DRUG>LEVOFLOXACIN</DRUG> -levofloxacin- 500 MG = 1 TABLET Oral TABLET DAILY for 30 Days  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY  levothyroxine -Synthroid- 150 m
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 10, 'grams_between:<<NUMBER> tablet>': 1, 'grams_between:<oral tablet>': 1, 'grams_between:<<NUMBER> for>': 1, 'grams_between:<mg>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER> : directions>': 1, 'grams_between:<:>': 1, 'grams_between:<<NUMBER> : tablet>': 1, 'grams_between:<for>': 1, 'grams_between:<daily tablet>': 1, 'grams_between:<<NUMBER> days>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<: directions>': 1, 'grams_between:<daily>': 1, 'grams_between:<tablet>': 1, 'grams_between:<oral>': 1, 'grams_between:<<NUMBER> :>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<directions>': 1, 'grams_between:<<NUMBER> oral tablet>': 1, 'grams_between:<daily for>': 1, 'grams_between:<days>': 1, 'grams_between:<<NUMBER> days for>': 1, 'grams_between:<daily oral tablet>': 1, 'grams_before:<dry>': 1, 'grams_before:<OOV>': 1, 'grams_before:<skin>': 1, 'grams_after:<OOV>': 1, 'grams_after:<levothyroxine>': 1, 'grams_after:<daily>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nnp nnp>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<: cd>': 1, 'tags_between:<nnps>': 1, 'tags_between:<nnp>': 1, 'tags_between:<OOV>': 1, 'tags_between:<nns>': 1, 'tags_between:<:>': 1, 'tags_between:<: nnps>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cd vbd>': 1, 'tags_between:<nnp vbd>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<cd nnp vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<: cd nn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<: cd nnps>': 1, 'tags_between:<in nnp nnp>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<cd in nnp>': 1, 'tags_between:<cd nnp>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<nn nnp>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<DURATION>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
@@ -22,7 +46,7 @@ FEATURE DICTIONARY:
 -----------------------------------
 
 
-TRUE TYPE: manner/route ------ PRED TYPE: none
+TRUE TYPE: manner/route ------ PRED TYPE: do
 10_889
 'Neurontin':'orally', Drug:Route, type=manner/route
 
@@ -30,6 +54,18 @@ CONTEXT STRING: g on Neurontin. I am going to continue <MANNER/ROUTE><DRUG>Neuro
 
 FEATURE DICTIONARY: 
 {'num_tokens_between': 10, 'grams_between:<to>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<and in>': 1, 'grams_between:<OOV>': 1, 'grams_between:<increase will>': 1, 'grams_between:<<NUMBER> to>': 1, 'grams_between:<dose>': 1, 'grams_between:<will>': 1, 'grams_between:<and>': 1, 'grams_between:<the>': 1, 'grams_between:<<NUMBER> mg to>': 1, 'grams_between:<increase>': 1, 'grams_between:<fact>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<dose the>': 1, 'grams_between:<in>': 1, 'grams_between:<fact in>': 1, 'grams_between:<mg>': 1, 'grams_between:<increase the>': 1, 'grams_before:<continue>': 1, 'grams_before:<continue to>': 1, 'grams_before:<to>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<times>': 1, 'grams_after:<<NUMBER> times>': 1, 'tags_between:<nn>': 1, 'tags_between:<md nn vb>': 1, 'tags_between:<cc in nn>': 1, 'tags_between:<in md nn>': 1, 'tags_between:<dt nn vb>': 1, 'tags_between:<cd nn to>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nn>': 1, 'tags_between:<nn to>': 1, 'tags_between:<nns>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd>': 1, 'tags_between:<md>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<in>': 1, 'tags_between:<cd nns to>': 1, 'tags_between:<cd to>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<cc in>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt nn to>': 1, 'tags_between:<md nn>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<to>': 1, 'tags_before:<to>': 1, 'tags_before:<to vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<cd nns>': 1, 'tags_after:<nns>': 1, 'tags_after:<cd>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+12_123
+'MULTIVITAMINS (TAB-A-VITE)':'oral', Drug:Route, type=manner/route
+
+CONTEXT STRING: tablet oral every four hours PRN Pain  <MANNER/ROUTE><DRUG>MULTIVITAMINS (TAB-A-VITE)</DRUG> 1 TABLET = 1 TABLET Oral TABLET DAILY STAT and then Routine for 30 Days  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  DAILY  simvastatin 20 mg Tablet, Order
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 12, 'grams_between:<and>': 1, 'grams_between:<<NUMBER> tablet>': 1, 'grams_between:<oral tablet>': 1, 'grams_between:<<NUMBER> for>': 1, 'grams_between:<OOV>': 1, 'grams_between:<then>': 1, 'grams_between:<<NUMBER> : directions>': 1, 'grams_between:<:>': 1, 'grams_between:<<NUMBER> : tablet>': 1, 'grams_between:<for>': 1, 'grams_between:<daily tablet>': 1, 'grams_between:<<NUMBER> days>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<: directions>': 1, 'grams_between:<daily>': 1, 'grams_between:<and then>': 1, 'grams_between:<tablet>': 1, 'grams_between:<oral>': 1, 'grams_between:<<NUMBER> :>': 1, 'grams_between:<directions>': 1, 'grams_between:<<NUMBER> oral tablet>': 1, 'grams_between:<days>': 1, 'grams_between:<routine>': 1, 'grams_between:<<NUMBER> days for>': 1, 'grams_between:<daily oral tablet>': 1, 'grams_before:<prn>': 1, 'grams_before:<pain>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'grams_after:<daily>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nnp nnp>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<: cd>': 1, 'tags_between:<nnps>': 1, 'tags_between:<nnp>': 1, 'tags_between:<OOV>': 1, 'tags_between:<cc nnp rb>': 1, 'tags_between:<nns>': 1, 'tags_between:<:>': 1, 'tags_between:<: nnps>': 1, 'tags_between:<cc>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<: cd nn>': 1, 'tags_between:<nnp rb>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cc rb>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<: cd nnps>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<in nnp rb>': 1, 'tags_between:<cd in nnp>': 1, 'tags_between:<cc nnp nnp>': 1, 'tags_between:<cd nnp>': 1, 'tags_between:<rb>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<vbd>': 1, 'tags_after:<nnp vbd>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'entities_between:<DOSE>': 1, 'entities_between:<ROUTE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 6, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
@@ -107,6 +143,42 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
+13_851
+'albuterol \nsulfate':'inhaled', Drug:Route, type=manner/route
+
+CONTEXT STRING: .r.n., Colace p.r.n., Combivent p.r.n., <MANNER/ROUTE><DRUG>albuterol \nsulfate</DRUG> p.r.n. <ROUTE>inhaled</ROUTE></MANNER/ROUTE> , Benadryl p.r.n., hydrochlorothiazide 2
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<.>': 1, 'grams_between:<p.r.n>': 1, 'grams_between:<. p.r.n>': 1, 'grams_before:<, p.r.n.>': 1, 'grams_before:<p.r.n.>': 1, 'grams_before:<,>': 1, 'grams_after:<OOV>': 1, 'grams_after:<p.r.n.>': 1, 'tags_between:<nn>': 1, 'tags_between:<.>': 1, 'tags_between:<. nn>': 1, 'tags_before:<nn>': 1, 'tags_before:<, nn>': 1, 'tags_before:<,>': 1, 'tags_after:<nn>': 1, 'tags_after:<nn nnp>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 0, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+14_121
+'Warfarin':'by mouth', Drug:Route, type=manner/route
+
+CONTEXT STRING: d clots.   How do I take warfarin?  <MANNER/ROUTE><DRUG>Warfarin</DRUG> comes as a tablet to take <ROUTE>by mouth</ROUTE></MANNER/ROUTE> . It is usually taken once a day.  You
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<take to>': 1, 'grams_between:<OOV>': 1, 'grams_between:<tablet>': 1, 'grams_between:<take>': 1, 'grams_between:<a>': 1, 'grams_between:<comes>': 1, 'grams_between:<as>': 1, 'grams_between:<to>': 1, 'grams_between:<a as>': 1, 'grams_before:<OOV>': 1, 'grams_before:<?>': 1, 'grams_before:<warfarin>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in vbz>': 1, 'tags_between:<vb>': 1, 'tags_between:<vbz>': 1, 'tags_between:<nn to>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt nn to>': 1, 'tags_between:<in vbz>': 1, 'tags_between:<to vb>': 1, 'tags_between:<in>': 1, 'tags_between:<nn to vb>': 1, 'tags_between:<to>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_before:<nn>': 1, 'tags_before:<.>': 1, 'tags_before:<. nn>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+14_232
+'Zosyn':'IV', Drug:Route, type=manner/route
+
+CONTEXT STRING: cs. The patient has received 4 days of <MANNER/ROUTE><ROUTE>IV</ROUTE> vancomycin and <DRUG>Zosyn</DRUG></MANNER/ROUTE> . The patient's symptoms of shortness o
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<and vancomycin>': 1, 'grams_between:<vancomycin>': 1, 'grams_between:<and>': 1, 'grams_before:<days>': 1, 'grams_before:<of>': 1, 'grams_before:<days of>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<cc>': 1, 'tags_before:<in>': 1, 'tags_before:<nns>': 1, 'tags_before:<in nns>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 14_298
 'vancomycin':'IV', Drug:Route, type=manner/route
 
@@ -119,6 +191,42 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
+14_780
+'Zosyn':'IV', Drug:Route, type=manner/route
+
+CONTEXT STRING: R for further management. He was given <MANNER/ROUTE><ROUTE>IV</ROUTE> vancomycin  and <DRUG>Zosyn</DRUG></MANNER/ROUTE>  at ER and was transferred up to the flo
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<and vancomycin>': 1, 'grams_between:<vancomycin>': 1, 'grams_between:<and>': 1, 'grams_before:<given>': 1, 'grams_before:<given was>': 1, 'grams_before:<was>': 1, 'grams_after:<OOV>': 1, 'grams_after:<er>': 1, 'grams_after:<at>': 1, 'tags_between:<nn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<cc>': 1, 'tags_before:<vbd>': 1, 'tags_before:<vbn>': 1, 'tags_before:<vbd vbn>': 1, 'tags_after:<in nnp>': 1, 'tags_after:<in>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+14_827
+'metronidazole':'p.o.', Drug:Route, type=manner/route
+
+CONTEXT STRING:  hours,  vancomycin 750 mg, 1 dose and <MANNER/ROUTE><DRUG>metronidazole</DRUG> 500 mg 3 times daily <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  Other  medications include calcitriol
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> mg times>': 1, 'grams_between:<daily>': 1, 'grams_between:<times>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> times>': 1, 'grams_between:<<NUMBER> daily times>': 1, 'grams_between:<<NUMBER> <NUMBER> mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<daily times>': 1, 'grams_before:<OOV>': 1, 'grams_before:<dose>': 1, 'grams_before:<and>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd cd nn>': 1, 'tags_between:<cd jj nns>': 1, 'tags_between:<nns>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nns>': 1, 'tags_before:<nn>': 1, 'tags_before:<cc nn>': 1, 'tags_before:<cc>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+16_35
+'prednisone':'p.o.', Drug:Route, type=manner/route
+
+CONTEXT STRING: t could be poison ivy and had given her <MANNER/ROUTE><DRUG>prednisone</DRUG> b.i.d. <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  x5 days.   HISTORY OF PRESENT ILLNES
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<.>': 1, 'grams_between:<b.i.d>': 1, 'grams_between:<. b.i.d>': 1, 'grams_before:<given>': 1, 'grams_before:<given her>': 1, 'grams_before:<her>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<.>': 1, 'tags_between:<. nn>': 1, 'tags_before:<vbn>': 1, 'tags_before:<prp$>': 1, 'tags_before:<prp$ vbn>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 19_196
 'Compazine':'by mouth', Drug:Route, type=manner/route
 
@@ -126,6 +234,18 @@ CONTEXT STRING: he patient is to take 1 tablet daily;  <MANNER/ROUTE><DRUG>Compa
 
 FEATURE DICTIONARY: 
 {'num_tokens_between': 10, 'grams_between:<patient>': 1, 'grams_between:<<NUMBER> mg tablet>': 1, 'grams_between:<mg>': 1, 'grams_between:<patient the>': 1, 'grams_between:<is>': 1, 'grams_between:<, patient the>': 1, 'grams_between:<is patient the>': 1, 'grams_between:<OOV>': 1, 'grams_between:<, mg tablet>': 1, 'grams_between:<,>': 1, 'grams_between:<is to>': 1, 'grams_between:<take to>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> tab>': 1, 'grams_between:<, tablet>': 1, 'grams_between:<, the>': 1, 'grams_between:<tablet>': 1, 'grams_between:<the>': 1, 'grams_between:<take>': 1, 'grams_between:<tab>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<mg tablet>': 1, 'grams_between:<to>': 1, 'grams_between:<is patient>': 1, 'grams_before:<OOV>': 1, 'grams_before:<;>': 1, 'grams_before:<daily>': 1, 'grams_after:<.>': 1, 'grams_after:<q>': 1, 'grams_after:<. q>': 1, 'tags_between:<nn>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<, dt>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cd nn nn>': 1, 'tags_between:<to vb>': 1, 'tags_between:<, nn nn>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<cd vb>': 1, 'tags_between:<vbz>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<cd>': 1, 'tags_between:<cd nn vb>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<nn to vbz>': 1, 'tags_between:<vb>': 1, 'tags_between:<to vb vbz>': 1, 'tags_between:<cd to vb>': 1, 'tags_between:<to vbz>': 1, 'tags_between:<to>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<dt nn vbz>': 1, 'tags_before:<: rb>': 1, 'tags_before:<:>': 1, 'tags_before:<rb>': 1, 'tags_after:<nn>': 1, 'tags_after:<.>': 1, 'tags_after:<. nn>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+19_202
+'ceftazidime':'IV', Drug:Route, type=manner/route
+
+CONTEXT STRING: of fever with reinitiation of his prior <MANNER/ROUTE><ROUTE>IV</ROUTE> regimen  of vancomycin and <DRUG>ceftazidime</DRUG></MANNER/ROUTE> . We think it is reasonable to continue
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<and vancomycin>': 1, 'grams_between:<of>': 1, 'grams_between:<OOV>': 1, 'grams_between:<and>': 1, 'grams_between:<regimen>': 1, 'grams_between:<vancomycin>': 1, 'grams_before:<his>': 1, 'grams_before:<prior>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<cc in nn>': 1, 'tags_between:<in nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<cc>': 1, 'tags_between:<in>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<in nn nns>': 1, 'tags_between:<in nns>': 1, 'tags_before:<prp$>': 1, 'tags_before:<jj>': 1, 'tags_before:<jj prp$>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
@@ -144,12 +264,72 @@ FEATURE DICTIONARY:
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
 19_233
+'Compazine':'G-tube', Drug:Route, type=manner/route
+
+CONTEXT STRING: e; prednisone  10 mg via G-tube daily; <MANNER/ROUTE><DRUG>Compazine</DRUG> 10 mg every 6 hours as needed for nausea via  <ROUTE>G-tube</ROUTE></MANNER/ROUTE> ; posaconazole 200 mg 3 times daily via 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 9, 'grams_between:<for needed>': 1, 'grams_between:<hours>': 1, 'grams_between:<for nausea>': 1, 'grams_between:<as needed>': 1, 'grams_between:<as hours needed>': 1, 'grams_between:<<NUMBER> every mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<via>': 1, 'grams_between:<OOV>': 1, 'grams_between:<for>': 1, 'grams_between:<nausea>': 1, 'grams_between:<as>': 1, 'grams_between:<for nausea needed>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<as hours>': 1, 'grams_between:<as for needed>': 1, 'grams_between:<<NUMBER> as hours>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> every hours>': 1, 'grams_between:<<NUMBER> every>': 1, 'grams_between:<every mg>': 1, 'grams_between:<<NUMBER> hours>': 1, 'grams_between:<needed>': 1, 'grams_between:<every>': 1, 'grams_before:<OOV>': 1, 'grams_before:<;>': 1, 'grams_before:<daily>': 1, 'grams_after:<OOV>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<posaconazole>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd dt>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<in nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<in in vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in in nn>': 1, 'tags_between:<in>': 1, 'tags_between:<cd>': 1, 'tags_between:<cd dt nn>': 1, 'tags_between:<in nns vbn>': 1, 'tags_between:<in nn vbn>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nns>': 1, 'tags_before:<: rb>': 1, 'tags_before:<:>': 1, 'tags_before:<rb>': 1, 'tags_after:<cd jj>': 1, 'tags_after:<jj>': 1, 'tags_after:<cd>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+19_233
+'posaconazole':'G-tube', Drug:Route, type=manner/route
+
+CONTEXT STRING: ours as needed for nausea via  G-tube; <MANNER/ROUTE><DRUG>posaconazole</DRUG> 200 mg 3 times daily via <ROUTE>G-tube</ROUTE></MANNER/ROUTE> ; oxycodone 5 mg/5 mL 5-10  mL via G-tu
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> mg times>': 1, 'grams_between:<daily>': 1, 'grams_between:<OOV>': 1, 'grams_between:<times>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> times>': 1, 'grams_between:<<NUMBER> daily times>': 1, 'grams_between:<<NUMBER> <NUMBER> mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<via>': 1, 'grams_between:<daily times>': 1, 'grams_before:<OOV>': 1, 'grams_before:<;>': 1, 'grams_before:<g-tube>': 1, 'grams_after:<OOV>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<oxycod<NUMBER>>': 1, 'tags_between:<nn>': 1, 'tags_between:<in jj nns>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd cd nn>': 1, 'tags_between:<cd jj nns>': 1, 'tags_between:<in jj>': 1, 'tags_between:<nns>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nns>': 1, 'tags_before:<: nnp>': 1, 'tags_before:<:>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cd>': 1, 'tags_after:<cd cd>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+19_233
+'ceftaz':'IV', Drug:Route, type=manner/route
+
+CONTEXT STRING: btained and the  patient was placed on <MANNER/ROUTE><ROUTE>IV</ROUTE> antibiotics to include <DRUG>ceftaz</DRUG></MANNER/ROUTE> , vanco and Flagyl.  Antibiotics were t
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 3, 'grams_between:<OOV>': 1, 'grams_between:<antibiotics>': 1, 'grams_between:<to>': 1, 'grams_between:<include>': 1, 'grams_before:<on>': 1, 'grams_before:<placed>': 1, 'grams_before:<on placed>': 1, 'grams_after:<OOV>': 1, 'grams_after:<and>': 1, 'tags_between:<vb>': 1, 'tags_between:<nns>': 1, 'tags_between:<nns to>': 1, 'tags_between:<to vb>': 1, 'tags_between:<to>': 1, 'tags_between:<nns to vb>': 1, 'tags_before:<vbn>': 1, 'tags_before:<in>': 1, 'tags_before:<in vbn>': 1, 'tags_after:<nn>': 1, 'tags_after:<cc nn>': 1, 'tags_after:<cc>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+19_233
 'vanco':'IV', Drug:Route, type=manner/route
 
 CONTEXT STRING: btained and the  patient was placed on <MANNER/ROUTE><ROUTE>IV</ROUTE> antibiotics to include ceftaz, <DRUG>vanco</DRUG></MANNER/ROUTE>  and Flagyl.  Antibiotics were then cha
 
 FEATURE DICTIONARY: 
 {'num_tokens_between': 5, 'grams_between:<to>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<include>': 1, 'grams_between:<antibiotics>': 1, 'grams_before:<on>': 1, 'grams_before:<placed>': 1, 'grams_before:<on placed>': 1, 'grams_after:<OOV>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<vb>': 1, 'tags_between:<, nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<nn vb>': 1, 'tags_between:<nns to>': 1, 'tags_between:<to vb>': 1, 'tags_between:<nn to vb>': 1, 'tags_between:<, nn vb>': 1, 'tags_between:<to>': 1, 'tags_between:<nns to vb>': 1, 'tags_before:<vbn>': 1, 'tags_before:<in>': 1, 'tags_before:<in vbn>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc nnp>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+19_272
+'BEAM':'p.o.', Drug:Route, type=manner/route
+
+CONTEXT STRING: gous stem cell  transplantation with a <MANNER/ROUTE><DRUG>BEAM</DRUG> conditioning regimen. This included carmustine,  etoposide, cytarabine and melphalan chemotherapy prior to stem cell  transplantation. He was also started on prophylactic medication of acyclovir  400 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  t.i.d. He tolerated the conditioning r
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 24, 'grams_between:<. he>': 1, 'grams_between:<prior to>': 1, 'grams_between:<cell>': 1, 'grams_between:<cell stem>': 1, 'grams_between:<and>': 1, 'grams_between:<regimen>': 1, 'grams_between:<on prophylactic>': 1, 'grams_between:<<NUMBER> acyclovir>': 1, 'grams_between:<stem>': 1, 'grams_between:<mg>': 1, 'grams_between:<also he was>': 1, 'grams_between:<he>': 1, 'grams_between:<medication>': 1, 'grams_between:<chemotherapy>': 1, 'grams_between:<also>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<prophylactic>': 1, 'grams_between:<on started>': 1, 'grams_between:<acyclovir>': 1, 'grams_between:<. he was>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<started>': 1, 'grams_between:<prior>': 1, 'grams_between:<transplantation>': 1, 'grams_between:<.>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<included>': 1, 'grams_between:<also was>': 1, 'grams_between:<. this>': 1, 'grams_between:<this>': 1, 'grams_between:<he was>': 1, 'grams_between:<. regimen>': 1, 'grams_between:<was>': 1, 'grams_between:<<NUMBER> acyclovir mg>': 1, 'grams_between:<on>': 1, 'grams_between:<to>': 1, 'grams_before:<a>': 1, 'grams_before:<with>': 1, 'grams_before:<a with>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd jj nn>': 1, 'tags_between:<vbp>': 1, 'tags_between:<nn nns>': 1, 'tags_between:<rb vbd vbn>': 1, 'tags_between:<jj>': 1, 'tags_between:<. dt>': 1, 'tags_between:<nn vbp>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<to vb>': 1, 'tags_between:<nn to vb>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<nn rb vbp>': 1, 'tags_between:<dt>': 1, 'tags_between:<. nn nns>': 1, 'tags_between:<, , rb>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<dt vbd>': 1, 'tags_between:<in jj vbn>': 1, 'tags_between:<OOV>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<, nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<cc nn vbp>': 1, 'tags_between:<. nn nn>': 1, 'tags_between:<cc>': 1, 'tags_between:<dt nn vbd>': 1, 'tags_between:<cd in jj>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<. dt vbd>': 1, 'tags_between:<rb to>': 1, 'tags_between:<rb vbp>': 1, 'tags_between:<nn nn vb>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. nns>': 1, 'tags_between:<. prp>': 1, 'tags_between:<rb vbn>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<rb to vb>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<in>': 1, 'tags_between:<in rb vbn>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<cc nn nn>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<vb>': 1, 'tags_between:<nn vb>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<prp rb vbd>': 1, 'tags_between:<, rb>': 1, 'tags_between:<. dt nns>': 1, 'tags_between:<, nn vbd>': 1, 'tags_between:<to>': 1, 'tags_between:<, cc nn>': 1, 'tags_between:<, nn rb>': 1, 'tags_between:<rb>': 1, 'tags_before:<dt in>': 1, 'tags_before:<in>': 1, 'tags_before:<dt>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DRUG>': 1, 'entities_between:<INDICATION>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 7, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+19_566
+'oral':'oral', Route:Route, type=manner/route
+
+CONTEXT STRING: d after this most recent admission on  <MANNER/ROUTE><ROUTE>oral</ROUTE><ROUTE>oral</ROUTE></MANNER/ROUTE>  antibiotics and did not improve so at t
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<oral>': 1, 'grams_before:<on>': 1, 'grams_before:<admission on>': 1, 'grams_before:<admission>': 1, 'grams_after:<OOV>': 1, 'grams_after:<antibiotics>': 1, 'grams_after:<and>': 1, 'tags_between:<jj>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc nns>': 1, 'tags_after:<nns>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<ROUTE>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<ROUTE><=><ROUTE>'}
 
 -----------------------------------
 
@@ -167,6 +347,18 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
+1_1016
+'aspirin':'oral', Drug:Route, type=manner/route
+
+CONTEXT STRING:  Directions: 2 each transdermal DAILY  <MANNER/ROUTE><DRUG>aspirin</DRUG> -Aspirin Low Dose- 81 mg Tablet, Delayed Release -E.C.-, Ordered By: --- Name --- --- Name ---  Directions: 1 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  daily  morphine 60 mg Tablet Extended 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 14, 'grams_between:<- - -->': 1, 'grams_between:<- directions>': 1, 'grams_between:<, ordered>': 1, 'grams_between:<<NUMBER> tablet>': 1, 'grams_between:<->': 1, 'grams_between:<low>': 1, 'grams_between:<by>': 1, 'grams_between:<, by ordered>': 1, 'grams_between:<<NUMBER> mg tablet>': 1, 'grams_between:<mg>': 1, 'grams_between:<- -- -->': 1, 'grams_between:<OOV>': 1, 'grams_between:<, mg tablet>': 1, 'grams_between:<<NUMBER> : directions>': 1, 'grams_between:<,>': 1, 'grams_between:<:>': 1, 'grams_between:<-- name>': 1, 'grams_between:<<NUMBER> : tablet>': 1, 'grams_between:<-->': 1, 'grams_between:<ordered>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<: directions>': 1, 'grams_between:<, tablet>': 1, 'grams_between:<by ordered>': 1, 'grams_between:<tablet>': 1, 'grams_between:<-- : by>': 1, 'grams_between:<name>': 1, 'grams_between:<<NUMBER> :>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<mg tablet>': 1, 'grams_between:<directions>': 1, 'grams_between:<: by ordered>': 1, 'grams_between:<release>': 1, 'grams_between:<- -- name>': 1, 'grams_between:<- -->': 1, 'grams_between:<- : directions>': 1, 'grams_between:<- -- :>': 1, 'grams_between:<-- :>': 1, 'grams_between:<- name>': 1, 'grams_between:<- -- directions>': 1, 'grams_between:<: by>': 1, 'grams_before:<OOV>': 1, 'grams_before:<daily>': 1, 'grams_after:<OOV>': 1, 'grams_after:<morphine>': 1, 'grams_after:<daily>': 1, 'tags_between:<nn>': 1, 'tags_between:<, nn nnp>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<cd jj nnp>': 1, 'tags_between:<: cd>': 1, 'tags_between:<, in vbn>': 1, 'tags_between:<nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<: : nn>': 1, 'tags_between:<jj nnp>': 1, 'tags_between:<: in>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<:>': 1, 'tags_between:<, nnp nnp>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nnp rb>': 1, 'tags_between:<: cd nn>': 1, 'tags_between:<nn nnp>': 1, 'tags_between:<: :>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<: cd nns>': 1, 'tags_between:<: : :>': 1, 'tags_between:<, vbn>': 1, 'tags_between:<vbn>': 1, 'tags_between:<: nns>': 1, 'tags_between:<cd nn nnp>': 1, 'tags_between:<in>': 1, 'tags_between:<: : in>': 1, 'tags_between:<: : nns>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<, nnp vbn>': 1, 'tags_between:<cd nnp>': 1, 'tags_between:<: in vbn>': 1, 'tags_between:<rb>': 1, 'tags_before:<jj nnp>': 1, 'tags_before:<jj>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<jj>': 1, 'tags_after:<jj nn>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 4, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 1_143
 'Rituxan':'infusion', Drug:Route, type=manner/route
 
@@ -174,6 +366,18 @@ CONTEXT STRING: onth.   ADDENDUM: While getting his <MANNER/ROUTE><DRUG>Rituxan<
 
 FEATURE DICTIONARY: 
 {'num_tokens_between': 11, 'grams_between:<patient>': 1, 'grams_between:<a significant>': 1, 'grams_between:<. he>': 1, 'grams_between:<a had>': 1, 'grams_between:<difficulty>': 1, 'grams_between:<a had patient>': 1, 'grams_between:<had patient>': 1, 'grams_between:<had patient the>': 1, 'grams_between:<had>': 1, 'grams_between:<patient the>': 1, 'grams_between:<it>': 1, 'grams_between:<he>': 1, 'grams_between:<, patient the>': 1, 'grams_between:<OOV>': 1, 'grams_between:<significant>': 1, 'grams_between:<. had he>': 1, 'grams_between:<had he>': 1, 'grams_between:<,>': 1, 'grams_between:<. it>': 1, 'grams_between:<, the>': 1, 'grams_between:<the>': 1, 'grams_between:<.>': 1, 'grams_between:<a>': 1, 'grams_between:<. the>': 1, 'grams_before:<getting>': 1, 'grams_before:<OOV>': 1, 'grams_before:<his>': 1, 'grams_after:<OOV>': 1, 'grams_after:<finished>': 1, 'grams_after:<,>': 1, 'tags_between:<nn>': 1, 'tags_between:<, dt nn>': 1, 'tags_between:<nn prp vbg>': 1, 'tags_between:<, dt>': 1, 'tags_between:<jj>': 1, 'tags_between:<. dt>': 1, 'tags_between:<dt>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<dt vbd>': 1, 'tags_between:<. jj nn>': 1, 'tags_between:<prp vbg>': 1, 'tags_between:<,>': 1, 'tags_between:<dt nn vbd>': 1, 'tags_between:<. nn>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<nn vbg>': 1, 'tags_between:<vbg>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. prp>': 1, 'tags_between:<nn prp vbd>': 1, 'tags_between:<nn vbd vbg>': 1, 'tags_between:<. prp vbg>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt jj vbd>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<. dt prp>': 1, 'tags_between:<dt jj nn>': 1, 'tags_before:<vbg>': 1, 'tags_before:<prp$>': 1, 'tags_before:<prp$ vbg>': 1, 'tags_after:<, vbn>': 1, 'tags_after:<vbn>': 1, 'tags_after:<,>': 1, 'same_sentence': 0, 'entities_between:<SEVERITY>': 1, 'entities_between:<ADE>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+1_228
+'pamidronate':'infusion', Drug:Route, type=manner/route
+
+CONTEXT STRING: e and Velcade.  3. I will discontinue <MANNER/ROUTE><DRUG>pamidronate</DRUG> since it should be a 2-year <ROUTE>infusion</ROUTE></MANNER/ROUTE>  and he has clearly been infused much lo
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<it>': 1, 'grams_between:<be>': 1, 'grams_between:<OOV>': 1, 'grams_between:<be should>': 1, 'grams_between:<a>': 1, 'grams_between:<should>': 1, 'grams_between:<a be>': 1, 'grams_between:<since>': 1, 'grams_before:<OOV>': 1, 'grams_before:<will>': 1, 'grams_after:<he>': 1, 'grams_after:<and>': 1, 'grams_after:<and he>': 1, 'tags_between:<dt md vb>': 1, 'tags_between:<md>': 1, 'tags_between:<md prp>': 1, 'tags_between:<vb>': 1, 'tags_between:<dt>': 1, 'tags_between:<jj>': 1, 'tags_between:<in md prp>': 1, 'tags_between:<prp>': 1, 'tags_between:<dt vb>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<in>': 1, 'tags_between:<md vb>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<in prp>': 1, 'tags_between:<dt jj vb>': 1, 'tags_before:<md>': 1, 'tags_before:<md vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<cc>': 1, 'tags_after:<prp>': 1, 'tags_after:<cc prp>': 1, 'same_sentence': 1, 'entities_between:<DURATION>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
@@ -203,13 +407,13 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
-1_583
-'pamidronate':'intravenously', Drug:Route, type=manner/route
+1_476
+'erythropoietin':'injections', Drug:Route, type=manner/route
 
-CONTEXT STRING: ime when I see him.  2. He is due for <MANNER/ROUTE><DRUG>pamidronate</DRUG> in another month. He gets 90 mg <ROUTE>intravenously</ROUTE></MANNER/ROUTE>  every other month.  3. The patient sa
+CONTEXT STRING: sed with him the side effect profile of <MANNER/ROUTE><DRUG>erythropoietin</DRUG> and would start with weekly <ROUTE>injections</ROUTE></MANNER/ROUTE>  with a weekly CBC. He will be treated 
 
 FEATURE DICTIONARY: 
-{'num_tokens_between': 8, 'grams_between:<gets>': 1, 'grams_between:<he>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<. he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<month>': 1, 'grams_between:<. month>': 1, 'grams_between:<.>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<in>': 1, 'grams_between:<mg>': 1, 'grams_between:<another>': 1, 'grams_before:<OOV>': 1, 'grams_before:<for>': 1, 'grams_before:<due>': 1, 'grams_after:<every other>': 1, 'grams_after:<other>': 1, 'grams_after:<every>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd vbz>': 1, 'tags_between:<dt in>': 1, 'tags_between:<. prp>': 1, 'tags_between:<vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<prp vbz>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<cd prp vbz>': 1, 'tags_between:<. nn>': 1, 'tags_between:<in>': 1, 'tags_between:<cd>': 1, 'tags_between:<cd nn vbz>': 1, 'tags_between:<. prp vbz>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<. dt nn>': 1, 'tags_before:<in jj>': 1, 'tags_before:<in>': 1, 'tags_before:<jj>': 1, 'tags_after:<dt jj>': 1, 'tags_after:<jj>': 1, 'tags_after:<dt>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+{'num_tokens_between': 5, 'grams_between:<OOV>': 1, 'grams_between:<and>': 1, 'grams_between:<weekly>': 1, 'grams_between:<with>': 1, 'grams_between:<start>': 1, 'grams_between:<would>': 1, 'grams_before:<OOV>': 1, 'grams_before:<of>': 1, 'grams_before:<profile>': 1, 'grams_after:<a>': 1, 'grams_after:<with>': 1, 'grams_after:<a with>': 1, 'tags_between:<in jj vb>': 1, 'tags_between:<md>': 1, 'tags_between:<cc md vb>': 1, 'tags_between:<vb>': 1, 'tags_between:<in jj>': 1, 'tags_between:<jj>': 1, 'tags_between:<cc>': 1, 'tags_between:<in>': 1, 'tags_between:<md vb>': 1, 'tags_between:<in vb>': 1, 'tags_between:<in md vb>': 1, 'tags_between:<cc md>': 1, 'tags_before:<nn>': 1, 'tags_before:<in nn>': 1, 'tags_before:<in>': 1, 'tags_after:<dt in>': 1, 'tags_after:<in>': 1, 'tags_after:<dt>': 1, 'same_sentence': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
@@ -227,6 +431,78 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
+1_751
+'Decadron':'intravenously', Drug:Route, type=manner/route
+
+CONTEXT STRING: ology/Oncology: The patient remains on <MANNER/ROUTE><DRUG>Decadron</DRUG> for his lymphoma.  The dose has been decreased from 4 mg intravenously every eight hours to 4  mg <ROUTE>intravenously</ROUTE></MANNER/ROUTE>  every twelve hours. The patient has al
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 16, 'grams_between:<hours>': 1, 'grams_between:<from>': 1, 'grams_between:<<NUMBER> mg to>': 1, 'grams_between:<<NUMBER> to>': 1, 'grams_between:<lymphoma>': 1, 'grams_between:<dose>': 1, 'grams_between:<intravenously>': 1, 'grams_between:<been has>': 1, 'grams_between:<mg>': 1, 'grams_between:<decreased>': 1, 'grams_between:<<NUMBER> from>': 1, 'grams_between:<OOV>': 1, 'grams_between:<intravenously mg>': 1, 'grams_between:<for>': 1, 'grams_between:<dose the>': 1, 'grams_between:<<NUMBER> intravenously mg>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<. lymphoma the>': 1, 'grams_between:<the>': 1, 'grams_between:<for his>': 1, 'grams_between:<.>': 1, 'grams_between:<been>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<. lymphoma>': 1, 'grams_between:<. his lymphoma>': 1, 'grams_between:<<NUMBER> every hours>': 1, 'grams_between:<has>': 1, 'grams_between:<<NUMBER> every>': 1, 'grams_between:<his lymphoma>': 1, 'grams_between:<<NUMBER> hours>': 1, 'grams_between:<. the>': 1, 'grams_between:<every>': 1, 'grams_between:<his>': 1, 'grams_between:<to>': 1, 'grams_before:<on>': 1, 'grams_before:<remains>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'grams_after:<every>': 1, 'tags_between:<nn>': 1, 'tags_between:<in nn prp$>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<. dt>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<in prp$>': 1, 'tags_between:<vbn vbn vbz>': 1, 'tags_between:<dt>': 1, 'tags_between:<vbz>': 1, 'tags_between:<nns>': 1, 'tags_between:<nns to>': 1, 'tags_between:<cd nns rb>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<cd dt rb>': 1, 'tags_between:<prp$>': 1, 'tags_between:<nns rb>': 1, 'tags_between:<nn prp$>': 1, 'tags_between:<. nn prp$>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<dt rb>': 1, 'tags_between:<vbn vbn>': 1, 'tags_between:<vbn vbz>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<in>': 1, 'tags_between:<cd nns to>': 1, 'tags_between:<cd to>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<. dt nn>': 1, 'tags_between:<cd dt>': 1, 'tags_between:<cd in vbn>': 1, 'tags_between:<dt nns rb>': 1, 'tags_between:<in vbn vbn>': 1, 'tags_between:<rb>': 1, 'tags_between:<to>': 1, 'tags_between:<nn vbn vbz>': 1, 'tags_between:<nn vbz>': 1, 'tags_between:<dt nn vbz>': 1, 'tags_before:<in vbz>': 1, 'tags_before:<in>': 1, 'tags_before:<vbz>': 1, 'tags_after:<nn>': 1, 'tags_after:<dt nn>': 1, 'tags_after:<dt>': 1, 'same_sentence': 0, 'entities_between:<INDICATION>': 1, 'entities_between:<DOSE>': 1, 'entities_between:<ROUTE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 5, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+1_808
+'oral':'oral', Route:Route, type=manner/route
+
+CONTEXT STRING: ed release 24hr  Directions: 1 capsule <MANNER/ROUTE><ROUTE>oral</ROUTE><ROUTE>oral</ROUTE></MANNER/ROUTE>  daily  Extended Instructions: hold if 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<oral>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<capsule>': 1, 'grams_before:<<NUMBER> capsule>': 1, 'grams_after:<OOV>': 1, 'grams_after:<ex<NUMBER>ded>': 1, 'grams_after:<daily>': 1, 'tags_between:<jj>': 1, 'tags_before:<nn>': 1, 'tags_before:<cd>': 1, 'tags_before:<cd nn>': 1, 'tags_after:<rb vbn>': 1, 'tags_after:<vbn>': 1, 'tags_after:<rb>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<ROUTE>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<ROUTE><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+1_808
+'oral':'oral', Route:Route, type=manner/route
+
+CONTEXT STRING: AM 0.5 mg Tablet  Directions: 1 tablet <MANNER/ROUTE><ROUTE>oral</ROUTE><ROUTE>oral</ROUTE></MANNER/ROUTE>  three times a day PRN anxiety  Continu
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<oral>': 1, 'grams_before:<tablet>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> tablet>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<times>': 1, 'grams_after:<<NUMBER> times>': 1, 'tags_between:<jj>': 1, 'tags_before:<nn>': 1, 'tags_before:<cd>': 1, 'tags_before:<cd nn>': 1, 'tags_after:<cd nns>': 1, 'tags_after:<nns>': 1, 'tags_after:<cd>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<ROUTE>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<ROUTE><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+1_808
+'oral':'oral', Route:Route, type=manner/route
+
+CONTEXT STRING:  release -DR/EC-  Directions: 1 tablet <MANNER/ROUTE><ROUTE>oral</ROUTE><ROUTE>oral</ROUTE></MANNER/ROUTE>  daily  Continued By: --- Name --- ---
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<oral>': 1, 'grams_before:<tablet>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> tablet>': 1, 'grams_after:<OOV>': 1, 'grams_after:<continued>': 1, 'grams_after:<daily>': 1, 'tags_between:<jj>': 1, 'tags_before:<nn>': 1, 'tags_before:<cd>': 1, 'tags_before:<cd nn>': 1, 'tags_after:<vbn>': 1, 'tags_after:<jj vbn>': 1, 'tags_after:<jj>': 1, 'same_sentence': 1, 'num_entities_between': 0, 'num_sentences_overlap': 1, 'first_entity_type:<ROUTE>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<ROUTE><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+1_868
+'Procrit':'subcutaneous injections', Drug:Route, type=manner/route
+
+CONTEXT STRING: ocet 2 tablets three times a day, and  <MANNER/ROUTE><DRUG>Procrit</DRUG> -weekly <ROUTE>subcutaneous injections</ROUTE></MANNER/ROUTE> -. He is also still on cycles of  chem
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 1, 'grams_between:<OOV>': 1, 'grams_before:<, and>': 1, 'grams_before:<,>': 1, 'grams_before:<and>': 1, 'grams_after:<.>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nnp>': 1, 'tags_before:<cc>': 1, 'tags_before:<,>': 1, 'tags_before:<, cc>': 1, 'tags_after:<.>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+21_552
+'Citalopram':'p.o.', Drug:Route, type=manner/route
+
+CONTEXT STRING: ith depression. The patient will start <MANNER/ROUTE><DRUG>Citalopram</DRUG> 10 mg p.o. daily x2 weeks, then increase to 20 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  once each day. She will continue loraz
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 11, 'grams_between:<<NUMBER> mg to>': 1, 'grams_between:<<NUMBER> to>': 1, 'grams_between:<mg p.o>': 1, 'grams_between:<mg>': 1, 'grams_between:<OOV>': 1, 'grams_between:<. daily>': 1, 'grams_between:<then>': 1, 'grams_between:<,>': 1, 'grams_between:<, weeks>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<, then>': 1, 'grams_between:<. daily p.o>': 1, 'grams_between:<.>': 1, 'grams_between:<increase>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<x<NUMBER>>': 1, 'grams_between:<. p.o>': 1, 'grams_between:<increase to>': 1, 'grams_between:<. mg p.o>': 1, 'grams_between:<<NUMBER> mg p.o>': 1, 'grams_between:<p.o>': 1, 'grams_between:<weeks>': 1, 'grams_between:<to>': 1, 'grams_between:<daily>': 1, 'grams_before:<start>': 1, 'grams_before:<will>': 1, 'grams_before:<start will>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cd nn nn>': 1, 'tags_between:<, nnp nns>': 1, 'tags_between:<to vb>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<cd nn to>': 1, 'tags_between:<nnp>': 1, 'tags_between:<, nns>': 1, 'tags_between:<. jj nn>': 1, 'tags_between:<jj nnp>': 1, 'tags_between:<nns>': 1, 'tags_between:<,>': 1, 'tags_between:<. nn nn>': 1, 'tags_between:<. nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<nnp nns>': 1, 'tags_between:<. jj nnp>': 1, 'tags_between:<rb vb>': 1, 'tags_between:<rb to vb>': 1, 'tags_between:<, rb vb>': 1, 'tags_between:<.>': 1, 'tags_between:<cd to>': 1, 'tags_between:<jj nnp nns>': 1, 'tags_between:<vb>': 1, 'tags_between:<, nns rb>': 1, 'tags_between:<. jj>': 1, 'tags_between:<, rb>': 1, 'tags_between:<cd to vb>': 1, 'tags_between:<to>': 1, 'tags_between:<rb>': 1, 'tags_before:<md>': 1, 'tags_before:<md vb>': 1, 'tags_before:<vb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<ROUTE>': 1, 'entities_between:<FREQUENCY>': 1, 'entities_between:<DURATION>': 1, 'num_entities_between': 5, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 3_405
 'Neupogen':'subcutaneous injection', Drug:Route, type=manner/route
 
@@ -234,6 +510,18 @@ CONTEXT STRING: ry  low ANC. Patient was started with <MANNER/ROUTE><DRUG>Neupog
 
 FEATURE DICTIONARY: 
 {'num_tokens_between': 11, 'grams_between:<kg>': 1, 'grams_between:<<NUMBER> mcg>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> kg>': 1, 'grams_between:<OOV>': 1, 'grams_between:<body>': 1, 'grams_between:<,>': 1, 'grams_between:<, which>': 1, 'grams_between:<w<NUMBER>>': 1, 'grams_between:<, w<NUMBER>>': 1, 'grams_between:<an>': 1, 'grams_between:<an for>': 1, 'grams_between:<for>': 1, 'grams_between:<which>': 1, 'grams_between:<mcg>': 1, 'grams_between:<daily>': 1, 'grams_before:<OOV>': 1, 'grams_before:<started>': 1, 'grams_before:<with>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<nn nn nnp>': 1, 'tags_between:<, wdt>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<jj rb>': 1, 'tags_between:<cd jj rb>': 1, 'tags_between:<cd dt in>': 1, 'tags_between:<, nn nn>': 1, 'tags_between:<nn nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<vbz>': 1, 'tags_between:<in nn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<wdt>': 1, 'tags_between:<,>': 1, 'tags_between:<cd>': 1, 'tags_between:<, nn wdt>': 1, 'tags_between:<cd vbz>': 1, 'tags_between:<, vbz wdt>': 1, 'tags_between:<nn nnp>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<cd nn nnp>': 1, 'tags_between:<in>': 1, 'tags_between:<cd jj vbz>': 1, 'tags_between:<cd dt nnp>': 1, 'tags_between:<cd dt>': 1, 'tags_between:<dt in>': 1, 'tags_between:<vbz wdt>': 1, 'tags_between:<cd vbz wdt>': 1, 'tags_between:<cd nnp>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<vbn>': 1, 'tags_before:<in>': 1, 'tags_before:<in vbn>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+5_207
+'Azithromycin':'PO', Drug:Route, type=manner/route
+
+CONTEXT STRING: d from hospital on --- Date ---, now on <MANNER/ROUTE><ROUTE>PO</ROUTE> antibx -Cipro and <DRUG>Azithromycin</DRUG></MANNER/ROUTE> - for possible pneumonia per daughter. S
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<OOV>': 1, 'grams_between:<and>': 1, 'grams_before:<on>': 1, 'grams_before:<now>': 1, 'grams_before:<now on>': 1, 'grams_after:<possible>': 1, 'grams_after:<OOV>': 1, 'grams_after:<for>': 1, 'tags_between:<jj nnp>': 1, 'tags_between:<jj>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc jj nnp>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<nnp>': 1, 'tags_before:<in rb>': 1, 'tags_before:<in>': 1, 'tags_before:<rb>': 1, 'tags_after:<in jj>': 1, 'tags_after:<in>': 1, 'tags_after:<jj>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
@@ -263,6 +551,18 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
+6_136
+'NEUPOGEN':'injections', Drug:Route, type=manner/route
+
+CONTEXT STRING: RIM-          SuFrSa@BID   <MANNER/ROUTE><DRUG>NEUPOGEN</DRUG>                 300 mcg  SQ                           One Time Per Day  Comment: continue daily <ROUTE>injections</ROUTE></MANNER/ROUTE>  by HHN until      ANC > 3000 post
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 10, 'grams_between:<<NUMBER>>': 1, 'grams_between:<day>': 1, 'grams_between:<<NUMBER> mcg>': 1, 'grams_between:<comment>': 1, 'grams_between:<OOV>': 1, 'grams_between:<: comment>': 1, 'grams_between:<time>': 1, 'grams_between:<:>': 1, 'grams_between:<per>': 1, 'grams_between:<day per>': 1, 'grams_between:<continue>': 1, 'grams_between:<<NUMBER> time>': 1, 'grams_between:<mcg>': 1, 'grams_between:<daily>': 1, 'grams_before:<OOV>': 1, 'grams_before:<bid>': 1, 'grams_after:<OOV>': 1, 'grams_after:<by>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nnp nnp>': 1, 'tags_between:<nn nnp>': 1, 'tags_between:<nnp>': 1, 'tags_between:<vbp>': 1, 'tags_between:<: nnp vbp>': 1, 'tags_between:<jj>': 1, 'tags_between:<:>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cd nn nnp>': 1, 'tags_between:<cd nnp>': 1, 'tags_between:<cd>': 1, 'tags_between:<: jj vbp>': 1, 'tags_between:<: nnp>': 1, 'tags_between:<: nnp nnp>': 1, 'tags_between:<: vbp>': 1, 'tags_between:<jj vbp>': 1, 'tags_before:<nnp nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<in nnp>': 1, 'tags_after:<in>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<ROUTE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 4, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 6_184
 'fluconazole':'p.o.', Drug:Route, type=manner/route
 
@@ -275,13 +575,49 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
-6_189
-'amitriptyline':'p.o.', Drug:Route, type=manner/route
+6_225
+'Methotrexate':'injected', Drug:Route, type=manner/route
 
-CONTEXT STRING:  Psychosocial: --- Name --- remains on <MANNER/ROUTE><DRUG>amitriptyline</DRUG>. He will decrease his dose to 12.5 mg <ROUTE>p.o.</ROUTE></MANNER/ROUTE>  daily. If tolerated well, he will cont
+CONTEXT STRING:  A total of 5 mL of CSF was removed.  <MANNER/ROUTE><DRUG>Methotrexate</DRUG> and hydrocortisone in 10ml of normal saline was slowly  <ROUTE>injected</ROUTE></MANNER/ROUTE>  through the spinal needle with no probl
 
 FEATURE DICTIONARY: 
-{'num_tokens_between': 9, 'grams_between:<he>': 1, 'grams_between:<to>': 1, 'grams_between:<. he>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER>.<NUMBER> mg>': 1, 'grams_between:<dose>': 1, 'grams_between:<will>': 1, 'grams_between:<he will>': 1, 'grams_between:<decrease>': 1, 'grams_between:<.>': 1, 'grams_between:<. he will>': 1, 'grams_between:<<NUMBER>.<NUMBER>>': 1, 'grams_between:<his>': 1, 'grams_between:<mg>': 1, 'grams_between:<<NUMBER>.<NUMBER> to>': 1, 'grams_before:<on>': 1, 'grams_before:<remains>': 1, 'grams_before:<OOV>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<md prp>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<md prp vb>': 1, 'tags_between:<cd nn to>': 1, 'tags_between:<. md prp>': 1, 'tags_between:<nn to>': 1, 'tags_between:<cd>': 1, 'tags_between:<prp$>': 1, 'tags_between:<. prp>': 1, 'tags_between:<nn prp$>': 1, 'tags_between:<to>': 1, 'tags_between:<md>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<prp$ vb>': 1, 'tags_between:<cd to>': 1, 'tags_between:<vb>': 1, 'tags_between:<md prp$ vb>': 1, 'tags_between:<md vb>': 1, 'tags_between:<nn prp$ to>': 1, 'tags_between:<nn prp$ vb>': 1, 'tags_before:<in vbz>': 1, 'tags_before:<in>': 1, 'tags_before:<vbz>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+{'num_tokens_between': 9, 'grams_between:<of>': 1, 'grams_between:<was>': 1, 'grams_between:<OOV>': 1, 'grams_between:<and>': 1, 'grams_between:<hydrocortis<NUMBER>>': 1, 'grams_between:<normal of>': 1, 'grams_between:<normal saline>': 1, 'grams_between:<in>': 1, 'grams_between:<slowly>': 1, 'grams_between:<saline>': 1, 'grams_between:<normal>': 1, 'grams_before:<.>': 1, 'grams_before:<removed>': 1, 'grams_before:<. removed>': 1, 'grams_after:<through>': 1, 'grams_after:<the through>': 1, 'grams_after:<the>': 1, 'tags_between:<nn>': 1, 'tags_between:<cc in nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<cc>': 1, 'tags_between:<cd in jj>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<cd in in>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<vbd>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<in>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<nn rb vbd>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<rb>': 1, 'tags_before:<.>': 1, 'tags_before:<vbn>': 1, 'tags_before:<. vbn>': 1, 'tags_after:<dt in>': 1, 'tags_after:<in>': 1, 'tags_after:<dt>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'entities_between:<DOSE>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_225
+'hydrocortisone':'injected', Drug:Route, type=manner/route
+
+CONTEXT STRING:  of CSF was removed.  Methotrexate and <MANNER/ROUTE><DRUG>hydrocortisone</DRUG> in 10ml of normal saline was slowly  <ROUTE>injected</ROUTE></MANNER/ROUTE>  through the spinal needle with no probl
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 7, 'grams_between:<of>': 1, 'grams_between:<was>': 1, 'grams_between:<OOV>': 1, 'grams_between:<normal of>': 1, 'grams_between:<normal saline>': 1, 'grams_between:<in>': 1, 'grams_between:<slowly>': 1, 'grams_between:<saline>': 1, 'grams_between:<normal>': 1, 'grams_before:<OOV>': 1, 'grams_before:<methotrexate>': 1, 'grams_before:<and>': 1, 'grams_after:<through>': 1, 'grams_after:<the through>': 1, 'grams_after:<the>': 1, 'tags_between:<nn>': 1, 'tags_between:<vbd>': 1, 'tags_between:<in jj nn>': 1, 'tags_between:<nn rb vbd>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<in jj>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd in jj>': 1, 'tags_between:<in>': 1, 'tags_between:<cd>': 1, 'tags_between:<cd in>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<cd in in>': 1, 'tags_between:<rb vbd>': 1, 'tags_between:<rb>': 1, 'tags_before:<cc>': 1, 'tags_before:<cc nnp>': 1, 'tags_before:<nnp>': 1, 'tags_after:<dt in>': 1, 'tags_after:<in>': 1, 'tags_after:<dt>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_247
+'hydrocortisone':'IT', Drug:Route, type=manner/route
+
+CONTEXT STRING:  mg, cytarabine 220 mg over three days, <MANNER/ROUTE><ROUTE>IT</ROUTE> Methotrexate, <DRUG>hydrocortisone</DRUG></MANNER/ROUTE> , cytarabine as triple IT between --- Da
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<OOV>': 1, 'grams_between:<methotrexate>': 1, 'grams_between:<,>': 1, 'grams_before:<days>': 1, 'grams_before:<, days>': 1, 'grams_before:<,>': 1, 'grams_after:<as>': 1, 'grams_after:<OOV>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<,>': 1, 'tags_between:<nnp>': 1, 'tags_before:<,>': 1, 'tags_before:<nns>': 1, 'tags_before:<, nns>': 1, 'tags_after:<nn>': 1, 'tags_after:<in nn>': 1, 'tags_after:<in>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_247
+'cytarabine':'IT', Drug:Route, type=manner/route
+
+CONTEXT STRING:  mg, cytarabine 220 mg over three days, <MANNER/ROUTE><ROUTE>IT</ROUTE> Methotrexate, hydrocortisone, <DRUG>cytarabine</DRUG></MANNER/ROUTE>  as triple IT between --- Date --- and -
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 3, 'grams_between:<OOV>': 1, 'grams_between:<methotrexate>': 1, 'grams_between:<,>': 1, 'grams_between:<hydrocortis<NUMBER>>': 1, 'grams_before:<days>': 1, 'grams_before:<, days>': 1, 'grams_before:<,>': 1, 'grams_after:<as>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, nn nnp>': 1, 'tags_between:<nnp>': 1, 'tags_between:<, nn>': 1, 'tags_between:<, nnp>': 1, 'tags_between:<,>': 1, 'tags_between:<, , nn>': 1, 'tags_before:<,>': 1, 'tags_before:<nns>': 1, 'tags_before:<, nns>': 1, 'tags_after:<nn>': 1, 'tags_after:<in nn>': 1, 'tags_after:<in>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
@@ -299,6 +635,42 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
+6_247
+'methotrexate':'intrathecal', Drug:Route, type=manner/route
+
+CONTEXT STRING: ytoxan and methylprednisone, as well as <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> chemotherapy, <DRUG>methotrexate</DRUG></MANNER/ROUTE> , hydrocortisone and ARA-C. In addition
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 2, 'grams_between:<,>': 1, 'grams_between:<chemotherapy>': 1, 'grams_between:<, chemotherapy>': 1, 'grams_before:<as>': 1, 'grams_before:<well>': 1, 'grams_before:<as well>': 1, 'grams_after:<OOV>': 1, 'grams_after:<hydrocortis<NUMBER>>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_before:<in rb>': 1, 'tags_before:<in>': 1, 'tags_before:<rb>': 1, 'tags_after:<nn>': 1, 'tags_after:<cc nn>': 1, 'tags_after:<cc>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_247
+'hydrocortisone':'intrathecal', Drug:Route, type=manner/route
+
+CONTEXT STRING: ytoxan and methylprednisone, as well as <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> chemotherapy, methotrexate, <DRUG>hydrocortisone</DRUG></MANNER/ROUTE>  and ARA-C. In addition, the regime inc
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 3, 'grams_between:<chemotherapy>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<methotrexate>': 1, 'grams_between:<, chemotherapy>': 1, 'grams_before:<as>': 1, 'grams_before:<well>': 1, 'grams_before:<as well>': 1, 'grams_after:<OOV>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<, nn nn>': 1, 'tags_between:<, , nn>': 1, 'tags_before:<in rb>': 1, 'tags_before:<in>': 1, 'tags_before:<rb>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc nnp>': 1, 'tags_after:<nnp>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_247
+'ARA-C':'intrathecal', Drug:Route, type=manner/route
+
+CONTEXT STRING: ytoxan and methylprednisone, as well as <MANNER/ROUTE><ROUTE>intrathecal</ROUTE> chemotherapy, methotrexate, hydrocortisone and <DRUG>ARA-C</DRUG></MANNER/ROUTE> . In addition, the regime included doxo
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 5, 'grams_between:<chemotherapy>': 1, 'grams_between:<OOV>': 1, 'grams_between:<,>': 1, 'grams_between:<hydrocortis<NUMBER>>': 1, 'grams_between:<and>': 1, 'grams_between:<methotrexate>': 1, 'grams_between:<, chemotherapy>': 1, 'grams_before:<as>': 1, 'grams_before:<well>': 1, 'grams_before:<as well>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<, nn>': 1, 'tags_between:<,>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<, nn nn>': 1, 'tags_between:<, cc nn>': 1, 'tags_between:<, , nn>': 1, 'tags_before:<in rb>': 1, 'tags_before:<in>': 1, 'tags_before:<rb>': 1, 'tags_after:<OOV>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 6_40
 'Percocet':'p.o.', Drug:Route, type=manner/route
 
@@ -311,6 +683,102 @@ FEATURE DICTIONARY:
 
 
 TRUE TYPE: manner/route ------ PRED TYPE: none
+6_735
+'Chemotherapy':'PO', Drug:Route, type=manner/route
+
+CONTEXT STRING:                30 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  -PREDNISONE-                    Twice a Day  Reason for this Medication: <DRUG>Chemotherapy</DRUG></MANNER/ROUTE>   Comment: To be taken PM on Day # 6 --
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 9, 'grams_between:<: medication this>': 1, 'grams_between:<medication>': 1, 'grams_between:<day>': 1, 'grams_between:<a twice>': 1, 'grams_between:<OOV>': 1, 'grams_between:<: medication>': 1, 'grams_between:<:>': 1, 'grams_between:<for reason this>': 1, 'grams_between:<for medication this>': 1, 'grams_between:<a>': 1, 'grams_between:<a day>': 1, 'grams_between:<for>': 1, 'grams_between:<a day twice>': 1, 'grams_between:<reason>': 1, 'grams_between:<for this>': 1, 'grams_between:<twice>': 1, 'grams_between:<for reason>': 1, 'grams_between:<medication this>': 1, 'grams_between:<this>': 1, 'grams_before:<mg>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> mg>': 1, 'grams_after:<: comment>': 1, 'grams_after:<:>': 1, 'grams_after:<comment>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt nnp>': 1, 'tags_between:<in nnp nnp>': 1, 'tags_between:<:>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<: dt nn>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt nnp nnp>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<cd nnp>': 1, 'tags_before:<cd>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<:>': 1, 'tags_after:<: nn>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_735
+'Chemotherapy':'PO', Drug:Route, type=manner/route
+
+CONTEXT STRING:                15 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  -PREDNISONE-                    Twice a Day  Reason for this Medication: <DRUG>Chemotherapy</DRUG></MANNER/ROUTE>   Comment: To be taken AM, PM on Day # 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 9, 'grams_between:<: medication this>': 1, 'grams_between:<medication>': 1, 'grams_between:<day>': 1, 'grams_between:<a twice>': 1, 'grams_between:<OOV>': 1, 'grams_between:<: medication>': 1, 'grams_between:<:>': 1, 'grams_between:<for reason this>': 1, 'grams_between:<for medication this>': 1, 'grams_between:<a>': 1, 'grams_between:<a day>': 1, 'grams_between:<for>': 1, 'grams_between:<a day twice>': 1, 'grams_between:<reason>': 1, 'grams_between:<for this>': 1, 'grams_between:<twice>': 1, 'grams_between:<for reason>': 1, 'grams_between:<medication this>': 1, 'grams_between:<this>': 1, 'grams_before:<mg>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> mg>': 1, 'grams_after:<: comment>': 1, 'grams_after:<:>': 1, 'grams_after:<comment>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<dt nnp>': 1, 'tags_between:<in nnp nnp>': 1, 'tags_between:<:>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<: dt nn>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt nnp nnp>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<cd nnp>': 1, 'tags_before:<cd>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<:>': 1, 'tags_after:<: nn>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_735
+'Chemotherapy':'PO', Drug:Route, type=manner/route
+
+CONTEXT STRING:                15 MG   <MANNER/ROUTE><ROUTE>PO</ROUTE>  -PREDNISONE-                    Every Day  Reason for this Medication: <DRUG>Chemotherapy</DRUG></MANNER/ROUTE>   Comment: To be taken once AM on Day #
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<: medication this>': 1, 'grams_between:<medication>': 1, 'grams_between:<day>': 1, 'grams_between:<OOV>': 1, 'grams_between:<day every>': 1, 'grams_between:<: medication>': 1, 'grams_between:<:>': 1, 'grams_between:<for reason this>': 1, 'grams_between:<for medication this>': 1, 'grams_between:<for>': 1, 'grams_between:<every>': 1, 'grams_between:<reason>': 1, 'grams_between:<for this>': 1, 'grams_between:<for reason>': 1, 'grams_between:<medication this>': 1, 'grams_between:<this>': 1, 'grams_before:<mg>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<<NUMBER> mg>': 1, 'grams_after:<: comment>': 1, 'grams_after:<:>': 1, 'grams_after:<comment>': 1, 'tags_between:<nn>': 1, 'tags_between:<dt in>': 1, 'tags_between:<dt in nnp>': 1, 'tags_between:<: nn>': 1, 'tags_between:<dt>': 1, 'tags_between:<in nnp nnp>': 1, 'tags_between:<:>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<: dt nn>': 1, 'tags_between:<in>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt in nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<cd nnp>': 1, 'tags_before:<cd>': 1, 'tags_before:<nnp>': 1, 'tags_after:<nn>': 1, 'tags_after:<:>': 1, 'tags_after:<: nn>': 1, 'same_sentence': 1, 'entities_between:<DRUG>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+6_736
+'fentanyl':'intravenous', Drug:Route, type=manner/route
+
+CONTEXT STRING: bine 30 mg in 10 mL normal saline- with <MANNER/ROUTE><ROUTE>intravenous</ROUTE> moderate sedation -Versed and <DRUG>fentanyl</DRUG></MANNER/ROUTE> - and local anesthesia 1% lidocaine.  
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 4, 'grams_between:<OOV>': 1, 'grams_between:<moderate>': 1, 'grams_between:<sedation>': 1, 'grams_between:<and>': 1, 'grams_before:<OOV>': 1, 'grams_before:<with>': 1, 'grams_after:<OOV>': 1, 'grams_after:<local>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<vbd>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<jj>': 1, 'tags_between:<cc>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<cc vbd>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<cc nn vbd>': 1, 'tags_before:<in jj>': 1, 'tags_before:<in>': 1, 'tags_before:<jj>': 1, 'tags_after:<cc>': 1, 'tags_after:<cc jj>': 1, 'tags_after:<jj>': 1, 'same_sentence': 1, 'entities_between:<INDICATION>': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 2, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_328
+'cyclophosphamide':'orally', Drug:Route, type=manner/route
+
+CONTEXT STRING: as been tapered slowly. She is also on <MANNER/ROUTE><DRUG>cyclophosphamide</DRUG> 100 mg 3 times a week and 50 mg <ROUTE>orally</ROUTE></MANNER/ROUTE>  4 times a week. She completed 4 cycles
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<a times>': 1, 'grams_between:<a times week>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> mg times>': 1, 'grams_between:<OOV>': 1, 'grams_between:<a week>': 1, 'grams_between:<<NUMBER> a times>': 1, 'grams_between:<times>': 1, 'grams_between:<and>': 1, 'grams_between:<a and week>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> times>': 1, 'grams_between:<week>': 1, 'grams_between:<and week>': 1, 'grams_between:<<NUMBER> <NUMBER> mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<<NUMBER> and mg>': 1, 'grams_between:<<NUMBER> and>': 1, 'grams_before:<on>': 1, 'grams_before:<also>': 1, 'grams_before:<also on>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<times>': 1, 'grams_after:<<NUMBER> times>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd cd nn>': 1, 'tags_between:<dt nn nns>': 1, 'tags_between:<cc dt nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<cd nn nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc cd nn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc cd>': 1, 'tags_between:<dt nns>': 1, 'tags_between:<cc cd nns>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt>': 1, 'tags_before:<in rb>': 1, 'tags_before:<in>': 1, 'tags_before:<rb>': 1, 'tags_after:<cd nns>': 1, 'tags_after:<nns>': 1, 'tags_after:<cd>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_439
+'Cyclophosphamide':'orally', Drug:Route, type=manner/route
+
+CONTEXT STRING: rrently on prednisone 5 mg daily.  2. <MANNER/ROUTE><DRUG>Cyclophosphamide</DRUG> 100 mg 3 times a week and 50 mg <ROUTE>orally</ROUTE></MANNER/ROUTE>  4 times a week.  3. She completed 4 c
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<a times>': 1, 'grams_between:<a times week>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> mg times>': 1, 'grams_between:<OOV>': 1, 'grams_between:<a week>': 1, 'grams_between:<<NUMBER> a times>': 1, 'grams_between:<times>': 1, 'grams_between:<and>': 1, 'grams_between:<a and week>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> times>': 1, 'grams_between:<week>': 1, 'grams_between:<and week>': 1, 'grams_between:<<NUMBER> <NUMBER> mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<<NUMBER> and mg>': 1, 'grams_between:<<NUMBER> and>': 1, 'grams_before:<.>': 1, 'grams_before:<<NUMBER>>': 1, 'grams_before:<. <NUMBER>>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<times>': 1, 'grams_after:<<NUMBER> times>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd cd nn>': 1, 'tags_between:<dt nn nns>': 1, 'tags_between:<cc dt nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<cd nn nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc cd nn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc cd>': 1, 'tags_between:<dt nns>': 1, 'tags_between:<cc cd nns>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt>': 1, 'tags_before:<.>': 1, 'tags_before:<. cd>': 1, 'tags_before:<cd>': 1, 'tags_after:<cd nns>': 1, 'tags_after:<nns>': 1, 'tags_after:<cd>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_470
+'HYDROCODONE 5 MG/APAP 325 MG (VICODIN':'oral', Drug:Route, type=manner/route
+
+CONTEXT STRING: -  Directions: 0.5 tablet oral DAILY  <MANNER/ROUTE><DRUG>HYDROCODONE 5 MG/APAP 325 MG (VICODIN</DRUG> 5 MG/325 MG- 1- 2 TABLET ORAL TABLET Q6HPRN PAIN  Directions: 2 tablet <ROUTE>oral</ROUTE></MANNER/ROUTE>  every six hours PRN PAIN  potassium ch
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 8, 'grams_between:<<NUMBER>>': 1, 'grams_between:<: directions>': 1, 'grams_between:<OOV>': 1, 'grams_between:<tablet>': 1, 'grams_between:<<NUMBER> : directions>': 1, 'grams_between:<:>': 1, 'grams_between:<<NUMBER> tablet>': 1, 'grams_between:<<NUMBER> : tablet>': 1, 'grams_between:<oral tablet>': 1, 'grams_between:<<NUMBER> :>': 1, 'grams_between:<oral>': 1, 'grams_between:<directions>': 1, 'grams_between:<pain>': 1, 'grams_between:<<NUMBER>->': 1, 'grams_between:<<NUMBER> oral tablet>': 1, 'grams_before:<oral>': 1, 'grams_before:<daily>': 1, 'grams_before:<daily oral>': 1, 'grams_after:<every <NUMBER>>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<every>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nnp nnp>': 1, 'tags_between:<: cd nn>': 1, 'tags_between:<jj nnp>': 1, 'tags_between:<jj>': 1, 'tags_between:<:>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<cd jj nnp>': 1, 'tags_between:<: cd>': 1, 'tags_between:<cd nnp>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nnp nnp>': 1, 'tags_between:<: cd nnp>': 1, 'tags_between:<: nnp>': 1, 'tags_between:<: nnp nnp>': 1, 'tags_between:<nnp>': 1, 'tags_before:<jj nnp>': 1, 'tags_before:<jj>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cd dt>': 1, 'tags_after:<cd>': 1, 'tags_after:<dt>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<ROUTE>': 1, 'entities_between:<FREQUENCY>': 1, 'entities_between:<INDICATION>': 1, 'num_entities_between': 7, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_585
+'0.25% Marcaine':'subacromial injection', Drug:Route, type=manner/route
+
+CONTEXT STRING: today.  2. I recommended a trial of a <MANNER/ROUTE><ROUTE>subacromial injection</ROUTE>.   DESCRIPTION OF PROCEDURE: Informed consent was obtained. Under sterile  conditions from a posterior approach, her left subacromial space was  injected with 80 mg of Depo-Medrol and 5 mL of <DRUG>0.25% Marcaine</DRUG></MANNER/ROUTE>  plain. --- Name ---  tolerated this w
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 25, 'grams_between:<of procedure>': 1, 'grams_between:<sterile>': 1, 'grams_between:<from>': 1, 'grams_between:<: of procedure>': 1, 'grams_between:<and>': 1, 'grams_between:<obtained>': 1, 'grams_between:<consent>': 1, 'grams_between:<with>': 1, 'grams_between:<mg>': 1, 'grams_between:<<NUMBER> ml>': 1, 'grams_between:<<NUMBER> and>': 1, 'grams_between:<obtained was>': 1, 'grams_between:<her>': 1, 'grams_between:<OOV>': 1, 'grams_between:<space>': 1, 'grams_between:<under>': 1, 'grams_between:<,>': 1, 'grams_between:<:>': 1, 'grams_between:<procedure>': 1, 'grams_between:<a from>': 1, 'grams_between:<left>': 1, 'grams_between:<description of procedure>': 1, 'grams_between:<her left>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<<NUMBER> ml of>': 1, 'grams_between:<.>': 1, 'grams_between:<informed>': 1, 'grams_between:<a>': 1, 'grams_between:<description>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> mg with>': 1, 'grams_between:<: procedure>': 1, 'grams_between:<. description of>': 1, 'grams_between:<ml>': 1, 'grams_between:<<NUMBER> with>': 1, 'grams_between:<was>': 1, 'grams_between:<<NUMBER> mg of>': 1, 'grams_between:<injected>': 1, 'grams_between:<description of>': 1, 'grams_between:<. description>': 1, 'grams_between:<posterior>': 1, 'grams_between:<mg of>': 1, 'grams_between:<ml of>': 1, 'grams_between:<, her>': 1, 'grams_before:<a>': 1, 'grams_before:<of>': 1, 'grams_before:<a of>': 1, 'grams_after:<.>': 1, 'grams_after:<OOV>': 1, 'tags_between:<nn>': 1, 'tags_between:<nn vbd vbn>': 1, 'tags_between:<in jj nns>': 1, 'tags_between:<jj prp$>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<, nn prp$>': 1, 'tags_between:<: nnp>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<: nnp nnp>': 1, 'tags_between:<, jj prp$>': 1, 'tags_between:<jj jj prp$>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<. in vbn>': 1, 'tags_between:<cd in nn>': 1, 'tags_between:<in nn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<, nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<:>': 1, 'tags_between:<,>': 1, 'tags_between:<jj jj>': 1, 'tags_between:<cc>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<. nnp>': 1, 'tags_between:<in nnp nns>': 1, 'tags_between:<. in>': 1, 'tags_between:<. vbn>': 1, 'tags_between:<prp$>': 1, 'tags_between:<cc nnp>': 1, 'tags_between:<in nns>': 1, 'tags_between:<vbd>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<nn nnp>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<: nn nnp>': 1, 'tags_between:<cc in nnp>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<, jj nn>': 1, 'tags_between:<in>': 1, 'tags_between:<cc cd nn>': 1, 'tags_between:<cc cd>': 1, 'tags_between:<dt in nns>': 1, 'tags_between:<in nnp>': 1, 'tags_between:<jj nns>': 1, 'tags_between:<, prp$>': 1, 'tags_between:<cc cd nnp>': 1, 'tags_between:<dt in>': 1, 'tags_between:<. vbd vbn>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<jj jj nn>': 1, 'tags_between:<cd in vbn>': 1, 'tags_between:<. nnp nnp>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<nn nnp vbd>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<. in jj>': 1, 'tags_before:<dt in>': 1, 'tags_before:<in>': 1, 'tags_before:<dt>': 1, 'tags_after:<nn>': 1, 'tags_after:<.>': 1, 'tags_after:<. nn>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
 7_585
 'anti-inflammatory':'injection', Drug:Route, type=manner/route
 
@@ -318,6 +786,54 @@ CONTEXT STRING: ted exercises course. She has had some <MANNER/ROUTE><DRUG>anti-
 
 FEATURE DICTIONARY: 
 {'num_tokens_between': 7, 'grams_between:<medication>': 1, 'grams_between:<. she>': 1, 'grams_between:<she>': 1, 'grams_between:<based>': 1, 'grams_between:<anterior>': 1, 'grams_between:<OOV>': 1, 'grams_between:<had she>': 1, 'grams_between:<.>': 1, 'grams_between:<an>': 1, 'grams_between:<an had she>': 1, 'grams_between:<had>': 1, 'grams_between:<. had she>': 1, 'grams_between:<an had>': 1, 'grams_between:<. medication>': 1, 'grams_before:<some>': 1, 'grams_before:<had>': 1, 'grams_before:<had some>': 1, 'grams_after:<OOV>': 1, 'grams_after:<a>': 1, 'grams_after:<approximately>': 1, 'tags_between:<nn>': 1, 'tags_between:<vbd>': 1, 'tags_between:<. prp vbd>': 1, 'tags_between:<dt vbd>': 1, 'tags_between:<. prp>': 1, 'tags_between:<dt prp vbd>': 1, 'tags_between:<jj vbn>': 1, 'tags_between:<dt jj vbn>': 1, 'tags_between:<jj>': 1, 'tags_between:<.>': 1, 'tags_between:<prp>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<. nn>': 1, 'tags_between:<prp vbd>': 1, 'tags_between:<dt jj vbd>': 1, 'tags_between:<. nn prp>': 1, 'tags_between:<dt>': 1, 'tags_before:<vbd>': 1, 'tags_before:<dt vbd>': 1, 'tags_before:<dt>': 1, 'tags_after:<dt rb>': 1, 'tags_after:<dt>': 1, 'tags_after:<rb>': 1, 'same_sentence': 0, 'num_entities_between': 0, 'num_sentences_overlap': 2, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_585
+'Depo-Medrol':'subacromial injection', Drug:Route, type=manner/route
+
+CONTEXT STRING: today.  2. I recommended a trial of a <MANNER/ROUTE><ROUTE>subacromial injection</ROUTE>.   DESCRIPTION OF PROCEDURE: Informed consent was obtained. Under sterile  conditions from a posterior approach, her left subacromial space was  injected with 80 mg of <DRUG>Depo-Medrol</DRUG></MANNER/ROUTE>  and 5 mL of 0.25% Marcaine plain. --- 
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 23, 'grams_between:<of procedure>': 1, 'grams_between:<sterile>': 1, 'grams_between:<from>': 1, 'grams_between:<: of procedure>': 1, 'grams_between:<obtained>': 1, 'grams_between:<consent>': 1, 'grams_between:<with>': 1, 'grams_between:<mg>': 1, 'grams_between:<obtained was>': 1, 'grams_between:<her>': 1, 'grams_between:<OOV>': 1, 'grams_between:<space>': 1, 'grams_between:<under>': 1, 'grams_between:<:>': 1, 'grams_between:<,>': 1, 'grams_between:<procedure>': 1, 'grams_between:<left>': 1, 'grams_between:<a from>': 1, 'grams_between:<her left>': 1, 'grams_between:<description of procedure>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<of>': 1, 'grams_between:<.>': 1, 'grams_between:<informed>': 1, 'grams_between:<description>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> mg with>': 1, 'grams_between:<: procedure>': 1, 'grams_between:<. description of>': 1, 'grams_between:<<NUMBER> with>': 1, 'grams_between:<was>': 1, 'grams_between:<<NUMBER> mg of>': 1, 'grams_between:<injected>': 1, 'grams_between:<description of>': 1, 'grams_between:<. description>': 1, 'grams_between:<posterior>': 1, 'grams_between:<mg of>': 1, 'grams_between:<, her>': 1, 'grams_before:<a>': 1, 'grams_before:<of>': 1, 'grams_before:<a of>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<<NUMBER> and>': 1, 'grams_after:<and>': 1, 'tags_between:<nn>': 1, 'tags_between:<nn vbd vbn>': 1, 'tags_between:<in jj nns>': 1, 'tags_between:<jj prp$>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd in nns>': 1, 'tags_between:<in vbn>': 1, 'tags_between:<, nn prp$>': 1, 'tags_between:<: nnp>': 1, 'tags_between:<jj nn vbd>': 1, 'tags_between:<: nnp nnp>': 1, 'tags_between:<, jj prp$>': 1, 'tags_between:<jj jj prp$>': 1, 'tags_between:<dt>': 1, 'tags_between:<nnp>': 1, 'tags_between:<. in vbn>': 1, 'tags_between:<in jj>': 1, 'tags_between:<, nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<:>': 1, 'tags_between:<,>': 1, 'tags_between:<jj jj>': 1, 'tags_between:<nnp nnp>': 1, 'tags_between:<cd in>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<. nnp>': 1, 'tags_between:<. in>': 1, 'tags_between:<. vbn>': 1, 'tags_between:<prp$>': 1, 'tags_between:<in nns>': 1, 'tags_between:<vbd>': 1, 'tags_between:<vbd vbn>': 1, 'tags_between:<nn nnp>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<: nn nnp>': 1, 'tags_between:<.>': 1, 'tags_between:<vbn>': 1, 'tags_between:<dt jj>': 1, 'tags_between:<, jj nn>': 1, 'tags_between:<in>': 1, 'tags_between:<dt in nns>': 1, 'tags_between:<jj nns>': 1, 'tags_between:<, prp$>': 1, 'tags_between:<dt in>': 1, 'tags_between:<. vbd vbn>': 1, 'tags_between:<nn vbd>': 1, 'tags_between:<jj jj nn>': 1, 'tags_between:<cd in vbn>': 1, 'tags_between:<. nnp nnp>': 1, 'tags_between:<nnp nnp nnp>': 1, 'tags_between:<in vbd vbn>': 1, 'tags_between:<nn nnp vbd>': 1, 'tags_between:<dt jj nn>': 1, 'tags_between:<dt in jj>': 1, 'tags_between:<. in jj>': 1, 'tags_before:<dt in>': 1, 'tags_before:<in>': 1, 'tags_before:<dt>': 1, 'tags_after:<cc>': 1, 'tags_after:<cd>': 1, 'tags_after:<cc cd>': 1, 'same_sentence': 0, 'entities_between:<DOSE>': 1, 'num_entities_between': 1, 'num_sentences_overlap': 3, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_683
+'cyclophosphamide':'orally', Drug:Route, type=manner/route
+
+CONTEXT STRING: prednisone 10 mg a day.  2. She is on <MANNER/ROUTE><DRUG>cyclophosphamide</DRUG> 100 mg 3 times a week and 50 mg <ROUTE>orally</ROUTE></MANNER/ROUTE>  4 times a week.  3. She completed 4 c
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<a times>': 1, 'grams_between:<a times week>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> mg times>': 1, 'grams_between:<OOV>': 1, 'grams_between:<a week>': 1, 'grams_between:<<NUMBER> a times>': 1, 'grams_between:<times>': 1, 'grams_between:<and>': 1, 'grams_between:<a and week>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> times>': 1, 'grams_between:<week>': 1, 'grams_between:<and week>': 1, 'grams_between:<<NUMBER> <NUMBER> mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<<NUMBER> and mg>': 1, 'grams_between:<<NUMBER> and>': 1, 'grams_before:<on>': 1, 'grams_before:<is on>': 1, 'grams_before:<is>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<times>': 1, 'grams_after:<<NUMBER> times>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd cd nn>': 1, 'tags_between:<dt nn nns>': 1, 'tags_between:<cc dt nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<cd nn nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc cd nn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc cd>': 1, 'tags_between:<dt nns>': 1, 'tags_between:<cc cd nns>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt>': 1, 'tags_before:<in vbz>': 1, 'tags_before:<in>': 1, 'tags_before:<vbz>': 1, 'tags_after:<cd nns>': 1, 'tags_after:<nns>': 1, 'tags_after:<cd>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_786
+'Cyclophosphamide':'orally', Drug:Route, type=manner/route
+
+CONTEXT STRING: tly on 50 mg of prednisone a day.  B. <MANNER/ROUTE><DRUG>Cyclophosphamide</DRUG> 100 mg 3 times a week and 50 mg <ROUTE>orally</ROUTE></MANNER/ROUTE>  4 times a week.  C. She completed 4 c
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<a times>': 1, 'grams_between:<a times week>': 1, 'grams_between:<<NUMBER>>': 1, 'grams_between:<<NUMBER> mg times>': 1, 'grams_between:<OOV>': 1, 'grams_between:<a week>': 1, 'grams_between:<<NUMBER> a times>': 1, 'grams_between:<times>': 1, 'grams_between:<and>': 1, 'grams_between:<a and week>': 1, 'grams_between:<a>': 1, 'grams_between:<<NUMBER> mg>': 1, 'grams_between:<<NUMBER> times>': 1, 'grams_between:<week>': 1, 'grams_between:<and week>': 1, 'grams_between:<<NUMBER> <NUMBER> mg>': 1, 'grams_between:<mg>': 1, 'grams_between:<<NUMBER> and mg>': 1, 'grams_between:<<NUMBER> and>': 1, 'grams_before:<OOV>': 1, 'grams_before:<b.>': 1, 'grams_after:<<NUMBER>>': 1, 'grams_after:<times>': 1, 'grams_after:<<NUMBER> times>': 1, 'tags_between:<nn>': 1, 'tags_between:<cd nns>': 1, 'tags_between:<cd cd nn>': 1, 'tags_between:<dt nn nns>': 1, 'tags_between:<cc dt nn>': 1, 'tags_between:<nns>': 1, 'tags_between:<cd dt nns>': 1, 'tags_between:<cd nn nns>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cc>': 1, 'tags_between:<cc cd nn>': 1, 'tags_between:<cc nn>': 1, 'tags_between:<cd>': 1, 'tags_between:<cc cd>': 1, 'tags_between:<dt nns>': 1, 'tags_between:<cc cd nns>': 1, 'tags_between:<dt nn>': 1, 'tags_between:<dt>': 1, 'tags_before:<OOV>': 1, 'tags_before:<nnp>': 1, 'tags_after:<cd nns>': 1, 'tags_after:<nns>': 1, 'tags_after:<cd>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<FREQUENCY>': 1, 'num_entities_between': 3, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
+
+-----------------------------------
+
+
+TRUE TYPE: manner/route ------ PRED TYPE: none
+7_903
+'DEXTROSE':'CONTINUOUS INTRAVENOU', Drug:Route, type=manner/route
+
+CONTEXT STRING: ER PROTOCOL INTRAVENOU ---- Date ----  <MANNER/ROUTE><DRUG>DEXTROSE</DRUG> 5%-NACL 0.9% 1,000 ML <ROUTE>CONTINUOUS INTRAVENOU</ROUTE></MANNER/ROUTE>  ---- Date ----     ASSESSMENT   
+
+FEATURE DICTIONARY: 
+{'num_tokens_between': 6, 'grams_between:<<NUMBER>>': 1, 'grams_between:<% <NUMBER>>': 1, 'grams_between:<OOV>': 1, 'grams_between:<<NUMBER>,<NUMBER>>': 1, 'grams_between:<%>': 1, 'grams_between:<<NUMBER>.<NUMBER>>': 1, 'grams_between:<% <NUMBER>.<NUMBER>>': 1, 'grams_between:<ml>': 1, 'grams_before:<-- -->': 1, 'grams_before:<-->': 1, 'grams_after:<-- -->': 1, 'grams_after:<-->': 1, 'tags_between:<nn>': 1, 'tags_between:<cd cd nn>': 1, 'tags_between:<cd jj nn>': 1, 'tags_between:<jj>': 1, 'tags_between:<cd nn>': 1, 'tags_between:<cd jj>': 1, 'tags_between:<cd nn nnp>': 1, 'tags_between:<cd nnp>': 1, 'tags_between:<cd>': 1, 'tags_between:<jj nn>': 1, 'tags_between:<nnp>': 1, 'tags_before:<: :>': 1, 'tags_before:<:>': 1, 'tags_after:<: :>': 1, 'tags_after:<:>': 1, 'same_sentence': 1, 'entities_between:<DOSE>': 1, 'entities_between:<DRUG>': 1, 'num_entities_between': 4, 'num_sentences_overlap': 1, 'first_entity_type:<DRUG>': 1, 'second_entity_type:<ROUTE>': 1, 'entity_types_concat': '<DRUG><=><ROUTE>'}
 
 -----------------------------------
 
