@@ -124,65 +124,11 @@ def load_legal_edges(thresh=1):
    return [x for x in edges.keys() if edges[x] >= thresh]
 
 
-def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=2):
-    """
-    Takes a single AnnotatedDocument that contains annotations.
-    All annotations that have a legal edge between them
-    and are have an overlapping sentence length <= max_sent_length,
-        ie., they are in either the same sentence or n adjancent sentences,
-    are paired to create RelationAnnotations.
-    Takes an optional list legal_edges that defines which edges should be allowed.
-
-    Returns a list of RelationAnnotations.
-    """
-    true_annotations = doc.get_annotations()
-    true_relations = doc.get_relations()
-    generated_relations = []
-    edges = defaultdict(list)
+def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=3):
+    return made_utils.pair_annotations_in_doc(doc, legal_edges, max_sent_length)
 
 
-    # Map all annotation_1's to annotation_2's
-    # in order to identify all positive examples of relations
-    # If this is testing data, it may not actually have these
-    for relat in true_relations:
-        anno1, anno2 = relat.get_annotations()
-        edges[anno1.id].append(anno2.id)
 
-    for anno1 in true_annotations:
-        for anno2 in true_annotations:
-
-            # Don't pair the same annotation with itself
-            if anno1.id == anno2.id:
-                continue
-
-            if anno1.span == anno2.span:
-                continue
-
-            # Don't generate paris that have already been paried
-            if anno2.id in edges[anno1.id]:
-                continue
-
-            # Exclude illegal relations
-            if len(legal_edges) and (anno1.type, anno2.type) not in legal_edges:
-                continue
-
-            # Check the span between them, make sure it's either 1 or 2
-            start1, end1 = anno1.span
-            start2, end2 = anno2.span
-            sorted_spans = list(sorted([start1, end1, start2, end2]))
-            span = (sorted_spans[0], sorted_spans[-1])
-            overlapping_sentences = doc.get_sentences_overlap_span(span)
-            if len(overlapping_sentences) > max_sent_length:
-                continue
-
-            # If they haven't already been paired, pair them
-            else:
-                generated_relation = annotation.RelationAnnotation.from_null_rel(
-                    anno1, anno2, doc.file_name
-                )
-                generated_relations.append(generated_relation)
-    relations = true_relations + generated_relations
-    return relations
 
 if __name__ == '__main__':
     define_legal_edges()

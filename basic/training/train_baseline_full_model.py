@@ -12,6 +12,7 @@ from sklearn.model_selection import cross_val_score, cross_val_predict
 
 import train_utils
 
+
 DATADIR = os.path.join('..', '..', 'data')
 MODELDIR = os.path.join('..', '..', 'saved_models')
 assert os.path.exists(DATADIR)
@@ -42,11 +43,49 @@ def filter_by_idx(idxs, *args):
     z = [z[i] for i in idxs]
     return zip(*z)
 
+def train_eval_cross_val(X, y):
+    """
+    Trains and validates a model using cross-validation.
+    """
+    clf = RandomForestClassifier(max_depth = None,
+                            max_features = None,
+                            min_samples_leaf = 2,
+                            min_samples_split = 2,
+                            n_estimators = 10,
+                            n_jobs = 3)
+
+    pred = cross_val_predict(clf, X, y)
+    score = classification_report(y, pred)
+    print(score)
+    with open('rf_lex_full_model_cross_val_scores.txt', 'w') as f:
+        f.write(score)
+    return clf
+
+
+def train_model(X, y):
+    """
+    Trains a model using the entire training data.
+    Saves the trained model.
+    No evaluation.
+    """
+    clf = RandomForestClassifier(max_depth = None,
+                            max_features = None,
+                            min_samples_leaf = 2,
+                            min_samples_split = 2,
+                            n_estimators = 10,
+                            n_jobs = 3)
+    clf.fit(X, y)
+    outpath = os.path.join(MODELDIR, 'rf_lex_full_model.pkl')
+    with open(outpath, 'wb') as f:
+        pickle.dump(clf, f)
+    print("Saved full classifier at {}".format(outpath))
+    return clf
+
+
 def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
-        feat_dicts, relats, X, y, _, _ = pickle.load(f)
-    del _
+        feat_dicts, relats, X, y, _, _ = pickle.load(f) #TODO: get rid of the _'s
     #X = X[:10000, :]
     #y = y[:10000]
     print("X: {}".format(X.shape))
@@ -64,6 +103,10 @@ def main():
     print(len(relats))
     y = np.array(y)
     print(y[:10])
+
+    train_eval_cross_val(X, y)
+    train_model(X, y)
+    exit()
 
     #clf = LinearRegression()
     #clf = SVC()

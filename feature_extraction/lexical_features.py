@@ -15,6 +15,7 @@ from sklearn.feature_extraction import DictVectorizer
 
 sys.path.append(os.path.join('..', 'basic'))
 import base_feature
+#from base_feature import BaseFeatureExtractor
 from feature_utils import save_example_feature_dict
 
 DATADIR = os.path.join('..', 'data') # the processed data
@@ -141,9 +142,9 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         # Features for types of the entities
         lex_features['first_entity_type:<{}>'.format(relat.entity_types[0].upper())] = 1
         lex_features['second_entity_type:<{}>'.format(relat.entity_types[1].upper())] = 1
-        lex_features['entity_types_concat'] = '<=>'.join(sorted(['<{}>'.format(et.upper()) for et in
-            (relat.entity_types[0].upper(), relat.entity_types[1].upper())
-        ]))
+        # Feature types for entities, left to right
+        sorted_entities = sorted((relat.annotation_1, relat.annotation_2), key=lambda a: a.span[0])
+        lex_features['entity_types_concat'] = '<=>'.join(['<{}>'.format(a.type.upper()) for a in sorted_entities])
 
 
         return lex_features
@@ -275,9 +276,8 @@ def main():
     # Load in data
     inpath = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
     with open(inpath, 'rb') as f:
-        docs_, relats = pickle.load(f)
+        docs, relats = pickle.load(f)
 
-    docs = {doc.file_name: doc for doc in docs_}
     print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
     #shuffle(relats)
     with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
@@ -309,6 +309,7 @@ def main():
     vectorizer = DictVectorizer(sparse=True, sort=True)
 
     X = vectorizer.fit_transform(feat_dicts)
+    print("Binary data")
     print(X)
     print(X.shape)
     print(len(y))
@@ -323,27 +324,36 @@ def main():
     # Save feature names and scores
     binary_feature_selector.write_feature_scores('binary_lex_feature_scores.txt')
     # Pickle data for training and error analysis
-    binary_data = (feat_dicts, relats, X_bin, y_bin, vectorizer, binary_feature_selector)
+    binary_data = (feat_dicts, relats, X_bin, y_bin)
     outpath = '../data/binary_lexical_data.pkl'
     with open(outpath, 'wb') as f:
         pickle.dump(binary_data, f)
     print("Saved binary data at {}".format(outpath))
+    print(X_bin.shape)
+
 #
     # To avoid running out of memory
     del X_bin
     del y_bin
-    del binary_feature_selector
 
     # Now do the same for non-binary
     full_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)
     X_full = full_feature_selector.fit_transform(X, y)
     print(X_full.shape)
     full_feature_selector.write_feature_scores('full_lex_feature_scores.txt')
-    full_data = (feat_dicts, relats, X_full, y, vectorizer, full_feature_selector)
+    full_data = (feat_dicts, relats, X_full, y, vectorizer, full_feature_selector) # TODO: Change this
     outpath = '../data/full_lexical_data.pkl'
     with open(outpath, 'wb') as f:
         pickle.dump(full_data, f)
     print("Saved non-binary data at {}".format(outpath))
+    print(X_full.shape)
+
+    # Save feature extractor for use in prediction
+    outpath = '../data/lex_feature_extractors.pkl'
+    items = (feature_extractor, binary_feature_selector, full_feature_selector)
+    with open(outpath, 'wb') as f:
+        pickle.dump(items, f)
+    print("Saved LexicalFeatureExtractor, binary feature selector and full feature selector at {} ".format(outpath))
 
 
 

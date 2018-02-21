@@ -54,9 +54,9 @@ class EntityAnnotation(BaseAnnotation):
         super().__init__()
         self.file_name = file_name
         self.id = -1
-        self.from_bioc(bioc_anno)
+        self.from_bioc(bioc_anno, file_name)
 
-    def from_bioc(self, bioc_anno):
+    def from_bioc(self, bioc_anno, file_name):
 
         assert len(bioc_anno.locations) == 1
         loc = bioc_anno.locations[0]
@@ -181,15 +181,16 @@ class RelationAnnotation(BaseAnnotation):
 # this class encapsulates all data for a document which has been annotated_doc_map
 # this includes the original text, its annotations and its tokenized self
 class AnnotatedDocument(object):
-    def __init__(self, file_name, text, annotations={}, relations={}):
+    def __init__(self, file_name, text, annotations=[], relations=[]):
         self.file_name = file_name
         #self.text = text
         self.text = min_preprocess(text)
         self.bioc_annotations = annotations # a dictionary mapping annotation id's to bioc.Annotation objects
         self.bioc_relations = relations # a dictionary mapping relation id's to bioc.Relation objects
 
-        self.relations = [] # A list containg RelationAnnotation objects
-        self.annotations = []
+        self.relations = relations # A list containg RelationAnnotation objects
+        #self.annotations = annotations
+        self.annotations = [EntityAnnotation(a, file_name) for a in annotations]
         self._sentences = {} # Tokenized sentences, {offset: sentence}
         self._tokens = {} # Tokenized words, {offset: token}
         self._tag_seqs = {} # POS tag seentences
@@ -199,7 +200,8 @@ class AnnotatedDocument(object):
         self.tokenized_document = None
 
         self.tokenize_and_tag_document() # Tokenizes and tags
-        self.connect_relation_pairs()
+        if relations != []:
+            self.connect_relation_pairs()
 
 
 
@@ -444,6 +446,49 @@ class AnnotatedDocument(object):
 
     def get_relations(self):
         return self.relations
+
+    def add_relations(self, relations):
+        self.relations += relations
+
+    def to_bioc_xml(self, outdir):
+        outpath = os.path.join(outdir, self.file_name + '.bioc.xml')
+        writer = bioc.BioCWriter()
+        writer.collection = bioc.BioCCollection()
+        collection = writer.collection
+        document = bioc.BioCDocument()
+        document.id = self.file_name
+
+        passage = bioc.BioCPassage()
+        passage.offset = '0'
+        document.add_passage(passage)
+        collection.add_document(document)
+
+        # Add annotations that already have bioc annotations
+        for anno in self.get_annotations():
+            passage.add_annotation(anno.bioc_anno)
+
+        for relat in self.get_relations():
+            # Create new BioCRelation
+            relation = bioc.bioc_relation.BioCRelation()
+            relation.id = relat.id
+            relation.put_infon('type', relat.type)
+
+            # Reference that nodes that contain the annotations
+            node1 = bioc.bioc_node.BioCNode()
+            node1.role = 'annotation 1'
+            node1.refid = relat.annotation_1.id
+            relation.add_node(node1)
+
+            node2 = bioc.bioc_node.BioCNode()
+            node2.role = 'annotation 2'
+            node2.refid = relat.annotation_2.id
+            relation.add_node(node2)
+
+            passage.add_relation(relation)
+
+        writer.write(outpath)
+
+
 
 
 

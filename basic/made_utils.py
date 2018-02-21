@@ -6,6 +6,7 @@ import bioc
 import os, glob, sys
 sys.path.append('.')
 import annotation
+from collections import defaultdict
 #import annotation
 
 def read_made_data(num_docs=-1):
@@ -32,7 +33,7 @@ class TextAndBioCParser(object):
         pass
 
 
-    def read_texts_and_xmls(self, num_docs=-1):
+    def read_texts_and_xmls(self, num_docs=-1, include_relations=True):
         """
         Reads corresponding text and annotation files
         that are located in self.datadir
@@ -48,12 +49,13 @@ class TextAndBioCParser(object):
                 break
             file_name = os.path.basename(file_path)
             text, annotations, relations = self.read_text_and_xml(file_name)
+            if not include_relations:
+                relations=[]
             try:
                 annotated_docs[file_name] = annotation.AnnotatedDocument(file_name, text, annotations, relations,)
             except Exception as e:
                 raise e
                 pass
-
         return annotated_docs
 
     def read_text_and_xml(self, file_name):
@@ -84,9 +86,83 @@ class TextAndBioCParser(object):
         bioc_reader.read()
         doc = bioc_reader.collection.documents[0]
         passage = doc.passages[0]
-        annos = {anno.id: anno for anno in passage.annotations}
-        relations = {relat.id: relat for relat in passage.relations}
+        # NOTE: chaning annos and relats to lists
+        annos = [anno for anno in passage.annotations]
+        relations = [relat for relat in passage.relations]
+        #annos = {anno.id: anno for anno in passage.annotations}
+        #relations = {relat.id: relat for relat in passage.relations}
         return [annos, relations]
         #annos = [EntityAnnotatio]
         return {'annotations': annos,
                'relations': relations}
+
+def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=3):
+    """
+    Takes a single AnnotatedDocument that contains annotations.
+    All annotations that have a legal edge between them
+    and are have an overlapping sentence length <= max_sent_length,
+        ie., they are in either the same sentence or n adjancent sentences,
+    are paired to create RelationAnnotations.
+    Takes an optional list legal_edges that defines which edges should be allowed.
+
+    Returns a list of RelationAnnotations.
+    """
+    if legal_edges == []:
+        legal_edges = [('Drug', 'Route'),
+                         ('Drug', 'Indication'),
+                         ('SSLIF', 'Severity'),
+                         ('Drug', 'Dose'),
+                         ('Drug', 'Frequency'),
+                         ('Drug', 'Duration'),
+                         ('Drug', 'ADE'),
+                         ('ADE', 'Severity'),
+                         ('Indication', 'Severity'),
+                         ('SSLIF', 'ADE')]
+    true_annotations = doc.get_annotations()
+    true_relations = doc.get_relations()
+    generated_relations = []
+    edges = defaultdict(list)
+
+
+    # Map all annotation_1's to annotation_2's
+    # in order to identify all positive examples of relations
+    # If this is testing data, it may not actually have these
+    for relat in true_relations:
+        anno1, anno2 = relat.get_annotations()
+        edges[anno1.id].append(anno2.id)
+
+    for anno1 in true_annotations:
+        for anno2 in true_annotations:
+
+            # Don't pair the same annotation with itself
+            if anno1.id == anno2.id:
+                continue
+
+            if anno1.span == anno2.span:
+                continue
+
+            # Don't generate paris that have already been paried
+            if anno2.id in edges[anno1.id]:
+                continue
+
+            # Exclude illegal relations
+            if len(legal_edges) and (anno1.type, anno2.type) not in legal_edges:
+                continue
+
+            # Check the span between them, make sure it's either 1 or 2
+            start1, end1 = anno1.span
+            start2, end2 = anno2.span
+            sorted_spans = list(sorted([start1, end1, start2, end2]))
+            span = (sorted_spans[0], sorted_spans[-1])
+            overlapping_sentences = doc.get_sentences_overlap_span(span)
+            if len(overlapping_sentences) > max_sent_length:
+                continue
+
+            # If they haven't already been paired, pair them
+            else:
+                generated_relation = annotation.RelationAnnotation.from_null_rel(
+                    anno1, anno2, doc.file_name
+                )
+                generated_relations.append(generated_relation)
+    relations = true_relations + generated_relations
+    return relations

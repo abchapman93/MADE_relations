@@ -1,5 +1,6 @@
 """
 This script will create RelationAnnotation objects out of every possible annotation pair in the data documents.
+Splits all documents in the data directory into a training and validation set (80-20).
 """
 from collections import defaultdict
 import random
@@ -73,8 +74,6 @@ def main():
     doc = docs[list(docs.keys())[0]]
     print("{} docs".format(len(docs)))
 
-
-
     # Load in legal edges
     legal_edges = load_legal_edges()
     # Now generate all possible relation annotations
@@ -102,8 +101,8 @@ def main():
     doc_names = list(docs.keys())
     train_docs_names, val_docs_names = train_test_split(doc_names, test_size=0.2)
 
-    train_docs = [docs[name] for name in train_docs_names]
-    val_docs = [docs[name] for name in val_docs_names]
+    train_docs = {name: docs[name] for name in train_docs_names}
+    val_docs = {name: docs[name] for name in val_docs_names}
     train_relats = []
     val_relats = []
 
@@ -126,12 +125,12 @@ def main():
     with open(val_outpath, 'wb') as f:
         pickle.dump(val_data, f)
 
-    print("Saved {} relations at {} and {} validation relations at {}".format(
-    train_outpath, len(train_relats), val_outpath, len(val_relats)
-    ))
-
-
-    exit()
+    print("Training: {} relations from {} documents at {}".format(
+                    len(train_relats), len(train_docs), train_outpath)
+                    )
+    print("Validation: {} relations from {} documents at {}".format(
+                    len(val_relats), len(val_docs), val_outpath)
+                    )
 
 if __name__ == '__main__':
     outdir = os.path.join('..', '..', 'data')
