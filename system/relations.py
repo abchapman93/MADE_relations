@@ -94,18 +94,18 @@ def main():
 
         feat_dicts = [feature_extractor.create_feature_dict(r, doc)
                         for r in possible_relations]
-        #X_bin = binary_feature_selector.vectorizer.transform(feat_dicts)
-        #X_bin = binary_feature_selector.transform(X_bin)
-        #pred_bin = bin_clf.predict(X_bin)
-        ##pred_bin[1] = 'none' # Debugging purposes
+        X_bin = binary_feature_selector.vectorizer.transform(feat_dicts)
+        X_bin = binary_feature_selector.transform(X_bin)
+        pred_bin = bin_clf.predict(X_bin)
+        #pred_bin[1] = 'none' # Debugging purposes
 #
-        ## Now filter out
-        #yes_idxs = get_non_zero_preds(pred_bin)
-        #possible_relations, feat_dicts = filter_by_idx(yes_idxs,
-        #                                possible_relations, feat_dicts)
-        #if not len(possible_relations):
-        #    continue
-        #X_bin = X_bin[yes_idxs,:]
+        # Now filter out
+        yes_idxs = get_non_zero_preds(pred_bin)
+        possible_relations, feat_dicts = filter_by_idx(yes_idxs,
+                                        possible_relations, feat_dicts)
+        if not len(possible_relations):
+            continue
+        X_bin = X_bin[yes_idxs,:]
 
         # Now predict with the full classifier
         X_full = full_feature_selector.vectorizer.transform(feat_dicts)
