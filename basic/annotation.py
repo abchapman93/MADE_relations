@@ -115,6 +115,13 @@ class RelationAnnotation(BaseAnnotation):
         self.annotation_2 = anno2
         return self
 
+    @property
+    def nodes(self):
+        """
+        Returns the original BioC nodes in this relation
+        """
+        return self.annotation_1.bioc_anno, self.annotation_2.bioc_anno
+
         # If bioc_anno1 and bioc_anno2 are None and annotations is not empty,
         # find bioc_anno1 and bioc_anno2 in the list of annotations.
 
@@ -185,11 +192,12 @@ class AnnotatedDocument(object):
         self.file_name = file_name
         #self.text = text
         self.text = min_preprocess(text)
-        self.bioc_annotations = annotations # a dictionary mapping annotation id's to bioc.Annotation objects
-        self.bioc_relations = relations # a dictionary mapping relation id's to bioc.Relation objects
+        self.bioc_annotations = annotations # a list of BioC Annotations
+        self.bioc_relations = relations # a list of BioC relations
 
-        self.relations = relations # A list containg RelationAnnotation objects
-        #self.annotations = annotations
+        self.relations = [] # This will be A list containing RelationAnnotation objects
+
+        # Conver the BioC Annotations into our own EntityAnnotations
         self.annotations = [EntityAnnotation(a, file_name) for a in annotations]
         self._sentences = {} # Tokenized sentences, {offset: sentence}
         self._tokens = {} # Tokenized words, {offset: token}
@@ -200,7 +208,11 @@ class AnnotatedDocument(object):
         self.tokenized_document = None
 
         self.tokenize_and_tag_document() # Tokenizes and tags
+
+        # If we passed in a list of relations,
+        # Add EntityAnnotations to them
         if relations != []:
+            print("Here now")
             self.connect_relation_pairs()
 
 
@@ -401,11 +413,24 @@ class AnnotatedDocument(object):
         For every relation in self.relations, finds the two
         annotations that it connects.
         """
-        for relation_id, relation in self.bioc_relations.items():
-            node1, node2 = relation.nodes
+        # TODO: Having issues with dict and list mappings of annotations
+
+        # Mapping from id #s to BioCAnnotations
+        bioc_mapping = {node.id: node for node in self.bioc_annotations}
+        for relation in self.bioc_relations:
+
+            relation_id = relation.id
+            node1, node2 = relation.nodes #BioCNodes
+            id1 = node1.refid
             # Use add_relation to add the two nodes
-            bioc_annotation_1 = self.bioc_annotations[node1.refid]
-            bioc_annotation_2 = self.bioc_annotations[node2.refid]
+            try:
+                bioc_annotation_1 = bioc_mapping[id1]
+                bioc_annotation_2 = bioc_mapping[node2.refid]
+            except Exception as e:
+                print(type(node1), type(node2))
+                print(dir(node1))
+                raise e
+
             relation_annotation = self.create_relation(relation,
                                     bioc_annotation_1,
                                     bioc_annotation_2, )
