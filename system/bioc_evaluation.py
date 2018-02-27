@@ -166,11 +166,12 @@ def read_word_based_annotations(infile,textfile,prediction_file=False):
     return annotations,annotation_map
 
 
-def generate_match(categories,reference_map,predictions):
+def generate_match(categories,reference_map,predictions, filename=''):
     reference_set={}
     for entry,entry_id in reference_map.items():
         if reference_map[entry] not in reference_set:
             reference_set[entry_id]=entry[0]
+    inv_reference_set = {v: k for (k, v) in reference_set.items()}
 
     true_positives={categ:0 for categ in categories}
     false_positives={categ:0 for categ in categories}
@@ -187,11 +188,19 @@ def generate_match(categories,reference_map,predictions):
         else:
             #This is a false positive
             false_positives[prediction[0]]+=1
+            # NOTE: changing this to save the incorrect result
+            pred_type = prediction[0]
+            offset_1 = prediction[1][1]
+            offset_2 = prediction[2][1]
+
+
 
     #Now counting the total false negatives:
     for key,category in reference_set.items():
         false_negatives[category]+=1
-
+        # NOTE: changing this to save the incorrect result
+        #print(inv_reference_set)
+        #print(inv_reference_set[key])
     return true_positives,false_positives,false_negatives
 
 
@@ -268,19 +277,18 @@ def get_f_scores(reference_dir,prediction_dir,text_dir,suppress_output=False):
         #Removing the last 9 characters ".bioc.xml" from the filename to get the text file.
         _,word_reference_map=read_word_based_annotations(os.path.join(reference_dir,filename),os.path.join(text_dir,filename[:-9]))
         word_predictions,__=read_word_based_annotations(os.path.join(prediction_dir,filename),os.path.join(text_dir,filename[:-9]))
-
-        atp,afp,afn=generate_match(ANNOTATION_TYPE,annotation_map,pred_annotations)
+        atp,afp,afn=generate_match(ANNOTATION_TYPE,annotation_map,pred_annotations, filename)
         annotation_tp={ky:annotation_tp[ky]+atp[ky] for ky in annotation_tp}
         annotation_fp={ky:annotation_fp[ky]+afp[ky] for ky in annotation_fp}
         annotation_fn={ky:annotation_fn[ky]+afn[ky] for ky in annotation_fn}
 
 
-        wtp,wfp,wfn=generate_match(ANNOTATION_TYPE,word_reference_map ,word_predictions)
+        wtp,wfp,wfn=generate_match(ANNOTATION_TYPE,word_reference_map ,word_predictions, filename)
         word_tp={ky:word_tp[ky]+wtp[ky] for ky in word_tp}
         word_fp={ky:word_fp[ky]+wfp[ky] for ky in word_fp}
         word_fn={ky:word_fn[ky]+wfn[ky] for ky in word_fn}
 
-        rtp,rfp,rfn=generate_match(RELATION_TYPE,relation_map,pred_relations)
+        rtp,rfp,rfn=generate_match(RELATION_TYPE,relation_map,pred_relations, filename)
         relation_tp={ky:relation_tp[ky]+rtp[ky] for ky in relation_tp}
         relation_fp={ky:relation_fp[ky]+rfp[ky] for ky in relation_fp}
         relation_fn={ky:relation_fn[ky]+rfn[ky] for ky in relation_fn}

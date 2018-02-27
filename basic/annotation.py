@@ -77,7 +77,7 @@ class RelationAnnotation(BaseAnnotation):
     """
     Takes a bioc.Relation object and two connected bioc.Annotation objects.
     """
-    def __init__(self, bioc_rel, anno1, anno2, file_name, true_relation=True):
+    def __init__(self, bioc_rel, anno1, anno2, file_name, true_relation=True, type='none'):
         super().__init__()
         self.file_name = file_name
         self.id = -1
@@ -89,7 +89,7 @@ class RelationAnnotation(BaseAnnotation):
             self.type = bioc_rel.infons['type']
         else:
             self.id = str(anno1.id) + str(anno2.id)
-            self.type = 'none'
+            self.type = type
 
     @classmethod
     def from_bioc_rel(cls, bioc_rel, anno1, anno2, file_name):
@@ -212,7 +212,6 @@ class AnnotatedDocument(object):
         # If we passed in a list of relations,
         # Add EntityAnnotations to them
         if relations != []:
-            print("Here now")
             self.connect_relation_pairs()
 
 

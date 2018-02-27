@@ -1,4 +1,5 @@
 import os, sys
+import numpy as np
 import pickle
 
 # Import modules from this package
@@ -23,10 +24,10 @@ def read_in_data(datadir):
     Pairs all possible relations as defined in made_utils.pair_annotations_in_doc
     """
     reader = made_utils.TextAndBioCParser(datadir=datadir)
-    docs = reader.read_texts_and_xmls(include_relations=False)
+    docs = reader.read_texts_and_xmls(-1, include_relations=False)
     # Now pair up all possible annotations
     for doc in docs.values():
-        possible_relations = made_utils.pair_annotations_in_doc(doc)
+        possible_relations = made_utils.pair_annotations_in_doc(doc, max_sent_length=3)
         doc.add_relations(possible_relations)
     return docs
 
@@ -55,7 +56,7 @@ def get_non_zero_preds(pred):
     """
     Returns all of the indices where a relation is predicted to be 'any'
     """
-    return [i for i in range(len(pred)) if pred[i] != 'none']
+    return [i for i in range(len(pred)) if pred[i][0] != 'n']
 
 
 def filter_by_idx(idxs, *args):
@@ -85,7 +86,7 @@ def main():
 
     # Now for each document, predict which relations are true
     for i, (file_name, doc) in enumerate(docs.items()):
-        if i % 10 == 0:
+        if i % 10 == 0 and i > 0:
             print("{}/{}".format(i, len(docs)))
         # First, binary clf
         possible_relations = doc.get_relations()
@@ -94,18 +95,27 @@ def main():
 
         feat_dicts = [feature_extractor.create_feature_dict(r, doc)
                         for r in possible_relations]
-        #X_bin = binary_feature_selector.vectorizer.transform(feat_dicts)
-        #X_bin = binary_feature_selector.transform(X_bin)
-        #pred_bin = bin_clf.predict(X_bin)
-        ##pred_bin[1] = 'none' # Debugging purposes
-#
-        ## Now filter out
-        #yes_idxs = get_non_zero_preds(pred_bin)
-        #possible_relations, feat_dicts = filter_by_idx(yes_idxs,
-        #                                possible_relations, feat_dicts)
-        #if not len(possible_relations):
-        #    continue
-        #X_bin = X_bin[yes_idxs,:]
+
+
+        X_bin = binary_feature_selector.vectorizer.transform(feat_dicts)
+        X_bin = binary_feature_selector.transform(X_bin)
+        pred_bin = bin_clf.predict(X_bin)
+
+        # Tried using a lower threshold for binary classifier, but gave a very small bump in recall and hurt precision
+        # [P('any'), P('none')]
+        #pred_bin = np.empty(X_bin.shape[0], dtype=str)
+        #probs_bin = bin_clf.predict_proba(X_bin)[:, 0] # Probability that they are 'any'
+        #pred_bin[probs_bin >= 0.4] = 'any'
+        #pred_bin[probs_bin < 0.4] = 'none'
+        #pred_bin[1] = 'none' # Debugging purposes
+##
+        # Now filter out
+        yes_idxs = get_non_zero_preds(pred_bin)
+        possible_relations, feat_dicts = filter_by_idx(yes_idxs,
+                                        possible_relations, feat_dicts)
+        if not len(possible_relations):
+            continue
+        X_bin = X_bin[yes_idxs,:]
 
         # Now predict with the full classifier
         X_full = full_feature_selector.vectorizer.transform(feat_dicts)
@@ -132,8 +142,8 @@ def main():
     with open('example_output.txt', 'w') as f:
         for i, (file_name, doc) in enumerate(docs.items()):
             f.write('{}\n\n'.format(file_name))
-            #f.write('\n'.join([r.get_example_string(doc) for r in
-            #                    doc.get_relations()]))
+            f.write('\n'.join([r.get_example_string(doc) for r in
+                                doc.get_relations()]))
             for r in doc.get_relations():
                 f.write(str(r) + '\n')
                 f.write('annotation1: {} \t annotation2: {}\n'.format(r.annotation_1.id, r.annotation_2.id))
