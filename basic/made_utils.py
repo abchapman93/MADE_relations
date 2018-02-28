@@ -48,7 +48,14 @@ class TextAndBioCParser(object):
             if i == num_docs:
                 break
             file_name = os.path.basename(file_path)
-            text, annotations, relations = self.read_text_and_xml(file_name)
+            try:
+                text, annotations, relations = self.read_text_and_xml(file_name)
+            except:
+                print("{} failed".format(file_path))
+                raise e
+                num_failed += 1
+                print(num_failed, i+1)
+                continue
             if not include_relations: # If we're just reading in data for evaluation, we don't want any gold standard relations
                 relations=[]
 
