@@ -12,6 +12,8 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score, cross_val_predict, GridSearchCV
 
+from sklearn.utils import shuffle
+
 import train_utils
 
 DATADIR = os.path.join('..', '..', 'data')
@@ -113,7 +115,7 @@ def train_model(X, y):
                             n_estimators = 10,
                             n_jobs = 3)
     clf.fit(X, y)
-    outpath = os.path.join(MODELDIR, 'rf_lex_binary_model.pkl')
+    outpath = os.path.join(MODELDIR, 'rf_binary_baseline_model.pkl')
     with open(outpath, 'wb') as f:
         pickle.dump(clf, f)
     print("Saved at {}".format(outpath))
@@ -124,6 +126,8 @@ def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
         feat_dicts, relats, X, y, = pickle.load(f)
+
+    shuffle(feat_dicts, relats, X ,y)
     #X = X[:10, :]
     #y = y[:10]
     print("X: {}".format(X.shape))
@@ -136,36 +140,7 @@ def main():
 
     train_model(X, y)
 
-
-    #clf = SVC(C = learned_parameters['C'], 'kernel')
-
     exit()
-
-    yes_preds = get_positive_preds(pred, pos='any')
-    with open('bin_yes_preds.pkl', 'wb') as f:
-        pickle.dump(yes_preds, f)
-    print("Saved indices of predicted relations")
-
-    # Save some examples of errors
-    with open(os.path.join(DATADIR, 'annotated_documents.pkl'), 'rb') as f:
-        docs = pickle.load(f)
-    train_utils.save_errors('binary', y, pred, feat_dicts, relats, docs)
-
-    # Save the model
-    # TODO: Do you have to do something special because of cross-validation?
-    model_file = os.path.join(MODELDIR, 'filter_baseline.pkl')
-    with open(model_file, 'wb') as f:
-        pickle.dump(clf, f)
-    print("Saved binary classifier at {}".format(model_file))
-    exit()
-
-    print("Training")
-    clf.fit(X, y)
-    pred = clf.predict(X)
-    pred = [int(p) for p in pred]
-    print(pred)
-    score = classification_report(y, pred)
-    print(score)
 
 
 

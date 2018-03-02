@@ -46,38 +46,59 @@ from dependency import *
 
 
 def main():
-    nlp = spacy.load('en_core_web_sm')
-    # Load in data
+    #nlp = spacy.load('en_core_web_sm')
+    ## Load in data
+    # inpath = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
+    # with open(inpath, 'rb') as f:
+       # docs, relats = pickle.load(f)
+#
+    #print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
+    ##shuffle(relats)
+    #with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
+    #   vocab, pos_vocab = pickle.load(f)
+#
+#
+#
+#
+    # feature_extractor = LexicalFeatureExtractor(context_window=(2, 2),
+                           # ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
+                           # min_vocab_count=20, min_pos_count=20)
+#
+    #feat_dicts = [] # mappings of feature names to values
+    #y = [] # the relation types
+    #for i, relat in enumerate(relats):
+#
+    #   doc = docs[relat.file_name]
+#
+    #   feature_dict = feature_extractor.create_feature_dict(relat, doc)
+    #   # NOTE: Adding dependency and constituent features
+    #   feature_dict.update(create_dep_and_const_features(relat, doc, nlp))
+    #   feat_dicts.append(feature_dict)
+    #   y.append(relat.type)
+    #   if i % 100 == 0 and i > 0:
+    #       print("{}/{}".format(i, len(relats)))
+    #       #break
+
+    ############################################################################
+    # NOTE: This passage can be uncommented out if the process fails in the middle
+    # and you want to pick back up again
+    ############################################################################
     inpath = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
     with open(inpath, 'rb') as f:
-        docs, relats = pickle.load(f)
-
+       docs, relats = pickle.load(f)
+#
     print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
     #shuffle(relats)
     with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
-        vocab, pos_vocab = pickle.load(f)
-
-
-
+      vocab, pos_vocab = pickle.load(f)
 
     feature_extractor = LexicalFeatureExtractor(context_window=(2, 2),
-                            ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
-                            min_vocab_count=20, min_pos_count=20)
+                           ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
+                           min_vocab_count=20, min_pos_count=20)
+    with open('../data/binary_full_data.pkl', 'rb') as f:
+        feat_dicts, relats, X_bin, y_bin = pickle.load(f)
 
-    feat_dicts = [] # mappings of feature names to values
-    y = [] # the relation types
-    for i, relat in enumerate(relats):
-
-        doc = docs[relat.file_name]
-
-        feature_dict = feature_extractor.create_feature_dict(relat, doc)
-        # NOTE: Adding dependency and constituent features
-        feature_dict.update(create_dep_and_const_features(relat, doc, nlp))
-        feat_dicts.append(feature_dict)
-        y.append(relat.type)
-        if i % 100 == 0 and i > 0:
-            print("{}/{}".format(i, len(relats)))
-            #break
+    y = [r.type for r in relats]
 
 
     print(feat_dicts[0])
@@ -90,7 +111,7 @@ def main():
     print(X.shape)
     print(len(y))
 
-    k= 5000
+    k= 1000
 
     ## Now do some feature selection and transformation
     binary_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)
@@ -103,14 +124,19 @@ def main():
     binary_data = (feat_dicts, relats, X_bin, y_bin)
     outpath = '../data/binary_full_data.pkl'
     with open(outpath, 'wb') as f:
-        pickle.dump(binary_data, f)
+       pickle.dump(binary_data, f)
     print("Saved binary data at {}".format(outpath))
     print(X_bin.shape)
+
+    with open('../data/bin_full_feature_extractor.pkl', 'wb') as f:
+        pickle.dump((feature_extractor, binary_feature_selector), f)
 
 #
     # To avoid running out of memory
     del X_bin
     del y_bin
+
+
 
     # Now do the same for non-binary
     full_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)
@@ -125,7 +151,7 @@ def main():
     print(X_full.shape)
 
     # Save feature extractor for use in prediction
-    outpath = '../data/lex_feature_extractors.pkl'
+    outpath = '../data/full_full_feature_extractors.pkl'
     items = (feature_extractor, binary_feature_selector, full_feature_selector)
     with open(outpath, 'wb') as f:
         pickle.dump(items, f)

@@ -9,6 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score, cross_val_predict
+from sklearn.utils import shuffle
 
 import train_utils
 
@@ -30,12 +31,6 @@ LABEL_MAPPING = {'none': 0,
                 'du': 7
                 }
 
-def transform_features(X):
-    with open(os.path.join(MODELDIR, 'full_chi2.pkl'), 'rb') as f:
-        chi2 = pickle.load(f)
-    X = chi2.transform(X)
-    print("New X shape: {}".format(X.shape))
-    return X
 
 def filter_by_idx(idxs, *args):
     arrs = args
@@ -57,7 +52,7 @@ def train_eval_cross_val(X, y):
     pred = cross_val_predict(clf, X, y)
     score = classification_report(y, pred)
     print(score)
-    with open('rf_lex_full_model_cross_val_scores.txt', 'w') as f:
+    with open('rf_full_baseline_model_cross_val_scores.txt', 'w') as f:
         f.write(score)
     return clf
 
@@ -75,7 +70,8 @@ def train_model(X, y):
                             n_estimators = 10,
                             n_jobs = 3)
     clf.fit(X, y)
-    outpath = os.path.join(MODELDIR, 'rf_lex_full_model.pkl')
+    outpath = os.path.join(MODELDIR, 'rf_full_baseline_model.pkl')
+
     with open(outpath, 'wb') as f:
         pickle.dump(clf, f)
     print("Saved full classifier at {}".format(outpath))
@@ -86,6 +82,7 @@ def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
         feat_dicts, relats, X, y, _, _ = pickle.load(f) #TODO: get rid of the _'s
+    shuffle(feat_dicts, relats, X ,y)
     #X = X[:10000, :]
     #y = y[:10000]
     print("X: {}".format(X.shape))
@@ -107,32 +104,6 @@ def main():
     train_eval_cross_val(X, y)
     train_model(X, y)
     exit()
-
-    #clf = LinearRegression()
-    #clf = SVC()
-    clf = RandomForestClassifier(max_depth = None,
-                            max_features = None,
-                            min_samples_leaf = 2,
-                            min_samples_split = 2,
-                            n_estimators = 10,
-                            n_jobs = 3)
-    pred = cross_val_predict(clf, X, y)
-    score = classification_report(y, pred)
-    print(score)
-
-    # Save some examples of errors
-    #with open(os.path.join(DATADIR, 'annotated_documents.pkl'), 'rb') as f:
-    #    docs = pickle.load(f)
-    #train_utils.save_errors('binary_errors.txt', y, pred, feat_dicts, relats, docs)
-
-    # Save the model
-    # TODO: Do you have to do something special because of cross-validation?
-    model_file = os.path.join(MODELDIR, 'full_baseline.pkl')
-    with open(model_file, 'wb') as f:
-        pickle.dump(clf, f)
-    print("Saved non-binary classifier at {}".format(model_file))
-    exit()
-
 
 
 
