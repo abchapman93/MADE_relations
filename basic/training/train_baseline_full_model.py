@@ -93,8 +93,8 @@ def main():
     print(len(feat_dicts))
     print(len(relats))
     # Filter out any examples that the filtering classifier said had no relation
-    with open('bin_yes_preds.pkl', 'rb') as f:
-        idxs = pickle.load(f)
+    #with open('bin_yes_preds.pkl', 'rb') as f:
+    #    idxs = pickle.load(f)
     #X = X[idxs]
     #feat_dicts, relats, y = filter_by_idx(idxs, feat_dicts, relats, y)
     print("X: {}".format(X.shape))
@@ -121,9 +121,9 @@ def main():
     print(score)
 
     # Save some examples of errors
-    with open(os.path.join(DATADIR, 'annotated_documents.pkl'), 'rb') as f:
-        docs = pickle.load(f)
-    train_utils.save_errors('binary_errors.txt', y, pred, feat_dicts, relats, docs)
+    #with open(os.path.join(DATADIR, 'annotated_documents.pkl'), 'rb') as f:
+    #    docs = pickle.load(f)
+    #train_utils.save_errors('binary_errors.txt', y, pred, feat_dicts, relats, docs)
 
     # Save the model
     # TODO: Do you have to do something special because of cross-validation?
@@ -133,21 +133,6 @@ def main():
     print("Saved non-binary classifier at {}".format(model_file))
     exit()
 
-    # Save the predictions
-    outpath = os.path.join(DATADIR, 'filtered_data_lexical.pkl')
-    with open(outpath, 'wb') as f:
-        pickle.dump((X_filter, y_filter), f)
-    print("Saved filtered data at {}".format(outpath))
-    print("{}, {}".format(X_filter.shape, y_filter.shape))
-    exit()
-
-    print("Training")
-    clf.fit(X, y)
-    pred = clf.predict(X)
-    pred = [int(p) for p in pred]
-    print(pred)
-    score = classification_report(y, pred)
-    print(score)
 
 
 

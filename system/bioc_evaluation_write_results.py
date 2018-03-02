@@ -192,6 +192,7 @@ def generate_match(categories,reference_map,predictions, filename=''):
             pred_type = prediction[0]
             offset_1 = prediction[1][1]
             offset_2 = prediction[2][1]
+            f_fp.write('{}\t{}\t{}\t{}\n'.format(filename, pred_type, offset_1, offset_2))
 
 
 
@@ -201,6 +202,7 @@ def generate_match(categories,reference_map,predictions, filename=''):
         # NOTE: changing this to save the incorrect result
         #print(inv_reference_set)
         #print(inv_reference_set[key])
+        f_fn.write('{}\t{}\n'.format(filename, key))
     return true_positives,false_positives,false_negatives
 
 
@@ -307,6 +309,10 @@ def get_f_scores(reference_dir,prediction_dir,text_dir,suppress_output=False):
 
 
 if __name__=="__main__":
+    f_fp = open('saved_false_positives.txt', 'w')
+    f_fp.write('filename\tpred_type\toffset_1\toffset_2\n')
+    f_fn = open('saved_false_negatives.txt', 'w')
+    f_fn.write('filename\tid\n')
     # Usage :
     # For concise output
     # python bioc_evaluation.py annotation_dir prediction_dir text_dir
@@ -321,3 +327,5 @@ if __name__=="__main__":
 
 
     get_f_scores(ANNOTATION_DIR,PREDICTION_DIR,TEXT_DIR)
+    f_fp.close()
+    f_fn.close()

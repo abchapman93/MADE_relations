@@ -100,6 +100,12 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
         lex_features = {}
 
+        # The full string of the entities
+        anno1, anno2 = relat.get_annotations()
+        lex_features['text_in_anno1'] = anno1.text.lower()
+        lex_features['text_in_anno2'] = anno2.text.lower()
+        lex_features['concat_text'] = anno1.text.lower() + ':' + anno2.text.lower()
+
         # Get the number of tokens between
         # NOTE: only unigrams
         lex_features['num_tokens_between'] = len(self.get_grams_between(relat, doc, ngram_window=(1, 1)))
@@ -314,7 +320,7 @@ def main():
     print(X.shape)
     print(len(y))
 
-    k= 100
+    k= 1000
 
     ## Now do some feature selection and transformation
     binary_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)

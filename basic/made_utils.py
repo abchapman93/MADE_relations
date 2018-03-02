@@ -48,9 +48,17 @@ class TextAndBioCParser(object):
             if i == num_docs:
                 break
             file_name = os.path.basename(file_path)
-            text, annotations, relations = self.read_text_and_xml(file_name)
-            if not include_relations:
+            try:
+                text, annotations, relations = self.read_text_and_xml(file_name)
+            except:
+                print("{} failed".format(file_path))
+                raise e
+                num_failed += 1
+                print(num_failed, i+1)
+                continue
+            if not include_relations: # If we're just reading in data for evaluation, we don't want any gold standard relations
                 relations=[]
+
             try:
                 annotated_docs[file_name] = annotation.AnnotatedDocument(file_name, text, annotations, relations,)
             except Exception as e:
@@ -67,7 +75,7 @@ class TextAndBioCParser(object):
 
     def read_text_file(self, file_name):
         """
-        Reads the text in a file_name
+        Reads the text in a n
         """
         fullpath = os.path.join(self.datadir, 'corpus', file_name)
         with open(fullpath) as f:

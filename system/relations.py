@@ -1,5 +1,7 @@
 import os, sys
+import numpy as np
 import pickle
+from collections import defaultdict
 
 # Import modules from this package
 sys.path.append('..')
@@ -23,10 +25,10 @@ def read_in_data(datadir):
     Pairs all possible relations as defined in made_utils.pair_annotations_in_doc
     """
     reader = made_utils.TextAndBioCParser(datadir=datadir)
-    docs = reader.read_texts_and_xmls(include_relations=False)
+    docs = reader.read_texts_and_xmls(-1, include_relations=False)
     # Now pair up all possible annotations
     for doc in docs.values():
-        possible_relations = made_utils.pair_annotations_in_doc(doc)
+        possible_relations = made_utils.pair_annotations_in_doc(doc, max_sent_length=3)
         doc.add_relations(possible_relations)
     return docs
 
@@ -51,11 +53,73 @@ def load_models_and_feature_extractors():
     return bin_clf, full_clf, feature_extractor, binary_feature_selector, full_feature_selector
 
 
+def limit_by_string_concat(possible_relations, pred_full, pred_probs):
+
+    new_pred_full = []
+    concat_strs = []
+
+
+    # Now, let's go through document and prevent any 'duplicate' edges
+    # Where two entities with the exact same text are given the exact same relation
+    # For now, we'll say that the first relation should be considered true
+    doc_cache = {} # This will map prediction types to instances  and probabilities
+
+    for i in range(len(possible_relations)):
+        relat = possible_relations[i]
+        r_pred = pred_full[i]
+        concat = '{}:{}'.format(relat.annotation_1.text, relat.annotation_2.text)
+        concat_strs.append(concat)
+        if r_pred == 'none':
+            new_pred_full.append(r_pred)
+            continue
+        #if r_pred not in ('do', 'du', 'fr', 'manner/route'):
+        #    new_pred_full.append(r_pred)
+        #    continue
+        r_prob = max(pred_probs[i])
+
+        if r_pred not in doc_cache:
+            doc_cache[r_pred] = defaultdict(list)
+
+        if concat in doc_cache[r_pred]: # This means we've already seen an instance like this and need to check the probabilities
+
+            # Check the probabilities
+            to_replace = [] # The indices for values that should be replaced with 'none'
+            for (other_prob, other_idx) in doc_cache[r_pred][concat]:
+                if r_prob > other_prob: # This one is more likely and we should keep it
+                    to_replace.append(other_idx)
+                else: # This one is less likely and we should replace it
+                    r_pred = 'none'
+                    num_replaced += 1
+                    #new_pred_full.append(r_pred)
+
+            # Append the new prediction
+            new_pred_full.append(r_pred)
+            # Replace the ones that are less likely
+            for other_idx in to_replace:
+                num_replaced += 1
+                new_pred_full[other_idx] = 'none'
+
+        else: # This means this is the first exact relation instance
+            new_pred_full.append(r_pred)
+        if r_pred != 'none':
+            doc_cache[r_pred][concat].append((r_prob, i)) # Add to the cache
+
+    #for i in range(len(pred_full)):
+    #    if pred_full[i] != new_pred_full[i]:
+    #        print(pred_full[i], new_pred_full[i])
+
+    print(num_replaced)
+    #if num_replaced:
+    #    for i in range(len(pred_full)):
+    #        print(concat_strs[i], pred_full[i], new_pred_full[i])
+    pred_full = new_pred_full
+
+
 def get_non_zero_preds(pred):
     """
     Returns all of the indices where a relation is predicted to be 'any'
     """
-    return [i for i in range(len(pred)) if pred[i] != 'none']
+    return [i for i in range(len(pred)) if pred[i][0] != 'n']
 
 
 def filter_by_idx(idxs, *args):
@@ -75,8 +139,8 @@ def main():
             docs = pickle.load(f)
     else: # Read in the files directly and pickle them for next time
         docs = read_in_data(datadir)
-        with open('../data/evaluation_annotated_docs.pkl', 'wb') as f:
-            pickle.dump(docs, f)
+        #with open('../data/evaluation_annotated_docs.pkl', 'wb') as f:
+        #    pickle.dump(docs, f)
     print(len(docs))
 
     # Load in the models
@@ -84,28 +148,33 @@ def main():
      binary_feature_selector, full_feature_selector) = load_models_and_feature_extractors()
 
     # Now for each document, predict which relations are true
-    for i, (file_name, doc) in enumerate(docs.items()):
-        if i % 10 == 0:
-            print("{}/{}".format(i, len(docs)))
+    for idx, (file_name, doc) in enumerate(docs.items()):
+        if idx % 10 == 0 and idx > 0:
+            print("{}/{}".format(idx, len(docs)))
         # First, binary clf
         possible_relations = doc.get_relations()
         if not len(possible_relations):
             continue
 
+        relat_offsets = []
+        for r in possible_relations:
+            anno1, anno2 = r.get_annotations()
+            relat_offsets.append((anno1.start_index, anno2.start_index))
+
         feat_dicts = [feature_extractor.create_feature_dict(r, doc)
                         for r in possible_relations]
+
+        # Predict with the binary classifier
         X_bin = binary_feature_selector.vectorizer.transform(feat_dicts)
         X_bin = binary_feature_selector.transform(X_bin)
         pred_bin = bin_clf.predict(X_bin)
-        #pred_bin[1] = 'none' # Debugging purposes
 #
         # Now filter out
         yes_idxs = get_non_zero_preds(pred_bin)
-        possible_relations, feat_dicts = filter_by_idx(yes_idxs,
-                                        possible_relations, feat_dicts)
+        possible_relations, relat_offsets, feat_dicts = filter_by_idx(yes_idxs,
+                                        possible_relations, relat_offsets, feat_dicts)
         if not len(possible_relations):
             continue
-        X_bin = X_bin[yes_idxs,:]
 
         # Now predict with the full classifier
         X_full = full_feature_selector.vectorizer.transform(feat_dicts)
@@ -119,10 +188,10 @@ def main():
         for label, relat in zip(pred_full, possible_relations):
             relat.type = label
         doc.relations = possible_relations
-
     # Now write bioc xmls
     for doc in docs.values():
-        doc.to_bioc_xml('output')
+        doc.to_bioc_xml('output/annotations')
+    print("Saved {} files at {}".format(len(docs), "output/annotations"))
 
         #print(doc.relations)
         #print(doc.get_relations()); exit()
@@ -132,8 +201,8 @@ def main():
     with open('example_output.txt', 'w') as f:
         for i, (file_name, doc) in enumerate(docs.items()):
             f.write('{}\n\n'.format(file_name))
-            #f.write('\n'.join([r.get_example_string(doc) for r in
-            #                    doc.get_relations()]))
+            f.write('\n'.join([r.get_example_string(doc) for r in
+                                doc.get_relations()]))
             for r in doc.get_relations():
                 f.write(str(r) + '\n')
                 f.write('annotation1: {} \t annotation2: {}\n'.format(r.annotation_1.id, r.annotation_2.id))
@@ -144,8 +213,9 @@ def main():
 
 
 if __name__ == '__main__':
-    #datadir = sys.argv[1] #
+    #datadir = sys.argv[1]
     datadir = os.path.join('..', 'data', 'heldout_xmls')
+
     assert os.path.exists(datadir)
     cached = '--cached' in sys.argv
     main()
