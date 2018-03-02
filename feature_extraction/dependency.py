@@ -29,7 +29,6 @@ def get_sents_with_annos(relat, doc, window=(3, 3)):
     anno1, anno2 = relat.get_annotations()
     sorted_entities = list(sorted((anno1, anno2), key=lambda x:x.span[0]))
     sorted_spans = list(sorted((anno1.span, anno2.span), key=lambda x:x[0]))
-    sents = doc.get_sentences_overlap_span(relat.span)
     tokens = []
     # Step back some window
     offset = sorted_spans[0][0]
@@ -66,11 +65,6 @@ def get_sents_with_annos(relat, doc, window=(3, 3)):
 
 
     return ' '.join(tokens)
-
-    for sent in sents:
-        text += ' '.join(sent)
-        text = re.sub(anno1.text, '<>'.format(anno.type).upper(), text)
-        text = re.sub(anno2.text, '<>'.format(anno.type).upper(), text)
 
 
 def get_shortest_path(sent, relat, doc):

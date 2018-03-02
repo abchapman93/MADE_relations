@@ -18,6 +18,9 @@ import base_feature
 #from base_feature import BaseFeatureExtractor
 from feature_utils import save_example_feature_dict
 
+import pyConTextNLP.itemData as itemData
+import pyConTextNLP.pyConTextGraph as pyConText
+
 DATADIR = os.path.join('..', 'data') # the processed data
 MODELDIR = os.path.join('..', 'saved_models')
 MADE_DIR = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0') # the original MADE data
@@ -66,6 +69,11 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         self.pos_vocab =  self.create_vocab(pos_vocab, min_pos_count, self.ngram_window)
         #self.tokens = [gram for (gram, idx) in self.vocab.items() if len(gram.split()) == 1] # Only unigrams
         self.pos = {} # Will eventually contain mapping for POS tags
+
+        # pyConText tools
+        self.modifiers = itemData.instantiateFromCSVtoitemData("https://raw.githubusercontent.com/chapmanbe/pyConTextNLP/master/KB/lexical_kb_05042016.tsv")
+        self.targets = instantiateFromCSVtoitemData("https://raw.githubusercontent.com/abchapman93/MADE_relations/master/feature_extraction/targets.tsv?token=AUOYx9rYHO6A5fiZS3mB9e_3DP83Uws8ks5aownVwA%3D%3D")
+
 
         #self.all_features_values = self.create_base_features()
 
@@ -271,6 +279,74 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
             offset += 1
 
         return overlapping_entities
+
+    def get_negation_status(self, anno, doc):
+        """
+        Checks whether certain entity types are negated, historical, etc.
+        """
+
+
+
+    def get_sent_with_anno(anno, doc, window=(3, 3)):
+        """
+        Returns the sentence that contains a given annotation.
+        Replaces the text of the annotations with a tag <ENTITY-TYPE>
+        """
+        tokens = []
+        # Step back some window
+        offset = anno.start_index
+
+        while offset not in doc._sentences:
+            offset -= 1
+            if offset < 0:
+                break
+            if offset in doc._tokens:
+                tokens.insert(0, doc._tokens[offset].lower())
+
+        # Now add an entity
+        tokens.append('{}'.format(sorted_entities[0].type.upper()))
+
+        # Now add all the tokens between them
+        offset = anno.start_index
+
+        # Now add a window on the right
+        current_length = len(tokens)
+        offset = sorted_spans[1][1]
+        while offset not in doc._sentences:
+            if offset > max(doc._tokens.keys()):
+                break
+            if offset in doc._tokens:
+                tokens.append(doc._tokens[offset].lower())
+            offset += 1
+
+
+        return ' '.join(tokens)
+
+
+
+    def markup_sentence(self, sent):
+         """
+        Identifies all markups in a sentence
+        """
+        markup = pyConText.ConTextMarkup()
+        markup.setRawText(sentence)
+        #markup.cleanText()
+        markup.markItems(modifiers, mode="modifier")
+        markup.markItems(targets, mode="target")
+        try:
+            markup.pruneMarks()
+        except TypeError as e:
+            print("Error in pruneMarks")
+            raise e
+            print(markup)
+            print(e)
+        markup.dropMarks('Exclusion')
+        # apply modifiers to any targets within the modifiers scope
+        markup.applyModifiers()
+        markup.pruneSelfModifyingRelationships()
+        if prune_inactive:
+            markup.dropInactiveModifiers()
+        return markup
 
 
     def __repr__(self):
