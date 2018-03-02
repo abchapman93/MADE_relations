@@ -320,7 +320,7 @@ def main():
     print(X.shape)
     print(len(y))
 
-    k= 'all'
+    k= 1000
 
     ## Now do some feature selection and transformation
     binary_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)

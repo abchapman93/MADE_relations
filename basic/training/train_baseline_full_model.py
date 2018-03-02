@@ -93,8 +93,8 @@ def main():
     print(len(feat_dicts))
     print(len(relats))
     # Filter out any examples that the filtering classifier said had no relation
-    with open('bin_yes_preds.pkl', 'rb') as f:
-        idxs = pickle.load(f)
+    #with open('bin_yes_preds.pkl', 'rb') as f:
+    #    idxs = pickle.load(f)
     #X = X[idxs]
     #feat_dicts, relats, y = filter_by_idx(idxs, feat_dicts, relats, y)
     print("X: {}".format(X.shape))
