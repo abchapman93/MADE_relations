@@ -1,0 +1,12 @@
+               precision    recall  f1-score   support
+
+      adverse       0.93      0.83      0.87      1706
+           do       0.99      0.99      0.99      4327
+           du       0.96      0.93      0.95       728
+           fr       0.99      0.98      0.98      3678
+ manner/route       0.98      0.98      0.98      2126
+         none       0.98      0.99      0.98     41553
+       reason       0.93      0.88      0.91      3587
+severity_type       0.99      0.98      0.98      2807
+
+  avg / total       0.97      0.98      0.97     60512

@@ -115,7 +115,7 @@ def train_model(X, y):
                             n_estimators = 10,
                             n_jobs = 3)
     clf.fit(X, y)
-    outpath = os.path.join(MODELDIR, 'rf_binary_baseline_model.pkl')
+    outpath = os.path.join(MODELDIR, 'rf_binary_model.pkl')
     with open(outpath, 'wb') as f:
         pickle.dump(clf, f)
     print("Saved at {}".format(outpath))
@@ -140,6 +140,9 @@ def main():
 
     train_model(X, y)
 
+
+    #clf = SVC(C = learned_parameters['C'], 'kernel')
+
     exit()
 
 
@@ -147,5 +150,5 @@ def main():
 
 
 if __name__ == '__main__':
-    data_file = 'binary_lexical_data.pkl'
+    data_file = 'binary_full_data.pkl'
     main()

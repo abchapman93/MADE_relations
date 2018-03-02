@@ -7,17 +7,16 @@ from collections import defaultdict
 sys.path.append('..')
 sys.path.append('../basic')
 sys.path.append('../feature_extraction')
+
 from feature_extraction.lexical_features import LexicalFeatureExtractor
+from dependency import *
+
 from basic import made_utils
 
-FEATURE_EXTRACTOR_FILE = os.path.join('..', 'data', 'lex_feature_extractors.pkl')
-assert os.path.exists(FEATURE_EXTRACTOR_FILE)
 
-BINARY_MODEL_FILE = os.path.join('..', 'saved_models', 'rf_lex_binary_model.pkl')
-FULL_MODEL_FILE = os.path.join('..', 'saved_models', 'rf_lex_full_model.pkl')
 
-for f in (BINARY_MODEL_FILE, FULL_MODEL_FILE):
-    assert os.path.exists(f)
+
+
 
 def read_in_data(datadir):
     """
@@ -133,6 +132,7 @@ def filter_by_idx(idxs, *args):
 
 
 def main():
+    nlp = spacy.load('en_core_web_sm')
     # First, read in the texts and xmls as AnnotatedDocuments
     if cached: # Read in the files from the last run
         with open('../data/evaluation_annotated_docs.pkl', 'rb') as f:
@@ -149,6 +149,10 @@ def main():
 
     # Now for each document, predict which relations are true
     for idx, (file_name, doc) in enumerate(docs.items()):
+        print(file_name)
+        if idx < 17:
+            continue
+        print("{}/{}".format(idx, len(docs)))
         if idx % 10 == 0 and idx > 0:
             print("{}/{}".format(idx, len(docs)))
         # First, binary clf
@@ -157,12 +161,24 @@ def main():
             continue
 
         relat_offsets = []
-        for r in possible_relations:
+        for i, r in enumerate(possible_relations):
             anno1, anno2 = r.get_annotations()
             relat_offsets.append((anno1.start_index, anno2.start_index))
 
-        feat_dicts = [feature_extractor.create_feature_dict(r, doc)
-                        for r in possible_relations]
+        feat_dicts = []
+        print(len(possible_relations))
+        for r in possible_relations:
+            if idx == 14:
+                print('{}/{}'.format(i, len(possible_relations)))
+            feat_dict = feature_extractor.create_feature_dict(r, doc)
+            if model_name == 'full':
+                feat_dict.update(create_dep_and_const_features(r, doc, nlp))
+            feat_dicts.append(feat_dict)
+        if idx == 0:
+            print(feat_dicts)
+
+        # [feature_extractor.create_feature_dict(r, doc)
+                        # for r in possible_relations]
 
         # Predict with the binary classifier
         X_bin = binary_feature_selector.vectorizer.transform(feat_dicts)
@@ -188,25 +204,12 @@ def main():
         for label, relat in zip(pred_full, possible_relations):
             relat.type = label
         doc.relations = possible_relations
-    # Now write bioc xmls
-    for doc in docs.values():
-        doc.to_bioc_xml('output/annotations')
+        # Now write bioc xmls
+        doc.to_bioc_xml('output_{}/annotations'.format(model_name))
     print("Saved {} files at {}".format(len(docs), "output/annotations"))
 
         #print(doc.relations)
         #print(doc.get_relations()); exit()
-
-
-    # For now, let's just make sure this is doing what we want
-    with open('example_output.txt', 'w') as f:
-        for i, (file_name, doc) in enumerate(docs.items()):
-            f.write('{}\n\n'.format(file_name))
-            f.write('\n'.join([r.get_example_string(doc) for r in
-                                doc.get_relations()]))
-            for r in doc.get_relations():
-                f.write(str(r) + '\n')
-                f.write('annotation1: {} \t annotation2: {}\n'.format(r.annotation_1.id, r.annotation_2.id))
-            f.write('\n\n-----------\n\n')
 
 
 
@@ -217,5 +220,15 @@ if __name__ == '__main__':
     datadir = os.path.join('..', 'data', 'heldout_xmls')
 
     assert os.path.exists(datadir)
-    cached = '--cached' in sys.argv
+    cached = True
+    model_name = sys.argv[1] # Baseline or full
+    MODEL_DIR = os.path.join('..', 'saved_models')
+    BINARY_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_binary_{}_model.pkl'.format(model_name))
+    FULL_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_full_{}_model.pkl'.format(model_name))
+    FEATURE_EXTRACTOR_FILE = os.path.join('..', 'data', '{}_feature_extractors.pkl'.format(model_name))
+    for f in (BINARY_MODEL_FILE, FULL_MODEL_FILE, FEATURE_EXTRACTOR_FILE):
+        print(f)
+        assert os.path.exists(f)
+    #cached = '--cached' in sys.argv
+
     main()
