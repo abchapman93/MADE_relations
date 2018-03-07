@@ -3,31 +3,39 @@ import numpy as np
 import pickle
 from collections import defaultdict
 
-# Import modules from this package
-sys.path.append('..')
-sys.path.append('../basic')
-sys.path.append('../feature_extraction')
+#sys.path.append('../../basic')
+#sys.path.append('../../basic/training')
+#sys.path.append('../../feature_extraction')
 
-from feature_extraction.lexical_features import LexicalFeatureExtractor
-from dependency import *
+sys.path.append('.')
 
-from basic import made_utils
+import train_utils
+
+from lexical_features import LexicalFeatureExtractor
+#DATADIR = './data/test_data'
+MODEL_DIR = './saved_models'
+#OUTDIR = 'output_run_1/annotations'
+OUTDIR = 'output_run_2/annotations'
+#assert os.path.exists(DATADIR)
+assert os.path.exists(MODEL_DIR)
+assert os.path.exists(OUTDIR)
+
+import made_utils
+
+print("Everything looks fine.")
+exit()
 
 
-
-
-
-
-def read_in_data(datadir):
+def read_in_data(datadir, num_docs=-1):
     """
     Reads in data using BioC parser.
     Pairs all possible relations as defined in made_utils.pair_annotations_in_doc
     """
     reader = made_utils.TextAndBioCParser(datadir=datadir)
-    docs = reader.read_texts_and_xmls(-1, include_relations=False)
+    docs = reader.read_texts_and_xmls(num_docs, include_relations=False)
     # Now pair up all possible annotations
     for doc in docs.values():
-        possible_relations = made_utils.pair_annotations_in_doc(doc, max_sent_length=3)
+        possible_relations = made_utils.pair_annotations_in_doc(doc, max_sent_length=1)
         doc.add_relations(possible_relations)
     return docs
 
@@ -126,32 +134,31 @@ def filter_by_idx(idxs, *args):
     z = list(zip(*arrs))
     z = [z[i] for i in idxs]
     to_return = list(zip(*z))
-    if len(to_return) == 1:
-        return to_return[0]
+    #if len(to_return) == 1:
+    #    return to_return[0]
     return to_return
 
 
 def main():
-    nlp = spacy.load('en_core_web_sm')
     # First, read in the texts and xmls as AnnotatedDocuments
     if cached: # Read in the files from the last run
-        with open('../data/evaluation_annotated_docs.pkl', 'rb') as f:
+        with open('data/evaluation_annotated_docs.pkl', 'rb') as f:
             docs = pickle.load(f)
     else: # Read in the files directly and pickle them for next time
-        docs = read_in_data(datadir)
-        #with open('../data/evaluation_annotated_docs.pkl', 'wb') as f:
-        #    pickle.dump(docs, f)
+        docs = read_in_data(datadir, -1)
+        with open('data/evaluation_annotated_docs.pkl', 'wb') as f:
+            pickle.dump(docs, f)
     print(len(docs))
 
     # Load in the models
     (bin_clf, full_clf, feature_extractor,
      binary_feature_selector, full_feature_selector) = load_models_and_feature_extractors()
 
+
     # Now for each document, predict which relations are true
     for idx, (file_name, doc) in enumerate(docs.items()):
+
         print(file_name)
-        if idx < 17:
-            continue
         print("{}/{}".format(idx, len(docs)))
         if idx % 10 == 0 and idx > 0:
             print("{}/{}".format(idx, len(docs)))
@@ -168,11 +175,9 @@ def main():
         feat_dicts = []
         print(len(possible_relations))
         for r in possible_relations:
-            if idx == 14:
-                print('{}/{}'.format(i, len(possible_relations)))
+            #if idx == 14:
+            #    print('{}/{}'.format(i, len(possible_relations)))
             feat_dict = feature_extractor.create_feature_dict(r, doc)
-            if model_name == 'full':
-                feat_dict.update(create_dep_and_const_features(r, doc, nlp))
             feat_dicts.append(feat_dict)
         if idx == 0:
             print(feat_dicts)
@@ -187,10 +192,10 @@ def main():
 #
         # Now filter out
         yes_idxs = get_non_zero_preds(pred_bin)
+        if not len(yes_idxs):
+            continue
         possible_relations, relat_offsets, feat_dicts = filter_by_idx(yes_idxs,
                                         possible_relations, relat_offsets, feat_dicts)
-        if not len(possible_relations):
-            continue
 
         # Now predict with the full classifier
         X_full = full_feature_selector.vectorizer.transform(feat_dicts)
@@ -200,12 +205,18 @@ def main():
         # Now filter out any that were predicted to be 'none'
         # We'll call this true relations
         yes_idxs = get_non_zero_preds(pred_full)
+        if not len(yes_idxs):
+            continue
         pred_full, possible_relations = filter_by_idx(yes_idxs, pred_full, possible_relations)
         for label, relat in zip(pred_full, possible_relations):
             relat.type = label
         doc.relations = possible_relations
-        # Now write bioc xmls
-        doc.to_bioc_xml('output_{}/annotations'.format(model_name))
+    # Now write bioc xmls
+    num_written = 0
+    for doc in docs.values():
+        num_written += 1
+        print(num_written)
+        doc.to_bioc_xml(OUTDIR)
     print("Saved {} files at {}".format(len(docs), "output/annotations"))
 
         #print(doc.relations)
@@ -217,18 +228,15 @@ def main():
 
 if __name__ == '__main__':
     #datadir = sys.argv[1]
-    datadir = os.path.join('..', 'data', 'heldout_xmls')
+    datadir = DATADIR
 
     assert os.path.exists(datadir)
-    cached = True
-    model_name = sys.argv[1] # Baseline or full
-    MODEL_DIR = os.path.join('..', 'saved_models')
-    BINARY_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_binary_{}_model.pkl'.format(model_name))
-    FULL_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_full_{}_model.pkl'.format(model_name))
-    FEATURE_EXTRACTOR_FILE = os.path.join('..', 'data', '{}_feature_extractors.pkl'.format(model_name))
+    BINARY_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_binary_model.pkl')
+    FULL_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_full_model.pkl')
+    FEATURE_EXTRACTOR_FILE = os.path.join( 'data', 'full_feature_extractors.pkl')
     for f in (BINARY_MODEL_FILE, FULL_MODEL_FILE, FEATURE_EXTRACTOR_FILE):
         print(f)
         assert os.path.exists(f)
-    #cached = '--cached' in sys.argv
+    cached = '-cached' in sys.argv
 
     main()
