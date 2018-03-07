@@ -1,29 +1,26 @@
+import argparse
 import os, sys
 import numpy as np
 import pickle
 from collections import defaultdict
 
-#sys.path.append('../../basic')
-#sys.path.append('../../basic/training')
-#sys.path.append('../../feature_extraction')
-
-sys.path.append('.')
 
 import train_utils
-
 from lexical_features import LexicalFeatureExtractor
-#DATADIR = './data/test_data'
-MODEL_DIR = './saved_models'
-#OUTDIR = 'output_run_1/annotations'
-OUTDIR = 'output_run_2/annotations'
-#assert os.path.exists(DATADIR)
-assert os.path.exists(MODEL_DIR)
-assert os.path.exists(OUTDIR)
-
 import made_utils
 
-print("Everything looks fine.")
-exit()
+
+MODEL_DIR = './saved_models'
+assert os.path.exists(MODEL_DIR)
+
+
+# Paths to the pickled models and feature extractors
+BINARY_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_binary_model.pkl')
+FULL_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_full_model.pkl')
+FEATURE_EXTRACTOR_FILE = os.path.join(MODEL_DIR, 'full_feature_extractors.pkl')
+for f in (BINARY_MODEL_FILE, FULL_MODEL_FILE, FEATURE_EXTRACTOR_FILE):
+    assert os.path.exists(f)
+
 
 
 def read_in_data(datadir, num_docs=-1):
@@ -32,10 +29,12 @@ def read_in_data(datadir, num_docs=-1):
     Pairs all possible relations as defined in made_utils.pair_annotations_in_doc
     """
     reader = made_utils.TextAndBioCParser(datadir=datadir)
+    print("Reading in documents and annotations, tokenizing")
     docs = reader.read_texts_and_xmls(num_docs, include_relations=False)
     # Now pair up all possible annotations
+    print("Pairing possible relations in text")
     for doc in docs.values():
-        possible_relations = made_utils.pair_annotations_in_doc(doc, max_sent_length=1)
+        possible_relations = made_utils.pair_annotations_in_doc(doc, max_sent_length=3)
         doc.add_relations(possible_relations)
     return docs
 
@@ -60,67 +59,6 @@ def load_models_and_feature_extractors():
     return bin_clf, full_clf, feature_extractor, binary_feature_selector, full_feature_selector
 
 
-def limit_by_string_concat(possible_relations, pred_full, pred_probs):
-
-    new_pred_full = []
-    concat_strs = []
-
-
-    # Now, let's go through document and prevent any 'duplicate' edges
-    # Where two entities with the exact same text are given the exact same relation
-    # For now, we'll say that the first relation should be considered true
-    doc_cache = {} # This will map prediction types to instances  and probabilities
-
-    for i in range(len(possible_relations)):
-        relat = possible_relations[i]
-        r_pred = pred_full[i]
-        concat = '{}:{}'.format(relat.annotation_1.text, relat.annotation_2.text)
-        concat_strs.append(concat)
-        if r_pred == 'none':
-            new_pred_full.append(r_pred)
-            continue
-        #if r_pred not in ('do', 'du', 'fr', 'manner/route'):
-        #    new_pred_full.append(r_pred)
-        #    continue
-        r_prob = max(pred_probs[i])
-
-        if r_pred not in doc_cache:
-            doc_cache[r_pred] = defaultdict(list)
-
-        if concat in doc_cache[r_pred]: # This means we've already seen an instance like this and need to check the probabilities
-
-            # Check the probabilities
-            to_replace = [] # The indices for values that should be replaced with 'none'
-            for (other_prob, other_idx) in doc_cache[r_pred][concat]:
-                if r_prob > other_prob: # This one is more likely and we should keep it
-                    to_replace.append(other_idx)
-                else: # This one is less likely and we should replace it
-                    r_pred = 'none'
-                    num_replaced += 1
-                    #new_pred_full.append(r_pred)
-
-            # Append the new prediction
-            new_pred_full.append(r_pred)
-            # Replace the ones that are less likely
-            for other_idx in to_replace:
-                num_replaced += 1
-                new_pred_full[other_idx] = 'none'
-
-        else: # This means this is the first exact relation instance
-            new_pred_full.append(r_pred)
-        if r_pred != 'none':
-            doc_cache[r_pred][concat].append((r_prob, i)) # Add to the cache
-
-    #for i in range(len(pred_full)):
-    #    if pred_full[i] != new_pred_full[i]:
-    #        print(pred_full[i], new_pred_full[i])
-
-    print(num_replaced)
-    #if num_replaced:
-    #    for i in range(len(pred_full)):
-    #        print(concat_strs[i], pred_full[i], new_pred_full[i])
-    pred_full = new_pred_full
-
 
 def get_non_zero_preds(pred):
     """
@@ -141,14 +79,8 @@ def filter_by_idx(idxs, *args):
 
 def main():
     # First, read in the texts and xmls as AnnotatedDocuments
-    if cached: # Read in the files from the last run
-        with open('data/evaluation_annotated_docs.pkl', 'rb') as f:
-            docs = pickle.load(f)
-    else: # Read in the files directly and pickle them for next time
-        docs = read_in_data(datadir, -1)
-        with open('data/evaluation_annotated_docs.pkl', 'wb') as f:
-            pickle.dump(docs, f)
-    print(len(docs))
+    docs = read_in_data(datadir, -1)
+    print("Loaded in {} annotated documents".format(len(docs)))
 
     # Load in the models
     (bin_clf, full_clf, feature_extractor,
@@ -158,12 +90,12 @@ def main():
     # Now for each document, predict which relations are true
     for idx, (file_name, doc) in enumerate(docs.items()):
 
-        print(file_name)
         print("{}/{}".format(idx, len(docs)))
-        if idx % 10 == 0 and idx > 0:
-            print("{}/{}".format(idx, len(docs)))
-        # First, binary clf
+
+        # Candidate relations
         possible_relations = doc.get_relations()
+
+        # If there are no possible relations, skip to the next document
         if not len(possible_relations):
             continue
 
@@ -173,24 +105,16 @@ def main():
             relat_offsets.append((anno1.start_index, anno2.start_index))
 
         feat_dicts = []
-        print(len(possible_relations))
         for r in possible_relations:
-            #if idx == 14:
-            #    print('{}/{}'.format(i, len(possible_relations)))
             feat_dict = feature_extractor.create_feature_dict(r, doc)
             feat_dicts.append(feat_dict)
-        if idx == 0:
-            print(feat_dicts)
-
-        # [feature_extractor.create_feature_dict(r, doc)
-                        # for r in possible_relations]
 
         # Predict with the binary classifier
         X_bin = binary_feature_selector.vectorizer.transform(feat_dicts)
         X_bin = binary_feature_selector.transform(X_bin)
         pred_bin = bin_clf.predict(X_bin)
 #
-        # Now filter out
+        # Now filter out any that we predict don't have a relation
         yes_idxs = get_non_zero_preds(pred_bin)
         if not len(yes_idxs):
             continue
@@ -202,22 +126,19 @@ def main():
         X_full = full_feature_selector.transform(X_full)
         pred_full = full_clf.predict(X_full)
 
-        # Now filter out any that were predicted to be 'none'
-        # We'll call this true relations
+        # Again filter out any that we don't think have any relations
         yes_idxs = get_non_zero_preds(pred_full)
         if not len(yes_idxs):
             continue
+        # We'll call the remaining true relations
         pred_full, possible_relations = filter_by_idx(yes_idxs, pred_full, possible_relations)
         for label, relat in zip(pred_full, possible_relations):
             relat.type = label
         doc.relations = possible_relations
     # Now write bioc xmls
-    num_written = 0
     for doc in docs.values():
-        num_written += 1
-        print(num_written)
-        doc.to_bioc_xml(OUTDIR)
-    print("Saved {} files at {}".format(len(docs), "output/annotations"))
+        doc.to_bioc_xml(outdir)
+    print("Saved {} files at {}".format(len(docs), os.path.join(outdir, 'annotations')))
 
         #print(doc.relations)
         #print(doc.get_relations()); exit()
@@ -227,16 +148,20 @@ def main():
 
 
 if __name__ == '__main__':
-    #datadir = sys.argv[1]
-    datadir = DATADIR
+    parser = argparse.ArgumentParser(description='Read in input BIOC files and write out predicted relations.')
+    parser.add_argument('--datadir',
+            help='Relative path to the data directory containing subfolders annotations/ and corpus/',
+            dest='datadir',
+            required=True)
+    parser.add_argument('--outdir',
+            help='Relative path to the data directory to write out new bioc.xml files.',
+            dest='outdir',
+            required=True)
+    args = parser.parse_args()
+    datadir = os.path.join(os.path.abspath('.'), args.datadir)
+    outdir = os.path.join(os.path.abspath('.'), args.outdir)
+    print("Data will be read in from {} and saved to {}".format(datadir, outdir))
 
     assert os.path.exists(datadir)
-    BINARY_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_binary_model.pkl')
-    FULL_MODEL_FILE = os.path.join(MODEL_DIR, 'rf_full_model.pkl')
-    FEATURE_EXTRACTOR_FILE = os.path.join( 'data', 'full_feature_extractors.pkl')
-    for f in (BINARY_MODEL_FILE, FULL_MODEL_FILE, FEATURE_EXTRACTOR_FILE):
-        print(f)
-        assert os.path.exists(f)
-    cached = '-cached' in sys.argv
-
+    assert os.path.exists(outdir)
     main()
