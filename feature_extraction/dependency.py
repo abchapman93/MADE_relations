@@ -119,7 +119,7 @@ def find_lca(out_node, in_node):
     return {}
 
 
-def create_dep_and_const_features(relat, doc, nlp):
+def create_dep_and_const_features(relat, doc, nlp, nlp_doc=None):
     if relat.annotation_1.type == relat.annotation_2.type:
         return {}
     if not doc.in_same_sentence(relat.get_span()):
@@ -128,7 +128,8 @@ def create_dep_and_const_features(relat, doc, nlp):
 
     feat_dict = {}
     sent = get_sents_with_annos(relat, doc)
-    nlp_doc = nlp(sent)
+    if not nlp_doc:
+        nlp_doc = nlp(sent)
     path = get_shortest_path(sent, relat, nlp_doc)
     if path == []:
         return {}

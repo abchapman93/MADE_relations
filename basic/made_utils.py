@@ -52,6 +52,7 @@ class TextAndBioCParser(object):
                 text, annotations, relations = self.read_text_and_xml(file_name)
             except:
                 print("{} failed".format(file_path))
+                continue
                 raise e
                 num_failed += 1
                 print(num_failed, i+1)

@@ -3,11 +3,48 @@ import re
 import pickle
 from collections import defaultdict
 from sklearn.model_selection import cross_val_score, cross_val_predict, GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
 sys.path.append('..')
 import made_utils, annotation
 
 DATADIR = os.path.join('..', '..', 'data')
 
+def create_rfc():
+    return RandomForestClassifier(
+        criterion='entropy', max_depth=None, max_features=None, min_samples_leaf=1,
+        min_samples_split=1
+    )
+
+def train_grid_search(X, y):
+    # Transform y
+    #y = [int(0) if label == 'none' else int(1)  for label in y_non_bin]
+
+    #X = transform_features(X)
+
+    #clf = LinearRegression()
+    #train_models(X, y)
+    clf = RandomForestClassifier()
+    clf_name = 'RFC'
+    param_grid = {
+        'criterion': ['entropy', 'gini'],
+        'max_depth': [1, 3, 5, 10, 25, 50, 75, 100, None],
+        'min_samples_leaf': [1, 2, 3, 5, 10, 25, 100],
+        'min_samples_split': [1, 2, 3, 5, 10, 25, 100],
+        'max_features': [1, 3, 15, 10, 100, "sqrt", "log2", None]
+            }
+
+    # Smaller set
+    param_grid = {
+        'criterion': ['entropy', 'gini'],
+        'max_depth': [1, 50, None],
+        'min_samples_leaf': [1, 25, 100],
+        'min_samples_split': [2, 25, 100],
+        'max_features': [1, 100, "log2", None]
+            }
+
+    learned_parameters = grid_search(X, y, clf, param_grid)
+    print(learned_parameters)
+    return learned_parameters
 
 def grid_search(X, y, clf, parameters):
     grid = GridSearchCV(clf, parameters, n_jobs=3, cv=3, verbose=1)

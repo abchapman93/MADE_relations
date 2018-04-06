@@ -61,12 +61,29 @@ def train_grid_search(X, y):
 
     #clf = LinearRegression()
     #train_models(X, y)
-    clf = SVC()
-    clf_name = 'SVC'
+    clf = RandomForestClassifier()
+    clf_name = 'RFC'
     param_grid = [
-            {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
-            {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
+        'criterion': ['entropy', 'gini'],
+        'max_depth': [1, 3, 5, 10, 25, 50, 75, 100, None],
+        'min_samples_leaf': [1, 2, 3, 5, 10, 25, 100],
+        'min_samples_split': [1, 2, 3, 5, 10, 25, 100],
+        'max_features': [1, 3, 15, 10, 100, "sqrt", "log2", None]
+
             ]
+    # Smaller set
+    param_grid = [
+        'criterion': ['entropy', 'gini'],
+        'max_depth': [1, 50, None],
+        'min_samples_leaf': [1, 25, 100],
+        'min_samples_split': [1, 25, 100],
+        'max_features': [1, 100, "log2", None]
+            ]
+
+
+
+
+
     learned_parameters = train_utils.grid_search(X, y, clf, param_grid)
     with open('best_{}_params.pkl'.format(clf_name), 'wb') as f:
         pickle.dump(parameters, f)

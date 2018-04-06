@@ -71,8 +71,8 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         self.pos = {} # Will eventually contain mapping for POS tags
 
         # pyConText tools
-        self.modifiers = itemData.instantiateFromCSVtoitemData("https://raw.githubusercontent.com/chapmanbe/pyConTextNLP/master/KB/lexical_kb_05042016.tsv")
-        self.targets = instantiateFromCSVtoitemData("https://raw.githubusercontent.com/abchapman93/MADE_relations/master/feature_extraction/targets.tsv?token=AUOYx9rYHO6A5fiZS3mB9e_3DP83Uws8ks5aownVwA%3D%3D")
+        #self.modifiers = itemData.instantiateFromCSVtoitemData("https://raw.githubusercontent.com/chapmanbe/pyConTextNLP/master/KB/lexical_kb_05042016.tsv")
+        #self.targets = itemData.instantiateFromCSVtoitemData("https://raw.githubusercontent.com/abchapman93/MADE_relations/master/feature_extraction/targets.tsv?token=AUOYx9rYHO6A5fiZS3mB9e_3DP83Uws8ks5aownVwA%3D%3D")
 
 
         #self.all_features_values = self.create_base_features()
@@ -159,6 +159,11 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         # Feature types for entities, left to right
         sorted_entities = sorted((relat.annotation_1, relat.annotation_2), key=lambda a: a.span[0])
         lex_features['entity_types_concat'] = '<=>'.join(['<{}>'.format(a.type.upper()) for a in sorted_entities])
+
+        # Add pyConText info
+        #context = self.get_pycontext_info(relat, doc)
+#
+        #lex_features.update(context)
 
 
         return lex_features
@@ -280,14 +285,43 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
         return overlapping_entities
 
-    def get_negation_status(self, anno, doc):
+    def get_pycontext_info(self, relat, doc):
         """
         Checks whether certain entity types are negated, historical, etc.
         """
 
 
+        target_entities = ('DRUG', 'SSLIF', 'ADE', 'INDICATION_ENTITY')
 
-    def get_sent_with_anno(anno, doc, window=(3, 3)):
+        anno1, anno2 = relat.get_annotations()
+        type1 = anno1.type.upper()
+        type2 = anno2.type.upper()
+        if type1 == 'INDICATION':
+            type1 = 'INDICATION_ENTITY'
+        if type2 == 'INDICATION':
+            type2 = 'INDICATION_ENTITY'
+
+
+        features = {}
+
+        # Let's look at the first annotation
+        if type1 in target_entities:
+            sent1 = self.get_sent_with_anno(anno1, doc, type1)
+            contexts = self.apply_context(sent1, type1)
+            features.update({'pyConText-annotation_1:{}'.format(c): 1
+                        for c in contexts})
+        if type2 in target_entities:
+            sent2 = self.get_sent_with_anno(anno2, doc, type2)
+            contexts = self.apply_context(sent2, type2)
+            features.update({'pyConText-annotation_2:{}'.format(c): 1
+                        for c in contexts})
+        return features
+
+
+
+
+
+    def get_sent_with_anno(self, anno, doc, entity_type):
         """
         Returns the sentence that contains a given annotation.
         Replaces the text of the annotations with a tag <ENTITY-TYPE>
@@ -304,14 +338,11 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
                 tokens.insert(0, doc._tokens[offset].lower())
 
         # Now add an entity
-        tokens.append('{}'.format(sorted_entities[0].type.upper()))
+        tokens.append(entity_type)
 
         # Now add all the tokens between them
         offset = anno.start_index
 
-        # Now add a window on the right
-        current_length = len(tokens)
-        offset = sorted_spans[1][1]
         while offset not in doc._sentences:
             if offset > max(doc._tokens.keys()):
                 break
@@ -322,21 +353,36 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
 
         return ' '.join(tokens)
 
+    def apply_context(self, sent, entity_type):
+        markup = self.markup_sentence(sent)
+        # There should only be one target
+        t = markup.getMarkedTargets()[0]
+        mods = [m.getCategory()[0] for m in markup.getModifiers(t)]
+
+        features = []
+        for mod in ['definite_negated_existence', 'probable_negated_existence',
+                    'indication', 'historical']:
+            if mod in mods:
+                features.append('{}-{}'.format(entity_type, mod))
+        return features
 
 
-    def markup_sentence(self, sent):
-         """
+
+
+    def markup_sentence(self, sent ):
+        """
         Identifies all markups in a sentence
         """
         markup = pyConText.ConTextMarkup()
-        markup.setRawText(sentence)
+        markup.setRawText(sent)
         #markup.cleanText()
-        markup.markItems(modifiers, mode="modifier")
-        markup.markItems(targets, mode="target")
+        markup.markItems(self.modifiers, mode="modifier")
+        markup.markItems(self.targets, mode="target")
         try:
             markup.pruneMarks()
         except TypeError as e:
             print("Error in pruneMarks")
+            print(sent)
             raise e
             print(markup)
             print(e)
@@ -344,8 +390,7 @@ class LexicalFeatureExtractor(base_feature.BaseFeatureExtractor):
         # apply modifiers to any targets within the modifiers scope
         markup.applyModifiers()
         markup.pruneSelfModifyingRelationships()
-        if prune_inactive:
-            markup.dropInactiveModifiers()
+        markup.dropInactiveModifiers()
         return markup
 
 
@@ -375,16 +420,15 @@ def main():
     feat_dicts = [] # mappings of feature names to values
     y = [] # the relation types
     for i, relat in enumerate(relats):
+        if i % 100 == 0 and i > 0:
+            print("{}/{}".format(i, len(relats)))
 
         doc = docs[relat.file_name]
 
         feature_dict = feature_extractor.create_feature_dict(relat, doc)
+
         feat_dicts.append(feature_dict)
         y.append(relat.type)
-        if i % 100 == 0 and i > 0:
-            print("{}/{}".format(i, len(relats)))
-            #break
-
 
     print(feat_dicts[0])
     # Create feature vectors
@@ -407,7 +451,7 @@ def main():
     binary_feature_selector.write_feature_scores('binary_lex_feature_scores.txt')
     # Pickle data for training and error analysis
     binary_data = (feat_dicts, relats, X_bin, y_bin)
-    outpath = '../data/binary_lexical_data.pkl'
+    outpath = '../data/baseline_binary_data.pkl'
     with open(outpath, 'wb') as f:
         pickle.dump(binary_data, f)
     print("Saved binary data at {}".format(outpath))
@@ -424,14 +468,14 @@ def main():
     print(X_full.shape)
     full_feature_selector.write_feature_scores('full_lex_feature_scores.txt')
     full_data = (feat_dicts, relats, X_full, y, vectorizer, full_feature_selector) # TODO: Change this
-    outpath = '../data/full_lexical_data.pkl'
+    outpath = '../data/baseline_full_data.pkl'
     with open(outpath, 'wb') as f:
         pickle.dump(full_data, f)
     print("Saved non-binary data at {}".format(outpath))
     print(X_full.shape)
 
     # Save feature extractor for use in prediction
-    outpath = '../data/lex_feature_extractors.pkl'
+    outpath = '../data/baseline_full_feature_extractors.pkl'
     items = (feature_extractor, binary_feature_selector, full_feature_selector)
     with open(outpath, 'wb') as f:
         pickle.dump(items, f)

@@ -11,6 +11,7 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.utils import shuffle
 
+sys.path.append('.')
 import train_utils
 
 

@@ -46,38 +46,40 @@ from dependency import *
 
 
 def main():
-    #nlp = spacy.load('en_core_web_sm')
-    ## Load in data
-    # inpath = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
-    # with open(inpath, 'rb') as f:
-       # docs, relats = pickle.load(f)
-#
-    #print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
-    ##shuffle(relats)
-    #with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
-    #   vocab, pos_vocab = pickle.load(f)
-#
-#
-#
-#
-    # feature_extractor = LexicalFeatureExtractor(context_window=(2, 2),
-                           # ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
-                           # min_vocab_count=20, min_pos_count=20)
-#
-    #feat_dicts = [] # mappings of feature names to values
-    #y = [] # the relation types
+    nlp = spacy.load('en_core_web_sm')
+    # Load in data
+    inpath = os.path.join(DATADIR, 'training_documents_and_relations.pkl')
+    with open(inpath, 'rb') as f:
+       docs, relats = pickle.load(f)
+
+    print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
+    #shuffle(relats)
+    with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
+      vocab, pos_vocab = pickle.load(f)
+
+
+
+
+    feature_extractor = LexicalFeatureExtractor(context_window=(2, 2),
+                           ngram_window=(1, 3), vocab=vocab, pos_vocab=pos_vocab,
+                           min_vocab_count=20, min_pos_count=20)
+
+    feat_dicts = [] # mappings of feature names to values
+    y = [] # the relation types
+    ############################################################################
+
     #for i, relat in enumerate(relats):
 #
-    #   doc = docs[relat.file_name]
+    #  doc = docs[relat.file_name]
 #
-    #   feature_dict = feature_extractor.create_feature_dict(relat, doc)
-    #   # NOTE: Adding dependency and constituent features
-    #   feature_dict.update(create_dep_and_const_features(relat, doc, nlp))
-    #   feat_dicts.append(feature_dict)
-    #   y.append(relat.type)
-    #   if i % 100 == 0 and i > 0:
-    #       print("{}/{}".format(i, len(relats)))
-    #       #break
+    #  feature_dict = feature_extractor.create_feature_dict(relat, doc)
+    #  # NOTE: Adding dependency and constituent features
+    #  feature_dict.update(create_dep_and_const_features(relat, doc, nlp))
+    #  feat_dicts.append(feature_dict)
+    #  y.append(relat.type)
+    #  if i % 100 == 0 and i > 0:
+    #      print("{}/{}".format(i, len(relats)))
+    #      #break
 
     ############################################################################
     # NOTE: This passage can be uncommented out if the process fails in the middle
@@ -88,7 +90,6 @@ def main():
        docs, relats = pickle.load(f)
 #
     print("Loaded {} docs and {} relations".format(len(docs), len(relats)))
-    #shuffle(relats)
     with open(os.path.join(DATADIR, 'vocab.pkl'), 'rb') as f:
       vocab, pos_vocab = pickle.load(f)
 
@@ -99,6 +100,15 @@ def main():
         feat_dicts, relats, X_bin, y_bin = pickle.load(f)
 
     y = [r.type for r in relats]
+    ############################################################################
+    ############################################################################
+
+    # Let's try getting rid of the pyConText features
+    for fd in feat_dicts:
+        for feature in fd.keys():
+            if 'pyConText' in feature:
+                del fd[feature]
+
 
 
     print(feat_dicts[0])
@@ -111,8 +121,7 @@ def main():
     print(X.shape)
     print(len(y))
 
-    k= 1000
-
+    k= 5000
     ## Now do some feature selection and transformation
     binary_feature_selector = base_feature.MyFeatureSelector(vectorizer, k=k)
     y_bin = ['any' if y_ != 'none' else 'none' for y_ in y]

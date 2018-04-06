@@ -53,24 +53,7 @@ def train_models(X, y):
 
     f.close()
 
-def train_grid_search(X, y):
-    # Transform y
-    #y = [int(0) if label == 'none' else int(1)  for label in y_non_bin]
 
-    #X = transform_features(X)
-
-    #clf = LinearRegression()
-    #train_models(X, y)
-    clf = SVC()
-    clf_name = 'SVC'
-    param_grid = [
-            {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
-            {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
-            ]
-    learned_parameters = train_utils.grid_search(X, y, clf, param_grid)
-    with open('best_{}_params.pkl'.format(clf_name), 'wb') as f:
-        pickle.dump(parameters, f)
-    return learned_parameters
 
 
 def get_positive_preds(y_pred, pos='any'):
@@ -97,7 +80,7 @@ def train_eval_cross_val(X, y):
     pred = cross_val_predict(clf, X, y)
     score = classification_report(y, pred)
     print(score)
-    with open('rf_binary_model_cross_val_scores.txt', 'w') as f:
+    with open('rf_baseline_binary_model_cross_val_scores.txt', 'w') as f:
         f.write(score)
     return clf
 
@@ -136,6 +119,13 @@ def main():
     y = np.array(y)
     print(y[:10])
 
+    print("Starting grid search")
+    learned_parameters = train_utils.train_grid_search(X, y)
+    with open('best_binary_params.pkl', 'wb') as f:
+        pickle.dump(parameters, f)
+    print("Found learned params")
+    exit()
+
     train_eval_cross_val(X, y)
 
     train_model(X, y)
@@ -147,5 +137,5 @@ def main():
 
 
 if __name__ == '__main__':
-    data_file = 'binary_lexical_data.pkl'
+    data_file = 'baseline_binary_data.pkl'
     main()
