@@ -11,16 +11,18 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.utils import shuffle
 
-sys.path.append('.')
+
+
+sys.path.append('../../basic')
+sys.path.append('../../basic/training')
+sys.path.append('../../feature_extraction')
+
 import train_utils
 
-
-DATADIR = os.path.join('..', '..', 'data')
-MODELDIR = os.path.join('..', '..', 'saved_models')
+DATADIR = './data'
+MODELDIR = './saved_models'
 assert os.path.exists(DATADIR)
 assert os.path.exists(MODELDIR)
-sys.path.append('..')
-sys.path.append('../../feature_extraction')
 
 LABEL_MAPPING = {'none': 0,
                 'do':1,
@@ -32,12 +34,6 @@ LABEL_MAPPING = {'none': 0,
                 'du': 7
                 }
 
-def transform_features(X):
-    with open(os.path.join(MODELDIR, 'full_chi2.pkl'), 'rb') as f:
-        chi2 = pickle.load(f)
-    X = chi2.transform(X)
-    print("New X shape: {}".format(X.shape))
-    return X
 
 def filter_by_idx(idxs, *args):
     arrs = args
@@ -59,7 +55,7 @@ def train_eval_cross_val(X, y):
     pred = cross_val_predict(clf, X, y)
     score = classification_report(y, pred)
     print(score)
-    with open('rf_full_full_model_cross_val_scores.txt', 'w') as f:
+    with open('rf_full_baseline_model_cross_val_scores.txt', 'w') as f:
         f.write(score)
     return clf
 
@@ -77,7 +73,8 @@ def train_model(X, y):
                             n_estimators = 10,
                             n_jobs = 3)
     clf.fit(X, y)
-    outpath = os.path.join(MODELDIR, 'rf_full_full_model.pkl')
+    outpath = os.path.join(MODELDIR, 'rf_full_model.pkl')
+
     with open(outpath, 'wb') as f:
         pickle.dump(clf, f)
     print("Saved full classifier at {}".format(outpath))
@@ -87,7 +84,8 @@ def train_model(X, y):
 def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
-        feat_dicts, relats, X, y, _, _ = pickle.load(f) #TODO: get rid of the _'s
+        feat_dicts, relats, X, y, vectorizer, full_feature_selector = pickle.load(f)
+        #feat_dicts, relats, X, y, _, _ = pickle.load(f) #TODO: get rid of the _'s
     shuffle(feat_dicts, relats, X ,y)
     #X = X[:10000, :]
     #y = y[:10000]
@@ -116,5 +114,5 @@ def main():
 
 
 if __name__ == '__main__':
-    data_file = 'full_full_data.pkl'
+    data_file = 'full_data.pkl'
     main()

@@ -16,7 +16,7 @@ from sklearn.feature_extraction import DictVectorizer
 sys.path.append(os.path.join('..', 'basic'))
 import base_feature
 #from base_feature import BaseFeatureExtractor
-from feature_utils import save_example_feature_dict
+#from feature_utils import save_example_feature_dict
 
 import pyConTextNLP.itemData as itemData
 import pyConTextNLP.pyConTextGraph as pyConText

@@ -1,4 +1,6 @@
 """
+print(os.getcwd())
+
 This script will create RelationAnnotation objects out of every possible annotation pair in the data documents.
 Splits all documents in the data directory into a training and validation set (80-20).
 """

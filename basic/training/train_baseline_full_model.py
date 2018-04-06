@@ -81,7 +81,8 @@ def train_model(X, y):
 def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
-        feat_dicts, relats, X, y, _, _ = pickle.load(f) #TODO: get rid of the _'s
+        feat_dicts, relats, X, y, vectorizer, full_feature_selector = pickle.load(f)
+        #feat_dicts, relats, X, y, _, _ = pickle.load(f) #TODO: get rid of the _'s
     shuffle(feat_dicts, relats, X ,y)
     #X = X[:10000, :]
     #y = y[:10000]
@@ -110,5 +111,5 @@ def main():
 
 
 if __name__ == '__main__':
-    data_file = 'full_lexical_data.pkl'
+    data_file = 'baseline_full_data.pkl'
     main()

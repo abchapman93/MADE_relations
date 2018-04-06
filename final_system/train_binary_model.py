@@ -4,25 +4,27 @@ import os, sys
 
 import numpy as np
 
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report
-from sklearn.model_selection import cross_val_score, cross_val_predict
+from sklearn.model_selection import cross_val_score, cross_val_predict, GridSearchCV
+
 from sklearn.utils import shuffle
-
-sys.path.append('.')
-import train_utils
-
-
-DATADIR = os.path.join('..', '..', 'data')
-MODELDIR = os.path.join('..', '..', 'saved_models')
-assert os.path.exists(DATADIR)
-assert os.path.exists(MODELDIR)
-sys.path.append('..')
+sys.path.append('../../basic')
+sys.path.append('../../basic/training')
 sys.path.append('../../feature_extraction')
 
-LABEL_MAPPING = {'none': 0,
+import train_utils
+
+DATADIR = './data'
+MODELDIR = './saved_models'
+assert os.path.exists(DATADIR)
+assert os.path.exists(MODELDIR)
+
+label_mapping = {'none': 0,
                 'do':1,
                 'reason': 2,
                 'fr': 3,
@@ -32,18 +34,37 @@ LABEL_MAPPING = {'none': 0,
                 'du': 7
                 }
 
-def transform_features(X):
-    with open(os.path.join(MODELDIR, 'full_chi2.pkl'), 'rb') as f:
-        chi2 = pickle.load(f)
-    X = chi2.transform(X)
-    print("New X shape: {}".format(X.shape))
-    return X
+def train_models(X, y):
+    """
+    Tries several classifications, saves cross-validated scores.
+    """
+    f = open('binary_model_scores.txt', 'w')
+    clfs = [LogisticRegression, DecisionTreeClassifier, MultinomialNB,
+    RandomForestClassifier, SVC]
+    for classifier in clfs:
+        clf = classifier()
+        print("Training {}".format(classifier))
+        pred = cross_val_predict(clf, X, y)
+        score = classification_report(y, pred)
+        print(score)
+        f.write('{}\n'.format(clf))
+        f.write(score)
+        f.write('\n\n')
 
-def filter_by_idx(idxs, *args):
-    arrs = args
-    z = list(zip(*arrs))
-    z = [z[i] for i in idxs]
-    return zip(*z)
+    f.close()
+
+
+
+
+def get_positive_preds(y_pred, pos='any'):
+    """
+    Gets the indices for any data points that were predicted to have a relation.
+    """
+    idxs = []
+    for i, y_ in enumerate(y_pred):
+        if y_ == pos:
+            idxs.append(i)
+    return idxs
 
 def train_eval_cross_val(X, y):
     """
@@ -59,7 +80,7 @@ def train_eval_cross_val(X, y):
     pred = cross_val_predict(clf, X, y)
     score = classification_report(y, pred)
     print(score)
-    with open('rf_full_full_model_cross_val_scores.txt', 'w') as f:
+    with open('rf_baseline_binary_model_cross_val_scores.txt', 'w') as f:
         f.write(score)
     return clf
 
@@ -77,38 +98,32 @@ def train_model(X, y):
                             n_estimators = 10,
                             n_jobs = 3)
     clf.fit(X, y)
-    outpath = os.path.join(MODELDIR, 'rf_full_full_model.pkl')
+    outpath = os.path.join(MODELDIR, 'rf_binary_model.pkl')
     with open(outpath, 'wb') as f:
         pickle.dump(clf, f)
-    print("Saved full classifier at {}".format(outpath))
+    print("Saved at {}".format(outpath))
     return clf
 
 
 def main():
     inpath = os.path.join(DATADIR, data_file)
     with open(inpath, 'rb') as f:
-        feat_dicts, relats, X, y, _, _ = pickle.load(f) #TODO: get rid of the _'s
+        feat_dicts, relats, X, y, = pickle.load(f)
+
     shuffle(feat_dicts, relats, X ,y)
-    #X = X[:10000, :]
-    #y = y[:10000]
+    #X = X[:10, :]
+    #y = y[:10]
     print("X: {}".format(X.shape))
     print("y: {}".format(len(y)))
-    print(len(feat_dicts))
-    print(len(relats))
-    # Filter out any examples that the filtering classifier said had no relation
-    #with open('bin_yes_preds.pkl', 'rb') as f:
-    #    idxs = pickle.load(f)
-    #X = X[idxs]
-    #feat_dicts, relats, y = filter_by_idx(idxs, feat_dicts, relats, y)
-    print("X: {}".format(X.shape))
-    print("y: {}".format(len(y)))
-    print(len(feat_dicts))
-    print(len(relats))
+    print(set(y))
     y = np.array(y)
     print(y[:10])
 
+
     train_eval_cross_val(X, y)
+
     train_model(X, y)
+
     exit()
 
 
@@ -116,5 +131,5 @@ def main():
 
 
 if __name__ == '__main__':
-    data_file = 'full_full_data.pkl'
+    data_file = 'binary_data.pkl'
     main()
