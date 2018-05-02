@@ -114,7 +114,7 @@ def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=3):
     are paired to create RelationAnnotations.
     Takes an optional list legal_edges that defines which edges should be allowed.
 
-    Returns a list of RelationAnnotations.
+    Returns a list of new RelationAnnotations with annotation type 'none'.
     """
     if legal_edges == []:
         legal_edges = [('Drug', 'Route'),
@@ -173,5 +173,7 @@ def pair_annotations_in_doc(doc, legal_edges=[], max_sent_length=3):
                     anno1, anno2, doc.file_name
                 )
                 generated_relations.append(generated_relation)
-    relations = true_relations + generated_relations
-    return relations
+    # relations = true_relations + generated_relations
+    # NOTE: Found a bug here , this should really only return the generated relations
+    # return generated_relations
+    return generated_relations + true_relations
