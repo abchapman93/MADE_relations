@@ -1,6 +1,8 @@
 # data files
 data/*
 saved_models/*
+publication/tmp_data/*
+final_system/data/*
 
 # .idea
 .idea/*

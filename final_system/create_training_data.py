@@ -52,6 +52,10 @@ def main():
         with open('all_training_documents_no_relations', 'wb') as f:
             pickle.dump(docs, f)
     relations = []
+    outpath = os.path.join(DATADIR, 'all_training_documents_and_relations.pkl')
+    with open(outpath, 'wb') as f:
+        pickle.dump((docs, relations), f)
+    return
 
     for i, doc in enumerate(docs.values()):
         # Add Fake relations for training
@@ -59,9 +63,6 @@ def main():
         all_relations = made_utils.pair_annotations_in_doc(doc, max_sent_length=3)
         relations += doc.get_relations()
 #
-    outpath = os.path.join(DATADIR, 'all_training_documents_and_relations.pkl')
-    with open(outpath, 'wb') as f:
-        pickle.dump((docs, relations), f)
 
     #with open('data/non_sampled_training_documents_and_relations.pkl', 'rb') as f:
     #    docs, all_relations = pickle.load(f)

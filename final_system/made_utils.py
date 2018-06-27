@@ -27,7 +27,8 @@ class TextAndBioCParser(object):
         """
         self.datadir = datadir
         if self.datadir == '':
-            self.datadir = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0')
+            #self.datadir = os.path.join(os.path.expanduser('~'), 'Box Sync', 'NLP_Challenge', 'MADE-1.0')
+            self.datadir = '/Users/alec/Data/NLP_Challenge/MADE-1.0'
 
         assert os.path.exists(self.datadir)
         pass
@@ -50,7 +51,8 @@ class TextAndBioCParser(object):
             file_name = os.path.basename(file_path)
             try:
                 text, annotations, relations = self.read_text_and_xml(file_name)
-            except:
+            except Exception as e:
+                raise e
                 print("{} failed".format(file_path))
                 continue
                 raise e
@@ -91,7 +93,7 @@ class TextAndBioCParser(object):
             relations
         """
         full_path = os.path.join(self.datadir, 'annotations', file_name+".bioc.xml")
-        bioc_reader = bioc.BioCReader(full_path)
+        bioc_reader = bioc.BioCXMLReader(full_path)
         bioc_reader.read()
         doc = bioc_reader.collection.documents[0]
         passage = doc.passages[0]
